@@ -12,6 +12,7 @@ export function FinalCTA() {
           fill
           className="object-cover"
           sizes="100vw"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-navy/85" />
       </div>

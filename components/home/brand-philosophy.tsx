@@ -48,6 +48,7 @@ export function BrandPhilosophy() {
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 bg-navy text-white px-6 py-4 rounded-xl shadow-lg hidden lg:block">

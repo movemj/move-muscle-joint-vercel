@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/section-wrapper';
@@ -40,8 +41,15 @@ export default function AboutPage() {
       <SectionWrapper bg="bg-secondary">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0">
-              <img src={IMAGES.provider} alt="Dr. Joseph Hugunin" className="w-full h-full object-cover" loading="lazy" />
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0 relative">
+              <Image
+                src={IMAGES.provider}
+                alt="Dr. Joseph Hugunin"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 400px"
+                loading="lazy"
+              />
             </div>
           </motion.div>
           <div>
