@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://movemj.com/sitemap.xml
+
+# Specific rules
+Disallow: /api/
+Disallow: /thank-you

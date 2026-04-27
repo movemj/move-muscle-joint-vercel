@@ -1,0 +1,37 @@
+import { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://movemj.com';
+  
+  const routes = [
+    { url: baseUrl, changeFrequency: 'weekly', priority: 1 },
+    { url: `${baseUrl}/our-approach`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/about`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/services`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/services/chiropractic-care`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/services/myofascial-release-therapy`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/services/shockwave-therapy`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/services/targeted-rehab`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/conditions/sciatica`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/neck-pain`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/low-back-pain`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/headaches-tension`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/hip-pain`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/knee-pain`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/plantar-fasciitis`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/shoulder-pain`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/sports-injuries`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/faq`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/contact`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/book`, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${baseUrl}/privacy`, changeFrequency: 'yearly', priority: 0.5 },
+  ];
+
+  return routes.map(route => ({
+    url: route.url,
+    lastModified: new Date(),
+    changeFrequency: route.changeFrequency as 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
+    priority: route.priority,
+  }));
+}
