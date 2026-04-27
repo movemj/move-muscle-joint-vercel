@@ -69,14 +69,14 @@ export const NAV_ITEMS = [
 ];
 
 export const IMAGES = {
-  hero: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/b45454252_generated_f13a0690.png",
-  chiropractic: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/99881d249_generated_6c3b2bce.png",
-  myofascial: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/89d752745_generated_981264c9.png",
-  shockwave: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/4ca2f6f67_generated_58233b93.png",
-  rehab: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/7ad78b588_generated_dcdbab81.png",
-  provider: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/da5a3c3f5_generated_bd1c9dcc.png",
-  assessment: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/1cbae5b01_generated_b8a30930.png",
-  lifestyle: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/dd5e9abf1_generated_026d7419.png",
-  clinic: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/f3148cfe8_generated_9197d395.png",
-  handsOn: "https://media.base44.com/images/public/69bf7815f38dd5629c282d1b/b0c551db5_generated_74888ac9.png",
+  hero: "/images/hero.png",
+  chiropractic: "/images/chiropractic.png",
+  myofascial: "/images/myofascial.png",
+  shockwave: "/images/shockwave.png",
+  rehab: "/images/rehab.png",
+  provider: "/images/provider.png",
+  assessment: "/images/assessment.png",
+  lifestyle: "/images/lifestyle.png",
+  clinic: "/images/clinic.png",
+  handsOn: "/images/handsOn.png",
 };
