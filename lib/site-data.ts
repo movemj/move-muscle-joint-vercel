@@ -69,14 +69,14 @@ export const NAV_ITEMS = [
 ];
 
 export const IMAGES = {
-  hero: "/images/hero.png",
-  chiropractic: "/images/chiropractic.png",
-  myofascial: "/images/myofascial.png",
-  shockwave: "/images/shockwave.png",
-  rehab: "/images/rehab.png",
-  provider: "/images/provider.png",
-  assessment: "/images/assessment.png",
-  lifestyle: "/images/lifestyle.png",
-  clinic: "/images/clinic.png",
-  handsOn: "/images/handsOn.png",
+  hero: "/images/hero.webp",
+  chiropractic: "/images/chiropractic.webp",
+  myofascial: "/images/myofascial.webp",
+  shockwave: "/images/shockwave.webp",
+  rehab: "/images/rehab.webp",
+  provider: "/images/provider.webp",
+  assessment: "/images/assessment.webp",
+  lifestyle: "/images/lifestyle.webp",
+  clinic: "/images/clinic.webp",
+  handsOn: "/images/handsOn.webp",
 };

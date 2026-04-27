@@ -23,6 +23,7 @@ export function ProviderPreview() {
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 400px"
+              loading="lazy"
             />
           </div>
         </motion.div>
