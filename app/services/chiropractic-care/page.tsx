@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 
 export default function ChiropracticCarePage() {
   return (
-    <ServicePageTemplate
-      title="Chiropractic Care"
-      h1="Chiropractic Care in Overland Park"
-      heroImage={IMAGES.chiropractic}
-      breadcrumbLabel="Chiropractic Care"
-      breadcrumbPath="/services/chiropractic-care"
+      <ServicePageTemplate
+        title="Chiropractic Care"
+        h1="Chiropractic Care in Overland Park"
+        heroImage={IMAGES.chiropractic}
+        breadcrumbLabel="Chiropractic Care"
+        breadcrumbPath="/services/chiropractic-care"
       introText={
         <>
           <p>
