@@ -15,6 +15,7 @@ const communities = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "S
 
 export const metadata: Metadata = {
   title: "About Our Chiropractic Clinic in Overland Park, KS",
+  description: "Meet Move Muscle & Joint, an Overland Park chiropractic and rehab clinic focused on movement-based care and lasting results.",
 };
 
 export default function AboutPage() {

@@ -6,6 +6,7 @@ import { SERVICES, CONDITIONS } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Sports Injury Treatment in Overland Park, KS | Chiropractic Care",
+  description: "Recover from sports injuries in Overland Park, KS with chiropractic care, shockwave therapy, myofascial release therapy, and rehab.",
 };
 
 export default function SportsInjuriesPage() {

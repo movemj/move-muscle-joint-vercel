@@ -25,6 +25,7 @@ const expectations = [
 
 export const metadata: Metadata = {
   title: "Book Chiropractic Appointment in Overland Park, KS",
+  description: "Book chiropractic care, myofascial release therapy, shockwave therapy, or targeted rehab at Move Muscle & Joint in Overland Park, KS.",
 };
 
 export default function BookPage() {

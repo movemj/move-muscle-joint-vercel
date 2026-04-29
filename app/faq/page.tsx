@@ -46,6 +46,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Chiropractic FAQ in Overland Park, KS | Move Muscle & Joint",
+  description: "Read answers about chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab at Move Muscle & Joint.",
 };
 
 export default function FAQPage() {

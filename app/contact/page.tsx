@@ -19,6 +19,7 @@ const serviceAreas = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "
 
 export const metadata: Metadata = {
   title: "Contact Chiropractor in Overland Park, KS | Move Muscle & Joint",
+  description: "Contact Move Muscle & Joint in Overland Park, KS for chiropractic care, myofascial release therapy, shockwave therapy, and rehab.",
 };
 
 async function sendContactForm(data: any) {

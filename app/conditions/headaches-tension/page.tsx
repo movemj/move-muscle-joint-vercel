@@ -6,6 +6,7 @@ import { SERVICES, CONDITIONS } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Tension Headache Treatment in Overland Park, KS",
+  description: "Get tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
 };
 
 export default function HeadachesTensionPage() {

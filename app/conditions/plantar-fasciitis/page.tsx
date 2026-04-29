@@ -6,6 +6,7 @@ import { SERVICES, CONDITIONS } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Plantar Fasciitis Treatment in Overland Park, KS",
+  description: "Treat plantar fasciitis in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and targeted rehab.",
 };
 
 export default function PlantarFasciitisPage() {

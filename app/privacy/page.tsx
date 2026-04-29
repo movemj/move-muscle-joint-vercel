@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Move Muscle & Joint",
+  description: "Read the privacy policy for Move Muscle & Joint, a chiropractic and rehab clinic serving Overland Park, KS.",
 };
 
 export default function PrivacyPage() {
