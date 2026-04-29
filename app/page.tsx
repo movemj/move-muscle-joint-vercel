@@ -14,7 +14,7 @@ import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Chiropractic Care in Overland Park, KS | Move Muscle & Joint",
-  description: "Move Muscle & Joint provides chiropractic care, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.",
+  description: "Chiropractic care, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS to help you move better.",
 };
 
 export default function Home() {

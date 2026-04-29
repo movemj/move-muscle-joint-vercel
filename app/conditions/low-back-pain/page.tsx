@@ -5,11 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Low Back Pain Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
-    "Get low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
+    "Low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
   openGraph: {
     title: "Low Back Pain Treatment in Overland Park, KS | Move Muscle & Joint",
     description:
-      "Get low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
+      "Low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
     url: `${SITE.url}/conditions/low-back-pain`,
   },
 };

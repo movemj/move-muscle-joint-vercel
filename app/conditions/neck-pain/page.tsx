@@ -5,11 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Neck Pain Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
-    "Find neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+    "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
   openGraph: {
     title: "Neck Pain Treatment in Overland Park, KS | Move Muscle & Joint",
     description:
-      "Find neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+      "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
     url: `${SITE.url}/conditions/neck-pain`,
   },
 };

@@ -6,7 +6,7 @@ import { SERVICES, CONDITIONS } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Shoulder Pain Relief in Overland Park, KS | Chiropractic Care",
-  description: "Find shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+  description: "Shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
 };
 
 export default function ShoulderPainPage() {

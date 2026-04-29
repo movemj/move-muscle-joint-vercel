@@ -5,11 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Sciatica Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
-    "Get sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+    "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
   openGraph: {
     title: "Sciatica Treatment in Overland Park, KS | Move Muscle & Joint",
     description:
-      "Get sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+      "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
     url: `${SITE.url}/conditions/sciatica`,
   },
 };

@@ -5,11 +5,11 @@ import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Chiropractic Care in Overland Park | Move Muscle & Joint",
   description:
-    "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement through personalized treatment.",
+    "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
   openGraph: {
     title: "Chiropractic Care in Overland Park | Move Muscle & Joint",
     description:
-      "Chiropractic care to improve joint mobility, reduce pain, and support better movement through personalized treatment.",
+      "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
     url: `${SITE.url}/services/chiropractic-care`,
   },
 };
