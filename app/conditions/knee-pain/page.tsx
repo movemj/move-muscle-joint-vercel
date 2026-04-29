@@ -16,6 +16,10 @@ export default function KneePainPage() {
       h1="Knee Pain Treatment in Overland Park"
       breadcrumbLabel="Knee Pain"
       breadcrumbPath="/conditions/knee-pain"
+      customHeadings={{
+        whatItIs: "What Is Knee Pain?",
+        symptoms: "Common Knee Pain Symptoms",
+      }}
       introText={<>
         <p>Knee pain treatment at Move Muscle & Joint in Overland Park goes beyond the knee. We evaluate hip mechanics, ankle mobility, and lower extremity strength to find the movement dysfunctions that are stressing your knee — then build an integrated treatment plan to resolve them.</p>
       </>}

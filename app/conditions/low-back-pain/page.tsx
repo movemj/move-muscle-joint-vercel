@@ -25,6 +25,10 @@ export default function LowBackPainPage() {
       h1="Low Back Pain Treatment in Overland Park"
       breadcrumbLabel="Low Back Pain"
       breadcrumbPath="/conditions/low-back-pain"
+      customHeadings={{
+        whatItIs: "What Is Low Back Pain?",
+        symptoms: "Common Low Back Pain Symptoms",
+      }}
       introText={
         <p>
           Low back pain treatment at Move Muscle & Joint in Overland Park is built around

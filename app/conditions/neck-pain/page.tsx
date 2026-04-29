@@ -25,6 +25,10 @@ export default function NeckPainPage() {
       h1="Neck Pain Treatment in Overland Park"
       breadcrumbLabel="Neck Pain"
       breadcrumbPath="/conditions/neck-pain"
+      customHeadings={{
+        whatItIs: "What Is Neck Pain?",
+        symptoms: "Common Neck Pain Symptoms",
+      }}
       introText={
         <p>
           Neck pain treatment at Move Muscle & Joint in Overland Park goes beyond temporary relief.

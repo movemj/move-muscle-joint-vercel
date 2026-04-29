@@ -16,6 +16,10 @@ export default function PlantarFasciitisPage() {
       h1="Plantar Fasciitis Treatment in Overland Park"
       breadcrumbLabel="Plantar Fasciitis"
       breadcrumbPath="/conditions/plantar-fasciitis"
+      customHeadings={{
+        whatItIs: "What Is Plantar Fasciitis?",
+        symptoms: "Common Plantar Fasciitis Symptoms",
+      }}
       introText={<>
         <p>Plantar fasciitis treatment at Move Muscle & Joint in Overland Park combines shockwave therapy, myofascial release, chiropractic care, and targeted rehab to address the full picture — from foot mechanics to calf mobility to lower extremity loading patterns.</p>
       </>}

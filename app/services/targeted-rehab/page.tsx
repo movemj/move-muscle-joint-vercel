@@ -22,6 +22,10 @@ export default function TargetedRehabPage() {
       heroImage={IMAGES.rehab}
       breadcrumbLabel="Targeted Rehab"
       breadcrumbPath="/services/targeted-rehab"
+      customHeadings={{
+        whatItIs: "Understanding Targeted Rehab and Movement Retraining",
+        whoItHelps: "Who Targeted Rehab May Help",
+      }}
       introText={
         <>
           <p>
