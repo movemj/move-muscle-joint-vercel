@@ -25,10 +25,6 @@ export default function SciaticaPage() {
       h1="Sciatica Treatment in Overland Park"
       breadcrumbLabel="Sciatica"
       breadcrumbPath="/conditions/sciatica"
-      customHeadings={{
-        whatItIs: "What Is Sciatica?",
-        symptoms: "Common Sciatica Symptoms",
-      }}
       introText={
         <p>
           Sciatica treatment at Move Muscle & Joint in Overland Park addresses the full picture —

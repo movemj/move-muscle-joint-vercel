@@ -22,10 +22,6 @@ export default function ChiropracticCarePage() {
         heroImage={IMAGES.chiropractic}
         breadcrumbLabel="Chiropractic Care"
         breadcrumbPath="/services/chiropractic-care"
-        customHeadings={{
-          whatItIs: "Understanding Chiropractic Care in Overland Park",
-          whoItHelps: "Who Chiropractic Care May Help",
-        }}
       introText={
         <>
           <p>

@@ -16,10 +16,6 @@ export default function HeadachesTensionPage() {
       h1="Headache & Tension Treatment in Overland Park"
       breadcrumbLabel="Headaches & Tension"
       breadcrumbPath="/conditions/headaches-tension"
-      customHeadings={{
-        whatItIs: "What Are Tension Headaches?",
-        symptoms: "Common Tension Headache Symptoms",
-      }}
       introText={<>
         <p>Headache and tension treatment at Move Muscle & Joint in Overland Park addresses the musculoskeletal contributors to chronic headaches — including cervical joint dysfunction, myofascial tension, postural strain, and upper body movement deficits. Our integrated approach combines chiropractic care, soft tissue therapy, and corrective exercise for lasting relief.</p>
       </>}

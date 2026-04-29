@@ -16,10 +16,6 @@ export default function SportsInjuriesPage() {
       h1="Sports Injury Treatment in Overland Park"
       breadcrumbLabel="Sports Injuries"
       breadcrumbPath="/conditions/sports-injuries"
-      customHeadings={{
-        whatItIs: "What Are Sports Injuries?",
-        symptoms: "Common Sports Injury Symptoms",
-      }}
       introText={<>
         <p>Sports injury treatment at Move Muscle & Joint in Overland Park is designed to help athletes and active adults recover fully, rebuild strength, and return to their sport with confidence. Our integrated care model combines chiropractic treatment, myofascial release therapy, shockwave therapy, and progressive rehab to address both the injury and the movement patterns that contributed to it.</p>
       </>}

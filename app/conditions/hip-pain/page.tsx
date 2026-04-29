@@ -16,10 +16,6 @@ export default function HipPainPage() {
       h1="Hip Pain Treatment in Overland Park"
       breadcrumbLabel="Hip Pain"
       breadcrumbPath="/conditions/hip-pain"
-      customHeadings={{
-        whatItIs: "What Is Hip Pain?",
-        symptoms: "Common Hip Pain Symptoms",
-      }}
       introText={<>
         <p>Hip pain treatment at Move Muscle & Joint in Overland Park addresses the structural, muscular, and movement-based factors contributing to hip dysfunction. Through integrated chiropractic care, myofascial release therapy, and targeted rehab, we restore hip mobility and build the strength to keep it.</p>
       </>}

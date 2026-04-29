@@ -16,10 +16,6 @@ export default function ShoulderPainPage() {
       h1="Shoulder Pain Treatment in Overland Park"
       breadcrumbLabel="Shoulder Pain"
       breadcrumbPath="/conditions/shoulder-pain"
-      customHeadings={{
-        whatItIs: "What Is Shoulder Pain?",
-        symptoms: "Common Shoulder Pain Symptoms",
-      }}
       introText={<>
         <p>Shoulder pain treatment at Move Muscle & Joint in Overland Park looks beyond the shoulder itself. We evaluate the entire upper body kinetic chain — cervical spine, thoracic mobility, scapular mechanics, and rotator cuff function — to uncover what&apos;s actually limiting your shoulder and build an integrated treatment plan.</p>
       </>}

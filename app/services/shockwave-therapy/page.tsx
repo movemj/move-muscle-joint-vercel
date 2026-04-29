@@ -26,10 +26,6 @@ export default function ShockwaveTherapyPage() {
       heroImage={IMAGES.shockwave}
       breadcrumbLabel="Shockwave Therapy"
       breadcrumbPath="/services/shockwave-therapy"
-      customHeadings={{
-        whatItIs: "Understanding Shockwave Therapy",
-        whoItHelps: "Who Shockwave Therapy May Help",
-      }}
       introText={
         <>
           <p>
