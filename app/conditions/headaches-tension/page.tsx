@@ -1,7 +1,13 @@
 'use client';
 
+import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
 import { SERVICES, CONDITIONS } from '@/lib/site-data';
+
+export const metadata: Metadata = {
+  title: "Tension Headache Treatment in Overland Park, KS",
+  description: "Tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and rehab.",
+};
 
 export default function HeadachesTensionPage() {
   return (

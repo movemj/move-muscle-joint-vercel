@@ -1,7 +1,13 @@
 'use client';
 
+import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
 import { SERVICES, CONDITIONS } from '@/lib/site-data';
+
+export const metadata: Metadata = {
+  title: "Knee Pain Treatment in Overland Park, KS | Chiropractic Care",
+  description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
+};
 
 export default function KneePainPage() {
   return (

@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from "next";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '@/components/ui/section-wrapper';
@@ -42,6 +43,11 @@ const faqs = [
     a: "The easiest way to book is through our online scheduling system. Simply visit our Book Now page and you'll be guided through the process. We operate as a receptionless office, so online booking is the fastest and most reliable way to schedule your visit."
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Chiropractic FAQ in Overland Park, KS | Move Muscle & Joint",
+  description: "Answers about chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab at Move Muscle & Joint.",
+};
 
 export default function FAQPage() {
   return (

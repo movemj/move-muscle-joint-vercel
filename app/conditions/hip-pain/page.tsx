@@ -1,7 +1,13 @@
 'use client';
 
+import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
 import { SERVICES, CONDITIONS } from '@/lib/site-data';
+
+export const metadata: Metadata = {
+  title: "Hip Pain Treatment in Overland Park, KS | Chiropractic Care",
+  description: "Hip pain treatment in Overland Park, KS using chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+};
 
 export default function HipPainPage() {
   return (

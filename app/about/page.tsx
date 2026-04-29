@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from "next";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
@@ -11,6 +12,11 @@ import { HeroMedia } from '@/components/ui/hero-media';
 import { IMAGES, SITE } from '@/lib/site-data';
 
 const communities = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
+
+export const metadata: Metadata = {
+  title: "About Our Chiropractic Clinic in Overland Park, KS",
+  description: "Meet Move Muscle & Joint, an Overland Park chiropractic and rehab clinic focused on movement-based care and lasting results.",
+};
 
 export default function AboutPage() {
   return (
@@ -33,7 +39,7 @@ export default function AboutPage() {
           <div className="space-y-5 text-steel leading-relaxed -mt-8">
             <p>We don't believe in rushed care or generic treatment plans. At Move Muscle & Joint, every session is designed around how your body moves, where it is compensating, and what it needs to recover fully.</p>
             <p>Our approach blends hands-on treatment with movement education and progressive rehab so you can build results that last. No cookie-cutter plans. No endless appointments without a clear goal. Just intentional care designed to help you move better and stay that way.</p>
-            <p>Move was founded on the belief that chiropractic care is most effective when it's part of a bigger picture — one that includes soft tissue work, rehab-based exercise, and a commitment to understanding the whole person, not just the painful spot.</p>
+            <p>            Move was founded on the belief that chiropractic care is most effective when it's part of a bigger picture — one that includes myofascial release therapy, rehab-based exercise, and a commitment to understanding the whole person, not just the painful spot.</p>
           </div>
         </div>
       </SectionWrapper>

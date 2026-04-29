@@ -5,11 +5,11 @@ import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Chiropractic Care in Overland Park | Move Muscle & Joint",
   description:
-    "Restore joint function, improve mobility, and reduce pain through precise, personalized chiropractic treatment integrated with your full care plan in Overland Park.",
+    "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
   openGraph: {
     title: "Chiropractic Care in Overland Park | Move Muscle & Joint",
     description:
-      "Restore joint function, improve mobility, and reduce pain through precise, personalized chiropractic treatment integrated with your full care plan.",
+      "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
     url: `${SITE.url}/services/chiropractic-care`,
   },
 };
@@ -33,7 +33,7 @@ export default function ChiropracticCarePage() {
           <p>
             Every session is tailored to how your body moves — not to a one-size-fits-all protocol.
             Whether you&apos;re dealing with acute pain or chronic stiffness, chiropractic care at Move
-            is designed to work alongside soft tissue therapy and rehabilitation to create results
+            is designed to work alongside myofascial release therapy and rehabilitation to create results
             that last.
           </p>
         </>
@@ -75,7 +75,7 @@ export default function ChiropracticCarePage() {
           </p>
           <p>
             You may experience joint mobilization, spinal manipulation, or extremity adjustments as
-            part of a session that also includes soft tissue work and corrective exercise. Each
+            part of a session that also includes myofascial release therapy and corrective exercise. Each
             visit builds on the last, progressing you toward full movement confidence.
           </p>
         </>

@@ -5,11 +5,11 @@ import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Targeted Rehab / Movement Retraining in Overland Park | Move Muscle & Joint",
   description:
-    "Rebuild strength, retrain movement patterns, and create lasting resilience through progressive exercise-based rehabilitation at Move Muscle & Joint in Overland Park.",
+    "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
   openGraph: {
     title: "Targeted Rehab / Movement Retraining in Overland Park | Move Muscle & Joint",
     description:
-      "Rebuild strength, retrain movement patterns, and create lasting resilience through progressive exercise-based rehabilitation.",
+      "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
     url: `${SITE.url}/services/targeted-rehab`,
   },
 };
