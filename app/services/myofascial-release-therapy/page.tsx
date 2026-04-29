@@ -28,10 +28,6 @@ export default function MyofascialReleasePage() {
       heroImage={IMAGES.myofascial}
       breadcrumbLabel="Myofascial Release Therapy"
       breadcrumbPath="/services/myofascial-release-therapy"
-      customHeadings={{
-        whatItIs: "Understanding Myofascial Release Therapy",
-        whoItHelps: "Who Myofascial Release Therapy May Help",
-      }}
       introText={
         <>
           <p>

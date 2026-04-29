@@ -30,10 +30,6 @@ interface ServicePageTemplateProps {
   faqs: Array<{ q: string; a: string }>;
   breadcrumbLabel: string;
   breadcrumbPath: string;
-  customHeadings?: {
-    whatItIs?: string;
-    whoItHelps?: string;
-  };
 }
 
 export function ServicePageTemplate({
@@ -50,7 +46,6 @@ export function ServicePageTemplate({
   faqs,
   breadcrumbLabel,
   breadcrumbPath,
-  customHeadings,
 }: ServicePageTemplateProps) {
   return (
     <>
@@ -84,11 +79,11 @@ export function ServicePageTemplate({
       <SectionWrapper bg="bg-secondary">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <SectionHeading tag="What It Is" title={customHeadings?.whatItIs || `Understanding ${title.toLowerCase()}.`} />
+            <SectionHeading tag="What It Is" title={`Understanding ${title.toLowerCase()}.`} />
             <div className="space-y-4 text-steel leading-relaxed -mt-8">{whatItIs}</div>
           </div>
           <div>
-            <SectionHeading tag="Who It Helps" title={customHeadings?.whoItHelps || "Is this right for you?"} />
+            <SectionHeading tag="Who It Helps" title="Is this right for you?" />
             <div className="space-y-4 text-steel leading-relaxed -mt-8">{whoItHelps}</div>
           </div>
         </div>

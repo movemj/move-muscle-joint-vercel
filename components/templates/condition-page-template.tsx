@@ -29,10 +29,6 @@ interface ConditionPageTemplateProps {
   relatedServices: Array<{ title: string; slug: string }>;
   relatedConditions: Array<{ title: string; slug: string }>;
   faqs: Array<{ q: string; a: string }>;
-  customHeadings?: {
-    whatItIs?: string;
-    symptoms?: string;
-  };
 }
 
 export function ConditionPageTemplate({
@@ -50,7 +46,6 @@ export function ConditionPageTemplate({
   relatedServices,
   relatedConditions,
   faqs,
-  customHeadings,
 }: ConditionPageTemplateProps) {
   return (
     <>
@@ -85,11 +80,11 @@ export function ConditionPageTemplate({
       <SectionWrapper bg="bg-secondary">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <SectionHeading tag="Understanding" title={customHeadings?.whatItIs || `What is ${title.toLowerCase()}?`} />
+            <SectionHeading tag="Understanding" title={`What is ${title.toLowerCase()}?`} />
             <div className="space-y-4 text-steel leading-relaxed -mt-8">{whatItIs}</div>
           </div>
           <div>
-            <SectionHeading tag="Symptoms" title={customHeadings?.symptoms || "Common signs and symptoms."} />
+            <SectionHeading tag="Symptoms" title="Common signs and symptoms." />
             <div className="space-y-2 -mt-8">
               {symptoms.map((s, i) => (
                 <div key={i} className="flex items-start gap-3">
