@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     description: "Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park.",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
