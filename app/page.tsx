@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HomeHero } from "@/components/home/home-hero";
 import { BrandPhilosophy } from "@/components/home/brand-philosophy";
 import { FirstVisit } from "@/components/home/first-visit";
@@ -10,6 +11,10 @@ import { ConditionsPreview } from "@/components/home/conditions-preview";
 import { FAQPreview } from "@/components/home/faq-preview";
 import { FinalCTA } from "@/components/home/final-cta";
 import { SITE } from "@/lib/site-data";
+
+export const metadata: Metadata = {
+  title: "Chiropractic Care in Overland Park, KS | Move Muscle & Joint",
+};
 
 export default function Home() {
   const schema = {

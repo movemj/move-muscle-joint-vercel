@@ -3,11 +3,11 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Low Back Pain Treatment in Overland Park | Move Muscle & Joint",
+  title: "Low Back Pain Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
     "Low back pain treatment at Move Muscle & Joint is built around understanding why your back hurts through integrated chiropractic care, myofascial release therapy, and targeted rehab in Overland Park.",
   openGraph: {
-    title: "Low Back Pain Treatment in Overland Park | Move Muscle & Joint",
+    title: "Low Back Pain Treatment in Overland Park, KS | Move Muscle & Joint",
     description:
       "Low back pain treatment at Move Muscle & Joint is built around understanding why your back hurts through integrated chiropractic care, myofascial release therapy, and targeted rehab.",
     url: `${SITE.url}/conditions/low-back-pain`,

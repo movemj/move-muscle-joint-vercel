@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from "next";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -15,6 +16,10 @@ import { Label } from '@/components/ui/label';
 import { SITE } from '@/lib/site-data';
 
 const serviceAreas = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
+
+export const metadata: Metadata = {
+  title: "Contact Chiropractor in Overland Park, KS | Move Muscle & Joint",
+};
 
 async function sendContactForm(data: any) {
   const response = await fetch('/api/contact', {

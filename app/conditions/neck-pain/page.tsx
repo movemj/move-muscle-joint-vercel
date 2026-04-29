@@ -3,11 +3,11 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Neck Pain Treatment in Overland Park | Move Muscle & Joint",
+  title: "Neck Pain Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
     "Neck pain treatment at Move Muscle & Joint goes beyond temporary relief. We assess the full kinetic chain to uncover what's driving your neck pain in Overland Park.",
   openGraph: {
-    title: "Neck Pain Treatment in Overland Park | Move Muscle & Joint",
+    title: "Neck Pain Treatment in Overland Park, KS | Move Muscle & Joint",
     description:
       "Neck pain treatment at Move Muscle & Joint goes beyond temporary relief. We assess the full kinetic chain to uncover what's driving your neck pain.",
     url: `${SITE.url}/conditions/neck-pain`,

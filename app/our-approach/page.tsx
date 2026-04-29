@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from "next";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Layers, Repeat, Brain, HeartPulse, Shield, Zap } from 'lucide-react';
@@ -19,6 +20,10 @@ const differentiators = [
   { icon: Shield, title: "Durability Over Dependency", desc: "Our goal is to build resilience and self-sufficiency — not ongoing dependency on passive care." },
   { icon: Zap, title: "Modern Setting", desc: "A gym-based clinic designed for hands-on care and progressive rehab under one roof." },
 ];
+
+export const metadata: Metadata = {
+  title: "Our Approach to Chiropractic & Rehab in Overland Park, KS",
+};
 
 export default function OurApproachPage() {
   return (

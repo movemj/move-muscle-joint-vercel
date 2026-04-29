@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from "next";
 import { motion } from 'framer-motion';
 import { CheckCircle, Calendar, ClipboardCheck, Dumbbell, Shield } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/section-wrapper';
@@ -21,6 +22,10 @@ const expectations = [
   "Treatment may begin during the same visit",
   "No referral needed — book directly online",
 ];
+
+export const metadata: Metadata = {
+  title: "Book Chiropractic Appointment in Overland Park, KS",
+};
 
 export default function BookPage() {
   return (

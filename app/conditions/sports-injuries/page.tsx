@@ -1,7 +1,12 @@
 'use client';
 
+import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
 import { SERVICES, CONDITIONS } from '@/lib/site-data';
+
+export const metadata: Metadata = {
+  title: "Sports Injury Treatment in Overland Park, KS | Chiropractic Care",
+};
 
 export default function SportsInjuriesPage() {
   return (

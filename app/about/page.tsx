@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from "next";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
@@ -11,6 +12,10 @@ import { HeroMedia } from '@/components/ui/hero-media';
 import { IMAGES, SITE } from '@/lib/site-data';
 
 const communities = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
+
+export const metadata: Metadata = {
+  title: "About Our Chiropractic Clinic in Overland Park, KS",
+};
 
 export default function AboutPage() {
   return (

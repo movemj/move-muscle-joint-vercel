@@ -3,11 +3,11 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Sciatica Treatment in Overland Park | Move Muscle & Joint",
+  title: "Sciatica Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
     "Sciatica treatment at Move Muscle & Joint addresses the full picture through integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park.",
   openGraph: {
-    title: "Sciatica Treatment in Overland Park | Move Muscle & Joint",
+    title: "Sciatica Treatment in Overland Park, KS | Move Muscle & Joint",
     description:
       "Sciatica treatment at Move Muscle & Joint addresses the full picture through integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab.",
     url: `${SITE.url}/conditions/sciatica`,
