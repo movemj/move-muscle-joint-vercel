@@ -14,10 +14,10 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | Integrated Chiropractic Care & Rehab in Overland Park`,
+    default: "Chiropractor Overland Park KS | Move Muscle & Joint",
     template: `%s | ${SITE.name}`,
   },
-  description: "Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park. Move better. Stay strong. Live without hesitation.",
+  description: "Experienced chiropractor in Overland Park KS offering integrated chiropractic care, myofascial release, shockwave therapy, and gym-based rehab. Move better and stay strong near 119th St & Roe Ave. Book your first visit today.",
   keywords: ["chiropractic", "chiropractor", "Overland Park", "rehab", "myofascial release", "shockwave therapy", "back pain", "neck pain", "sports injuries"],
   authors: [{ name: SITE.name }],
   creator: SITE.name,
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE.url,
     siteName: SITE.name,
-    title: `${SITE.name} | Integrated Chiropractic Care & Rehab in Overland Park`,
-    description: "Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park. Move better. Stay strong. Live without hesitation.",
+    title: "Chiropractor Overland Park KS | Move Muscle & Joint",
+    description: "Experienced chiropractor in Overland Park KS offering integrated chiropractic care, myofascial release, shockwave therapy, and gym-based rehab. Move better and stay strong near 119th St & Roe Ave. Book your first visit today.",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} | Integrated Chiropractic Care & Rehab in Overland Park`,
-    description: "Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park.",
+    title: "Chiropractor Overland Park KS | Move Muscle & Joint",
+    description: "Experienced chiropractor in Overland Park KS offering integrated chiropractic care, myofascial release, shockwave therapy, and gym-based rehab. Move better and stay strong near 119th St & Roe Ave. Book your first visit today.",
   },
   robots: {
     index: false,
