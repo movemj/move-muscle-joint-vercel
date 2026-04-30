@@ -12,16 +12,23 @@ export const schemas = {
    */
   localBusinessChiropractor: () => ({
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'Chiropractor'],
+    '@type': ['LocalBusiness', 'Chiropractor', 'MedicalBusiness'],
     '@id': `${SITE.url}/#organization`,
     name: SITE.name,
+    alternateName: 'Move Muscle and Joint',
     description:
-      'Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park, KS.',
+      'Movement-based chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, team physician for Sporting KC and University of Kansas Athletics.',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    image: `${SITE.url}/images/clinic.webp`,
     logo: `${SITE.url}/logo.png`,
+    image: [
+      `${SITE.url}/images/clinic.webp`,
+      `${SITE.url}/images/handsOn.webp`,
+      `${SITE.url}/images/assessment.webp`,
+      `${SITE.url}/images/provider.webp`,
+      `${SITE.url}/images/chiropractic.webp`,
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.addressStreet,
@@ -35,23 +42,63 @@ export const schemas = {
       latitude: SITE.lat,
       longitude: SITE.lng,
     },
+    hasMap: 'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         opens: '09:00',
-        closes: '17:00',
+        closes: '18:00',
       },
     ],
     priceRange: '$$',
+    currenciesAccepted: 'USD',
+    paymentAccepted: 'Cash, Credit Card, HSA, FSA',
     areaServed: [
       { '@type': 'City', name: 'Overland Park' },
       { '@type': 'City', name: 'Leawood' },
+      { '@type': 'City', name: 'Lenexa' },
       { '@type': 'City', name: 'Prairie Village' },
-      { '@type': 'City', name: 'Olathe' },
       { '@type': 'City', name: 'Kansas City' },
     ],
-    sameAs: [],
+    medicalSpecialty: ['Chiropractic', 'Sports Medicine', 'Physical Therapy'],
+    founder: {
+      '@id': `${SITE.url}/about/#provider`,
+    },
+    employee: {
+      '@id': `${SITE.url}/about/#provider`,
+    },
+    availableService: [
+      {
+        '@type': 'MedicalTherapy',
+        name: 'Chiropractic Care',
+        url: `${SITE.url}/services/chiropractic-care`,
+      },
+      {
+        '@type': 'MedicalTherapy',
+        name: 'Myofascial Release Therapy',
+        url: `${SITE.url}/services/myofascial-release-therapy`,
+      },
+      {
+        '@type': 'MedicalTherapy',
+        name: 'Shockwave Therapy',
+        url: `${SITE.url}/services/shockwave-therapy`,
+      },
+      {
+        '@type': 'MedicalTherapy',
+        name: 'Targeted Rehab',
+        url: `${SITE.url}/services/targeted-rehab`,
+      },
+    ],
+    sameAs: [
+      'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
+      'https://www.yelp.com/biz/move-muscle-and-joint-overland-park',
+      'https://www.healthgrades.com/group-directory/ks-kansas/overland-park/move-muscle-joint-u3cdyw2',
+      'https://www.instagram.com/movemuscleandjoint/',
+      'https://local.yahoo.com/info-224216223-move-muscle-joint-overland-park/',
+      'https://nextdoor.com/pages/move-muscle-joint-overland-park-ks/',
+      'https://www.facebook.com/movemuscleandjoint',
+    ],
   }),
 
   /**

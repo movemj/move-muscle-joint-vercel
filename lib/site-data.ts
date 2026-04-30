@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Move Muscle & Joint",
   tagline: "Move Today, Thrive Tomorrow.",
-  phone: "(913) 303-0989",
+  phone: "+1-913-303-0989",
   email: "hello@movemj.com",
   address: "10701 El Monte St, Studio 2, Overland Park, KS 66211",
   addressStreet: "10701 El Monte St, Studio 2",
@@ -12,8 +12,8 @@ export const SITE = {
   url: "https://movemuscleandjoint.com",
   janeBookingUrl: "https://mmj.janeapp.com/#staff_member/1",
   bookPath: "/book",
-  lat: 38.9258,
-  lng: -94.6458,
+  lat: 38.93498055323811,
+  lng: -94.635725381436,
 };
 
 export const SERVICES = [
