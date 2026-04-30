@@ -118,9 +118,9 @@ export function getRelatedPosts(slugs: string[]): BlogPostMeta[] {
         ogImage: post.ogImage,
         category: post.category,
         tags: post.tags,
-      };
+      } as BlogPostMeta;
     })
-    .filter((post): post is BlogPostMeta => post !== null);
+    .filter((post) => post !== null) as BlogPostMeta[];
 }
 
 /**
