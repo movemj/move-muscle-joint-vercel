@@ -219,7 +219,52 @@ export const schemas = {
   }),
 
   /**
-   * 7. WebSite Schema
+   * 7. Article Schema
+   * Used on: Blog post pages
+   */
+  article: (
+    headline: string,
+    description: string,
+    image: string,
+    datePublished: string,
+    dateModified: string,
+    author: string,
+    slug: string
+  ) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    image: image.startsWith('http') ? image : `${SITE.url}${image}`,
+    datePublished,
+    dateModified,
+    author: {
+      '@type': 'Person',
+      name: author,
+      url: `${SITE.url}/about`,
+      jobTitle: 'Chiropractor',
+      worksFor: {
+        '@type': 'LocalBusiness',
+        '@id': `${SITE.url}/#organization`,
+      },
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${SITE.url}/#organization`,
+      name: SITE.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE.url}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE.url}/blog/${slug}`,
+    },
+  }),
+
+  /**
+   * 8. WebSite Schema
    * Used on: Layout (site-wide)
    */
   website: () => ({
