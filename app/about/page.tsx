@@ -23,13 +23,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <JsonLdSchema
-        data={schemas.person(
-          'Dr. Joseph Hugunin',
-          'Chiropractor',
-          'Founder and chiropractor at Move Muscle & Joint, specializing in integrated chiropractic care, movement assessment, and rehab-based treatment.'
-        )}
-      />
+      <JsonLdSchema data={schemas.person()} />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs items={[{ label: "About", path: "/about" }]} />
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-3xl">

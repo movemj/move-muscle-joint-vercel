@@ -111,25 +111,36 @@ export const schemas = {
    * 5. Person Schema
    * Used on: About page
    */
-  person: (name: string, title: string, description: string) => ({
+  person: () => ({
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${SITE.url}/about#provider`,
-    name,
-    jobTitle: title,
-    description,
+    '@id': `${SITE.url}/about/#provider`,
+    name: 'Dr. Joseph Hugunin',
+    alternateName: 'Dr. Joey Hugunin',
+    honorificSuffix: 'DC',
+    jobTitle: 'Chiropractor',
+    description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team physician for Sporting KC and care provider for University of Kansas Athletics.',
     image: `${SITE.url}/images/provider.webp`,
+    url: `${SITE.url}/about`,
     worksFor: {
-      '@type': 'Chiropractor',
       '@id': `${SITE.url}/#organization`,
     },
+    alumniOf: [
+      { '@type': 'CollegeOrUniversity', name: 'Rockhurst University' },
+    ],
     knowsAbout: [
       'Chiropractic Care',
       'Myofascial Release Therapy',
-      'Movement Assessment',
-      'Rehabilitation',
       'Shockwave Therapy',
+      'Sports Chiropractic',
+      'Movement-Based Rehabilitation',
+      'Functional Movement Assessment',
     ],
+    memberOf: [
+      { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Physician' },
+      { '@type': 'SportsOrganization', name: 'University of Kansas Athletics', description: 'Care Provider' },
+    ],
+    areaServed: 'Overland Park, KS',
   }),
 
   /**
