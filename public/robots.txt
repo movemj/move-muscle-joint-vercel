@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://movemj.com/sitemap.xml
+Sitemap: https://movemuscleandjoint.com/sitemap.xml
 
 # Specific rules
 Disallow: /api/

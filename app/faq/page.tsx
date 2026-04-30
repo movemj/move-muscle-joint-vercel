@@ -7,6 +7,8 @@ import { SectionWrapper } from '@/components/ui/section-wrapper';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { CTAButton } from '@/components/ui/cta-button';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+import { JsonLdSchema } from '@/components/schema-json-ld';
+import { schemas } from '@/lib/schemas';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const faqs = [
@@ -50,8 +52,14 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+  const faqSchema = faqs.map((faq) => ({
+    question: faq.q,
+    answer: faq.a,
+  }));
+
   return (
     <>
+      <JsonLdSchema data={schemas.faqPage(faqSchema)} />
       <section className="bg-charcoal pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "FAQ", path: "/faq" }]} />
@@ -74,16 +82,6 @@ export default function FAQPage() {
               </AccordionItem>
             ))}
           </Accordion>
-
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(f => ({
-              "@type": "Question",
-              "name": f.q,
-              "acceptedAnswer": { "@type": "Answer", "text": f.a }
-            }))
-          }) }} />
         </div>
       </SectionWrapper>
 

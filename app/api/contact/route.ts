@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend
     const response = await resend.emails.send({
-      from: 'Move Muscle & Joint <noreply@movemj.com>',
+      from: 'Move Muscle & Joint <noreply@movemuscleandjoint.com>',
       to: [contactToEmail],
       replyTo: email,
       subject: `New contact form submission from ${name}`,

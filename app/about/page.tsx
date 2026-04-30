@@ -9,6 +9,8 @@ import { SectionHeading } from '@/components/ui/section-heading';
 import { CTAButton } from '@/components/ui/cta-button';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { HeroMedia } from '@/components/ui/hero-media';
+import { JsonLdSchema } from '@/components/schema-json-ld';
+import { schemas } from '@/lib/schemas';
 import { IMAGES, SITE } from '@/lib/site-data';
 
 const communities = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
@@ -21,7 +23,13 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <HeroMedia imageSrc={IMAGES.clinic} alt="Move Muscle & Joint clinic" minHeight="min-h-[60vh]" overlayOpacity="bg-charcoal/60">
+      <JsonLdSchema
+        data={schemas.person(
+          'Dr. Joseph Hugunin',
+          'Chiropractor',
+          'Founder and chiropractor at Move Muscle & Joint, specializing in integrated chiropractic care, movement assessment, and rehab-based treatment.'
+        )}
+      />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs items={[{ label: "About", path: "/about" }]} />
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-3xl">

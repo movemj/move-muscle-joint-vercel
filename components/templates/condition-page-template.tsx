@@ -5,6 +5,8 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { JsonLdSchema } from "@/components/schema-json-ld";
+import { schemas } from "@/lib/schemas";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import {
@@ -47,9 +49,25 @@ export function ConditionPageTemplate({
   relatedConditions,
   faqs,
 }: ConditionPageTemplateProps) {
+  // Build schema data
+  const medicalConditionSchema = schemas.medicalCondition(
+    title,
+    title,
+    typeof introText === 'string' ? introText : 'A musculoskeletal condition treated at Move Muscle & Joint.',
+    symptoms.map((s) => ({ name: s })),
+    'Integrated Chiropractic and Rehab Treatment',
+    'Treatment includes spinal manipulation, myofascial release therapy, and targeted rehab.'
+  );
+
+  const faqSchema = faqs.map((faq) => ({
+    question: faq.q,
+    answer: faq.a,
+  }));
+
   return (
     <>
-      {/* Hero */}
+      <JsonLdSchema data={medicalConditionSchema} />
+      {faqs && faqs.length > 0 && <JsonLdSchema data={schemas.faqPage(faqSchema)} />}
       <section className="bg-charcoal pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Breadcrumbs

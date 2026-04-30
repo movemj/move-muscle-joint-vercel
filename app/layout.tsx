@@ -3,7 +3,9 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { JsonLdSchema } from "@/components/schema-json-ld";
 import { SITE } from "@/lib/site-data";
+import { schemas } from "@/lib/schemas";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -53,6 +55,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <JsonLdSchema data={schemas.website()} />
+      </head>
       <body className={`${montserrat.variable} font-sans`}>
         <Header />
         <main>{children}</main>
