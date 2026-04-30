@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -19,6 +19,19 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react";
 interface Props {
   params: Promise<{ slug: string }>;
 }
+
+const legacyRedirects: Record<string, string> = {
+  "sciatica-relief-exercises": "/conditions/sciatica",
+  "plantar-fasciitis-heel-pain-treatment-overland-park": "/conditions/plantar-fasciitis",
+  "headaches-migraines-treatment-overland-park": "/conditions/headaches-tension",
+  "text-neck-forward-head-posture-overland-park": "/conditions/neck-pain",
+  "when-to-use-shockwave-therapy-overland-park": "/services/shockwave-therapy",
+  "introduction-to-chiropractic-care": "/services/chiropractic-care",
+  "the-benefits-of-chiropractic-care-for-sports-injuries": "/conditions/sports-injuries",
+  "best-chiropractor-near-me-overland-park-sports-injuries": "/conditions/sports-injuries",
+  "modern-chiropractic-movement-therapy-overland-park": "/our-approach",
+  "why-choose-movement-focused-chiropractic": "/our-approach",
+};
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -160,6 +173,13 @@ const mdxComponents = {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
+  
+  // Check if this is a legacy blog post that should redirect
+  const redirectPath = legacyRedirects[slug];
+  if (redirectPath) {
+    redirect(redirectPath);
+  }
+  
   const post = getPostBySlug(slug);
 
   if (!post) {
