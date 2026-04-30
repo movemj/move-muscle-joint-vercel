@@ -80,5 +80,5 @@ export const IMAGES = {
   assessment: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blog%20Hero%20for%20wellness%20advice%20Move%20Muscle%20%26%20Joint-seHkPjzPLHVq5lr6gOvoPzkdrFxxmd.webp",
   lifestyle: "/images/lifestyle.webp",
   clinic: "/images/clinic.webp",
-  handsOn: "/images/handsOn.webp",
+  handsOn: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Active%20release%20techniques%20ART%20overland%20park%20ks-6YOLZFNTeUnDzE2gUycsJBbZSX7P9m.webp",
 };
