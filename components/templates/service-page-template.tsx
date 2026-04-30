@@ -61,6 +61,7 @@ export function ServicePageTemplate({
     <>
       <JsonLdSchema data={serviceSchema} />
       {faqs && faqs.length > 0 && <JsonLdSchema data={schemas.faqPage(faqSchema)} />}
+      <HeroMedia imageSrc={heroImage} alt={title} minHeight="min-h-[55vh]" overlayOpacity="bg-charcoal/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs
             items={[
