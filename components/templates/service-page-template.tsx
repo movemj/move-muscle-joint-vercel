@@ -133,9 +133,9 @@ export function ServicePageTemplate({
         <div className="max-w-3xl mx-auto space-y-4 text-steel leading-relaxed -mt-8">{moveMethodFit}</div>
         <div className="grid grid-cols-5 gap-px bg-border rounded-xl overflow-hidden mt-10 max-w-4xl mx-auto">
           {MOVE_METHOD_STEPS.map((s) => (
-            <div key={s.step} className="bg-white p-4 text-center">
-              <span className="text-xs font-bold text-softblue">{s.step}</span>
-              <p className="text-xs font-semibold text-charcoal mt-1">{s.title}</p>
+            <div key={s.step} className="bg-white p-2 text-center">
+              <span className="text-[10px] font-bold text-softblue block">{s.step}</span>
+              <p className="text-[10px] font-semibold text-charcoal mt-1 leading-tight">{s.title}</p>
             </div>
           ))}
         </div>
