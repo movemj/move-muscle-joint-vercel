@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/section-wrapper';
-import { SectionHeading } from '@/components/ui/section-wrapper';
+import { SectionHeading } from '@/components/ui/section-heading';
 import { CTAButton } from '@/components/ui/cta-button';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Input } from '@/components/ui/input';
