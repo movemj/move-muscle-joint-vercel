@@ -92,9 +92,9 @@ export function getAllPosts(): BlogPostMeta[] {
         ogImage: post.ogImage,
         category: post.category,
         tags: post.tags,
-      };
+      } as BlogPostMeta;
     })
-    .filter((post): post is BlogPostMeta => post !== null);
+    .filter((post) => post !== null) as BlogPostMeta[];
 
   // Sort by date, newest first
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
