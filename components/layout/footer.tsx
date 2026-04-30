@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SITE, SERVICES, CONDITIONS } from "@/lib/site-data";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -22,10 +22,6 @@ export function Footer() {
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0 text-softblue" />
                 <span>{SITE.phone}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 shrink-0 text-softblue" />
-                <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">{SITE.email}</a>
               </div>
             </div>
           </div>
