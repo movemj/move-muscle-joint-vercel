@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://movemj.com';
+  const baseUrl = 'https://movemuscleandjoint.com';
   
   const routes = [
     { url: baseUrl, changeFrequency: 'weekly', priority: 1 },

@@ -6,6 +6,8 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { JsonLdSchema } from "@/components/schema-json-ld";
+import { schemas } from "@/lib/schemas";
 import { MOVE_METHOD_STEPS } from "@/lib/site-data";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -47,9 +49,18 @@ export function ServicePageTemplate({
   breadcrumbLabel,
   breadcrumbPath,
 }: ServicePageTemplateProps) {
+  // Build schema data
+  const serviceSchema = schemas.service(title, breadcrumbPath);
+
+  const faqSchema = faqs.map((faq) => ({
+    question: faq.q,
+    answer: faq.a,
+  }));
+
   return (
     <>
-      <HeroMedia imageSrc={heroImage} alt={title} minHeight="min-h-[55vh]" overlayOpacity="bg-charcoal/60">
+      <JsonLdSchema data={serviceSchema} />
+      {faqs && faqs.length > 0 && <JsonLdSchema data={schemas.faqPage(faqSchema)} />}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs
             items={[
