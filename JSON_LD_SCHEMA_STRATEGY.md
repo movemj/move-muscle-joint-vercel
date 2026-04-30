@@ -53,6 +53,7 @@ export default function Page() {
   "description": "Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park, KS.",
   "url": "https://movemuscleandjoint.com",
   "telephone": "(913) 303-0989",
+  "email": "hello@movemj.com",
   "image": "https://movemuscleandjoint.com/images/clinic.webp",
   "logo": "https://movemuscleandjoint.com/logo.png",
   "address": {

@@ -2,6 +2,7 @@ export const SITE = {
   name: "Move Muscle & Joint",
   tagline: "Move Today, Thrive Tomorrow.",
   phone: "(913) 303-0989",
+  email: "hello@movemj.com",
   address: "10701 El Monte St, Studio 2, Overland Park, KS 66211",
   addressStreet: "10701 El Monte St, Studio 2",
   addressCity: "Overland Park",

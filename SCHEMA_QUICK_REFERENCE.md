@@ -9,6 +9,14 @@
 - `/public/robots.txt`
 - `/app/api/contact/route.ts`
 
+### 2. Email Configuration
+✅ Added email configuration:
+- Email: `hello@movemj.com`
+- Added to `/lib/site-data.ts` as `SITE.email`
+- Integrated into LocalBusiness schema
+- Added to footer with mailto link
+- Updated contact API route to use correct email
+
 ### 2. Created Schema Infrastructure
 
 #### New Files

@@ -19,6 +19,7 @@ export const schemas = {
       'Integrated chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park, KS.',
     url: SITE.url,
     telephone: SITE.phone,
+    email: SITE.email,
     image: `${SITE.url}/images/clinic.webp`,
     logo: `${SITE.url}/logo.png`,
     address: {
