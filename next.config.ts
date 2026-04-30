@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
     // ESLint isn't installed in this project — skip linting during build
     ignoreDuringBuilds: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "hebbkx1anhila5yf.public.blob.vercel-storage.com",
+      },
+    ],
+  },
   redirects: async () => {
     return [
       // Contact/Booking redirects
