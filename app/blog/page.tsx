@@ -13,14 +13,14 @@ import { SITE, IMAGES } from "@/lib/site-data";
 import { Calendar, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Movement, Rehab & Chiropractic Insights | Move Muscle & Joint",
-  description: "Expert insights on chiropractic care, movement health, injury prevention, and rehabilitation from Dr. Joseph Hugunin at Move Muscle & Joint in Overland Park, KS.",
+  title: "Blog | Movement, Rehab & Longevity Insights | Move Muscle & Joint",
+  description: "Expert insights on movement health, rehabilitation, and longevity from Dr. Joseph Hugunin at Move Muscle & Joint in Overland Park, KS.",
   alternates: {
     canonical: `${SITE.url}/blog`,
   },
-  openGraph: {
-    title: "Blog | Move Muscle & Joint",
-    description: "Expert insights on chiropractic care, movement health, injury prevention, and rehabilitation from Dr. Joseph Hugunin.",
+    openGraph: {
+      title: "Blog | Move Muscle & Joint",
+      description: "Expert insights on movement health, rehabilitation, and longevity from Dr. Joseph Hugunin.",
     url: `${SITE.url}/blog`,
     type: "website",
     siteName: SITE.name,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Blog | Move Muscle & Joint",
-    description: "Expert insights on chiropractic care, movement health, injury prevention, and rehabilitation.",
+    description: "Expert insights on movement health, rehabilitation, and longevity.",
     images: [`${SITE.url}${IMAGES.assessment}`],
     creator: "@movemuscleandjoint",
   },
@@ -69,11 +69,11 @@ export default function BlogPage() {
               Insights & Education
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
-              Movement, Rehab & Chiropractic Insights
+              Movement, Rehab & Longevity Insights
             </h1>
             <p className="mt-6 text-lg text-white/75 leading-relaxed max-w-xl">
-              Expert guidance on injury prevention, movement health, and 
-              rehabilitation from Dr. Joseph Hugunin in Overland Park, KS.
+              Expert guidance on movement health, rehabilitation, and longevity 
+              from Dr. Joseph Hugunin in Overland Park, KS.
             </p>
           </div>
         </div>
