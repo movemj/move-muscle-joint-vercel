@@ -9,7 +9,10 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { AuthorBio } from "@/components/blog/author-bio";
 import { RelatedPosts } from "@/components/blog/related-posts";
+import { AreasWeServe } from "@/components/blog/areas-we-serve";
+import { ServiceLink } from "@/components/blog/service-link";
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts, formatDate } from "@/lib/mdx";
+import { schemas } from "@/lib/schemas";
 import { SITE, IMAGES } from "@/lib/site-data";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 
@@ -32,10 +35,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const canonicalUrl = `${SITE.url}/blog/${slug}`;
+  const ogImageUrl = post.ogImage
+    ? post.ogImage.startsWith("http")
+      ? post.ogImage
+      : `${SITE.url}${post.ogImage}`
+    : `${SITE.url}${IMAGES.clinic}`;
+
   return {
-    title: post.title,
+    title: `${post.title} | ${SITE.name} Blog`,
     description: post.description,
     authors: [{ name: post.author }],
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -43,27 +56,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       modifiedTime: post.dateModified || post.date,
       authors: [post.author],
-      url: `${SITE.url}/blog/${slug}`,
-      images: post.ogImage
-        ? [
-            {
-              url: post.ogImage.startsWith("http")
-                ? post.ogImage
-                : `${SITE.url}${post.ogImage}`,
-              width: 1200,
-              height: 630,
-              alt: post.title,
-            },
-          ]
-        : [],
+      url: canonicalUrl,
+      siteName: SITE.name,
+      locale: "en_US",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: post.ogImage
-        ? [post.ogImage.startsWith("http") ? post.ogImage : `${SITE.url}${post.ogImage}`]
-        : [],
+      images: [ogImageUrl],
+      creator: "@movemuscleandjoint",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }
@@ -133,6 +154,8 @@ const mdxComponents = {
   hr: () => <hr className="my-10 border-border" />,
   strong: (props: any) => <strong className="font-semibold text-charcoal" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
+  // Custom MDX components for internal linking
+  ServiceLink,
 };
 
 export default async function BlogPostPage({ params }: Props) {
@@ -217,6 +240,7 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <JsonLdSchema data={articleSchema} />
       <JsonLdSchema data={breadcrumbSchema} />
+      <JsonLdSchema data={schemas.localBusinessChiropractor()} />
 
       {/* Header with Breadcrumbs */}
       <section className="bg-charcoal pt-28 pb-16">
@@ -295,6 +319,9 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
+
+        {/* Areas We Serve */}
+        <AreasWeServe />
 
         {/* Back to Blog */}
         <div className="mt-12 pt-8 border-t border-border">

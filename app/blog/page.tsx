@@ -6,18 +6,44 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { JsonLdSchema } from "@/components/schema-json-ld";
 import { getAllPosts, formatDate } from "@/lib/mdx";
+import { schemas } from "@/lib/schemas";
 import { SITE, IMAGES } from "@/lib/site-data";
 import { Calendar, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Movement, Rehab & Chiropractic Insights",
+  title: "Blog | Movement, Rehab & Chiropractic Insights | Move Muscle & Joint",
   description: "Expert insights on chiropractic care, movement health, injury prevention, and rehabilitation from Dr. Joseph Hugunin at Move Muscle & Joint in Overland Park, KS.",
+  alternates: {
+    canonical: `${SITE.url}/blog`,
+  },
   openGraph: {
     title: "Blog | Move Muscle & Joint",
     description: "Expert insights on chiropractic care, movement health, injury prevention, and rehabilitation from Dr. Joseph Hugunin.",
     url: `${SITE.url}/blog`,
     type: "website",
+    siteName: SITE.name,
+    locale: "en_US",
+    images: [
+      {
+        url: `${SITE.url}${IMAGES.assessment}`,
+        width: 1200,
+        height: 630,
+        alt: "Move Muscle & Joint Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Move Muscle & Joint",
+    description: "Expert insights on chiropractic care, movement health, injury prevention, and rehabilitation.",
+    images: [`${SITE.url}${IMAGES.assessment}`],
+    creator: "@movemuscleandjoint",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -26,6 +52,9 @@ export default function BlogPage() {
 
   return (
     <>
+      {/* LocalBusiness JSON-LD for GMB consistency */}
+      <JsonLdSchema data={schemas.localBusinessChiropractor()} />
+      
       {/* Hero - matches homepage hero style */}
       <HeroMedia
         imageSrc={IMAGES.assessment}
