@@ -56,7 +56,6 @@ export const MOVE_METHOD_STEPS = [
   { step: "02", title: "Restore Alignment", desc: "Improve joint position and tissue mobility to create a foundation for movement." },
   { step: "03", title: "Relearn Movement", desc: "Retrain the patterns that caused dysfunction so your body moves efficiently." },
   { step: "04", title: "Build Strength", desc: "Progressively load tissue and build resilience for the demands of your daily life." },
-  { step: "05", title: "Move With Confidence", desc: "Maintain your results and move through life without hesitation or fear of setback." },
 ];
 
 export const NAV_ITEMS = [

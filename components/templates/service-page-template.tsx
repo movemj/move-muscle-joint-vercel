@@ -131,7 +131,7 @@ export function ServicePageTemplate({
       <SectionWrapper>
         <SectionHeading tag="The Move Method" title="How this fits into your care plan." align="center" />
         <div className="max-w-3xl mx-auto space-y-4 text-steel leading-relaxed -mt-8">{moveMethodFit}</div>
-        <div className="grid grid-cols-5 gap-px bg-border rounded-xl overflow-hidden mt-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-4 gap-px bg-border rounded-xl overflow-hidden mt-10 max-w-4xl mx-auto">
           {MOVE_METHOD_STEPS.map((s) => (
             <div key={s.step} className="bg-white p-2 text-center">
               <span className="text-[10px] font-bold text-softblue block">{s.step}</span>
