@@ -11,11 +11,11 @@ export function MoveMethod() {
       <SectionHeading
         tag="The Move Method"
         title="A framework for lasting results."
-        subtitle="Our five-stage care model guides every patient from pain relief through full movement confidence."
+        subtitle="Our four-stage care model guides every patient from pain relief through full movement confidence."
         align="center"
         light
       />
-      <div className="grid md:grid-cols-5 gap-px bg-white/10 rounded-2xl overflow-hidden">
+      <div className="grid md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
         {MOVE_METHOD_STEPS.map((s, i) => (
           <motion.div
             key={s.title}
