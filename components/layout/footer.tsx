@@ -61,6 +61,7 @@ export function Footer() {
               {[
                 { label: "Our Approach", path: "/our-approach" },
                 { label: "About", path: "/about" },
+                { label: "Blog", path: "/blog" },
                 { label: "FAQ", path: "/faq" },
                 { label: "Contact", path: "/contact" },
                 { label: "Book Now", path: "/book" },
