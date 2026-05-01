@@ -46,7 +46,7 @@ export function ProviderPreview() {
               helping patients build long-term confidence in the way they move.
             </p>
           </div>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full max-w-full">
             <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow />
             <CTAButton href="/about" label="Learn More" variant="ghost" />
           </div>

@@ -25,13 +25,13 @@ export function HeroMedia({
   return (
     <section
       className={cn(
-        "relative w-full flex items-center overflow-hidden",
+        "relative w-full max-w-full flex items-center overflow-hidden",
         minHeight,
         className
       )}
     >
       {/* Media Container */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full max-w-full">
         {videoSrc ? (
           <video
             autoPlay
@@ -59,7 +59,7 @@ export function HeroMedia({
       {overlay && <div className={cn("absolute inset-0", overlayOpacity)} />}
 
       {/* Content */}
-      <div className="relative z-10 w-full">{children}</div>
+      <div className="relative z-10 w-full max-w-full overflow-x-hidden">{children}</div>
     </section>
   );
 }
