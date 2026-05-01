@@ -27,11 +27,16 @@
   }
 
   /* Global viewport overflow protection */
-  html,
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip !important;
+  }
+  
   body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip !important;
   }
 }
 
