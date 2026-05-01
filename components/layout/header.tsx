@@ -26,11 +26,11 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden ${
         scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full max-w-full overflow-x-hidden">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
@@ -112,9 +112,9 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t overflow-hidden"
+            className="lg:hidden bg-white border-t overflow-x-hidden"
           >
-            <nav className="px-6 py-6 space-y-1">
+            <nav className="px-6 py-6 space-y-1 w-full max-w-full">
               {NAV_ITEMS.map((item) => (
                 <div key={item.path}>
                   <Link
@@ -141,7 +141,7 @@ export function Header() {
               <div className="pt-4">
                 <Link
                   href="/book"
-                  className="block w-full py-3 px-6 bg-navy text-white text-center rounded-full font-semibold text-sm tracking-wide"
+                  className="block w-full py-3 px-6 bg-navy text-white text-center rounded-full font-semibold text-sm tracking-wide break-words"
                 >
                   Book Now
                 </Link>
