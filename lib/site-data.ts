@@ -9,7 +9,7 @@ export const SITE = {
   addressState: "KS",
   addressZip: "66211",
   domain: "movemuscleandjoint.com",
-  url: "https://movemuscleandjoint.com",
+  url: "https://www.movemuscleandjoint.com",
   janeBookingUrl: "https://mmj.janeapp.com/#staff_member/1",
   bookPath: "/book",
   lat: 38.93498055323811,

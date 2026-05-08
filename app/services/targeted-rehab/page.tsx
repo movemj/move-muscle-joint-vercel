@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Targeted Rehab / Movement Retraining in Overland Park | Move Muscle & Joint",
   description:
     "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
+  alternates: {
+    canonical: "/services/targeted-rehab",
+  },
   openGraph: {
     title: "Targeted Rehab / Movement Retraining in Overland Park | Move Muscle & Joint",
     description:

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Blog | Movement, Rehab & Longevity Insights | Move Muscle & Joint",
   description: "Expert insights on movement health, rehabilitation, and longevity from Dr. Joseph Hugunin at Move Muscle & Joint in Overland Park, KS.",
   alternates: {
-    canonical: `${SITE.url}/blog`,
+    canonical: "/blog",
   },
     openGraph: {
       title: "Blog | Move Muscle & Joint",

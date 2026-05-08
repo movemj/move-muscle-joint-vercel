@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
-import { SERVICES, CONDITIONS } from '@/lib/site-data';
+import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Plantar Fasciitis Treatment in Overland Park, KS",
   description: "Plantar fasciitis treatment in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and rehab.",
+  alternates: {
+    canonical: "/conditions/plantar-fasciitis",
+  },
+  openGraph: {
+    url: `${SITE.url}/conditions/plantar-fasciitis`,
+  },
 };
 
 export default function PlantarFasciitisPage() {
