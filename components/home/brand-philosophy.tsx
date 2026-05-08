@@ -39,7 +39,7 @@ export function BrandPhilosophy() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden"
+          className="relative"
         >
           <div className="aspect-[4/5] rounded-2xl relative">
             <Image
