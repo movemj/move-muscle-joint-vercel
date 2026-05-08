@@ -41,12 +41,12 @@ export function BrandPhilosophy() {
           transition={{ duration: 0.6 }}
           className="relative overflow-hidden"
         >
-          <div className="aspect-[4/5] rounded-2xl overflow-hidden relative">
+          <div className="aspect-[4/5] rounded-2xl relative">
             <Image
               src={IMAGES.handsOn}
               alt="Hands-on chiropractic care at Move Muscle & Joint"
               fill
-              className="object-cover"
+              className="object-cover rounded-2xl"
               sizes="(max-width: 1024px) 100vw, 50vw"
               loading="lazy"
             />
