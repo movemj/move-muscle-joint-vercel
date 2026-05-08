@@ -46,8 +46,7 @@ export function HomeHero() {
           >
             Movement-based care in Overland Park combining chiropractic care,
             myofascial release therapy, shockwave therapy, and targeted rehab
-            to help active adults reduce pain, improve strength, and move with
-            confidence again.
+            to improve how your body moves — not just where it hurts.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
