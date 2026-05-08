@@ -36,7 +36,7 @@ export function HomeHero() {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight"
           >
-            Move Better. Stay Strong. Live Without Hesitation.
+            Move Like Your Body Was Designed To.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -44,9 +44,10 @@ export function HomeHero() {
             transition={{ delay: 0.35 }}
             className="mt-6 text-lg text-white/75 leading-relaxed max-w-xl"
           >
-            Integrated chiropractic care, myofascial release therapy, shockwave
-            therapy, and targeted rehab designed to help you move with more
-            confidence in Overland Park.
+            Movement-based care in Overland Park combining chiropractic care,
+            myofascial release therapy, shockwave therapy, and targeted rehab
+            to help active adults reduce pain, improve strength, and move with
+            confidence again.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
