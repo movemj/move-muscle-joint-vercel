@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
-import { SERVICES, CONDITIONS } from '@/lib/site-data';
+import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Shoulder Pain Relief in Overland Park, KS | Chiropractic Care",
   description: "Shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+  alternates: {
+    canonical: "/conditions/shoulder-pain",
+  },
+  openGraph: {
+    url: `${SITE.url}/conditions/shoulder-pain`,
+  },
 };
 
 export default function ShoulderPainPage() {

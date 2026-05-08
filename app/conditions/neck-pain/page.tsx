@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Neck Pain Treatment in Overland Park, KS | Move Muscle & Joint",
   description:
     "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+  alternates: {
+    canonical: "/conditions/neck-pain",
+  },
   openGraph: {
     title: "Neck Pain Treatment in Overland Park, KS | Move Muscle & Joint",
     description:

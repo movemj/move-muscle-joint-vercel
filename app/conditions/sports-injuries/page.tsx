@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { ConditionPageTemplate } from '@/components/templates/condition-page-template';
-import { SERVICES, CONDITIONS } from '@/lib/site-data';
+import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: "Sports Injury Treatment in Overland Park, KS | Chiropractic Care",
   description: "Sports injury treatment in Overland Park, KS with chiropractic care, shockwave therapy, myofascial release therapy, and rehab.",
+  alternates: {
+    canonical: "/conditions/sports-injuries",
+  },
+  openGraph: {
+    url: `${SITE.url}/conditions/sports-injuries`,
+  },
 };
 
 export default function SportsInjuriesPage() {
