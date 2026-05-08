@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://movemuscleandjoint.com';
+  const baseUrl = 'https://www.movemuscleandjoint.com';
   
   // Static routes
   const staticRoutes = [
