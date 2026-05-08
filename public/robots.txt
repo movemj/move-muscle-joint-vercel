@@ -4,7 +4,7 @@ Allow: /blog/
 Allow: /blog/*
 
 # Sitemaps
-Sitemap: https://movemuscleandjoint.com/sitemap.xml
+Sitemap: https://www.movemuscleandjoint.com/sitemap.xml
 
 # Specific rules
 Disallow: /api/
