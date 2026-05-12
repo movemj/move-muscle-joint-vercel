@@ -50,7 +50,7 @@ export function OurApproachContent() {
         <SectionHeading tag="How We Evaluate" title="Understanding how your body moves." subtitle="Before any treatment begins, we assess your movement as a system — identifying restrictions, compensations, and loading imbalances that contribute to pain." align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-steel leading-relaxed">
           <p>Our assessment looks beyond the site of pain. We evaluate posture, gait, joint mobility, stability patterns, and functional movement to understand what's driving dysfunction — not just where it hurts.</p>
-          <p>This comprehensive evaluation forms the basis of every treatment plan. It allows us to integrate the right combination of chiropractic care, soft tissue work, shockwave therapy, and rehab for your specific needs.</p>
+          <p>This comprehensive evaluation forms the basis of every treatment plan. It allows us to integrate the right combination of chiropractic, soft tissue work, shockwave therapy, and rehab for your specific needs.</p>
         </div>
       </SectionWrapper>
 
@@ -59,7 +59,7 @@ export function OurApproachContent() {
       <SectionWrapper>
         <SectionHeading tag="How Services Work Together" title="One system, not a menu." subtitle="Each treatment modality at Move supports the others — creating a care experience that builds on itself over time." align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-steel leading-relaxed">
-          <p>Chiropractic care restores joint position and mobility. Myofascial release therapy addresses the soft tissue restrictions that limit movement quality. Shockwave therapy accelerates healing for stubborn conditions. And targeted rehab rebuilds the strength and motor control that prevent recurrence.</p>
+          <p>Chiropractic restores joint position and mobility. Myofascial release therapy addresses the soft tissue restrictions that limit movement quality. Shockwave therapy accelerates healing for stubborn conditions. And targeted rehab rebuilds the strength and motor control that prevent recurrence.</p>
           <p>Rather than choosing one modality, your treatment plan draws from all of them based on what your body needs at each stage of recovery. This is what makes the Move Method work — it's progressive, it's personalized, and it's designed to end well.</p>
         </div>
       </SectionWrapper>

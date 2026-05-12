@@ -3,16 +3,16 @@ import { ServicePageTemplate } from "@/components/templates/service-page-templat
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Chiropractic Care in Overland Park | Move Muscle & Joint",
+  title: "Chiropractor Overland Park KS | Move Muscle & Joint",
   description:
-    "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+    "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
   alternates: {
     canonical: "/services/chiropractic-care",
   },
   openGraph: {
-    title: "Chiropractic Care in Overland Park | Move Muscle & Joint",
+    title: "Chiropractor Overland Park KS | Move Muscle & Joint",
     description:
-      "Chiropractic care in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+      "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
     url: `${SITE.url}/services/chiropractic-care`,
   },
 };
@@ -20,22 +20,22 @@ export const metadata: Metadata = {
 export default function ChiropracticCarePage() {
   return (
       <ServicePageTemplate
-        title="Chiropractic Care"
-        h1="Chiropractic Care in Overland Park"
+        title="Chiropractic"
+        h1="Chiropractor Overland Park"
         heroImage={IMAGES.chiropractic}
-        breadcrumbLabel="Chiropractic Care"
+        breadcrumbLabel="Chiropractic"
         breadcrumbPath="/services/chiropractic-care"
       introText={
         <>
           <p>
-            Chiropractic care at Move Muscle & Joint in Overland Park goes beyond routine
+            Chiropractic at Move Muscle & Joint in Overland Park goes beyond routine
             adjustments. It&apos;s a personalized, assessment-driven approach to restoring joint
             function, improving mobility, and addressing the underlying movement dysfunctions that
             contribute to pain.
           </p>
           <p>
             Every session is tailored to how your body moves — not to a one-size-fits-all protocol.
-            Whether you&apos;re dealing with acute pain or chronic stiffness, chiropractic care at Move
+            Whether you&apos;re dealing with acute pain or chronic stiffness, chiropractic at Move
             is designed to work alongside myofascial release therapy and rehabilitation to create results
             that last.
           </p>
@@ -44,12 +44,12 @@ export default function ChiropracticCarePage() {
       whatItIs={
         <>
           <p>
-            Chiropractic care involves skilled manual therapy focused on the joints and spine. By
+            Chiropractic involves skilled manual therapy focused on the joints and spine. By
             restoring proper joint mechanics, chiropractic treatment helps reduce pain, improve
             range of motion, and support the body&apos;s ability to move and heal efficiently.
           </p>
           <p>
-            At Move, chiropractic care is never isolated. It&apos;s one tool inside a broader care model
+            At Move, chiropractic is never isolated. It&apos;s one tool inside a broader care model
             that includes myofascial release therapy, shockwave therapy, and targeted rehab — all
             coordinated around your specific needs and goals.
           </p>
@@ -58,14 +58,14 @@ export default function ChiropracticCarePage() {
       whoItHelps={
         <>
           <p>
-            Chiropractic care at Move is ideal for anyone experiencing joint pain, stiffness,
+            Chiropractic at Move is ideal for anyone experiencing joint pain, stiffness,
             restricted movement, or recurring musculoskeletal issues. Whether you&apos;re an active
             adult, a desk worker, or recovering from an injury, this service addresses the
             structural component of your movement dysfunction.
           </p>
           <p>
             Patients throughout Overland Park, Leawood, Prairie Village, and the Kansas City metro
-            come to Move for chiropractic care that&apos;s part of a smarter, more integrated approach.
+            come to Move for chiropractic that&apos;s part of a smarter, more integrated approach.
           </p>
         </>
       }
@@ -94,13 +94,13 @@ export default function ChiropracticCarePage() {
       moveMethodFit={
         <>
           <p>
-            Chiropractic care plays a key role across every stage of the Move Method. In the early
+            Chiropractic plays a key role across every stage of the Move Method. In the early
             stages, it helps reduce pain and restore alignment. As care progresses, it supports the
             foundation for movement retraining and strength building.
           </p>
           <p>
             Because it&apos;s integrated with myofascial release therapy and targeted rehab, chiropractic
-            care at Move delivers results that compound over time rather than requiring indefinite
+            at Move delivers results that compound over time rather than requiring indefinite
             maintenance.
           </p>
         </>
@@ -108,8 +108,8 @@ export default function ChiropracticCarePage() {
       relatedConditions={CONDITIONS}
       faqs={[
         {
-          q: "Is chiropractic care safe?",
-          a: "Yes. Chiropractic care is a well-established, evidence-supported treatment for musculoskeletal conditions. At Move, every session is based on thorough assessment and tailored to your body.",
+          q: "Is chiropractic safe?",
+          a: "Yes. Chiropractic is a well-established, evidence-supported treatment for musculoskeletal conditions. At Move, every session is based on thorough assessment and tailored to your body.",
         },
         {
           q: "Do I need a referral?",
@@ -121,7 +121,7 @@ export default function ChiropracticCarePage() {
         },
         {
           q: "Is chiropractic combined with other treatments?",
-          a: "Yes. At Move, chiropractic care is part of an integrated model that may include myofascial release therapy, shockwave therapy, and targeted rehab in the same visit.",
+          a: "Yes. At Move, chiropractic is part of an integrated model that may include myofascial release therapy, shockwave therapy, and targeted rehab in the same visit.",
         },
       ]}
     />
