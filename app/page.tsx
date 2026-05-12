@@ -15,8 +15,8 @@ import { schemas } from "@/lib/schemas";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Chiropractic Care in Overland Park, KS | Move Muscle & Joint",
-  description: "Chiropractic care, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS to help you move better.",
+  title: "Chiropractor Overland Park KS | Move Muscle & Joint",
+  description: "Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS to help you move better.",
   alternates: {
     canonical: "/",
   },

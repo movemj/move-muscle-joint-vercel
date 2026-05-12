@@ -17,7 +17,7 @@ export const schemas = {
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
-      'Movement-based chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, team physician for Sporting KC and University of Kansas Athletics.',
+      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, team physician for Sporting KC and University of Kansas Athletics.',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
@@ -71,7 +71,7 @@ export const schemas = {
     availableService: [
       {
         '@type': 'MedicalTherapy',
-        name: 'Chiropractic Care',
+        name: 'Chiropractic',
         url: `${SITE.url}/services/chiropractic-care`,
       },
       {
@@ -176,7 +176,7 @@ export const schemas = {
       { '@type': 'CollegeOrUniversity', name: 'Rockhurst University' },
     ],
     knowsAbout: [
-      'Chiropractic Care',
+      'Chiropractic',
       'Myofascial Release Therapy',
       'Shockwave Therapy',
       'Sports Chiropractic',
@@ -274,7 +274,7 @@ export const schemas = {
     name: SITE.name,
     url: SITE.url,
     description:
-      'Chiropractic care, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.',
+      'Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.',
     publisher: {
       '@type': 'Chiropractor',
       '@id': `${SITE.url}/#organization`,
