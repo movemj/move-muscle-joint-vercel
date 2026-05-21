@@ -51,6 +51,7 @@ const nextConfig: NextConfig = {
       { source: "/systems/biomechanical-system", destination: "/our-approach", permanent: true },
 
       // Blog redirects
+      { source: "/blog/why-a-movement-assessment-is-the-first-step-to-lasting-relief", destination: "/blog/movement-assessment-importance", permanent: true },
       { source: "/blog/plantar-fasciitis-heel-pain-treatment-overland-park", destination: "/conditions/plantar-fasciitis", permanent: true },
       { source: "/blog/sciatica-relief-exercises", destination: "/conditions/sciatica", permanent: true },
       { source: "/blog/headaches-migraines-treatment-overland-park", destination: "/conditions/headaches-tension", permanent: true },
