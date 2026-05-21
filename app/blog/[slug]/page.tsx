@@ -299,14 +299,14 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Featured Image */}
       {post.ogImage && (
         <div className="relative -mt-8 mb-12 max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-xl">
+          <div className="relative rounded-lg overflow-hidden shadow-xl">
             <Image
               src={post.ogImage}
               alt={post.title}
-              fill
-              className="object-cover"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
               priority
-              sizes="(max-width: 1024px) 100vw, 896px"
             />
           </div>
         </div>
