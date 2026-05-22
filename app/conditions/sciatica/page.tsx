@@ -3,7 +3,7 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Sciatica Treatment in Overland Park, KS | Move Muscle & Joint",
+  title: "Sciatica Treatment in Overland Park",
   description:
     "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
   alternates: {

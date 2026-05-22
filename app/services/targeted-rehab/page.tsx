@@ -3,14 +3,14 @@ import { ServicePageTemplate } from "@/components/templates/service-page-templat
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Targeted Rehab / Movement Retraining in Overland Park | Move Muscle & Joint",
+  title: "Targeted Rehab & Movement Retraining",
   description:
     "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
   alternates: {
     canonical: "/services/targeted-rehab",
   },
   openGraph: {
-    title: "Targeted Rehab / Movement Retraining in Overland Park | Move Muscle & Joint",
+    title: "Targeted Rehab & Movement Retraining",
     description:
       "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
     url: `${SITE.url}/services/targeted-rehab`,

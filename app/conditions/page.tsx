@@ -3,13 +3,13 @@ import { ConditionsOverviewContent } from "./conditions-overview-content";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Conditions We Treat in Overland Park | Move Muscle & Joint",
+  title: "Conditions We Treat",
   description: "Find treatment for sciatica, neck pain, low back pain, knee pain, hip pain, headaches, plantar fasciitis, and sports injuries in Overland Park.",
   alternates: {
     canonical: "/conditions",
   },
   openGraph: {
-    title: "Conditions We Treat in Overland Park | Move Muscle & Joint",
+    title: "Conditions We Treat",
     description: "Find treatment for sciatica, neck pain, low back pain, knee pain, hip pain, headaches, plantar fasciitis, and sports injuries.",
     url: `${SITE.url}/conditions`,
   },

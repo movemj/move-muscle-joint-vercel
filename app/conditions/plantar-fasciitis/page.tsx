@@ -3,7 +3,7 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Plantar Fasciitis Treatment in Overland Park, KS",
+  title: "Plantar Fasciitis Treatment",
   description: "Plantar fasciitis treatment in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and rehab.",
   alternates: {
     canonical: "/conditions/plantar-fasciitis",
