@@ -3,14 +3,14 @@ import { ServicePageTemplate } from "@/components/templates/service-page-templat
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Chiropractor Overland Park KS | Move Muscle & Joint",
+  title: "Chiropractor in Overland Park",
   description:
     "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
   alternates: {
     canonical: "/services/chiropractic-care",
   },
   openGraph: {
-    title: "Chiropractor Overland Park KS | Move Muscle & Joint",
+    title: "Chiropractor in Overland Park",
     description:
       "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
     url: `${SITE.url}/services/chiropractic-care`,

@@ -3,7 +3,7 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Tension Headache Treatment in Overland Park, KS",
+  title: "Tension Headache Treatment",
   description: "Tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and rehab.",
   alternates: {
     canonical: "/conditions/headaches-tension",

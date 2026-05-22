@@ -13,13 +13,13 @@ import { SITE, IMAGES } from "@/lib/site-data";
 import { Calendar, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Movement, Rehab & Longevity Insights | Move Muscle & Joint",
+  title: "Movement & Rehab Blog",
   description: "Expert insights on movement health, rehabilitation, and longevity from Dr. Joseph Hugunin at Move Muscle & Joint in Overland Park, KS.",
   alternates: {
     canonical: "/blog",
   },
     openGraph: {
-      title: "Blog | Move Muscle & Joint",
+      title: "Movement & Rehab Blog",
       description: "Expert insights on movement health, rehabilitation, and longevity from Dr. Joseph Hugunin.",
     url: `${SITE.url}/blog`,
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Move Muscle & Joint",
+    title: "Movement & Rehab Blog",
     description: "Expert insights on movement health, rehabilitation, and longevity.",
     images: [`${SITE.url}${IMAGES.assessment}`],
     creator: "@movemuscleandjoint",

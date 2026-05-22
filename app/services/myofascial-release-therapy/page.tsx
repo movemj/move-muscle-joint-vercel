@@ -3,14 +3,14 @@ import { ServicePageTemplate } from "@/components/templates/service-page-templat
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Myofascial Release Therapy in Overland Park | Move Muscle & Joint",
+  title: "Myofascial Release Therapy",
   description:
     "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park.",
   alternates: {
     canonical: "/services/myofascial-release-therapy",
   },
   openGraph: {
-    title: "Myofascial Release Therapy in Overland Park | Move Muscle & Joint",
+    title: "Myofascial Release Therapy",
     description:
       "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work.",
     url: `${SITE.url}/services/myofascial-release-therapy`,
