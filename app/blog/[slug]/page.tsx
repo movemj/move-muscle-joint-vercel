@@ -169,15 +169,6 @@ const mdxComponents = {
   em: (props: any) => <em className="italic" {...props} />,
   // Custom MDX components for internal linking
   ServiceLink,
-  Link: ({ href, children, ...props }: any) => (
-    <Link
-      href={href}
-      className="text-navy font-medium hover:text-navy/70 underline underline-offset-2 transition-colors"
-      {...props}
-    >
-      {children}
-    </Link>
-  ),
 };
 
 export default async function BlogPostPage({ params }: Props) {
