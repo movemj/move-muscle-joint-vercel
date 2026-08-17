@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SITE, SERVICES, CONDITIONS } from "@/lib/site-data";
 import { MapPin, Phone } from "lucide-react";
@@ -9,9 +10,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 w-full max-w-full">
           {/* Brand */}
           <div className="lg:col-span-1 overflow-hidden">
-            <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-bold tracking-tight break-words">MOVE</span>
-              <span className="text-xs font-medium tracking-widest uppercase text-white/60 ml-2 break-words">Muscle & Joint</span>
+            <Link href="/" className="inline-block mb-4" aria-label="Move Muscle & Joint home">
+              <Image
+                src="/images/move-logo-white.webp"
+                alt="Move Muscle & Joint"
+                width={260}
+                height={104}
+                className="h-16 w-auto max-w-full object-contain"
+              />
             </Link>
             <p className="text-sm text-white/50 italic mb-6 break-words">{SITE.tagline}</p>
             <div className="space-y-3 text-sm text-white/70 overflow-hidden">
