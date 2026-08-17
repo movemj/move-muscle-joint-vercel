@@ -19,8 +19,9 @@ export function HomeHero() {
       imageSrc={IMAGES.hero}
       alt="Movement assessment and rehabilitation at Move Muscle & Joint in Overland Park"
       overlayOpacity="bg-gradient-to-r from-charcoal/80 via-charcoal/60 to-charcoal/30"
+      minHeight="min-h-[720px] sm:min-h-[780px] lg:min-h-[90vh]"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-28 sm:py-32 lg:py-0">
         <div className="max-w-2xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +35,7 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight text-balance"
           >
             Move Like Your Body Was Designed To.
           </motion.p>

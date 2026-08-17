@@ -9,18 +9,9 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    setMounted(true);
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -29,9 +20,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full overflow-x-hidden ${
-        !mounted ? "bg-transparent" : scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
+      className="absolute top-0 left-0 right-0 z-[100] isolate pointer-events-auto w-full max-w-full overflow-x-hidden bg-transparent"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full max-w-full overflow-x-hidden">
         <div className="flex items-center justify-between h-20">
@@ -42,7 +31,7 @@ export function Header() {
               alt="Move Muscle & Joint"
               width={220}
               height={88}
-              className={`h-12 w-auto object-contain transition-[filter] ${scrolled || mobileOpen ? "brightness-0" : ""}`}
+              className="h-12 w-auto object-contain"
               priority
             />
           </Link>
@@ -58,25 +47,23 @@ export function Header() {
               >
                 <Link
                   href={item.path}
-                  className={`text-sm font-medium tracking-wide transition-colors flex items-center gap-1 ${
-                    !mounted ? "text-white/90" : scrolled ? "text-charcoal hover:text-navy" : "text-white/90 hover:text-white"
-                  } ${pathname === item.path ? (!mounted ? "text-white" : scrolled ? "text-navy" : "text-white") : ""}`}
+                  className={`text-sm font-medium tracking-wide transition-colors flex items-center gap-1 text-white/90 hover:text-white ${pathname === item.path ? "text-white" : ""}`}
                 >
                   {item.label}
                   {item.children && <ChevronDown className="w-3.5 h-3.5" />}
                 </Link>
                 {item.children && openDropdown === item.path && (
-                  <div className="absolute top-full left-0 pt-2">
+                  <div className="absolute top-full left-0 pt-3 z-50">
                     <motion.div
                       initial={{ opacity: 0, y: 4 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="bg-white rounded-lg shadow-xl border border-border/50 py-2 min-w-[260px]"
+                      className="bg-charcoal rounded-lg shadow-xl border border-white/15 py-2 min-w-[280px] w-max"
                     >
                       {item.children.map((child) => (
                         <Link
                           key={child.path}
                           href={child.path}
-                          className="block px-5 py-2.5 text-sm text-charcoal hover:text-navy hover:bg-secondary/50 transition-colors"
+                          className="block px-5 py-2.5 text-sm text-white/90 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap"
                         >
                           {child.label}
                         </Link>
@@ -92,17 +79,13 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/book"
-              className={`hidden lg:inline-flex px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all ${
-                !mounted ? "bg-white text-navy hover:bg-white/90" : scrolled
-                  ? "bg-navy text-white hover:bg-navy/90"
-                  : "bg-white text-navy hover:bg-white/90"
-              }`}
+              className="hidden lg:inline-flex px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all bg-white text-navy hover:bg-white/90"
             >
               Book Now
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`lg:hidden p-2 transition-colors ${!mounted ? "text-white" : scrolled ? "text-charcoal" : "text-white"}`}
+              className="lg:hidden p-2 text-white transition-colors"
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -117,7 +100,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t overflow-x-hidden"
+            className="lg:hidden bg-charcoal/95 backdrop-blur-md border-t border-white/10 overflow-x-hidden"
           >
             <nav className="px-6 py-6 space-y-1 w-full max-w-full">
               {NAV_ITEMS.map((item) => (
@@ -127,7 +110,7 @@ export function Header() {
                       <div className="flex items-center justify-between">
                         <Link
                           href={item.path}
-                          className="block py-3 text-base font-medium text-charcoal hover:text-navy transition-colors"
+                          className="block py-3 text-base font-medium text-white hover:text-softblue transition-colors"
                         >
                           {item.label}
                         </Link>
@@ -137,7 +120,7 @@ export function Header() {
                           aria-controls={`${item.path.slice(1).replaceAll("/", "-")}-mobile-submenu`}
                           aria-label={`Show ${item.label} submenu`}
                           onClick={() => setOpenDropdown(openDropdown === item.path ? null : item.path)}
-                          className="p-3 text-charcoal hover:text-navy transition-colors"
+                          className="p-3 text-white hover:text-softblue transition-colors"
                         >
                           <ChevronDown
                             className={`h-5 w-5 transition-transform ${openDropdown === item.path ? "rotate-180" : ""}`}
@@ -157,7 +140,7 @@ export function Header() {
                               <Link
                                 key={child.path}
                                 href={child.path}
-                                className="block py-2 text-sm text-steel hover:text-navy transition-colors"
+                                className="block py-2 text-sm text-white/70 hover:text-white transition-colors"
                               >
                                 {child.label}
                               </Link>
@@ -169,7 +152,7 @@ export function Header() {
                   ) : (
                     <Link
                       href={item.path}
-                      className="block py-3 text-base font-medium text-charcoal hover:text-navy transition-colors"
+                      className="block py-3 text-base font-medium text-white hover:text-softblue transition-colors"
                     >
                       {item.label}
                     </Link>
