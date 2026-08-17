@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/site-data";
@@ -35,13 +36,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full max-w-full overflow-x-hidden">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className={`text-xl font-bold tracking-tight transition-colors ${!mounted ? "text-white" : scrolled ? "text-navy" : "text-white"}`}>
-              MOVE
-            </span>
-            <span className={`text-xs font-medium tracking-widest uppercase transition-colors ${!mounted ? "text-white/70" : scrolled ? "text-steel" : "text-white/70"}`}>
-              Muscle & Joint
-            </span>
+          <Link href="/" className="flex items-center group" aria-label="Move Muscle & Joint home">
+            <Image
+              src="/images/move-logo-white.webp"
+              alt="Move Muscle & Joint"
+              width={220}
+              height={88}
+              className={`h-12 w-auto object-contain transition-[filter] ${scrolled || mobileOpen ? "brightness-0" : ""}`}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
