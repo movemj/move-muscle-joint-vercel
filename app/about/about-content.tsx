@@ -41,15 +41,15 @@ export function AboutContent() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper bg="bg-secondary">
+      <SectionWrapper bg="bg-secondary" padding="py-14 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0 relative">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0 relative">
               <Image
                 src={IMAGES.provider}
                 alt="Dr. Joseph Hugunin"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 400px"
                 loading="lazy"
               />

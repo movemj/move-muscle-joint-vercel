@@ -167,7 +167,7 @@ export const schemas = {
     honorificSuffix: 'DC',
     jobTitle: 'Chiropractor',
     description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team physician for Sporting KC and care provider for University of Kansas Athletics.',
-    image: `${SITE.url}/images/provider.webp`,
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2016%2C%202026%2C%2007_30_47%20PM-fYJYlrqEHJRDcGk4IurlfgtlpvlAwi.png',
     url: `${SITE.url}/about`,
     worksFor: {
       '@id': `${SITE.url}/#organization`,

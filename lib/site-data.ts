@@ -75,7 +75,7 @@ export const IMAGES = {
   myofascial: "/images/myofascial.webp",
   shockwave: "/images/shockwave.webp",
   rehab: "/images/rehab.webp",
-  provider: "/images/provider.webp",
+  provider: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2016%2C%202026%2C%2007_30_47%20PM-fYJYlrqEHJRDcGk4IurlfgtlpvlAwi.png",
   assessment: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blog%20Hero%20for%20wellness%20advice%20Move%20Muscle%20%26%20Joint-seHkPjzPLHVq5lr6gOvoPzkdrFxxmd.webp",
   lifestyle: "/images/lifestyle.webp",
   clinic: "/images/clinic.webp",
