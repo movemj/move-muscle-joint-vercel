@@ -48,7 +48,7 @@ export function HeroMedia({
             src={imageSrc}
             alt={alt}
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
             sizes="100vw"
           />
