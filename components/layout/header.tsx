@@ -122,24 +122,57 @@ export function Header() {
             <nav className="px-6 py-6 space-y-1 w-full max-w-full">
               {NAV_ITEMS.map((item) => (
                 <div key={item.path}>
-                  <Link
-                    href={item.path}
-                    className="block py-3 text-base font-medium text-charcoal hover:text-navy transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="pl-4 space-y-1">
-                      {item.children.map((child) => (
+                  {item.children ? (
+                    <>
+                      <div className="flex items-center justify-between">
                         <Link
-                          key={child.path}
-                          href={child.path}
-                          className="block py-2 text-sm text-steel hover:text-navy transition-colors"
+                          href={item.path}
+                          className="block py-3 text-base font-medium text-charcoal hover:text-navy transition-colors"
                         >
-                          {child.label}
+                          {item.label}
                         </Link>
-                      ))}
-                    </div>
+                        <button
+                          type="button"
+                          aria-expanded={openDropdown === item.path}
+                          aria-controls={`${item.path.slice(1).replaceAll("/", "-")}-mobile-submenu`}
+                          aria-label={`Show ${item.label} submenu`}
+                          onClick={() => setOpenDropdown(openDropdown === item.path ? null : item.path)}
+                          className="p-3 text-charcoal hover:text-navy transition-colors"
+                        >
+                          <ChevronDown
+                            className={`h-5 w-5 transition-transform ${openDropdown === item.path ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                      </div>
+                      <AnimatePresence initial={false}>
+                        {openDropdown === item.path && (
+                          <motion.div
+                            id={`${item.path.slice(1).replaceAll("/", "-")}-mobile-submenu`}
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="pl-4 space-y-1 overflow-hidden"
+                          >
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.path}
+                                href={child.path}
+                                className="block py-2 text-sm text-steel hover:text-navy transition-colors"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      href={item.path}
+                      className="block py-3 text-base font-medium text-charcoal hover:text-navy transition-colors"
+                    >
+                      {item.label}
+                    </Link>
                   )}
                 </div>
               ))}
