@@ -20,7 +20,7 @@ export function HeroMedia({
   overlayOpacity = "bg-charcoal/50",
   children,
   className = "",
-  minHeight = "min-h-[90vh]",
+  minHeight = "min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]",
 }: HeroMediaProps) {
   return (
     <section

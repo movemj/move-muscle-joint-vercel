@@ -10,7 +10,7 @@ export function HomeHero() {
       imageSrc={IMAGES.hero}
       alt="Movement assessment and rehabilitation at Move Muscle & Joint in Overland Park"
       overlayOpacity="bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-charcoal/15"
-      minHeight="min-h-[640px] sm:min-h-[700px] lg:min-h-[calc(100vh-5rem)]"
+      minHeight="min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]"
     >
       <div className="mx-auto flex w-full max-w-7xl items-center px-6 py-24 sm:px-8 sm:py-28 lg:min-h-[calc(100vh-5rem)] lg:px-8 lg:py-16">
         <div className="max-w-xl">
@@ -26,7 +26,7 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="max-w-lg text-4xl font-bold leading-[1.06] tracking-tight text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl"
+            className="max-w-lg text-4xl font-bold leading-[1.06] tracking-tight text-white text-balance sm:text-5xl md:text-6xl lg:text-6xl"
           >
             Move Like Your Body Was Designed To.
           </motion.h1>
@@ -46,8 +46,8 @@ export function HomeHero() {
             transition={{ delay: 0.5 }}
             className="mt-7 flex flex-wrap gap-3"
           >
-            <CTAButton href="/book" label="Book Now" variant="white" size="sm" showArrow />
-            <CTAButton href="/our-approach" label="Our Approach" variant="outlineWhite" size="sm" />
+            <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow />
+            <CTAButton href="/our-approach" label="Our Approach" variant="outlineWhite" size="lg" />
           </motion.div>
         </div>
       </div>

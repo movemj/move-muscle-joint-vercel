@@ -60,7 +60,7 @@ export default function BlogPage() {
         imageSrc={IMAGES.assessment}
         alt="Movement assessment and rehabilitation insights"
         overlayOpacity="bg-gradient-to-r from-charcoal/80 via-charcoal/60 to-charcoal/30"
-        minHeight="min-h-[60vh]"
+        minHeight="min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
           <div className="max-w-2xl">
