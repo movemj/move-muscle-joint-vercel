@@ -68,7 +68,7 @@ export function ConditionPageTemplate({
     <>
       <JsonLdSchema data={medicalConditionSchema} />
       {faqs && faqs.length > 0 && <JsonLdSchema data={schemas.faqPage(faqSchema)} />}
-      <section className="bg-charcoal pt-28 pb-16">
+      <section className="flex min-h-[calc(100svh-5rem)] items-center bg-charcoal py-28 sm:min-h-[calc(100vh-5rem)] sm:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Breadcrumbs
             items={[
@@ -79,7 +79,7 @@ export function ConditionPageTemplate({
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight max-w-3xl mt-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-3xl mt-4"
           >
             {h1}
           </motion.h1>

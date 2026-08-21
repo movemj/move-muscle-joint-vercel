@@ -18,7 +18,7 @@ export function AboutContent() {
   return (
     <>
       <JsonLdSchema data={schemas.person()} />
-      <HeroMedia imageSrc={IMAGES.clinic} alt="Move Muscle & Joint clinic" minHeight="min-h-[60vh]" overlayOpacity="bg-charcoal/60">
+      <HeroMedia imageSrc={IMAGES.clinic} alt="Move Muscle & Joint clinic" minHeight="min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]" overlayOpacity="bg-charcoal/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs items={[{ label: "About", path: "/about" }]} />
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-3xl">

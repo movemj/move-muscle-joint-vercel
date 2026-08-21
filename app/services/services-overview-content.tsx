@@ -38,7 +38,7 @@ const faqs = [
 export function ServicesOverviewContent() {
   return (
     <>
-      <HeroMedia imageSrc={IMAGES.handsOn} alt="Integrated services at Move" minHeight="min-h-[60vh]" overlayOpacity="bg-charcoal/60">
+      <HeroMedia imageSrc={IMAGES.handsOn} alt="Integrated services at Move" minHeight="min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]" overlayOpacity="bg-charcoal/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs items={[{ label: "Services", path: "/services" }]} />
           <motion.h1
