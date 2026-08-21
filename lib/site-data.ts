@@ -70,7 +70,7 @@ export const NAV_ITEMS = [
 ];
 
 export const IMAGES = {
-  hero: "/images/movement-rehab.webp",
+  hero: "/images/hero.webp",
   chiropractic: "/images/chiropractic.webp",
   myofascial: "/images/myofascial.webp",
   shockwave: "/images/shockwave.webp",

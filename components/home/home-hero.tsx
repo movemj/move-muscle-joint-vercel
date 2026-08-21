@@ -17,7 +17,7 @@ export function HomeHero() {
   return (
     <HeroMedia
       imageSrc={IMAGES.hero}
-      alt="Woman performing a mobility exercise during movement rehabilitation at Move Muscle & Joint in Overland Park"
+      alt="Movement assessment and rehabilitation at Move Muscle & Joint in Overland Park"
       overlayOpacity="bg-gradient-to-r from-charcoal/80 via-charcoal/60 to-charcoal/30"
       minHeight="min-h-[720px] sm:min-h-[780px] lg:min-h-[90vh]"
     >
