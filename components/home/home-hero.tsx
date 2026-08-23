@@ -46,21 +46,13 @@ export function HomeHero() {
             transition={{ delay: 0.5 }}
             className="mt-7 flex flex-wrap gap-3"
           >
-            <CTAButton
-              href="/book"
-              label="Book Now"
-              variant="white"
-              size="lg"
-              showArrow
-              className="w-40 justify-center"
-            />
+            <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow />
             <CTAButton
               href="https://us.fullscript.com/welcome/move"
               label="Supplements"
               variant="outlineWhite"
               size="lg"
               external
-              className="w-40 justify-center"
             />
           </motion.div>
         </div>
