@@ -47,7 +47,13 @@ export function HomeHero() {
             className="mt-7 flex flex-wrap gap-3"
           >
             <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow />
-            <CTAButton href="/our-approach" label="Our Approach" variant="outlineWhite" size="lg" />
+            <CTAButton
+              href="https://us.fullscript.com/welcome/move"
+              label="Supplements"
+              variant="outlineWhite"
+              size="lg"
+              external
+            />
           </motion.div>
         </div>
       </div>
