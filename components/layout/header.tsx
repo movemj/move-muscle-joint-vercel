@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/site-data";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
@@ -38,11 +38,14 @@ export function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item) => {
+              const hasDropdown = Boolean(item.children && !["Services", "Conditions"].includes(item.label));
+
+              return (
               <div
                 key={item.path}
                 className="relative group"
-                onMouseEnter={() => item.children && setOpenDropdown(item.path)}
+                onMouseEnter={() => hasDropdown && setOpenDropdown(item.path)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <Link
@@ -50,16 +53,15 @@ export function Header() {
                   className={`text-sm font-medium tracking-wide transition-colors flex items-center gap-1 text-white/90 hover:text-white ${pathname === item.path ? "text-white" : ""}`}
                 >
                   {item.label}
-                  {item.children && <ChevronDown className="w-3.5 h-3.5" />}
                 </Link>
-                {item.children && openDropdown === item.path && (
+                {hasDropdown && openDropdown === item.path && (
                   <div className="absolute top-full left-0 pt-3 z-50">
                     <motion.div
                       initial={{ opacity: 0, y: 4 }}
                       animate={{ opacity: 1, y: 0 }}
                       className="bg-charcoal rounded-lg shadow-xl border border-white/15 py-2 min-w-[280px] w-max"
                     >
-                      {item.children.map((child) => (
+                      {item.children?.map((child) => (
                         <Link
                           key={child.path}
                           href={child.path}
@@ -72,7 +74,8 @@ export function Header() {
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
           </nav>
 
           {/* CTA + Mobile Toggle */}
@@ -105,58 +108,12 @@ export function Header() {
             <nav className="px-6 py-6 space-y-1 w-full max-w-full">
               {NAV_ITEMS.map((item) => (
                 <div key={item.path}>
-                  {item.children ? (
-                    <>
-                      <div className="flex items-center justify-between">
-                        <Link
-                          href={item.path}
-                          className="block py-3 text-base font-medium text-white hover:text-softblue transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                        <button
-                          type="button"
-                          aria-expanded={openDropdown === item.path}
-                          aria-controls={`${item.path.slice(1).replaceAll("/", "-")}-mobile-submenu`}
-                          aria-label={`Show ${item.label} submenu`}
-                          onClick={() => setOpenDropdown(openDropdown === item.path ? null : item.path)}
-                          className="p-3 text-white hover:text-softblue transition-colors"
-                        >
-                          <ChevronDown
-                            className={`h-5 w-5 transition-transform ${openDropdown === item.path ? "rotate-180" : ""}`}
-                          />
-                        </button>
-                      </div>
-                      <AnimatePresence initial={false}>
-                        {openDropdown === item.path && (
-                          <motion.div
-                            id={`${item.path.slice(1).replaceAll("/", "-")}-mobile-submenu`}
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="pl-4 space-y-1 overflow-hidden"
-                          >
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.path}
-                                href={child.path}
-                                className="block py-2 text-sm text-white/70 hover:text-white transition-colors"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
-                    <Link
-                      href={item.path}
-                      className="block py-3 text-base font-medium text-white hover:text-softblue transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  )}
+                  <Link
+                    href={item.path}
+                    className="block py-3 text-base font-medium text-white hover:text-softblue transition-colors"
+                  >
+                    {item.label}
+                  </Link>
                 </div>
               ))}
               <div className="pt-4">
