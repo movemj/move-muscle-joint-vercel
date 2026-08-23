@@ -10,6 +10,7 @@ interface HeroMediaProps {
   children: React.ReactNode;
   className?: string;
   minHeight?: string;
+  mobileImagePosition?: string;
 }
 
 export function HeroMedia({
@@ -20,7 +21,8 @@ export function HeroMedia({
   overlayOpacity = "bg-charcoal/50",
   children,
   className = "",
-  minHeight = "min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]",
+  minHeight = "min-h-svh sm:min-h-screen",
+  mobileImagePosition = "object-center",
 }: HeroMediaProps) {
   return (
     <section
@@ -48,7 +50,7 @@ export function HeroMedia({
             src={imageSrc}
             alt={alt}
             fill
-            className="object-cover object-center"
+            className={cn("object-cover", mobileImagePosition, "sm:object-center")}
             priority
             sizes="100vw"
           />

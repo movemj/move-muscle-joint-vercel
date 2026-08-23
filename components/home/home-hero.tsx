@@ -10,7 +10,7 @@ export function HomeHero() {
       imageSrc={IMAGES.hero}
       alt="Movement assessment and rehabilitation at Move Muscle & Joint in Overland Park"
       overlayOpacity="bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-charcoal/15"
-      minHeight="min-h-[calc(100svh-5rem)] sm:min-h-[calc(100vh-5rem)]"
+      mobileImagePosition="object-[58%_center]"
     >
       <div className="mx-auto flex w-full max-w-7xl items-center px-6 py-24 sm:px-8 sm:py-28 lg:min-h-[calc(100vh-5rem)] lg:px-8 lg:py-16">
         <div className="max-w-xl">
