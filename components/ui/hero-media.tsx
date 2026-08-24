@@ -21,7 +21,7 @@ export function HeroMedia({
   overlayOpacity = "bg-charcoal/50",
   children,
   className = "",
-  minHeight = "min-h-svh sm:min-h-screen",
+  minHeight = "min-h-[100dvh] sm:min-h-screen",
   mobileImagePosition = "object-center",
 }: HeroMediaProps) {
   return (
