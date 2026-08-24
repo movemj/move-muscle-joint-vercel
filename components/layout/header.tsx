@@ -29,9 +29,9 @@ export function Header() {
             <Image
               src="/images/move-logo-white.webp"
               alt="Move Muscle & Joint"
-              width={220}
-              height={88}
-              className="h-12 w-auto object-contain"
+              width={260}
+              height={104}
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>

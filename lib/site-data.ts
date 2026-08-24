@@ -59,14 +59,11 @@ export const MOVE_METHOD_STEPS = [
 ];
 
 export const NAV_ITEMS = [
-  { label: "Home", path: "/" },
   { label: "Our Approach", path: "/our-approach" },
+  { label: "About", path: "/about" },
   { label: "Services", path: "/services", children: SERVICES.map(s => ({ label: s.title, path: s.slug })) },
   { label: "Conditions", path: "/conditions", children: CONDITIONS.map(c => ({ label: c.title, path: c.slug })) },
-  { label: "About", path: "/about" },
-  { label: "Blog", path: "/blog" },
   { label: "FAQ", path: "/faq" },
-  { label: "Contact", path: "/contact" },
 ];
 
 export const IMAGES = {
