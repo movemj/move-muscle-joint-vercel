@@ -11,6 +11,7 @@ export const SITE = {
   domain: "movemuscleandjoint.com",
   url: "https://www.movemuscleandjoint.com",
   janeBookingUrl: "https://mmj.janeapp.com/#staff_member/1",
+  newPatientOfferBookingUrl: "https://mmj.janeapp.com/#/staff_member/1/treatment/6",
   bookPath: "/book",
   lat: 38.93498055323811,
   lng: -94.635725381436,
