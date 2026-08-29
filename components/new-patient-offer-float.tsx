@@ -18,14 +18,14 @@ export function NewPatientOfferFloat() {
   return (
     <Link
       href="/new-patient-offer"
-      aria-label="View the $49 New Patient Movement Assessment offer"
+      aria-label="Claim the $49 Initial Move Session offer"
       className="fixed bottom-7 right-7 z-40 hidden min-h-[64px] w-[220px] flex-col justify-center rounded-md bg-navy px-5 py-3 text-white shadow-[0_8px_24px_rgba(25,29,36,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-navy/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 md:flex"
     >
       <span className="text-[11px] font-semibold uppercase tracking-[0.16em]">
         New Patient Offer
       </span>
       <span className="text-sm font-semibold tracking-wide">
-        $49 Movement Assessment <span aria-hidden="true">→</span>
+        $49 Initial Move Session: Evaluation and Treatment <span aria-hidden="true">→</span>
       </span>
     </Link>
   );

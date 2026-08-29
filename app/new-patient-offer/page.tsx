@@ -32,10 +32,10 @@ export default function NewPatientOfferPage() {
             <Breadcrumbs items={[{ label: "New Patient Offer", path: "/new-patient-offer" }]} />
             <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-accent">New Patient Offer</p>
             <h1 className="mt-5 max-w-xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Start With Clarity.</h1>
-            <p className="mt-6 max-w-lg text-xl font-semibold text-white">$49 New Patient Movement Assessment</p>
+            <p className="mt-6 max-w-lg text-xl font-semibold text-white">$49 Initial Move Session: Evaluation and Treatment</p>
             <p className="mt-5 max-w-xl leading-relaxed text-steel">Your first visit is built to understand how your body moves, identify what is limiting you, and determine the right path forward — not simply treat where it hurts.</p>
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-              <CTAButton href={offerBookingUrl} label="Claim the $49 New Patient Offer" variant="white" size="lg" showArrow external />
+              <CTAButton href={offerBookingUrl} label="Claim Offer" variant="white" size="lg" showArrow external />
               <span className="text-sm text-steel">New patients only.</span>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function NewPatientOfferPage() {
         <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">Ready to Move Better?</h2>
         <p className="mx-auto mt-5 max-w-xl leading-relaxed text-white/75">Start with a clear assessment and a plan built around how your body actually moves.</p>
         <div className="mt-8 flex flex-col items-center gap-3">
-          <CTAButton href={offerBookingUrl} label="Claim the $49 New Patient Offer" variant="white" size="lg" showArrow external />
+          <CTAButton href={offerBookingUrl} label="Claim Offer" variant="white" size="lg" showArrow external />
           <span className="text-sm text-white/65">New patients only.</span>
         </div>
       </SectionWrapper>
