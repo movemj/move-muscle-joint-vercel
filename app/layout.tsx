@@ -52,12 +52,21 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     title: "Chiropractor Overland Park KS | Move Muscle & Joint",
-    description: "Experienced chiropractor in Overland Park KS offering integrated chiropractic care, myofascial release, shockwave therapy, and gym-based rehab. Move better and stay strong near 119th St & Roe Ave. Book your first visit today.",
+    description: "Movement-based care in Overland Park combining chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab.",
+    images: [
+      {
+        url: "/move-muscle-joint-overland-park-ks-og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Move Muscle & Joint - Movement-Based Chiropractic Care in Overland Park, Kansas",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chiropractor Overland Park KS | Move Muscle & Joint",
-    description: "Experienced chiropractor in Overland Park KS offering integrated chiropractic care, myofascial release, shockwave therapy, and gym-based rehab. Move better and stay strong near 119th St & Roe Ave. Book your first visit today.",
+    description: "Movement-based care in Overland Park combining chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab.",
+    images: ["/move-muscle-joint-overland-park-ks-og.webp"],
   },
   robots: {
     index: true,
