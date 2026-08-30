@@ -35,7 +35,7 @@ const faqs: Array<[string, string | [string, string]]> = [
 
 export default function NewPatientOfferPage() {
   return (
-    <main className="bg-white pb-16 md:pb-0">
+    <main className="bg-white pb-28 md:pb-0">
       <section className="bg-charcoal text-white">
         <div className="mx-auto grid max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
           <div className="flex flex-col justify-center px-6 pb-16 pt-32 sm:px-8 lg:px-16 lg:py-36">
@@ -59,7 +59,7 @@ export default function NewPatientOfferPage() {
       </section>
 
       <div className="overflow-hidden border-b border-border bg-light-gray">
-        <div className="mx-auto flex max-w-7xl min-w-max items-center gap-8 px-6 py-5 text-xs font-semibold uppercase tracking-[0.14em] text-muted sm:justify-between sm:gap-4 sm:px-8 lg:px-16">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 py-5 text-center text-xs font-semibold uppercase tracking-[0.14em] text-muted sm:justify-between sm:gap-4 sm:px-8 lg:px-16">
           {["1:1 Care", "Whole-Body Assessment", "Hands-On Treatment", "Movement-Based Rehab", "Overland Park"].map((item) => <span key={item}>{item}</span>)}
         </div>
       </div>

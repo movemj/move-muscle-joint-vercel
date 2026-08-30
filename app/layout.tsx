@@ -91,7 +91,7 @@ export default function RootLayout({
       <head>
         <JsonLdSchema data={schemas.website()} />
       </head>
-      <body className={`${montserrat.variable} font-sans`}>
+      <body className={`${montserrat.variable} overflow-x-hidden font-sans`}>
         <Header />
         <main>{children}</main>
         <Footer />
