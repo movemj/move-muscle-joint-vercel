@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { SITE } from "@/lib/site-data";
 import { schemas } from "@/lib/schemas";
+import { NewPatientOfferFloatGroup } from "@/components/new-patient-offer-float";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -94,6 +95,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <NewPatientOfferFloatGroup />
       </body>
     </html>
   );
