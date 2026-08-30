@@ -12,6 +12,7 @@ export function NewPatientOfferFloat() {
   const pathname = usePathname();
   if (excludedPath(pathname)) return null;
   const onOfferPage = pathname === offerPath;
+  if (onOfferPage) return null;
   return (
     <Link
       href={onOfferPage ? SITE.newPatientOfferBookingUrl : offerPath}
@@ -35,6 +36,7 @@ export function NewPatientOfferMobileFloat() {
   const pathname = usePathname();
   if (excludedPath(pathname)) return null;
   const onOfferPage = pathname === offerPath;
+  if (onOfferPage) return null;
   return (
     <Link
       href={onOfferPage ? SITE.newPatientOfferBookingUrl : offerPath}
