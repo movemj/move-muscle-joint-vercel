@@ -7,6 +7,8 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { IMAGES, SITE, SERVICES } from "@/lib/site-data";
 
+const offerHeroImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2031%2C%202026%2C%2010_48_24%20AM-kKLAQU9BbbUEXXNh5VG49NPvuT8q2U.png";
+
 const offerBookingUrl = SITE.newPatientOfferBookingUrl;
 
 export const metadata: Metadata = {
@@ -37,14 +39,15 @@ export default function NewPatientOfferPage() {
   return (
     <main className="bg-white pb-28 md:pb-0">
       <section className="bg-charcoal text-white">
-        <div className="mx-auto grid max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
+        <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
           <div className="flex flex-col justify-center px-6 pb-16 pt-32 sm:px-8 lg:px-16 lg:py-36">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">Your first Move session is designed to uncover what may be contributing to the problem—not simply chase where it hurts. Get a comprehensive movement assessment, a clear explanation of what we find, and treatment when clinically appropriate.</p>
           </div>
           <div className="relative min-h-[390px] lg:min-h-[650px]">
-            <Image src={IMAGES.assessment} alt="Movement assessment at Move Muscle & Joint" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 48vw" />
+            <div className="absolute inset-0 bg-white/10 mix-blend-multiply" aria-hidden="true" />
+            <Image src={offerHeroImage} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
             <div className="absolute bottom-6 left-6 bg-navy px-6 py-5 text-white sm:bottom-10 sm:left-10">
               <p className="text-5xl font-bold tracking-tight">$49</p>
               <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">First Move Session</p>
@@ -55,7 +58,7 @@ export default function NewPatientOfferPage() {
       </section>
 
       <div className="overflow-hidden border-b border-border bg-light-gray">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 py-5 text-center text-xs font-semibold uppercase tracking-[0.14em] text-muted sm:justify-between sm:gap-4 sm:px-8 lg:px-16">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-5 gap-y-3 px-6 py-5 text-center text-xs font-semibold uppercase tracking-[0.14em] text-charcoal sm:justify-between sm:gap-4 sm:px-8 lg:px-16">
           {["1:1 Care", "Whole-Body Assessment", "Hands-On Treatment", "Movement-Based Rehab", "Overland Park"].map((item, index, items) => <span key={item} className="inline-flex items-center gap-x-6">{item}{index < items.length - 1 ? <span aria-hidden="true" className="text-accent/60">•</span> : null}</span>)}
         </div>
       </div>
@@ -65,8 +68,10 @@ export default function NewPatientOfferPage() {
           <SectionHeading tag="What brought you here?" title="You Don’t Have to Know What’s Wrong Yet." />
           <div>
             <p className="max-w-2xl text-lg leading-relaxed text-steel">Pain, stiffness, recurring injuries, or movement that just doesn’t feel right—we start by looking at how your body is working as a whole.</p>
-            <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-border pt-6">
-              {recognition.map((item, index) => <span key={item} className={`text-lg font-semibold tracking-tight sm:text-2xl ${index % 3 === 0 ? "text-navy" : "text-charcoal/75"}`}>{item}</span>)}
+            <div className="relative mt-12 overflow-hidden border-y border-border py-5" aria-label="Common reasons patients seek care">
+              <div className="flex w-max animate-[offer-marquee_28s_linear_infinite] gap-3 pr-3 hover:[animation-play-state:paused] motion-reduce:animate-none">
+                {[...recognition, ...recognition].map((item, index) => <span key={`${item}-${index}`} className="shrink-0 rounded-full border border-navy/15 bg-light-gray px-4 py-2 text-sm font-semibold text-navy sm:text-base">{item}</span>)}
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +85,7 @@ export default function NewPatientOfferPage() {
               <Image src={IMAGES.handsOn} alt="Hands-on movement care at Move Muscle & Joint" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
             </div>
           </div>
-          <div className="relative flex flex-col gap-8 before:absolute before:bottom-4 before:left-[25px] before:top-4 before:w-px before:bg-accent/40">
+          <div className="relative flex flex-col gap-8 pl-8 before:absolute before:bottom-4 before:left-3 before:top-4 before:w-px before:bg-accent/70">
             {firstVisit.map(([number, title, description]) => <article key={number} className="relative grid gap-5 pl-16 sm:grid-cols-[100px_1fr] sm:pl-0">
               <span className="text-5xl font-bold tracking-tight text-navy/15 sm:text-6xl">{number}</span>
               <div><h2 className="text-sm font-bold uppercase tracking-[0.14em] text-navy">{title}</h2><p className="mt-3 max-w-lg leading-relaxed text-steel">{description}</p></div>
