@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Prevent the Next 15.5 devtools RSC manifest bug from breaking preview renders.
+  devIndicators: false,
   eslint: {
     // ESLint isn't installed in this project — skip linting during build
     ignoreDuringBuilds: true,

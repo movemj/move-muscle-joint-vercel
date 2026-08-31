@@ -35,17 +35,13 @@ const faqs: Array<[string, string | [string, string]]> = [
 
 export default function NewPatientOfferPage() {
   return (
-    <main className="bg-white pb-16 md:pb-0">
+    <main className="bg-white pb-28 md:pb-0">
       <section className="bg-charcoal text-white">
         <div className="mx-auto grid max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
           <div className="flex flex-col justify-center px-6 pb-16 pt-32 sm:px-8 lg:px-16 lg:py-36">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">Your first Move session is designed to uncover what may be contributing to the problem—not simply chase where it hurts. Get a comprehensive movement assessment, a clear explanation of what we find, and treatment when clinically appropriate.</p>
-            <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
-              <CTAButton href={offerBookingUrl} label="Book My $49 First Visit" variant="white" size="lg" showArrow external />
-              <span className="text-sm text-white/55">New patients only · Overland Park · Book online</span>
-            </div>
           </div>
           <div className="relative min-h-[390px] lg:min-h-[650px]">
             <Image src={IMAGES.assessment} alt="Movement assessment at Move Muscle & Joint" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 48vw" />
@@ -59,8 +55,8 @@ export default function NewPatientOfferPage() {
       </section>
 
       <div className="overflow-hidden border-b border-border bg-light-gray">
-        <div className="mx-auto flex max-w-7xl min-w-max items-center gap-8 px-6 py-5 text-xs font-semibold uppercase tracking-[0.14em] text-muted sm:justify-between sm:gap-4 sm:px-8 lg:px-16">
-          {["1:1 Care", "Whole-Body Assessment", "Hands-On Treatment", "Movement-Based Rehab", "Overland Park"].map((item) => <span key={item}>{item}</span>)}
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 py-5 text-center text-xs font-semibold uppercase tracking-[0.14em] text-muted sm:justify-between sm:gap-4 sm:px-8 lg:px-16">
+          {["1:1 Care", "Whole-Body Assessment", "Hands-On Treatment", "Movement-Based Rehab", "Overland Park"].map((item, index, items) => <span key={item} className="inline-flex items-center gap-x-6">{item}{index < items.length - 1 ? <span aria-hidden="true" className="text-accent/60">•</span> : null}</span>)}
         </div>
       </div>
 
@@ -103,7 +99,7 @@ export default function NewPatientOfferPage() {
       <SectionWrapper>
         <SectionHeading tag="Why Move feels different" title="If You’ve Tried Care Before, This May Feel Different." align="center" />
         <div className="mx-auto mt-12 max-w-4xl divide-y divide-border border-y border-border">
-          {[["Rush in. Adjust. Leave.", "Assess. Treat. Retrain."], ["Treat only where it hurts.", "Look at how the entire system is moving."], ["Endless visits without direction.", "A plan built around progress."]].map(([not, move]) => <div key={not} className="grid gap-3 py-8 sm:grid-cols-2 sm:gap-10"><p className="text-lg text-muted line-through decoration-accent/60">{not}</p><p className="text-xl font-bold tracking-tight text-navy">{move}</p></div>)}
+          {[["Rush in. Adjust. Leave.", "Assess. Treat. Retrain."], ["Treat only where it hurts.", "Look at how the entire system is moving."], ["Endless visits without direction.", "A plan built around progress."]].map(([not, move]) => <div key={not} className="grid gap-5 py-8 sm:grid-cols-2 sm:gap-10"><div><p className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted">Not</p><p className="mt-2 text-lg text-muted line-through decoration-accent/60">{not}</p></div><div><p className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent">Move</p><p className="mt-2 text-xl font-bold tracking-tight text-navy">{move}</p></div></div>)}
         </div>
       </SectionWrapper>
 
