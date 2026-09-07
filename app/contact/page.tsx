@@ -4,6 +4,11 @@ import { ContactContent } from "./contact-content";
 export const metadata: Metadata = {
   title: "Contact Move Muscle & Joint",
   description: "Contact Move Muscle & Joint in Overland Park, KS for chiropractic care, myofascial release therapy, shockwave therapy, and rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Move Muscle & Joint",
+    description: "Contact Move Muscle & Joint in Overland Park, KS for chiropractic care, myofascial release therapy, shockwave therapy, and rehab.",
+  },
   alternates: {
     canonical: "/contact",
   },

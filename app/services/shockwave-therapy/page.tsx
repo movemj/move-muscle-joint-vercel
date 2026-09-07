@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Shockwave Therapy in Overland Park",
   description:
     "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology at Move Muscle & Joint in Overland Park.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Shockwave Therapy in Overland Park",
+    description: "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology at Move Muscle & Joint in Overland Park.",
+  },
   alternates: {
     canonical: "/services/shockwave-therapy",
   },

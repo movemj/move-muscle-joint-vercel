@@ -5,6 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 export const metadata: Metadata = {
   title: "Shoulder Pain Treatment in Overland Park",
   description: "Shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Shoulder Pain Treatment in Overland Park",
+    description: "Shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+  },
   alternates: {
     canonical: "/conditions/shoulder-pain",
   },

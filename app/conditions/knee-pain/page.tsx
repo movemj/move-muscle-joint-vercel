@@ -5,6 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 export const metadata: Metadata = {
   title: "Knee Pain Treatment in Overland Park",
   description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Knee Pain Treatment in Overland Park",
+    description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
+  },
   alternates: {
     canonical: "/conditions/knee-pain",
   },

@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Targeted Rehab & Movement Retraining",
   description:
     "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Targeted Rehab & Movement Retraining",
+    description: "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
+  },
   alternates: {
     canonical: "/services/targeted-rehab",
   },

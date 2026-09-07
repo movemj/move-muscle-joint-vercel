@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.movemuscleandjoint.com';
+  const siteLastModified = new Date('2026-09-06');
   
   // Static routes
   const staticRoutes = [
@@ -44,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allRoutes = [
     ...staticRoutes.map(route => ({
       url: route.url,
-      lastModified: new Date(),
+      lastModified: siteLastModified,
       changeFrequency: route.changeFrequency as 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
       priority: route.priority,
     })),

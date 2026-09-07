@@ -4,6 +4,11 @@ import { BookContent } from "./book-content";
 export const metadata: Metadata = {
   title: "Book an Appointment",
   description: "Book chiropractic care, myofascial release therapy, shockwave therapy, or targeted rehab at Move Muscle & Joint in Overland Park, KS.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Book an Appointment",
+    description: "Book chiropractic care, myofascial release therapy, shockwave therapy, or targeted rehab at Move Muscle & Joint in Overland Park, KS.",
+  },
   alternates: {
     canonical: "/book",
   },

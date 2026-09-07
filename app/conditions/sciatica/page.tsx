@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Sciatica Treatment in Overland Park",
   description:
     "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Sciatica Treatment in Overland Park",
+    description: "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+  },
   alternates: {
     canonical: "/conditions/sciatica",
   },

@@ -1,11 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /blog/
-Allow: /blog/*
 
-# Sitemaps
 Sitemap: https://www.movemuscleandjoint.com/sitemap.xml
-
-# Specific rules
-Disallow: /api/
-Disallow: /thank-you

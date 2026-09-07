@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Myofascial Release Therapy",
   description:
     "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Myofascial Release Therapy",
+    description: "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park.",
+  },
   alternates: {
     canonical: "/services/myofascial-release-therapy",
   },

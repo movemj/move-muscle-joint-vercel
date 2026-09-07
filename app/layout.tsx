@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: "Experienced chiropractor in Overland Park KS offering integrated chiropractic care, myofascial release, shockwave therapy, and gym-based rehab. Move better and stay strong near 119th St & Roe Ave. Book your first visit today.",
-  keywords: ["chiropractic", "chiropractor", "Overland Park", "rehab", "myofascial release", "shockwave therapy", "back pain", "neck pain", "sports injuries"],
   authors: [{ name: SITE.name }],
   creator: SITE.name,
   icons: {

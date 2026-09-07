@@ -40,7 +40,7 @@ export function FAQPreview() {
               <AccordionTrigger className="text-left font-semibold text-charcoal hover:text-navy text-sm py-5">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-steel leading-relaxed pb-5">
+              <AccordionContent forceMount className="text-sm text-steel leading-relaxed pb-5">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

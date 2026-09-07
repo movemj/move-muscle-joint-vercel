@@ -102,7 +102,7 @@ export const schemas = {
     description: `${serviceTitle} in ${SITE.addressCity}, ${SITE.addressState} to improve joint mobility, reduce pain, and support better movement.`,
     provider: {
       '@type': 'Chiropractor',
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
     },
     areaServed: {
       '@type': 'City',
@@ -159,7 +159,7 @@ export const schemas = {
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2016%2C%202026%2C%2007_30_47%20PM-fYJYlrqEHJRDcGk4IurlfgtlpvlAwi.png',
     url: `${SITE.url}/about`,
     worksFor: {
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
     },
     alumniOf: [
       { '@type': 'CollegeOrUniversity', name: 'Rockhurst University' },
@@ -226,7 +226,7 @@ export const schemas = {
     '@type': 'Article',
     headline,
     description,
-    image: image.startsWith('http') ? image : `${SITE.url}${image}`,
+    image: /^https?:\/\//i.test(image) ? image : `${SITE.url}${image.startsWith('/') ? image : `/${image}`}`,
     datePublished,
     dateModified,
 author: {
@@ -239,10 +239,9 @@ author: {
         '@id': `${SITE.url}/#clinic`,
       },
     },
-    },
     publisher: {
       '@type': 'Organization',
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
       name: SITE.name,
       logo: {
         '@type': 'ImageObject',
@@ -269,7 +268,7 @@ author: {
       'Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.',
     publisher: {
       '@type': 'Chiropractor',
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
     },
     potentialAction: {
       '@type': 'SearchAction',

@@ -17,6 +17,14 @@ const nextConfig: NextConfig = {
   },
   redirects: async () => {
     return [
+      // Enforce the canonical www host while preserving paths and query strings.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "movemuscleandjoint.com" }],
+        destination: "https://www.movemuscleandjoint.com/:path*",
+        permanent: true,
+      },
+      { source: "/schedule", destination: "/book", permanent: true },
       // Contact/Booking redirects
       { source: "/contact-booking", destination: "/book", permanent: true },
 

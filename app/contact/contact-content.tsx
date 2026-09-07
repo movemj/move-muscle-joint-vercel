@@ -13,6 +13,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { SITE } from '@/lib/site-data';
+import { JsonLdSchema } from '@/components/schema-json-ld';
+import { schemas } from '@/lib/schemas';
 
 const serviceAreas = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
 
@@ -50,6 +52,8 @@ export function ContactContent() {
 
   return (
     <>
+      <JsonLdSchema data={schemas.localBusinessChiropractor()} />
+      <JsonLdSchema data={schemas.person()} />
       <section className="bg-charcoal pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Contact", path: "/contact" }]} />

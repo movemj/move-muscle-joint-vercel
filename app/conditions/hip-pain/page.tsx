@@ -5,6 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 export const metadata: Metadata = {
   title: "Hip Pain Treatment in Overland Park",
   description: "Hip pain treatment in Overland Park, KS using chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Hip Pain Treatment in Overland Park",
+    description: "Hip pain treatment in Overland Park, KS using chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
+  },
   alternates: {
     canonical: "/conditions/hip-pain",
   },

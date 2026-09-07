@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Neck Pain Treatment in Overland Park",
   description:
     "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Neck Pain Treatment in Overland Park",
+    description: "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+  },
   alternates: {
     canonical: "/conditions/neck-pain",
   },

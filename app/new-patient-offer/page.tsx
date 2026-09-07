@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   title: "$49 New Patient Offer | Move Muscle & Joint",
   description: "Start with a $49 new patient movement assessment at Move Muscle & Joint. Learn what to expect and claim the dedicated new patient offer.",
   robots: { index: false, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "$49 New Patient Offer | Move Muscle & Joint",
+    description: "Start with a $49 new patient movement assessment at Move Muscle & Joint. Learn what to expect and claim the dedicated new patient offer.",
+  },
   alternates: { canonical: `${SITE.url}/new-patient-offer` },
 };
 
