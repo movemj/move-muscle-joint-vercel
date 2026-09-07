@@ -17,7 +17,7 @@ export function TestimonialQuote({
   return (
     <blockquote
       className={cn(
-        "flex flex-col gap-5",
+        "flex max-w-2xl flex-col gap-4",
         centered && "items-center text-center",
         className
       )}
@@ -28,7 +28,7 @@ export function TestimonialQuote({
       />
       <p
         className={cn(
-          "text-xl md:text-2xl leading-relaxed font-medium text-balance",
+          "text-lg leading-relaxed font-medium text-balance md:text-xl",
           light ? "text-white" : "text-charcoal"
         )}
       >

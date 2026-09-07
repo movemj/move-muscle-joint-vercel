@@ -64,7 +64,7 @@ export function TestimonialsCarousel() {
         }}
       >
         <div
-          className="relative min-h-[220px] sm:min-h-[180px]"
+          className="relative min-h-[190px] sm:min-h-[160px]"
           aria-live="polite"
           aria-atomic="true"
         >
@@ -75,10 +75,10 @@ export function TestimonialsCarousel() {
               animate={{ opacity: 1, y: 0 }}
               exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
               transition={{ duration: reducedMotion ? 0 : 0.6, ease: "easeOut" }}
-              className="flex flex-col items-center gap-5 text-center"
+              className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center"
             >
               <span className="block h-px w-10 bg-accent" aria-hidden="true" />
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-charcoal text-balance">
+              <p className="text-lg leading-relaxed font-medium text-charcoal text-balance md:text-xl">
                 &ldquo;{current.quote}&rdquo;
               </p>
               <cite className="block text-sm font-semibold not-italic text-steel">
@@ -88,7 +88,7 @@ export function TestimonialsCarousel() {
           </AnimatePresence>
         </div>
 
-        <div className="mt-8 flex items-center justify-center gap-6">
+        <div className="mt-6 flex items-center justify-center gap-6">
           <button
             type="button"
             onClick={goPrev}
@@ -125,7 +125,7 @@ export function TestimonialsCarousel() {
           </button>
         </div>
 
-        <div className="mt-8 flex flex-col items-center gap-2 text-center">
+        <div className="mt-6 flex flex-col items-center gap-2 text-center">
           <GoogleReviewsLink />
           <TestimonialDisclaimer />
         </div>
