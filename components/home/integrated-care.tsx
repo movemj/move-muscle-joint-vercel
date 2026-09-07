@@ -27,30 +27,38 @@ const pillars = [
 export function IntegratedCare() {
   return (
     <SectionWrapper bg="bg-white">
-      <SectionHeading
-        tag="Integrated Care"
-        title="One system. Four connected tools."
-        subtitle="Treatment plans are built around you — not around selling one modality. Every tool serves the larger goal of durable, confident movement."
-        align="center"
-      />
-      <div className="grid md:grid-cols-2 gap-6">
-        {pillars.map((p, i) => (
-          <motion.div
-            key={p.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="border border-border rounded-xl p-8 hover:shadow-lg hover:border-softblue/30 transition-all duration-300"
-          >
-            <div className="w-1 h-8 bg-navy rounded-full mb-5" />
-            <h3 className="text-lg font-bold text-charcoal">{p.title}</h3>
-            <p className="text-sm text-steel mt-3 leading-relaxed">{p.desc}</p>
-          </motion.div>
-        ))}
-      </div>
-      <div className="mt-12 text-center">
-        <CTAButton href="/our-approach" label="Learn About Our Approach" variant="outline" showArrow />
+      <div className="care-feature-surface rounded-[2rem] px-5 py-12 sm:px-8 sm:py-16 lg:px-14">
+        <SectionHeading
+          tag="Integrated Care"
+          title="One system. Four connected tools."
+          subtitle="Treatment plans are built around you — not around selling one modality. Every tool serves the larger goal of durable, confident movement."
+          align="center"
+        />
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
+          {pillars.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: i * 0.08, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -4 }}
+              className="care-feature-card group rounded-2xl p-6 sm:p-8"
+            >
+              <div className="mb-8 flex items-center justify-between">
+                <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-navy/60">
+                  0{i + 1}
+                </span>
+                <span className="size-2 rounded-full bg-navy/30 transition-colors duration-300 group-hover:bg-navy" />
+              </div>
+              <h3 className="text-xl font-bold tracking-tight text-charcoal">{p.title}</h3>
+              <p className="mt-3 max-w-md text-sm leading-7 text-steel">{p.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+        <div className="mt-10 text-center sm:mt-12">
+          <CTAButton href="/our-approach" label="Learn About Our Approach" variant="outline" showArrow />
+        </div>
       </div>
     </SectionWrapper>
   );
