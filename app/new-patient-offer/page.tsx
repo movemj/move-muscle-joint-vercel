@@ -5,18 +5,26 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { CTAButton } from "@/components/ui/cta-button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { JsonLdSchema } from "@/components/schema-json-ld";
+import { schemas } from "@/lib/schemas";
 import { IMAGES, SITE, SERVICES } from "@/lib/site-data";
 
 const offerBookingUrl = SITE.newPatientOfferBookingUrl;
+const offerTitle = "$49 New Patient Special | Chiropractor in Overland Park, KS";
+const offerDescription = "New patient special at Move Muscle & Joint in Overland Park: $49 for a full movement assessment, clinical evaluation, and hands-on treatment when appropriate.";
 
 export const metadata: Metadata = {
-  title: "$49 New Patient Offer | Move Muscle & Joint",
-  description: "Start with a $49 new patient movement assessment at Move Muscle & Joint. Learn what to expect and claim the dedicated new patient offer.",
-  robots: { index: false, follow: true },
+  title: { absolute: offerTitle },
+  description: offerDescription,
+  openGraph: {
+    url: `${SITE.url}/new-patient-offer`,
+    title: offerTitle,
+    description: offerDescription,
+  },
   twitter: {
     card: "summary_large_image",
-    title: "$49 New Patient Offer | Move Muscle & Joint",
-    description: "Start with a $49 new patient movement assessment at Move Muscle & Joint. Learn what to expect and claim the dedicated new patient offer.",
+    title: offerTitle,
+    description: offerDescription,
   },
   alternates: { canonical: `${SITE.url}/new-patient-offer` },
 };
@@ -41,6 +49,7 @@ const faqs: Array<[string, string | [string, string]]> = [
 export default function NewPatientOfferPage() {
   return (
     <main className="bg-white pb-28 md:pb-0">
+      <JsonLdSchema data={schemas.newPatientOffer()} />
       <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-charcoal text-white lg:min-h-0">
         <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
           <div className="relative z-10 flex flex-col justify-center px-6 pb-[48vh] pt-28 sm:px-8 lg:px-16 lg:py-36 lg:pb-36">

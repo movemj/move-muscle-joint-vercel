@@ -70,12 +70,15 @@ export function Footer() {
                 { label: "Blog", path: "/blog" },
                 { label: "FAQ", path: "/faq" },
                 { label: "Contact", path: "/contact" },
-                { label: "Book Now", path: "/book" },
+                { label: "Booking & Hours", path: "/book" },
               ].map((link) => (
                 <li key={link.path} className="overflow-hidden">
                   <Link href={link.path} className="text-sm text-white/60 hover:text-white transition-colors break-words">{link.label}</Link>
                 </li>
               ))}
+              <li className="overflow-hidden">
+                <a href="https://mmj.janeapp.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-white transition-colors break-words">Book Now</a>
+              </li>
             </ul>
           </div>
         </div>

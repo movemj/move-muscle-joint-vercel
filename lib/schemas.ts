@@ -256,7 +256,56 @@ author: {
   }),
 
   /**
-   * 8. WebSite Schema
+   * 8. Offer Schema
+   * Used on: New patient offer page
+   */
+  newPatientOffer: () => ({
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name: '$49 New Patient First Visit',
+    description:
+      'New patient special at Move Muscle & Joint: a full movement assessment, clinical evaluation, and hands-on treatment when clinically appropriate.',
+    price: '49',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: `${SITE.url}/new-patient-offer`,
+    seller: {
+      '@id': `${SITE.url}/#clinic`,
+    },
+  }),
+
+  /**
+   * 9. WebPage + ReserveAction Schema
+   * Used on: Book page
+   */
+  bookWebPage: () => ({
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.url}/book#webpage`,
+    url: `${SITE.url}/book`,
+    name: 'Book a Chiropractor in Overland Park, KS | Move Muscle & Joint',
+    about: {
+      '@id': `${SITE.url}/#clinic`,
+    },
+    potentialAction: {
+      '@type': 'ReserveAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://mmj.janeapp.com/',
+        actionPlatform: [
+          'https://schema.org/DesktopWebPlatform',
+          'https://schema.org/MobileWebPlatform',
+        ],
+      },
+      result: {
+        '@type': 'Reservation',
+        name: 'Chiropractic Appointment',
+      },
+    },
+  }),
+
+  /**
+   * 10. WebSite Schema
    * Used on: Layout (site-wide)
    */
   website: () => ({

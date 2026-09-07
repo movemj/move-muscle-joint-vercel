@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock } from 'lucide-react';
@@ -141,6 +142,10 @@ export function ContactContent() {
 
             <div className="mt-6">
               <CTAButton href="/book" label="Book Your Appointment" showArrow size="lg" />
+              <p className="mt-3 text-sm text-steel">
+                Need hours, parking, or what to expect first?{" "}
+                <Link href="/book" className="font-semibold text-navy hover:underline">Visit our booking & hours page</Link>.
+              </p>
             </div>
           </div>
         </div>
