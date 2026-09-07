@@ -8,6 +8,8 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { schemas } from "@/lib/schemas";
 import { SITE } from "@/lib/site-data";
+import { getTestimonialsForCondition } from "@/lib/testimonials";
+import { TestimonialsStatic } from "@/components/testimonials/testimonials-static";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import {
@@ -64,6 +66,9 @@ export function ConditionPageTemplate({
     question: faq.q,
     answer: faq.a,
   }));
+
+  const conditionSlug = breadcrumbPath.replace("/conditions/", "");
+  const conditionTestimonials = getTestimonialsForCondition(conditionSlug);
 
   return (
     <>
@@ -200,6 +205,8 @@ export function ConditionPageTemplate({
           </div>
         </SectionWrapper>
       )}
+
+      <TestimonialsStatic testimonials={conditionTestimonials} bg="bg-secondary" />
 
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-navy" />

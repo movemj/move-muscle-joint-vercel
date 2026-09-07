@@ -11,8 +11,11 @@ import { HeroMedia } from '@/components/ui/hero-media';
 import { JsonLdSchema } from '@/components/schema-json-ld';
 import { schemas } from '@/lib/schemas';
 import { IMAGES, SITE } from '@/lib/site-data';
+import { getTestimonialById } from '@/lib/testimonials';
+import { TestimonialsStatic } from '@/components/testimonials/testimonials-static';
 
 const communities = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
+const aboutTestimonial = getTestimonialById('sandra-c');
 
 export function AboutContent() {
   return (
@@ -92,6 +95,10 @@ export function AboutContent() {
           ))}
         </div>
       </SectionWrapper>
+
+      {aboutTestimonial && (
+        <TestimonialsStatic testimonials={[aboutTestimonial]} bg="bg-secondary" centered />
+      )}
 
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-navy" />
