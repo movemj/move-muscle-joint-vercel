@@ -17,7 +17,7 @@ export const schemas = {
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
-      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, team physician for Sporting KC and University of Kansas Athletics.',
+      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, team chiropractor for Sporting KC and University of Kansas Athletics.',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
@@ -160,7 +160,7 @@ export const schemas = {
     alternateName: 'Dr. Joey Hugunin',
     honorificSuffix: 'DC',
     jobTitle: 'Chiropractor',
-    description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team physician for Sporting KC and care provider for University of Kansas Athletics.',
+    description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team chiropractor for Sporting KC and care provider for University of Kansas Athletics.',
     image: `${SITE.url}/images/joseph-hugunin-dc.webp`,
     url: `${SITE.url}/about`,
     worksFor: {
@@ -177,11 +177,10 @@ export const schemas = {
       'Movement Rehabilitation',
     ],
     memberOf: [
-      { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Physician' },
+      { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Chiropractor' },
       { '@type': 'SportsOrganization', name: 'University of Kansas Athletics', description: 'Care Provider' },
     ],
-    // Personal profile URLs (e.g. LinkedIn) are still pending; do not reuse the clinic's business social URLs here.
-    sameAs: [],
+    sameAs: ['https://www.linkedin.com/in/dr-joseph-hugunin/'],
     areaServed: 'Overland Park, KS',
   }),
 

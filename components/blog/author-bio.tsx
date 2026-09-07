@@ -33,7 +33,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
           </h3>
           <p className="text-steel leading-relaxed mb-4">
             Founder of {SITE.name} and movement-focused chiropractor in {SITE.addressCity} with 20+ years of experience. 
-            Team physician for Sporting KC and care provider for University of Kansas Athletics.
+            Team chiropractor for Sporting KC and care provider for University of Kansas Athletics.
           </p>
           
           {/* NAP Information for GMB consistency */}
