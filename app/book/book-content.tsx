@@ -20,6 +20,10 @@ import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { JsonLdSchema } from '@/components/schema-json-ld';
 import { schemas } from '@/lib/schemas';
 import { SITE, SERVICES } from '@/lib/site-data';
+import { getTestimonialsByTag } from '@/lib/testimonials';
+import { TestimonialsStatic } from '@/components/testimonials/testimonials-static';
+
+const bookTestimonial = getTestimonialsByTag('book')[0];
 
 export function BookContent() {
   return (
@@ -161,6 +165,11 @@ export function BookContent() {
           <p className="text-sm text-steel leading-relaxed">We ask for advance notice if you need to cancel or reschedule so we can offer your spot to another patient. Please call or text our office to make any changes to your appointment.</p>
         </div>
       </SectionWrapper>
+
+      {/* Testimonial */}
+      {bookTestimonial && (
+        <TestimonialsStatic testimonials={[bookTestimonial]} bg="bg-white" centered />
+      )}
 
       {/* Closing CTA */}
       <section className="relative py-24 overflow-hidden">

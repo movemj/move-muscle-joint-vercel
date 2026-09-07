@@ -7,6 +7,7 @@ import { IntegratedCare } from "@/components/home/integrated-care";
 import { ServicesPreview } from "@/components/home/services-preview";
 import { WhoWeHelp } from "@/components/home/who-we-help";
 import { ProviderPreview } from "@/components/home/provider-preview";
+import { TestimonialsCarousel } from "@/components/testimonials/testimonials-carousel";
 import { ConditionsPreview } from "@/components/home/conditions-preview";
 import { FAQPreview } from "@/components/home/faq-preview";
 import { FinalCTA } from "@/components/home/final-cta";
@@ -39,6 +40,7 @@ export default function Home() {
       <ServicesPreview />
       <WhoWeHelp />
       <ProviderPreview />
+      <TestimonialsCarousel />
       <ConditionsPreview />
       <FAQPreview />
       <FinalCTA />

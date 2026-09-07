@@ -8,6 +8,10 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { schemas } from "@/lib/schemas";
 import { IMAGES, SITE, SERVICES } from "@/lib/site-data";
+import { getTestimonialsByTag } from "@/lib/testimonials";
+import { TestimonialsStatic } from "@/components/testimonials/testimonials-static";
+
+const offerTestimonial = getTestimonialsByTag("offer")[0];
 
 const offerBookingUrl = SITE.newPatientOfferBookingUrl;
 const offerTitle = "$49 New Patient Special | Chiropractor in Overland Park, KS";
@@ -122,6 +126,10 @@ export default function NewPatientOfferPage() {
       </SectionWrapper>
 
       <SectionWrapper><div className="mx-auto max-w-3xl"><SectionHeading tag="Questions" title="A few things to know." align="center" /><Accordion type="single" collapsible className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer], index) => <AccordionItem key={question} value={`faq-${index}`}><AccordionTrigger className="py-6 text-left font-semibold text-charcoal hover:text-navy">{question}</AccordionTrigger><AccordionContent className="pb-6 leading-relaxed text-steel">{Array.isArray(answer) ? <a className="text-navy underline underline-offset-4" href={answer[1]} target="_blank" rel="noreferrer">{answer[0]}</a> : answer}</AccordionContent></AccordionItem>)}</Accordion></div></SectionWrapper>
+
+      {offerTestimonial && (
+        <TestimonialsStatic testimonials={[offerTestimonial]} bg="bg-light-gray" centered />
+      )}
 
       <section className="bg-charcoal py-20 text-center text-white sm:py-28"><div className="mx-auto max-w-3xl px-6"><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Start with clarity</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Your Body Is Made to Move.</h2><p className="mt-4 text-xl text-white/70">Let’s figure out what’s holding it back.</p><div className="mt-8 flex flex-col items-center gap-3"><CTAButton href={offerBookingUrl} label="Book Your $49 First Visit" variant="white" size="lg" showArrow external /><span className="text-sm text-white/55">Move Muscle & Joint · Overland Park, Kansas</span></div></div></section>
     </main>

@@ -9,6 +9,8 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { schemas } from "@/lib/schemas";
 import { MOVE_METHOD_STEPS } from "@/lib/site-data";
+import { getTestimonialById } from "@/lib/testimonials";
+import { TestimonialsStatic } from "@/components/testimonials/testimonials-static";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import {
@@ -32,6 +34,7 @@ interface ServicePageTemplateProps {
   faqs: Array<{ q: string; a: string }>;
   breadcrumbLabel: string;
   breadcrumbPath: string;
+  testimonialId?: string;
 }
 
 export function ServicePageTemplate({
@@ -48,6 +51,7 @@ export function ServicePageTemplate({
   faqs,
   breadcrumbLabel,
   breadcrumbPath,
+  testimonialId,
 }: ServicePageTemplateProps) {
   // Build schema data
   const serviceSchema = schemas.service(title, breadcrumbPath);
@@ -56,6 +60,8 @@ export function ServicePageTemplate({
     question: faq.q,
     answer: faq.a,
   }));
+
+  const testimonial = testimonialId ? getTestimonialById(testimonialId) : undefined;
 
   return (
     <>
@@ -179,6 +185,10 @@ export function ServicePageTemplate({
             </Accordion>
           </div>
         </SectionWrapper>
+      )}
+
+      {testimonial && (
+        <TestimonialsStatic testimonials={[testimonial]} bg="bg-secondary" centered />
       )}
 
       <section className="relative py-24 overflow-hidden">

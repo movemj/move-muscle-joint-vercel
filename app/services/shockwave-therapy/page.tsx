@@ -115,6 +115,7 @@ export default function ShockwaveTherapyPage() {
         </>
       }
       relatedConditions={relatedConditions}
+      testimonialId="kyle-f"
       faqs={[
         {
           q: "Is shockwave therapy painful?",
