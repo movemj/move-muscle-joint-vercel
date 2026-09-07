@@ -12,8 +12,8 @@ export const schemas = {
    */
   localBusinessChiropractor: () => ({
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'Chiropractor', 'MedicalBusiness'],
-    '@id': `${SITE.url}/#organization`,
+    '@type': 'Chiropractic',
+    '@id': `${SITE.url}/#clinic`,
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
@@ -39,8 +39,6 @@ export const schemas = {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: SITE.lat,
-      longitude: SITE.lng,
     },
     hasMap: 'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
     openingHoursSpecification: [
@@ -57,11 +55,9 @@ export const schemas = {
     areaServed: [
       { '@type': 'City', name: 'Overland Park' },
       { '@type': 'City', name: 'Leawood' },
-      { '@type': 'City', name: 'Lenexa' },
       { '@type': 'City', name: 'Prairie Village' },
-      { '@type': 'City', name: 'Kansas City' },
     ],
-    medicalSpecialty: ['Chiropractic', 'Sports Medicine', 'Physical Therapy'],
+    medicalSpecialty: 'Chiropractic',
     founder: {
       '@id': `${SITE.url}/about/#provider`,
     },
@@ -90,15 +86,8 @@ export const schemas = {
         url: `${SITE.url}/services/targeted-rehab`,
       },
     ],
-    sameAs: [
-      'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
-      'https://www.yelp.com/biz/move-muscle-and-joint-overland-park',
-      'https://www.healthgrades.com/group-directory/ks-kansas/overland-park/move-muscle-joint-u3cdyw2',
-      'https://www.instagram.com/movemuscleandjoint/',
-      'https://local.yahoo.com/info-224216223-move-muscle-joint-overland-park/',
-      'https://nextdoor.com/pages/move-muscle-joint-overland-park-ks/',
-      'https://www.facebook.com/movemuscleandjoint',
-    ],
+    // Add Google Business Profile, Yelp, Healthgrades, and Instagram profiles here.
+    sameAs: [],
   }),
 
   /**
@@ -187,6 +176,8 @@ export const schemas = {
       { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Physician' },
       { '@type': 'SportsOrganization', name: 'University of Kansas Athletics', description: 'Care Provider' },
     ],
+    // Add Google Business Profile, Yelp, Healthgrades, and Instagram profiles here.
+    sameAs: [],
     areaServed: 'Overland Park, KS',
   }),
 
@@ -238,15 +229,16 @@ export const schemas = {
     image: image.startsWith('http') ? image : `${SITE.url}${image}`,
     datePublished,
     dateModified,
-    author: {
+author: {
       '@type': 'Person',
+      '@id': `${SITE.url}/about/#provider`,
       name: author,
       url: `${SITE.url}/about`,
-      jobTitle: 'Chiropractor',
+      jobTitle: 'Doctor of Chiropractic',
       worksFor: {
-        '@type': 'LocalBusiness',
-        '@id': `${SITE.url}/#organization`,
+        '@id': `${SITE.url}/#clinic`,
       },
+    },
     },
     publisher: {
       '@type': 'Organization',
