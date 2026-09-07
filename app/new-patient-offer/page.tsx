@@ -5,16 +5,27 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { CTAButton } from "@/components/ui/cta-button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { JsonLdSchema } from "@/components/schema-json-ld";
+import { schemas } from "@/lib/schemas";
 import { IMAGES, SITE, SERVICES } from "@/lib/site-data";
 
-const offerHeroImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2031%2C%202026%2C%2010_48_24%20AM-kKLAQU9BbbUEXXNh5VG49NPvuT8q2U.png";
-
 const offerBookingUrl = SITE.newPatientOfferBookingUrl;
+const offerTitle = "$49 New Patient Special | Chiropractor in Overland Park, KS";
+const offerDescription = "New patient special at Move Muscle & Joint in Overland Park: $49 for a full movement assessment, clinical evaluation, and hands-on treatment when appropriate.";
 
 export const metadata: Metadata = {
-  title: "$49 New Patient Offer | Move Muscle & Joint",
-  description: "Start with a $49 new patient movement assessment at Move Muscle & Joint. Learn what to expect and claim the dedicated new patient offer.",
-  robots: { index: false, follow: true },
+  title: { absolute: offerTitle },
+  description: offerDescription,
+  openGraph: {
+    url: `${SITE.url}/new-patient-offer`,
+    title: offerTitle,
+    description: offerDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: offerTitle,
+    description: offerDescription,
+  },
   alternates: { canonical: `${SITE.url}/new-patient-offer` },
 };
 
@@ -38,6 +49,7 @@ const faqs: Array<[string, string | [string, string]]> = [
 export default function NewPatientOfferPage() {
   return (
     <main className="bg-white pb-28 md:pb-0">
+      <JsonLdSchema data={schemas.newPatientOffer()} />
       <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-charcoal text-white lg:min-h-0">
         <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
           <div className="relative z-10 flex flex-col justify-center px-6 pb-[48vh] pt-28 sm:px-8 lg:px-16 lg:py-36 lg:pb-36">
@@ -47,7 +59,7 @@ export default function NewPatientOfferPage() {
           </div>
           <div className="absolute inset-x-0 bottom-0 h-[43vh] min-h-[260px] lg:relative lg:inset-auto lg:h-auto lg:min-h-[650px]">
             <div className="absolute inset-0 bg-white/10 mix-blend-multiply" aria-hidden="true" />
-            <Image src={offerHeroImage} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
+            <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
             <div className="absolute bottom-6 left-6 bg-navy px-6 py-5 text-white sm:bottom-10 sm:left-10">
               <p className="text-5xl font-bold tracking-tight">$49</p>
               <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">First Move Session</p>
@@ -106,7 +118,7 @@ export default function NewPatientOfferPage() {
       </SectionWrapper>
 
       <SectionWrapper bg="bg-light-gray">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"><div className="relative aspect-[4/3] overflow-hidden rounded-md"><Image src={IMAGES.provider} alt="Dr. Joseph Hugunin, Founder of Move Muscle & Joint" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 45vw" /></div><div><SectionHeading tag="Your Provider" title="You’ll Know Who You’re Seeing." /><p className="mt-2 font-medium text-navy">One-on-one care with Dr. Joseph Hugunin.</p><div className="mt-6 flex flex-col gap-4 leading-relaxed text-steel"><p>Dr. Joseph Hugunin helps patients uncover the root cause of pain through a blend of chiropractic care, movement assessment, myofascial release therapy, and rehab-based treatment.</p><p>His approach focuses on restoring function, reducing flare-ups, and helping patients build long-term confidence in the way they move.</p></div></div></div>
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"><div className="relative aspect-[4/3] overflow-hidden rounded-md"><Image src={IMAGES.provider} alt="Joseph Hugunin, DC — Founder, Move Muscle & Joint" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 45vw" /></div><div><SectionHeading tag="Your Provider" title="You’ll Know Who You’re Seeing." /><p className="mt-2 font-medium text-navy">One-on-one care with Dr. Joseph Hugunin.</p><div className="mt-6 flex flex-col gap-4 leading-relaxed text-steel"><p>Dr. Joseph Hugunin helps patients uncover the root cause of pain through a blend of chiropractic care, movement assessment, myofascial release therapy, and rehab-based treatment.</p><p>His approach focuses on restoring function, reducing flare-ups, and helping patients build long-term confidence in the way they move.</p></div></div></div>
       </SectionWrapper>
 
       <SectionWrapper><div className="mx-auto max-w-3xl"><SectionHeading tag="Questions" title="A few things to know." align="center" /><Accordion type="single" collapsible className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer], index) => <AccordionItem key={question} value={`faq-${index}`}><AccordionTrigger className="py-6 text-left font-semibold text-charcoal hover:text-navy">{question}</AccordionTrigger><AccordionContent className="pb-6 leading-relaxed text-steel">{Array.isArray(answer) ? <a className="text-navy underline underline-offset-4" href={answer[1]} target="_blank" rel="noreferrer">{answer[0]}</a> : answer}</AccordionContent></AccordionItem>)}</Accordion></div></SectionWrapper>

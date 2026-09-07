@@ -4,6 +4,11 @@ import { OurApproachContent } from "./our-approach-content";
 export const metadata: Metadata = {
   title: "Our Movement-Based Approach",
   description: "See how the Move Method blends chiropractic care, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Movement-Based Approach",
+    description: "See how the Move Method blends chiropractic care, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.",
+  },
   alternates: {
     canonical: "/our-approach",
   },

@@ -39,10 +39,12 @@ export function CTAButton({
   };
 
   const cls = cn(base, variants[variant], sizes[size], className);
+  const bookingLink = href === "/book";
+  const resolvedHref = bookingLink ? "https://mmj.janeapp.com/" : href;
 
-  if (external) {
+  if (external || bookingLink) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+      <a href={resolvedHref} target="_blank" rel="noopener noreferrer" className={cls}>
         {label}
         {showArrow && <ArrowRight className="w-4 h-4" />}
       </a>

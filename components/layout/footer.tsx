@@ -25,9 +25,13 @@ export function Footer() {
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
                 <span className="break-words overflow-wrap-break-word">{SITE.address}</span>
               </div>
-              <div className="flex items-center gap-2 overflow-hidden">
-                <Phone className="w-4 h-4 shrink-0 text-softblue" />
-                <span className="break-words">{SITE.phone}</span>
+              <div className="flex items-start gap-2 overflow-hidden">
+                <Phone className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+19133030989" className="break-words hover:text-white">{SITE.phone}</a>
+                  <span>Monday – Friday: 9:00 AM – 6:00 PM</span>
+                  <span>Saturday – Sunday: Closed</span>
+                </div>
               </div>
             </div>
           </div>
@@ -66,12 +70,15 @@ export function Footer() {
                 { label: "Blog", path: "/blog" },
                 { label: "FAQ", path: "/faq" },
                 { label: "Contact", path: "/contact" },
-                { label: "Book Now", path: "/book" },
+                { label: "Booking & Hours", path: "/book" },
               ].map((link) => (
                 <li key={link.path} className="overflow-hidden">
                   <Link href={link.path} className="text-sm text-white/60 hover:text-white transition-colors break-words">{link.label}</Link>
                 </li>
               ))}
+              <li className="overflow-hidden">
+                <a href="https://mmj.janeapp.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-white transition-colors break-words">Book Now</a>
+              </li>
             </ul>
           </div>
         </div>

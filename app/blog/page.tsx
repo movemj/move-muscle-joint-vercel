@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: `${SITE.url}${IMAGES.assessment}`,
+        url: IMAGES.assessment,
         width: 1200,
         height: 630,
         alt: "Move Muscle & Joint Blog",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Movement & Rehab Blog",
     description: "Expert insights on movement health, rehabilitation, and longevity.",
-    images: [`${SITE.url}${IMAGES.assessment}`],
+    images: [IMAGES.assessment],
     creator: "@movemuscleandjoint",
   },
   robots: {

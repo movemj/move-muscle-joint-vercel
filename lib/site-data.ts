@@ -10,7 +10,7 @@ export const SITE = {
   addressZip: "66211",
   domain: "movemuscleandjoint.com",
   url: "https://www.movemuscleandjoint.com",
-  janeBookingUrl: "https://mmj.janeapp.com/#staff_member/1",
+  janeBookingUrl: "https://mmj.janeapp.com/",
   newPatientOfferBookingUrl: "https://mmj.janeapp.com/#/staff_member/1/treatment/6",
   bookPath: "/book",
   lat: 38.93498055323811,
@@ -64,6 +64,7 @@ export const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services", children: SERVICES.map(s => ({ label: s.title, path: s.slug })) },
   { label: "Conditions", path: "/conditions", children: CONDITIONS.map(c => ({ label: c.title, path: c.slug })) },
+  { label: "Blog", path: "/blog" },
   { label: "FAQ", path: "/faq" },
 ];
 
@@ -73,7 +74,7 @@ export const IMAGES = {
   myofascial: "/images/myofascial.webp",
   shockwave: "/images/shockwave.webp",
   rehab: "/images/rehab.webp",
-  provider: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2016%2C%202026%2C%2007_30_47%20PM-fYJYlrqEHJRDcGk4IurlfgtlpvlAwi.png",
+  provider: "/images/joseph-hugunin-dc.webp",
   assessment: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blog%20Hero%20for%20wellness%20advice%20Move%20Muscle%20%26%20Joint-seHkPjzPLHVq5lr6gOvoPzkdrFxxmd.webp",
   lifestyle: "/images/lifestyle.webp",
   clinic: "/images/clinic.webp",

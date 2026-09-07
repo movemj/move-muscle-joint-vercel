@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonicalUrl = `${SITE.url}/blog/${slug}`;
   const ogImageUrl = post.ogImage
-    ? post.ogImage.startsWith("http")
+    ? /^https?:\/\//i.test(post.ogImage)
       ? post.ogImage
       : `${SITE.url}${post.ogImage}`
     : `${SITE.url}${IMAGES.clinic}`;
@@ -195,7 +195,7 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.description,
     image: post.ogImage
-      ? post.ogImage.startsWith("http")
+      ? /^https?:\/\//i.test(post.ogImage)
         ? post.ogImage
         : `${SITE.url}${post.ogImage}`
       : `${SITE.url}${IMAGES.clinic}`,
@@ -203,17 +203,17 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: post.dateModified || post.date,
     author: {
       "@type": "Person",
+      "@id": `${SITE.url}/about/#provider`,
       name: post.author,
       url: `${SITE.url}/about`,
-      jobTitle: "Chiropractor",
+      jobTitle: "Doctor of Chiropractic",
       worksFor: {
-        "@type": "LocalBusiness",
-        "@id": `${SITE.url}/#organization`,
+        "@id": `${SITE.url}/#clinic`,
       },
     },
     publisher: {
       "@type": "Organization",
-      "@id": `${SITE.url}/#organization`,
+      "@id": `${SITE.url}/#clinic`,
       name: SITE.name,
       logo: {
         "@type": "ImageObject",
@@ -271,6 +271,7 @@ export default async function BlogPostPage({ params }: Props) {
               { label: post.title, path: `/blog/${slug}` },
             ]}
           />
+          <p className="mb-4 text-xs text-white/55">Reviewed by <Link href="/about" className="underline underline-offset-2 hover:text-white/80">Joseph Hugunin, DC — Team Chiropractor, Sporting Kansas City</Link></p>
           {post.category && (
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-softblue mb-4 block">
               {post.category}

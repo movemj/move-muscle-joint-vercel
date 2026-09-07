@@ -5,6 +5,11 @@ import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 export const metadata: Metadata = {
   title: "Plantar Fasciitis Treatment",
   description: "Plantar fasciitis treatment in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and rehab.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Plantar Fasciitis Treatment",
+    description: "Plantar fasciitis treatment in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and rehab.",
+  },
   alternates: {
     canonical: "/conditions/plantar-fasciitis",
   },

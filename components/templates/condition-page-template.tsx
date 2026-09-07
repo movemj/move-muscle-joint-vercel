@@ -7,6 +7,7 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { schemas } from "@/lib/schemas";
+import { SITE } from "@/lib/site-data";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import {
@@ -68,6 +69,11 @@ export function ConditionPageTemplate({
     <>
       <JsonLdSchema data={medicalConditionSchema} />
       {faqs && faqs.length > 0 && <JsonLdSchema data={schemas.faqPage(faqSchema)} />}
+      <JsonLdSchema data={schemas.breadcrumb([
+        { name: 'Home', url: SITE.url },
+        { name: 'Conditions', url: `${SITE.url}/conditions` },
+        { name: breadcrumbLabel, url: `${SITE.url}${breadcrumbPath}` },
+      ])} />
       <section className="flex min-h-[calc(100svh-5rem)] items-center bg-charcoal py-28 sm:min-h-[calc(100vh-5rem)] sm:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Breadcrumbs
@@ -76,6 +82,7 @@ export function ConditionPageTemplate({
               { label: breadcrumbLabel, path: breadcrumbPath },
             ]}
           />
+          <p className="mt-4 text-xs text-white/55">Reviewed by <Link href="/about" className="underline underline-offset-2 hover:text-white/80">Joseph Hugunin, DC — Team Chiropractor, Sporting Kansas City</Link></p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -184,7 +191,7 @@ export function ConditionPageTemplate({
                   <AccordionTrigger className="text-left font-semibold text-charcoal text-sm py-5">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm text-steel leading-relaxed pb-5">
+                  <AccordionContent forceMount className="text-sm text-steel leading-relaxed pb-5">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

@@ -12,8 +12,8 @@ export const schemas = {
    */
   localBusinessChiropractor: () => ({
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'Chiropractor', 'MedicalBusiness'],
-    '@id': `${SITE.url}/#organization`,
+    '@type': 'Chiropractic',
+    '@id': `${SITE.url}/#clinic`,
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
@@ -39,10 +39,10 @@ export const schemas = {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: SITE.lat,
-      longitude: SITE.lng,
+      latitude: 38.9348915,
+      longitude: -94.6357243,
     },
-    hasMap: 'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
+    hasMap: 'https://www.google.com/maps/place/Move+Muscle+%26+Joint/@38.9348915,-94.6357243,17z',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -57,11 +57,9 @@ export const schemas = {
     areaServed: [
       { '@type': 'City', name: 'Overland Park' },
       { '@type': 'City', name: 'Leawood' },
-      { '@type': 'City', name: 'Lenexa' },
       { '@type': 'City', name: 'Prairie Village' },
-      { '@type': 'City', name: 'Kansas City' },
     ],
-    medicalSpecialty: ['Chiropractic', 'Sports Medicine', 'Physical Therapy'],
+    medicalSpecialty: 'Chiropractic',
     founder: {
       '@id': `${SITE.url}/about/#provider`,
     },
@@ -90,15 +88,8 @@ export const schemas = {
         url: `${SITE.url}/services/targeted-rehab`,
       },
     ],
-    sameAs: [
-      'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
-      'https://www.yelp.com/biz/move-muscle-and-joint-overland-park',
-      'https://www.healthgrades.com/group-directory/ks-kansas/overland-park/move-muscle-joint-u3cdyw2',
-      'https://www.instagram.com/movemuscleandjoint/',
-      'https://local.yahoo.com/info-224216223-move-muscle-joint-overland-park/',
-      'https://nextdoor.com/pages/move-muscle-joint-overland-park-ks/',
-      'https://www.facebook.com/movemuscleandjoint',
-    ],
+    // Add Google Business Profile, Yelp, Healthgrades, and Instagram profiles here.
+    sameAs: [],
   }),
 
   /**
@@ -113,7 +104,7 @@ export const schemas = {
     description: `${serviceTitle} in ${SITE.addressCity}, ${SITE.addressState} to improve joint mobility, reduce pain, and support better movement.`,
     provider: {
       '@type': 'Chiropractor',
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
     },
     areaServed: {
       '@type': 'City',
@@ -167,26 +158,27 @@ export const schemas = {
     honorificSuffix: 'DC',
     jobTitle: 'Chiropractor',
     description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team physician for Sporting KC and care provider for University of Kansas Athletics.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2016%2C%202026%2C%2007_30_47%20PM-fYJYlrqEHJRDcGk4IurlfgtlpvlAwi.png',
+    image: `${SITE.url}/images/joseph-hugunin-dc.webp`,
     url: `${SITE.url}/about`,
     worksFor: {
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
     },
     alumniOf: [
-      { '@type': 'CollegeOrUniversity', name: 'Rockhurst University' },
+      { '@type': 'CollegeOrUniversity', name: 'Cleveland Chiropractic College', address: 'Los Angeles' },
     ],
     knowsAbout: [
       'Chiropractic',
+      'Sports Chiropractic',
       'Myofascial Release Therapy',
       'Shockwave Therapy',
-      'Sports Chiropractic',
-      'Movement-Based Rehabilitation',
-      'Functional Movement Assessment',
+      'Movement Rehabilitation',
     ],
     memberOf: [
       { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Physician' },
       { '@type': 'SportsOrganization', name: 'University of Kansas Athletics', description: 'Care Provider' },
     ],
+    // Add Google Business Profile, Yelp, Healthgrades, and Instagram profiles here.
+    sameAs: [],
     areaServed: 'Overland Park, KS',
   }),
 
@@ -235,22 +227,22 @@ export const schemas = {
     '@type': 'Article',
     headline,
     description,
-    image: image.startsWith('http') ? image : `${SITE.url}${image}`,
+    image: /^https?:\/\//i.test(image) ? image : `${SITE.url}${image.startsWith('/') ? image : `/${image}`}`,
     datePublished,
     dateModified,
-    author: {
+author: {
       '@type': 'Person',
+      '@id': `${SITE.url}/about/#provider`,
       name: author,
       url: `${SITE.url}/about`,
-      jobTitle: 'Chiropractor',
+      jobTitle: 'Doctor of Chiropractic',
       worksFor: {
-        '@type': 'LocalBusiness',
-        '@id': `${SITE.url}/#organization`,
+        '@id': `${SITE.url}/#clinic`,
       },
     },
     publisher: {
       '@type': 'Organization',
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
       name: SITE.name,
       logo: {
         '@type': 'ImageObject',
@@ -264,7 +256,56 @@ export const schemas = {
   }),
 
   /**
-   * 8. WebSite Schema
+   * 8. Offer Schema
+   * Used on: New patient offer page
+   */
+  newPatientOffer: () => ({
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name: '$49 New Patient First Visit',
+    description:
+      'New patient special at Move Muscle & Joint: a full movement assessment, clinical evaluation, and hands-on treatment when clinically appropriate.',
+    price: '49',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: `${SITE.url}/new-patient-offer`,
+    seller: {
+      '@id': `${SITE.url}/#clinic`,
+    },
+  }),
+
+  /**
+   * 9. WebPage + ReserveAction Schema
+   * Used on: Book page
+   */
+  bookWebPage: () => ({
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.url}/book#webpage`,
+    url: `${SITE.url}/book`,
+    name: 'Book a Chiropractor in Overland Park, KS | Move Muscle & Joint',
+    about: {
+      '@id': `${SITE.url}/#clinic`,
+    },
+    potentialAction: {
+      '@type': 'ReserveAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://mmj.janeapp.com/',
+        actionPlatform: [
+          'https://schema.org/DesktopWebPlatform',
+          'https://schema.org/MobileWebPlatform',
+        ],
+      },
+      result: {
+        '@type': 'Reservation',
+        name: 'Chiropractic Appointment',
+      },
+    },
+  }),
+
+  /**
+   * 10. WebSite Schema
    * Used on: Layout (site-wide)
    */
   website: () => ({
@@ -277,7 +318,7 @@ export const schemas = {
       'Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.',
     publisher: {
       '@type': 'Chiropractor',
-      '@id': `${SITE.url}/#organization`,
+      '@id': `${SITE.url}/#clinic`,
     },
     potentialAction: {
       '@type': 'SearchAction',

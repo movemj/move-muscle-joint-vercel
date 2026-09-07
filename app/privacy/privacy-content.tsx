@@ -56,7 +56,7 @@ export function PrivacyContent() {
           <p className="text-steel leading-relaxed">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
           
           <h2 className="text-xl font-bold text-charcoal mt-8">Contact</h2>
-          <p className="text-steel leading-relaxed">{SITE.name}<br />{SITE.address}<br />{SITE.phone}</p>
+          <p className="text-steel leading-relaxed">{SITE.name}<br />{SITE.address}<br /><a href="tel:+19133030989" className="hover:text-navy">{SITE.phone}</a></p>
         </div>
       </SectionWrapper>
     </>

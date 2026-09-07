@@ -39,7 +39,7 @@ export function AreasWeServe() {
         ))}
       </div>
       <p className="mt-4 text-xs text-steel">
-        Located at {SITE.address}. Call <a href={`tel:${SITE.phone}`} className="text-navy hover:underline">{SITE.phone}</a> to schedule.
+        Located at {SITE.address}. Call <a href="tel:+19133030989" className="text-navy hover:underline">{SITE.phone}</a> to schedule.
       </p>
     </div>
   );

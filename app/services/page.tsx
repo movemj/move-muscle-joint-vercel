@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Chiropractic & Rehab Services",
   description:
     "Four integrated services at Move Muscle & Joint: chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Chiropractic & Rehab Services",
+    description: "Four integrated services at Move Muscle & Joint: chiropractic care, myofascial release therapy, shockwave therapy, and targeted rehab in Overland Park.",
+  },
   alternates: {
     canonical: "/services",
   },

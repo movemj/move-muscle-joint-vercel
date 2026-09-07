@@ -17,6 +17,11 @@ import { SITE } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Chiropractor Overland Park KS | Move Muscle & Joint",
   description: "Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS to help you move better.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Chiropractor Overland Park KS | Move Muscle & Joint",
+    description: "Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS to help you move better.",
+  },
   alternates: {
     canonical: "/",
   },

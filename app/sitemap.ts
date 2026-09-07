@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.movemuscleandjoint.com';
+  const siteLastModified = new Date('2026-09-06');
   
   // Static routes
   const staticRoutes = [
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/faq`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/contact`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/book`, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${baseUrl}/new-patient-offer`, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${baseUrl}/privacy`, changeFrequency: 'yearly', priority: 0.5 },
   ];
 
@@ -44,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allRoutes = [
     ...staticRoutes.map(route => ({
       url: route.url,
-      lastModified: new Date(),
+      lastModified: siteLastModified,
       changeFrequency: route.changeFrequency as 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
       priority: route.priority,
     })),

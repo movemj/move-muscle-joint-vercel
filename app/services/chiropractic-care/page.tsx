@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Chiropractor in Overland Park",
   description:
     "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Chiropractor in Overland Park",
+    description: "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+  },
   alternates: {
     canonical: "/services/chiropractic-care",
   },
