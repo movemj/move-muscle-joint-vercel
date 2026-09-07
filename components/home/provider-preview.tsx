@@ -19,7 +19,7 @@ export function ProviderPreview() {
           <div className="aspect-[4/3] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0 relative">
             <Image
               src={IMAGES.provider}
-              alt="Dr. Joseph Hugunin, Founder of Move Muscle & Joint"
+              alt="Joseph Hugunin, DC — Founder, Move Muscle & Joint"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 400px"
@@ -45,6 +45,17 @@ export function ProviderPreview() {
               His approach focuses on restoring function, reducing flare-ups, and
               helping patients build long-term confidence in the way they move.
             </p>
+          </div>
+          <div className="mt-6">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-navy">Credentials & Affiliations</h3>
+            <ul className="mt-3 space-y-1 text-sm leading-relaxed text-steel">
+              <li>Doctor of Chiropractic (DC), Cleveland Chiropractic College, Los Angeles</li>
+              <li>20+ years of musculoskeletal clinical experience</li>
+              <li>Team Chiropractor, Sporting Kansas City (MLS)</li>
+              <li>Team Chiropractor, University of Kansas Athletics</li>
+              <li>Event care provider, UFC</li>
+              <li>Touring artist care through Live Nation</li>
+            </ul>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full max-w-full">
             <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow />

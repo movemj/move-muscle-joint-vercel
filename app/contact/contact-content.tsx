@@ -61,7 +61,7 @@ export function ContactContent() {
             Contact Move Muscle & Joint
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-5 text-lg text-white/70 max-w-2xl">
-            Have a question? Use the form below or visit our office in Overland Park. To schedule care, we recommend booking online.
+            Have a question? Use the form below or visit our office in Overland Park. Call or text us at (913) 303-0989.
           </motion.p>
         </div>
       </section>
@@ -92,7 +92,7 @@ export function ContactContent() {
               <Button type="submit" disabled={sending} className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-full font-semibold">
                 {sending ? "Sending..." : "Send Message"}
               </Button>
-              <p className="text-xs text-steel">Looking to schedule an appointment? <a href="/book" className="text-navy font-semibold hover:underline">Book online</a> for the fastest experience.</p>
+              <p className="text-xs text-steel">Looking to schedule an appointment? <a href="https://mmj.janeapp.com/" target="_blank" rel="noopener noreferrer" className="text-navy font-semibold hover:underline">Book online</a> for the fastest experience.</p>
             </form>
           </div>
 
@@ -112,15 +112,15 @@ export function ContactContent() {
                   <Phone className="w-5 h-5 text-navy shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-charcoal">Phone</p>
-                    <p className="text-sm text-steel">{SITE.phone}</p>
-                    <p className="text-xs text-steel mt-0.5">For general questions only. To schedule, please book online.</p>
+                    <a href="tel:+19133030989" className="text-sm text-steel hover:text-navy">{SITE.phone}</a>
+                    <p className="text-xs text-steel mt-0.5">Call or text us at (913) 303-0989.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-navy shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-charcoal">Hours</p>
-                    <p className="text-sm text-steel">Monday – Friday: By appointment</p>
+                    <p className="text-sm text-steel">Monday – Friday: 9:00 AM – 6:00 PM</p>
                     <p className="text-sm text-steel">Saturday – Sunday: Closed</p>
                   </div>
                 </div>
@@ -128,16 +128,14 @@ export function ContactContent() {
             </div>
 
             {/* Map */}
-            <div className="rounded-xl overflow-hidden h-64 bg-secondary">
+            <div className="aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
               <iframe
-                title="Move Muscle & Joint Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.5!2d-94.646!3d38.926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU1JzMzLjAiTiA5NMKwMzgnNDUuMCJX!5e0!3m2!1sen!2sus!4v1"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
+                title="Move Muscle & Joint location map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.52608666434!2d-94.63572429999999!3d38.9348915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e976123d316f%3A0xdbb76f9248886b15!2sMove%20Muscle%20%26%20Joint!5e0!3m2!1sen!2sus!4v1788751242235!5m2!1sen!2sus"
+                className="h-full w-full border-0"
+                allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
 

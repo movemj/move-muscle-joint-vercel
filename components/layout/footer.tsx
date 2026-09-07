@@ -25,9 +25,13 @@ export function Footer() {
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
                 <span className="break-words overflow-wrap-break-word">{SITE.address}</span>
               </div>
-              <div className="flex items-center gap-2 overflow-hidden">
-                <Phone className="w-4 h-4 shrink-0 text-softblue" />
-                <span className="break-words">{SITE.phone}</span>
+              <div className="flex items-start gap-2 overflow-hidden">
+                <Phone className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+19133030989" className="break-words hover:text-white">{SITE.phone}</a>
+                  <span>Monday – Friday: 9:00 AM – 6:00 PM</span>
+                  <span>Saturday – Sunday: Closed</span>
+                </div>
               </div>
             </div>
           </div>

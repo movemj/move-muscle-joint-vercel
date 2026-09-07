@@ -39,8 +39,10 @@ export const schemas = {
     },
     geo: {
       '@type': 'GeoCoordinates',
+      latitude: 38.9348915,
+      longitude: -94.6357243,
     },
-    hasMap: 'https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg',
+    hasMap: 'https://www.google.com/maps/place/Move+Muscle+%26+Joint/@38.9348915,-94.6357243,17z',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -156,21 +158,20 @@ export const schemas = {
     honorificSuffix: 'DC',
     jobTitle: 'Chiropractor',
     description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team physician for Sporting KC and care provider for University of Kansas Athletics.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2016%2C%202026%2C%2007_30_47%20PM-fYJYlrqEHJRDcGk4IurlfgtlpvlAwi.png',
+    image: `${SITE.url}/images/joseph-hugunin-dc.webp`,
     url: `${SITE.url}/about`,
     worksFor: {
       '@id': `${SITE.url}/#clinic`,
     },
     alumniOf: [
-      { '@type': 'CollegeOrUniversity', name: 'Rockhurst University' },
+      { '@type': 'CollegeOrUniversity', name: 'Cleveland Chiropractic College', address: 'Los Angeles' },
     ],
     knowsAbout: [
       'Chiropractic',
+      'Sports Chiropractic',
       'Myofascial Release Therapy',
       'Shockwave Therapy',
-      'Sports Chiropractic',
-      'Movement-Based Rehabilitation',
-      'Functional Movement Assessment',
+      'Movement Rehabilitation',
     ],
     memberOf: [
       { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Physician' },

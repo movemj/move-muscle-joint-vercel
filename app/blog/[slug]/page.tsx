@@ -271,6 +271,7 @@ export default async function BlogPostPage({ params }: Props) {
               { label: post.title, path: `/blog/${slug}` },
             ]}
           />
+          <p className="mb-4 text-xs text-white/55">Reviewed by <Link href="/about" className="underline underline-offset-2 hover:text-white/80">Joseph Hugunin, DC — Team Chiropractor, Sporting Kansas City</Link></p>
           {post.category && (
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-softblue mb-4 block">
               {post.category}

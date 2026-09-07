@@ -44,7 +44,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-softblue shrink-0" />
-              <a href={`tel:${SITE.phone}`} className="hover:text-navy transition-colors">
+              <a href="tel:+19133030989" className="hover:text-navy transition-colors">
                 {SITE.phone}
               </a>
             </div>

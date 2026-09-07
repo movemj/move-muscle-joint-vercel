@@ -37,6 +37,22 @@ export function BookContent() {
         </div>
       </section>
 
+      <section className="px-6 py-10 sm:px-8 lg:px-16">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border bg-secondary">
+          <iframe
+            title="Move Muscle & Joint online booking"
+            src="https://mmj.janeapp.com/"
+            className="h-[100svh] min-h-[900px] w-full border-0 sm:h-[900px]"
+            loading="eager"
+            allow="fullscreen"
+          />
+        </div>
+        <div className="mx-auto mt-6 max-w-2xl text-center">
+          <p className="text-sm text-steel">Jane may block embedded booking calendars in some browsers. If the calendar does not load, open Jane directly or call us at <a href="tel:+19133030989" className="font-semibold text-navy hover:underline">(913) 303-0989</a>.</p>
+          <a href="https://mmj.janeapp.com/" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white">Open Booking</a>
+        </div>
+      </section>
+
       <SectionWrapper>
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>

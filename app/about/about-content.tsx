@@ -36,7 +36,7 @@ export function AboutContent() {
           <div className="space-y-5 text-steel leading-relaxed -mt-8">
             <p>We don't believe in rushed care or generic treatment plans. At Move Muscle & Joint, every session is designed around how your body moves, where it is compensating, and what it needs to recover fully.</p>
             <p>Our approach blends hands-on treatment with movement education and progressive rehab so you can build results that last. No cookie-cutter plans. No endless appointments without a clear goal. Just intentional care designed to help you move better and stay that way.</p>
-            <p>Move was founded on the belief that chiropractic care is most effective when it's part of a bigger picture — one that includes myofascial release therapy, rehab-based exercise, and a commitment to understanding the whole person, not just the painful spot.</p>
+            <p>Move was built on the belief that chiropractic care is most effective when it's part of a bigger picture — one that includes myofascial release therapy, rehab-based exercise, and a commitment to understanding the whole person, not just the painful spot.</p>
           </div>
         </div>
       </SectionWrapper>
@@ -47,7 +47,7 @@ export function AboutContent() {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0 relative">
               <Image
                 src={IMAGES.provider}
-                alt="Dr. Joseph Hugunin"
+                alt="Joseph Hugunin, DC — Founder, Move Muscle & Joint"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 400px"
@@ -62,6 +62,17 @@ export function AboutContent() {
               <p>Dr. Joseph Hugunin helps patients uncover the root cause of pain through a blend of chiropractic care, movement assessment, myofascial release therapy, and rehab-based treatment.</p>
               <p>His approach focuses on restoring function, reducing flare-ups, and helping patients build long-term confidence in the way they move.</p>
               <p>With a focus on whole-body evaluation and integrated care, Dr. Hugunin works with patients in Overland Park and the surrounding Kansas City metro area who want more than temporary relief — they want lasting improvement.</p>
+            </div>
+            <div className="mt-8">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-navy">Credentials & Affiliations</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-steel">
+                <li>Doctor of Chiropractic (DC), Cleveland Chiropractic College, Los Angeles</li>
+                <li>20+ years of musculoskeletal clinical experience</li>
+                <li>Team Chiropractor, Sporting Kansas City (MLS)</li>
+                <li>Team Chiropractor, University of Kansas Athletics</li>
+                <li>Event care provider, UFC</li>
+                <li>Touring artist care through Live Nation</li>
+              </ul>
             </div>
             <div className="mt-8">
               <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow />
