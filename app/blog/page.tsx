@@ -39,7 +39,6 @@ export const metadata: Metadata = {
     title: "Movement & Rehab Blog",
     description: "Expert insights on movement health, rehabilitation, and longevity.",
     images: [IMAGES.assessment],
-    creator: "@movemuscleandjoint",
   },
   robots: {
     index: true,

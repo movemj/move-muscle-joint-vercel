@@ -86,7 +86,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       images: [ogImageUrl],
-      creator: "@movemuscleandjoint",
     },
     robots: {
       index: true,
@@ -271,7 +270,7 @@ export default async function BlogPostPage({ params }: Props) {
               { label: post.title, path: `/blog/${slug}` },
             ]}
           />
-          <p className="mb-4 text-xs text-white/55">Reviewed by <Link href="/about" className="underline underline-offset-2 hover:text-white/80">Joseph Hugunin, DC — Team Chiropractor, Sporting Kansas City</Link></p>
+              <p className="mb-4 text-xs text-white/55">Reviewed by <Link href="/about" className="underline underline-offset-2 hover:text-white/80">Joseph Hugunin, DC — 20+ years of clinical experience, former team chiropractor for Sporting Kansas City</Link></p>
           {post.category && (
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-softblue mb-4 block">
               {post.category}
