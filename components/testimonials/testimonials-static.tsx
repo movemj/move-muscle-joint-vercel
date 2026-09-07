@@ -35,7 +35,7 @@ export function TestimonialsStatic({
       <SectionHeading tag={tag} title={title} align={centered ? "center" : "left"} />
       <div
         className={cn(
-          "-mt-8",
+          "-mt-4",
           isSingle
             ? cn("max-w-2xl", centered && "mx-auto")
             : "grid gap-12 sm:grid-cols-2 sm:gap-16"
