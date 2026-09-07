@@ -86,7 +86,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       images: [ogImageUrl],
-      creator: "@movemuscleandjoint",
     },
     robots: {
       index: true,

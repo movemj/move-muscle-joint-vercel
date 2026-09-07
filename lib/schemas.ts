@@ -88,8 +88,11 @@ export const schemas = {
         url: `${SITE.url}/services/targeted-rehab`,
       },
     ],
-    // Add Google Business Profile, Yelp, Healthgrades, and Instagram profiles here.
-    sameAs: [],
+    sameAs: [
+      'https://www.instagram.com/movemuscleandjoint/',
+      'https://www.facebook.com/movemuscleandjoint',
+      'https://maps.google.com/?cid=15832245689117076245',
+    ],
   }),
 
   /**
@@ -177,7 +180,7 @@ export const schemas = {
       { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Physician' },
       { '@type': 'SportsOrganization', name: 'University of Kansas Athletics', description: 'Care Provider' },
     ],
-    // Add Google Business Profile, Yelp, Healthgrades, and Instagram profiles here.
+    // Personal profile URLs (e.g. LinkedIn) are still pending; do not reuse the clinic's business social URLs here.
     sameAs: [],
     areaServed: 'Overland Park, KS',
   }),
