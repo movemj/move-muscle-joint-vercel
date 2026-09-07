@@ -17,7 +17,7 @@ export const schemas = {
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
-      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, team chiropractor for Sporting KC and University of Kansas Athletics.',
+      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, former team chiropractor for Sporting Kansas City and University of Kansas Athletics.',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
@@ -92,6 +92,7 @@ export const schemas = {
       'https://www.instagram.com/movemuscleandjoint/',
       'https://www.facebook.com/movemuscleandjoint',
       'https://maps.google.com/?cid=15832245689117076245',
+      'https://www.yelp.com/biz/move-muscle-and-joint-overland-park',
     ],
   }),
 
@@ -160,7 +161,7 @@ export const schemas = {
     alternateName: 'Dr. Joey Hugunin',
     honorificSuffix: 'DC',
     jobTitle: 'Chiropractor',
-    description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Team chiropractor for Sporting KC and care provider for University of Kansas Athletics.',
+    description: 'Founder of Move Muscle & Joint and movement-focused chiropractor in Overland Park with 20+ years of experience. Former team chiropractor for Sporting Kansas City and University of Kansas Athletics, with additional experience providing care at UFC events and for touring artists through Live Nation.',
     image: `${SITE.url}/images/joseph-hugunin-dc.webp`,
     url: `${SITE.url}/about`,
     worksFor: {
@@ -175,10 +176,6 @@ export const schemas = {
       'Myofascial Release Therapy',
       'Shockwave Therapy',
       'Movement Rehabilitation',
-    ],
-    memberOf: [
-      { '@type': 'SportsTeam', name: 'Sporting KC', description: 'Team Chiropractor' },
-      { '@type': 'SportsOrganization', name: 'University of Kansas Athletics', description: 'Care Provider' },
     ],
     sameAs: ['https://www.linkedin.com/in/dr-joseph-hugunin/'],
     areaServed: 'Overland Park, KS',

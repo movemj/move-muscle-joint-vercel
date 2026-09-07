@@ -68,10 +68,10 @@ export function AboutContent() {
               <ul className="mt-4 space-y-2 text-sm leading-relaxed text-steel">
                 <li>Doctor of Chiropractic (DC), Cleveland Chiropractic College, Los Angeles</li>
                 <li>20+ years of musculoskeletal clinical experience</li>
-                <li>Team Chiropractor, Sporting Kansas City (MLS)</li>
-                <li>Team Chiropractor, University of Kansas Athletics</li>
-                <li>Event care provider, UFC</li>
-                <li>Touring artist care through Live Nation</li>
+                <li>Former Team Chiropractor, Sporting Kansas City (MLS)</li>
+                <li>Former Team Chiropractor, University of Kansas Athletics</li>
+                <li>Former event care provider, UFC</li>
+                <li>Former touring artist care provider, Live Nation</li>
               </ul>
             </div>
             <div className="mt-8">
