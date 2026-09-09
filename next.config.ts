@@ -66,7 +66,9 @@ const nextConfig: NextConfig = {
       { source: "/blog/modern-chiropractic-movement-therapy-overland-park", destination: "/our-approach", permanent: true },
       { source: "/blog/why-choose-movement-focused-chiropractic", destination: "/our-approach", permanent: true },
 
-      // Location redirects (dynamic pattern)
+      // Location redirects
+      { source: "/locations/overland-park", destination: "/", permanent: true },
+      // Preserve the generic location redirect after the specific Overland Park rule.
       {
         source: "/locations/:city",
         destination: "/contact",
