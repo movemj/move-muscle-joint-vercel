@@ -3,21 +3,21 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Neck Pain Treatment in Overland Park",
+  title: "Neck Pain Chiropractor Overland Park KS",
   description:
-    "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+    "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Neck Pain Treatment in Overland Park",
-    description: "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+    title: "Neck Pain Chiropractor Overland Park KS | Move Muscle & Joint",
+    description: "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
   },
   alternates: {
     canonical: "/conditions/neck-pain",
   },
   openGraph: {
-    title: "Neck Pain Treatment in Overland Park",
+    title: "Neck Pain Chiropractor Overland Park KS | Move Muscle & Joint",
     description:
-      "Neck pain treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and targeted rehab.",
+      "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
     url: `${SITE.url}/conditions/neck-pain`,
   },
 };
@@ -35,7 +35,9 @@ export default function NeckPainPage() {
       breadcrumbPath="/conditions/neck-pain"
       introText={
         <p>
-          Neck pain treatment at Move Muscle & Joint in Overland Park goes beyond temporary relief.
+          If you&apos;re looking for a chiropractor in Overland Park for neck pain, the first question
+          worth asking is what&apos;s actually driving the pain. Neck pain treatment at Move Muscle &
+          Joint in Overland Park goes beyond temporary relief.
           We assess the full kinetic chain — from your cervical spine to your thoracic mobility,
           shoulder mechanics, and postural habits — to uncover what&apos;s driving your neck pain and
           build a lasting solution through integrated care.

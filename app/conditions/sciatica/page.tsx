@@ -3,21 +3,21 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Sciatica Treatment in Overland Park",
+  title: "Sciatica Chiropractor Overland Park KS",
   description:
-    "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+    "Sciatica chiropractor in Overland Park, KS treating nerve pain at its source with chiropractic care, myofascial release, and rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Sciatica Treatment in Overland Park",
-    description: "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+    title: "Sciatica Chiropractor Overland Park KS | Move Muscle & Joint",
+    description: "Sciatica chiropractor in Overland Park, KS treating nerve pain at its source with chiropractic care, myofascial release, and rehab.",
   },
   alternates: {
     canonical: "/conditions/sciatica",
   },
   openGraph: {
-    title: "Sciatica Treatment in Overland Park, KS | Move Muscle & Joint",
+    title: "Sciatica Chiropractor Overland Park KS | Move Muscle & Joint",
     description:
-      "Sciatica treatment in Overland Park, KS with chiropractic care, myofascial release therapy, mobility work, and targeted rehab.",
+      "Sciatica chiropractor in Overland Park, KS treating nerve pain at its source with chiropractic care, myofascial release, and rehab.",
     url: `${SITE.url}/conditions/sciatica`,
   },
 };
@@ -35,7 +35,9 @@ export default function SciaticaPage() {
       breadcrumbPath="/conditions/sciatica"
       introText={
         <p>
-          Sciatica treatment at Move Muscle & Joint in Overland Park addresses the full picture —
+          If you&apos;re looking for a chiropractor in Overland Park for sciatica, the first question
+          worth asking is what&apos;s actually compressing or irritating the nerve. Sciatica treatment
+          at Move Muscle & Joint in Overland Park addresses the full picture —
           not just the pain running down your leg. Through integrated chiropractic care, myofascial
           release therapy, shockwave therapy, and targeted rehab, we identify what&apos;s compressing or
           irritating the sciatic nerve and build a plan to resolve it at the source.

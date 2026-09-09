@@ -3,17 +3,19 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Plantar Fasciitis Treatment",
-  description: "Plantar fasciitis treatment in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and rehab.",
+  title: "Plantar Fasciitis Treatment Overland Park KS",
+  description: "Plantar fasciitis treatment in Overland Park, KS using shockwave therapy to relieve heel pain, plus chiropractic care and rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Plantar Fasciitis Treatment",
-    description: "Plantar fasciitis treatment in Overland Park, KS with shockwave therapy, myofascial release therapy, mobility work, and rehab.",
+    title: "Plantar Fasciitis Treatment Overland Park KS | Move Muscle & Joint",
+    description: "Plantar fasciitis treatment in Overland Park, KS using shockwave therapy to relieve heel pain, plus chiropractic care and rehab.",
   },
   alternates: {
     canonical: "/conditions/plantar-fasciitis",
   },
   openGraph: {
+    title: "Plantar Fasciitis Treatment Overland Park KS | Move Muscle & Joint",
+    description: "Plantar fasciitis treatment in Overland Park, KS using shockwave therapy to relieve heel pain, plus chiropractic care and rehab.",
     url: `${SITE.url}/conditions/plantar-fasciitis`,
   },
 };
@@ -26,7 +28,7 @@ export default function PlantarFasciitisPage() {
       breadcrumbLabel="Plantar Fasciitis"
       breadcrumbPath="/conditions/plantar-fasciitis"
       introText={<>
-        <p>Plantar fasciitis treatment at Move Muscle & Joint in Overland Park combines shockwave therapy, myofascial release, chiropractic care, and targeted rehab to address the full picture — from foot mechanics to calf mobility to lower extremity loading patterns.</p>
+        <p>If you&apos;re looking for a chiropractor in Overland Park for plantar fasciitis, the first question worth asking is what&apos;s keeping the tissue from healing. Plantar fasciitis treatment at Move Muscle & Joint in Overland Park combines shockwave therapy, myofascial release, chiropractic care, and targeted rehab to address the full picture — from foot mechanics to calf mobility to lower extremity loading patterns.</p>
       </>}
       whatItIs={<>
         <p>Plantar fasciitis is inflammation and degeneration of the plantar fascia — the thick band of tissue that runs along the bottom of the foot. It&apos;s one of the most common causes of heel pain and can significantly limit walking, running, and daily activity.</p>

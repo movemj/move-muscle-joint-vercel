@@ -3,21 +3,21 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Low Back Pain Treatment in Overland Park",
+  title: "Low Back Pain Chiropractor Overland Park KS",
   description:
-    "Low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
+    "Low back pain chiropractor in Overland Park, KS using chiropractic care, myofascial release, and rehab to resolve pain at its source.",
   twitter: {
     card: "summary_large_image",
-    title: "Low Back Pain Treatment in Overland Park",
-    description: "Low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
+    title: "Low Back Pain Chiropractor Overland Park KS | Move Muscle & Joint",
+    description: "Low back pain chiropractor in Overland Park, KS using chiropractic care, myofascial release, and rehab to resolve pain at its source.",
   },
   alternates: {
     canonical: "/conditions/low-back-pain",
   },
   openGraph: {
-    title: "Low Back Pain Treatment in Overland Park",
+    title: "Low Back Pain Chiropractor Overland Park KS | Move Muscle & Joint",
     description:
-      "Low back pain treatment in Overland Park, KS with chiropractic care, myofascial release therapy, movement retraining, and rehab.",
+      "Low back pain chiropractor in Overland Park, KS using chiropractic care, myofascial release, and rehab to resolve pain at its source.",
     url: `${SITE.url}/conditions/low-back-pain`,
   },
 };
@@ -35,7 +35,9 @@ export default function LowBackPainPage() {
       breadcrumbPath="/conditions/low-back-pain"
       introText={
         <p>
-          Low back pain treatment at Move Muscle & Joint in Overland Park is built around
+          If you&apos;re looking for a chiropractor in Overland Park for low back pain, the first
+          question worth asking is what&apos;s actually driving the pain. Low back pain treatment at
+          Move Muscle & Joint in Overland Park is built around
           understanding why your back hurts — not just where. Through integrated chiropractic care,
           myofascial release therapy, and targeted rehab, we address the structural, muscular, and
           movement-based contributors to build lasting relief.
