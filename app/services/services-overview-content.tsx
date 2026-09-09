@@ -97,7 +97,7 @@ export function ServicesOverviewContent() {
                   >
                     Learn More <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <CTAButton href="/book" label="Book Now" size="sm" />
+                  <CTAButton href="/book" label="Book Now" size="sm" campaign="services" content={s.slug.replace("/services/", "")} />
                 </div>
               </div>
             </motion.div>
@@ -135,7 +135,7 @@ export function ServicesOverviewContent() {
             Schedule your first visit and we&apos;ll build a plan around your body.
           </p>
           <div className="mt-8">
-            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow campaign="services" content="overview" />
           </div>
         </div>
       </section>

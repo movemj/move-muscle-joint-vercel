@@ -19,7 +19,7 @@ export default function ThankYouPage() {
           We&apos;ve received your message and will get back to you as soon as possible. If you&apos;re looking to schedule an appointment, the fastest way is to book online.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-8 flex flex-wrap gap-4 justify-center">
-          <CTAButton href="/book" label="Book an Appointment" showArrow />
+          <CTAButton href="/book" label="Book an Appointment" showArrow campaign="thank-you" />
           <CTAButton href="/" label="Back to Home" variant="outline" />
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-8">

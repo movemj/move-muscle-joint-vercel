@@ -58,7 +58,7 @@ export function ProviderPreview() {
             </ul>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full max-w-full">
-            <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow />
+            <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow campaign="homepage" />
             <CTAButton href="/about" label="Learn More" variant="ghost" />
           </div>
         </div>

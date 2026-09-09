@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SITE, SERVICES, CONDITIONS } from "@/lib/site-data";
+import { buildJaneUrl } from "@/lib/booking";
 import { MapPin, Phone } from "lucide-react";
+
+const janeUrl = buildJaneUrl({ campaign: "header-footer" });
 
 export function Footer() {
   return (
@@ -77,7 +80,7 @@ export function Footer() {
                 </li>
               ))}
               <li className="overflow-hidden">
-                <a href="https://mmj.janeapp.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-white transition-colors break-words">Book Now</a>
+                <a href={janeUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-white transition-colors break-words">Book Now</a>
               </li>
             </ul>
           </div>

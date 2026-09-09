@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SITE } from "@/lib/site-data";
+import { buildJaneUrl } from "@/lib/booking";
 
 const offerPath = "/new-patient-offer";
+const offerBookingUrl = buildJaneUrl({ campaign: "new-patient-offer", treatment: 6 });
 const excludedPath = (pathname: string) => pathname.startsWith("/admin") || pathname.startsWith("/api") || pathname.startsWith("/thank-you");
 
 export function NewPatientOfferFloat() {
@@ -15,7 +16,7 @@ export function NewPatientOfferFloat() {
   if (onOfferPage) return null;
   return (
     <Link
-      href={onOfferPage ? SITE.newPatientOfferBookingUrl : offerPath}
+      href={onOfferPage ? offerBookingUrl : offerPath}
       target={onOfferPage ? "_blank" : undefined}
       rel={onOfferPage ? "noopener noreferrer" : undefined}
       aria-label={onOfferPage ? "Book $49 visit" : "View $49 first visit offer"}
@@ -39,7 +40,7 @@ export function NewPatientOfferMobileFloat() {
   if (onOfferPage) return null;
   return (
     <Link
-      href={onOfferPage ? SITE.newPatientOfferBookingUrl : offerPath}
+      href={onOfferPage ? offerBookingUrl : offerPath}
       target={onOfferPage ? "_blank" : undefined}
       rel={onOfferPage ? "noopener noreferrer" : undefined}
       aria-label={onOfferPage ? "Book my $49 First Visit" : "See what is included in the $49 First Visit"}

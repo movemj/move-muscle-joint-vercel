@@ -78,7 +78,7 @@ export function AboutContent() {
               </ul>
             </div>
             <div className="mt-8">
-              <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow />
+              <CTAButton href="/book" label="Book With Dr. Hugunin" showArrow campaign="about" />
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export function AboutContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Experience the difference.</h2>
           <p className="mt-5 text-lg text-white/70">Book your first visit and see what movement-focused care feels like.</p>
           <div className="mt-8">
-            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow campaign="about" />
           </div>
         </div>
       </section>

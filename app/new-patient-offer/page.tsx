@@ -13,7 +13,6 @@ import { TestimonialsStatic } from "@/components/testimonials/testimonials-stati
 
 const offerTestimonial = getTestimonialsByTag("offer")[0];
 
-const offerBookingUrl = SITE.newPatientOfferBookingUrl;
 const offerTitle = "$49 New Patient Special | Chiropractor in Overland Park, KS";
 const offerDescription = "New patient special at Move Muscle & Joint in Overland Park: $49 for a full movement assessment, clinical evaluation, and hands-on treatment when appropriate.";
 
@@ -110,7 +109,7 @@ export default function NewPatientOfferPage() {
       <section className="bg-navy py-20 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-24 lg:px-16">
           <div><p className="text-8xl font-bold tracking-tight text-white sm:text-9xl">$49</p><p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-accent">First Move Session</p><p className="mt-6 max-w-sm text-lg leading-relaxed text-white/70">No guessing. No generic protocol. Start with clarity.</p></div>
-          <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Your first visit includes</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">More Than an Adjustment.</h2><div className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">{["Whole-body movement assessment", "Clinical evaluation", "Explanation of findings", "Personalized recommendations", "Hands-on treatment when clinically appropriate", "A clear next step"].map((item) => <div key={item} className="flex gap-3 border-t border-white/15 pt-4 text-sm text-white/80"><Check className="size-4 shrink-0 text-accent" aria-hidden="true" />{item}</div>)}</div><div className="mt-9"><CTAButton href={offerBookingUrl} label="Book My $49 First Visit" variant="white" size="lg" showArrow external /></div></div>
+          <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Your first visit includes</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">More Than an Adjustment.</h2><div className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">{["Whole-body movement assessment", "Clinical evaluation", "Explanation of findings", "Personalized recommendations", "Hands-on treatment when clinically appropriate", "A clear next step"].map((item) => <div key={item} className="flex gap-3 border-t border-white/15 pt-4 text-sm text-white/80"><Check className="size-4 shrink-0 text-accent" aria-hidden="true" />{item}</div>)}</div><div className="mt-9"><CTAButton campaign="new-patient-offer" treatment={6} label="Book My $49 First Visit" variant="white" size="lg" showArrow /></div></div>
         </div>
       </section>
 
@@ -131,7 +130,7 @@ export default function NewPatientOfferPage() {
         <TestimonialsStatic testimonials={[offerTestimonial]} bg="bg-light-gray" centered />
       )}
 
-      <section className="bg-charcoal py-20 text-center text-white sm:py-28"><div className="mx-auto max-w-3xl px-6"><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Start with clarity</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Your Body Is Made to Move.</h2><p className="mt-4 text-xl text-white/70">Let’s figure out what’s holding it back.</p><div className="mt-8 flex flex-col items-center gap-3"><CTAButton href={offerBookingUrl} label="Book Your $49 First Visit" variant="white" size="lg" showArrow external /><span className="text-sm text-white/55">Move Muscle & Joint · Overland Park, Kansas</span></div></div></section>
+      <section className="bg-charcoal py-20 text-center text-white sm:py-28"><div className="mx-auto max-w-3xl px-6"><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Start with clarity</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Your Body Is Made to Move.</h2><p className="mt-4 text-xl text-white/70">Let’s figure out what’s holding it back.</p><div className="mt-8 flex flex-col items-center gap-3"><CTAButton campaign="new-patient-offer" treatment={6} label="Book Your $49 First Visit" variant="white" size="lg" showArrow /><span className="text-sm text-white/55">Move Muscle & Joint · Overland Park, Kansas</span></div></div></section>
     </main>
   );
 }

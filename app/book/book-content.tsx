@@ -41,7 +41,7 @@ export function BookContent() {
             Schedule your visit at Move Muscle & Joint and get on the calendar in a couple of minutes.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
-            <CTAButton href="/book" label="Book Online" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Online" variant="white" size="lg" showArrow campaign="book-page" />
             <a href="tel:+19133030989" className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
               <Phone className="w-4 h-4" />
               Call or text (913) 303-0989
@@ -178,7 +178,7 @@ export function BookContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Ready to get started?</h2>
           <p className="mt-5 text-lg text-white/70">Book your visit at Move Muscle & Joint in Overland Park.</p>
           <div className="mt-8 flex flex-col items-center gap-4">
-            <CTAButton href="/book" label="Book Online" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Online" variant="white" size="lg" showArrow campaign="book-page" />
             <a href="tel:+19133030989" className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white">
               <Phone className="w-4 h-4" />
               Call or text (913) 303-0989

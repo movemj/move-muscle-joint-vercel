@@ -3,21 +3,21 @@ import { ServicePageTemplate } from "@/components/templates/service-page-templat
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Chiropractor in Overland Park",
+  title: "Chiropractic Care Overland Park KS",
   description:
-    "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+    "Chiropractic care in Overland Park, KS focused on restoring joint function and mobility. Personalized, assessment-driven treatment integrated with rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Chiropractor in Overland Park",
-    description: "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+    title: "Chiropractic Care Overland Park KS",
+    description: "Chiropractic care in Overland Park, KS focused on restoring joint function and mobility. Personalized, assessment-driven treatment integrated with rehab.",
   },
   alternates: {
     canonical: "/services/chiropractic-care",
   },
   openGraph: {
-    title: "Chiropractor in Overland Park",
+    title: "Chiropractic Care Overland Park KS",
     description:
-      "Chiropractic in Overland Park, KS to improve joint mobility, reduce pain, and support better movement with personalized treatment.",
+      "Chiropractic care in Overland Park, KS focused on restoring joint function and mobility. Personalized, assessment-driven treatment integrated with rehab.",
     url: `${SITE.url}/services/chiropractic-care`,
   },
 };
@@ -26,7 +26,7 @@ export default function ChiropracticCarePage() {
   return (
       <ServicePageTemplate
         title="Chiropractic"
-        h1="Chiropractor Overland Park"
+        h1="Chiropractic Care in Overland Park, KS"
         heroImage={IMAGES.chiropractic}
         breadcrumbLabel="Chiropractic"
         breadcrumbPath="/services/chiropractic-care"

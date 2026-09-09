@@ -1,4 +1,5 @@
 import { SITE } from './site-data';
+import { buildJaneUrl } from './booking';
 
 /**
  * JSON-LD Schema Utility
@@ -290,7 +291,7 @@ author: {
       '@type': 'ReserveAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://mmj.janeapp.com/',
+        urlTemplate: buildJaneUrl({ campaign: 'book-page' }),
         actionPlatform: [
           'https://schema.org/DesktopWebPlatform',
           'https://schema.org/MobileWebPlatform',
