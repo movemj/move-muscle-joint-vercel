@@ -27,7 +27,7 @@ const previewFaqs = [
 
 export function FAQPreview() {
   return (
-    <SectionWrapper bg="bg-white">
+    <SectionWrapper bg="bg-secondary">
       <div className="max-w-3xl mx-auto">
         <SectionHeading tag="FAQ" title="Questions we hear often." align="center" />
         <Accordion type="single" collapsible className="space-y-3">

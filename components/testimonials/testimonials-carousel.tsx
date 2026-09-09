@@ -50,7 +50,7 @@ export function TestimonialsCarousel() {
   const goNext = () => goTo(index + 1);
 
   return (
-    <SectionWrapper>
+    <SectionWrapper bg="bg-secondary">
       <SectionHeading tag="Patient Stories" title="What patients are saying." align="center" />
       <div
         className="max-w-3xl mx-auto"
