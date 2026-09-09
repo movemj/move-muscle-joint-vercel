@@ -78,10 +78,10 @@ export function TestimonialsCarousel() {
               className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center"
             >
               <span className="block h-px w-10 bg-accent" aria-hidden="true" />
-              <p className="text-lg leading-relaxed font-medium text-charcoal text-balance md:text-xl">
+              <p className="text-lg leading-7 font-medium text-charcoal text-balance sm:text-xl">
                 &ldquo;{current.quote}&rdquo;
               </p>
-              <cite className="block text-sm font-semibold not-italic text-steel">
+              <cite className="block text-sm leading-5 font-medium not-italic text-steel">
                 {current.name}
               </cite>
             </motion.blockquote>
