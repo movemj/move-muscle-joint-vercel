@@ -6,6 +6,7 @@ interface TestimonialQuoteProps {
   className?: string;
   light?: boolean;
   centered?: boolean;
+  variant?: "inline" | "featured";
 }
 
 export function TestimonialQuote({
@@ -13,11 +14,13 @@ export function TestimonialQuote({
   className,
   light = false,
   centered = false,
+  variant = "inline",
 }: TestimonialQuoteProps) {
   return (
     <blockquote
       className={cn(
-        "flex max-w-2xl flex-col gap-4",
+        "flex flex-col gap-4",
+        variant === "featured" ? "max-w-2xl" : "max-w-xl",
         centered && "items-center text-center",
         className
       )}
@@ -28,7 +31,9 @@ export function TestimonialQuote({
       />
       <p
         className={cn(
-          "text-lg leading-relaxed font-medium text-balance md:text-xl",
+          variant === "featured"
+            ? "text-lg leading-7 font-medium text-balance sm:text-xl"
+            : "text-base leading-7 font-medium text-balance sm:text-lg",
           light ? "text-white" : "text-charcoal"
         )}
       >
@@ -36,7 +41,7 @@ export function TestimonialQuote({
       </p>
       <cite
         className={cn(
-          "block text-sm font-semibold not-italic",
+          "block text-sm leading-5 font-medium not-italic",
           light ? "text-white/70" : "text-steel"
         )}
       >
