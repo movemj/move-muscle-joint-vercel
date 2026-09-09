@@ -76,7 +76,7 @@ export function FirstVisit() {
             ))}
           </div>
           <div className="mt-8">
-            <CTAButton href="/book" label="Schedule Your First Visit" showArrow />
+            <CTAButton href="/book" label="Schedule Your First Visit" showArrow campaign="homepage" />
           </div>
         </div>
       </div>

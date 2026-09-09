@@ -96,7 +96,7 @@ export function ConditionPageTemplate({
             {h1}
           </motion.h1>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6">
-            <CTAButton href="/book" label="Book Your Visit" variant="white" showArrow />
+            <CTAButton href="/book" label="Book Your Visit" variant="white" showArrow campaign="conditions" content={conditionSlug} />
           </motion.div>
         </div>
       </section>
@@ -136,7 +136,7 @@ export function ConditionPageTemplate({
         <SectionHeading tag="Our Evaluation" title="How Move evaluates this condition." />
         <div className="max-w-3xl space-y-4 text-steel leading-relaxed -mt-8">{howWeEvaluate}</div>
         <div className="mt-8">
-          <CTAButton href="/book" label="Schedule Your Assessment" showArrow />
+          <CTAButton href="/book" label="Schedule Your Assessment" showArrow campaign="conditions" content={conditionSlug} />
         </div>
       </SectionWrapper>
 
@@ -218,7 +218,7 @@ export function ConditionPageTemplate({
             Book your visit at Move Muscle & Joint in Overland Park and take the first step toward lasting relief.
           </p>
           <div className="mt-8">
-            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow campaign="conditions" content={conditionSlug} />
           </div>
         </div>
       </section>

@@ -51,7 +51,7 @@ export function ServicesPreview() {
                 >
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>
-                <CTAButton href="/book" label="Book" size="sm" />
+                <CTAButton href="/book" label="Book" size="sm" campaign="homepage" content={s.slug.replace("/services/", "")} />
               </div>
             </div>
           </motion.div>

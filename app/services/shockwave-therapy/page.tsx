@@ -2,22 +2,24 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
+const shockwaveTitle = "Shockwave Therapy Overland Park KS";
+const shockwaveDescription =
+  "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology at Move Muscle & Joint in Overland Park, KS.";
+
 export const metadata: Metadata = {
-  title: "Shockwave Therapy in Overland Park",
-  description:
-    "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology at Move Muscle & Joint in Overland Park.",
+  title: shockwaveTitle,
+  description: shockwaveDescription,
   twitter: {
     card: "summary_large_image",
-    title: "Shockwave Therapy in Overland Park",
-    description: "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology at Move Muscle & Joint in Overland Park.",
+    title: shockwaveTitle,
+    description: shockwaveDescription,
   },
   alternates: {
     canonical: "/services/shockwave-therapy",
   },
   openGraph: {
-    title: "Shockwave Therapy in Overland Park",
-    description:
-      "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology.",
+    title: shockwaveTitle,
+    description: shockwaveDescription,
     url: `${SITE.url}/services/shockwave-therapy`,
   },
 };

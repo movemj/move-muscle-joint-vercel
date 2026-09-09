@@ -162,7 +162,7 @@ export function ConditionsOverviewContent() {
             Book your assessment at Move Muscle & Joint in Overland Park.
           </p>
           <div className="mt-8">
-            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow campaign="conditions" content="overview" />
           </div>
         </div>
       </section>

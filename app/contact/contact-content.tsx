@@ -14,10 +14,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { SITE } from '@/lib/site-data';
+import { buildJaneUrl } from '@/lib/booking';
 import { JsonLdSchema } from '@/components/schema-json-ld';
 import { schemas } from '@/lib/schemas';
 
 const serviceAreas = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
+const janeUrl = buildJaneUrl({ campaign: "contact" });
 
 async function sendContactForm(data: any) {
   const response = await fetch('/api/contact', {
@@ -93,7 +95,7 @@ export function ContactContent() {
               <Button type="submit" disabled={sending} className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-full font-semibold">
                 {sending ? "Sending..." : "Send Message"}
               </Button>
-              <p className="text-xs text-steel">Looking to schedule an appointment? <a href="https://mmj.janeapp.com/" target="_blank" rel="noopener noreferrer" className="text-navy font-semibold hover:underline">Book online</a> for the fastest experience.</p>
+              <p className="text-xs text-steel">Looking to schedule an appointment? <a href={buildJaneUrl({ campaign: "contact" })} target="_blank" rel="noopener noreferrer" className="text-navy font-semibold hover:underline">Book online</a> for the fastest experience.</p>
             </form>
           </div>
 
@@ -141,7 +143,7 @@ export function ContactContent() {
             </div>
 
             <div className="mt-6">
-              <CTAButton href="/book" label="Book Your Appointment" showArrow size="lg" />
+              <CTAButton href="/book" label="Book Your Appointment" showArrow size="lg" campaign="contact" />
               <p className="mt-3 text-sm text-steel">
                 Need hours, parking, or what to expect first?{" "}
                 <Link href="/book" className="font-semibold text-navy hover:underline">Visit our booking & hours page</Link>.

@@ -368,7 +368,7 @@ export default async function BlogPostPage({ params }: Props) {
             Get personalized care from Dr. Joseph Hugunin and take the first step toward moving better.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow />
+            <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow campaign="blog" content={slug} />
             <CTAButton href="/contact" label="Contact Us" variant="outlineWhite" size="lg" />
           </div>
         </div>

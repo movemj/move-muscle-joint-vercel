@@ -69,7 +69,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Kyle F.",
     tags: ["plantar-fasciitis", "shockwave"],
     quote:
-      "Dr. Joe fixed my plantar fasciitis! After two years of dealing with it in both feet, Dr. Joe attacked it with a combination of shockwave therapy, ART therapy, chiropractic work, and physical therapy exercises. I finally wake up without foot pain and can go throughout the day without heavily managing my pain.",
+      "Dr. Joe fixed my plantar fasciitis! After two years of dealing with it in both feet, Dr. Joe attacked it with a combination of shockwave therapy, ART therapy, chiropractic work, and targeted rehab exercises. I finally wake up without foot pain and can go throughout the day without heavily managing my pain.",
   },
   {
     id: "yvette-c",

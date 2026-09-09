@@ -152,7 +152,7 @@ export default function BlogPage() {
           light
         />
         <div className="flex flex-wrap justify-center gap-4">
-          <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow />
+          <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow campaign="blog" content="blog-index" />
           <CTAButton href="/contact" label="Contact Us" variant="outlineWhite" size="lg" />
         </div>
       </SectionWrapper>

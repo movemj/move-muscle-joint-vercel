@@ -84,7 +84,7 @@ export function FAQContent() {
           <SectionHeading tag="Still have questions?" title="We're here to help." align="center" />
           <div className="flex flex-wrap gap-4 justify-center -mt-8">
             <CTAButton href="/contact" label="Contact Us" variant="outline" />
-            <CTAButton href="/book" label="Book Your Visit" showArrow />
+            <CTAButton href="/book" label="Book Your Visit" showArrow campaign="faq" />
           </div>
           <div className="mt-8 flex flex-wrap gap-6 justify-center text-sm text-steel">
             <Link href="/services" className="hover:text-navy transition-colors">View Our Services →</Link>

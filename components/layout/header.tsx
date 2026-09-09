@@ -5,8 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/site-data";
+import { buildJaneUrl } from "@/lib/booking";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const janeUrl = buildJaneUrl({ campaign: "header-footer" });
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -81,7 +84,7 @@ export function Header() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="https://mmj.janeapp.com/"
+              href={janeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all bg-white text-navy hover:bg-white/90"
@@ -123,7 +126,7 @@ export function Header() {
               ))}
               <div className="pt-4">
                 <a
-                  href="https://mmj.janeapp.com/"
+                  href={janeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-3 px-6 bg-navy text-white text-center rounded-full font-semibold text-sm tracking-wide break-words"

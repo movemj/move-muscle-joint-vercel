@@ -2,22 +2,24 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
+const targetedRehabTitle = "Targeted Rehab Overland Park KS";
+const targetedRehabDescription =
+  "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.";
+
 export const metadata: Metadata = {
-  title: "Targeted Rehab & Movement Retraining",
-  description:
-    "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
+  title: targetedRehabTitle,
+  description: targetedRehabDescription,
   twitter: {
     card: "summary_large_image",
-    title: "Targeted Rehab & Movement Retraining",
-    description: "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
+    title: targetedRehabTitle,
+    description: targetedRehabDescription,
   },
   alternates: {
     canonical: "/services/targeted-rehab",
   },
   openGraph: {
-    title: "Targeted Rehab & Movement Retraining",
-    description:
-      "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.",
+    title: targetedRehabTitle,
+    description: targetedRehabDescription,
     url: `${SITE.url}/services/targeted-rehab`,
   },
 };

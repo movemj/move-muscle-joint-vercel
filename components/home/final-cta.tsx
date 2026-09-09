@@ -25,7 +25,7 @@ export function FinalCTA() {
           at Move Muscle & Joint in Overland Park.
         </p>
         <div className="mt-8 flex justify-center w-full overflow-hidden">
-          <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow />
+          <CTAButton href="/book" label="Book Your Visit" variant="white" size="lg" showArrow campaign="homepage" />
         </div>
       </div>
     </section>

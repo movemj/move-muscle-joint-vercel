@@ -85,7 +85,7 @@ export function OurApproachContent() {
             <p>From there, we'll explain what we've found, outline a clear treatment plan, and often begin integrated care in the same session. You leave with a real understanding of what's happening and a defined path forward — not just temporary relief.</p>
           </div>
           <div className="mt-10">
-            <CTAButton href="/book" label="Schedule Your First Visit" size="lg" showArrow />
+            <CTAButton href="/book" label="Schedule Your First Visit" size="lg" showArrow campaign="our-approach" />
           </div>
         </div>
       </SectionWrapper>

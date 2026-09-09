@@ -2,22 +2,24 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
+const myofascialTitle = "Myofascial Release Therapy Overland Park KS";
+const myofascialDescription =
+  "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park, KS.";
+
 export const metadata: Metadata = {
-  title: "Myofascial Release Therapy",
-  description:
-    "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park.",
+  title: myofascialTitle,
+  description: myofascialDescription,
   twitter: {
     card: "summary_large_image",
-    title: "Myofascial Release Therapy",
-    description: "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park.",
+    title: myofascialTitle,
+    description: myofascialDescription,
   },
   alternates: {
     canonical: "/services/myofascial-release-therapy",
   },
   openGraph: {
-    title: "Myofascial Release Therapy",
-    description:
-      "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work.",
+    title: myofascialTitle,
+    description: myofascialDescription,
     url: `${SITE.url}/services/myofascial-release-therapy`,
   },
 };
