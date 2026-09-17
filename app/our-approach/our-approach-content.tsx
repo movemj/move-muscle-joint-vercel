@@ -41,7 +41,7 @@ export function OurApproachContent() {
           <div className="space-y-5 text-steel leading-relaxed -mt-8">
             <p>Most traditional care models are built around isolated treatments — an adjustment here, a stretch there, and a follow-up scheduled for next week. That fragmented approach leaves gaps in recovery and often leads to recurring flare-ups.</p>
             <p>At Move Muscle & Joint, we built a different model. Our care is designed around how the body actually works — as an interconnected system where pain in one area often reflects dysfunction somewhere else. When you address the root cause through coordinated hands-on treatment and movement retraining, results are more durable and meaningful.</p>
-            <p>This isn't about more visits. It's about better visits. Every session is designed to move you forward, with clarity about where you are and where you're going.</p>
+            <p>This isn&apos;t about more visits. It&apos;s about better visits. Every session is designed to move you forward, with clarity about where you are and where you&apos;re going.</p>
           </div>
         </div>
       </SectionWrapper>
@@ -49,7 +49,7 @@ export function OurApproachContent() {
       <SectionWrapper bg="bg-secondary">
         <SectionHeading tag="How We Evaluate" title="Understanding how your body moves." subtitle="Before any treatment begins, we assess your movement as a system — identifying restrictions, compensations, and loading imbalances that contribute to pain." align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-steel leading-relaxed">
-          <p>Our assessment looks beyond the site of pain. We evaluate posture, gait, joint mobility, stability patterns, and functional movement to understand what's driving dysfunction — not just where it hurts.</p>
+          <p>Our assessment looks beyond the site of pain. We evaluate posture, gait, joint mobility, stability patterns, and functional movement to understand what&apos;s driving dysfunction — not just where it hurts.</p>
           <p>This comprehensive evaluation forms the basis of every treatment plan. It allows us to integrate the right combination of chiropractic, soft tissue work, shockwave therapy, and rehab for your specific needs.</p>
         </div>
       </SectionWrapper>
@@ -60,7 +60,7 @@ export function OurApproachContent() {
         <SectionHeading tag="How Services Work Together" title="One system, not a menu." subtitle="Each treatment modality at Move supports the others — creating a care experience that builds on itself over time." align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-steel leading-relaxed">
           <p>Chiropractic restores joint position and mobility. Myofascial release therapy addresses the soft tissue restrictions that limit movement quality. Shockwave therapy accelerates healing for stubborn conditions. And targeted rehab rebuilds the strength and motor control that prevent recurrence.</p>
-          <p>Rather than choosing one modality, your treatment plan draws from all of them based on what your body needs at each stage of recovery. This is what makes the Move Method work — it's progressive, it's personalized, and it's designed to end well.</p>
+          <p>Rather than choosing one modality, your treatment plan draws from all of them based on what your body needs at each stage of recovery. This is what makes the Move Method work — it&apos;s progressive, it&apos;s personalized, and it&apos;s designed to end well.</p>
         </div>
       </SectionWrapper>
 
@@ -82,7 +82,7 @@ export function OurApproachContent() {
           <SectionHeading tag="Your First Visit" title="What to expect when you walk in." align="center" />
           <div className="space-y-5 text-steel leading-relaxed -mt-8">
             <p>Your first visit begins with a conversation and a whole-body movement assessment. We want to understand your history, your goals, and how your body is functioning right now.</p>
-            <p>From there, we'll explain what we've found, outline a clear treatment plan, and often begin integrated care in the same session. You leave with a real understanding of what's happening and a defined path forward — not just temporary relief.</p>
+            <p>From there, we&apos;ll explain what we&apos;ve found, outline a clear treatment plan, and often begin integrated care in the same session. You leave with a real understanding of what&apos;s happening and a defined path forward — not just temporary relief.</p>
           </div>
           <div className="mt-10">
             <CTAButton href="/book" label="Schedule Your First Visit" size="lg" showArrow campaign="our-approach" />

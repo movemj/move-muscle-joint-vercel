@@ -1,5 +1,40 @@
+import { Redis } from '@upstash/redis';
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+
+const CONTACT_LIMIT = 5;
+const CONTACT_WINDOW_SECONDS = 60 * 60;
+
+function getClientIp(request: NextRequest) {
+  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    request.headers.get('x-real-ip') ||
+    'unknown';
+}
+
+async function checkRateLimit(request: NextRequest) {
+  const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
+
+  if (!url || !token) {
+    console.error('Contact rate limiting is unavailable: missing Upstash configuration');
+    return true;
+  }
+
+  try {
+    const redis = new Redis({ url, token });
+    const key = `contact-form:${getClientIp(request)}`;
+    const count = await redis.incr(key);
+
+    if (count === 1) {
+      await redis.expire(key, CONTACT_WINDOW_SECONDS);
+    }
+
+    return count <= CONTACT_LIMIT;
+  } catch (error) {
+    console.error('Contact rate limiting is unavailable:', error);
+    return true;
+  }
+}
 
 function escapeHtml(value: string) {
   return value
@@ -14,6 +49,13 @@ const marketingPattern = /\b(backlinks?|guest\s+posts?|seo\s+services?|marketing
 
 export async function POST(request: NextRequest) {
   try {
+    if (!(await checkRateLimit(request))) {
+      return NextResponse.json(
+        { error: 'Unable to process your request right now. Please try again later.' },
+        { status: 429 },
+      );
+    }
+
     const body = await request.json();
     const name = typeof body.name === 'string' ? body.name.trim() : '';
     const email = typeof body.email === 'string' ? body.email.trim() : '';

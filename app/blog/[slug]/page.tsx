@@ -160,7 +160,7 @@ const mdxComponents = {
   ),
   img: (props: any) => (
     <span className="block my-8">
-      <img className="rounded-lg w-full" {...props} />
+      <img className="rounded-lg w-full" alt={props.alt ?? ""} {...props} />
     </span>
   ),
   hr: () => <hr className="my-10 border-border" />,
