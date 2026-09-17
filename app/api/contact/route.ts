@@ -61,6 +61,10 @@ function escapeHtml(value: string) {
 
 const marketingPattern = /\b(backlinks?|guest\s+posts?|seo\s+services?|marketing\s+agenc(y|ies)|buy\s+traffic|paid\s+promotion|press\s+release)\b/i;
 
+function logContactRejection(reason: string) {
+  console.error(`CONTACT_REJECTED: ${reason}`);
+}
+
 export async function POST(request: NextRequest) {
   try {
     if (!(await checkRateLimit(request))) {
@@ -70,7 +74,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
+    let body: Record<string, unknown>;
+    try {
+      const parsedBody: unknown = await request.json();
+      if (!parsedBody || typeof parsedBody !== 'object' || Array.isArray(parsedBody)) {
+        logContactRejection('malformed_body');
+        return NextResponse.json({ error: 'Invalid form submission' }, { status: 400 });
+      }
+      body = parsedBody as Record<string, unknown>;
+    } catch {
+      logContactRejection('malformed_body');
+      return NextResponse.json({ error: 'Invalid form submission' }, { status: 400 });
+    }
+
     const name = typeof body.name === 'string' ? body.name.trim() : '';
     const email = typeof body.email === 'string' ? body.email.trim() : '';
     const phone = typeof body.phone === 'string' ? body.phone.trim() : '';
@@ -79,19 +95,33 @@ export async function POST(request: NextRequest) {
 
     // Silently accept honeypot submissions so bots cannot learn that they were detected.
     if (website) {
+      logContactRejection('honeypot');
       return NextResponse.json({ success: true });
     }
 
-    if (
-      name.length < 2 || name.length > 100 ||
-      email.length > 254 || message.length < 10 || message.length > 4000 ||
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-    ) {
+    if (name.length < 2 || name.length > 100) {
+      logContactRejection('invalid_name');
+      return NextResponse.json({ error: 'Invalid form submission' }, { status: 400 });
+    }
+
+    if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      logContactRejection('invalid_email');
+      return NextResponse.json({ error: 'Invalid form submission' }, { status: 400 });
+    }
+
+    if (message.length < 10 || message.length > 4000) {
+      logContactRejection('invalid_message');
       return NextResponse.json({ error: 'Invalid form submission' }, { status: 400 });
     }
 
     const urlCount = (message.match(/https?:\/\//gi) || []).length;
-    if (marketingPattern.test(message) || urlCount >= 3) {
+    if (marketingPattern.test(message)) {
+      logContactRejection('spam_keyword');
+      return NextResponse.json({ success: true });
+    }
+
+    if (urlCount >= 3) {
+      logContactRejection('url_filter');
       return NextResponse.json({ success: true });
     }
 
