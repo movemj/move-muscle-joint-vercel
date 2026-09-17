@@ -21,13 +21,12 @@ import { schemas } from '@/lib/schemas';
 const serviceAreas = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
 const janeUrl = buildJaneUrl({ campaign: "contact" });
 
-async function sendContactForm(data: any) {
-  const response = await fetch('/api/contact', {
+async function sendContactForm(data: Record<string, string>) {
+  return fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
-  return response.ok;
 }
 
 export function ContactContent() {
@@ -41,14 +40,18 @@ export function ContactContent() {
     setSending(true);
     setError("");
     try {
-      const success = await sendContactForm(form);
-      if (success) {
+      const response = await sendContactForm(form);
+      if (response.ok) {
         router.push("/thank-you");
+      } else if (response.status === 400) {
+        setError("Please check your name, email, and message and try again.");
+      } else if (response.status === 429) {
+        setError("Too many attempts. Please wait a while and try again.");
       } else {
-        setError("Failed to send message. Please try again.");
+        setError("We couldn’t send your message. Please try again or call/text us at (913) 303-0989.");
       }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
+    } catch {
+      setError("We couldn’t send your message. Please try again or call/text us at (913) 303-0989.");
     }
     setSending(false);
   };
