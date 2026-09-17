@@ -17,8 +17,12 @@ export function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    setMobileOpen(false);
-    setOpenDropdown(null);
+    const resetNavigation = window.setTimeout(() => {
+      setMobileOpen(false);
+      setOpenDropdown(null);
+    }, 0);
+
+    return () => window.clearTimeout(resetNavigation);
   }, [pathname]);
 
   return (

@@ -37,9 +37,9 @@ export function AboutContent() {
         <div className="max-w-3xl">
           <SectionHeading tag="Why Move Exists" title="Built for care that lasts." />
           <div className="space-y-5 text-steel leading-relaxed -mt-8">
-            <p>We don't believe in rushed care or generic treatment plans. At Move Muscle & Joint, every session is designed around how your body moves, where it is compensating, and what it needs to recover fully.</p>
+            <p>We don&apos;t believe in rushed care or generic treatment plans. At Move Muscle & Joint, every session is designed around how your body moves, where it is compensating, and what it needs to recover fully.</p>
             <p>Our approach blends hands-on treatment with movement education and progressive rehab so you can build results that last. No cookie-cutter plans. No endless appointments without a clear goal. Just intentional care designed to help you move better and stay that way.</p>
-            <p>Move was built on the belief that chiropractic care is most effective when it's part of a bigger picture — one that includes myofascial release therapy, rehab-based exercise, and a commitment to understanding the whole person, not just the painful spot.</p>
+            <p>Move was built on the belief that chiropractic care is most effective when it&apos;s part of a bigger picture — one that includes myofascial release therapy, rehab-based exercise, and a commitment to understanding the whole person, not just the painful spot.</p>
           </div>
         </div>
       </SectionWrapper>

@@ -22,7 +22,7 @@ export function PrivacyContent() {
           <p className="text-steel leading-relaxed">Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
           
           <h2 className="text-xl font-bold text-charcoal mt-8">Introduction</h2>
-          <p className="text-steel leading-relaxed">{SITE.name} ("we," "us," or "our") is committed to protecting the privacy of our patients and website visitors. This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website at {SITE.domain} or use our services.</p>
+          <p className="text-steel leading-relaxed">{SITE.name} (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting the privacy of our patients and website visitors. This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website at {SITE.domain} or use our services.</p>
           
           <h2 className="text-xl font-bold text-charcoal mt-8">Information We Collect</h2>
           <p className="text-steel leading-relaxed">We may collect personal information that you voluntarily provide when you:</p>
