@@ -36,6 +36,20 @@ async function checkRateLimit(request: NextRequest) {
   }
 }
 
+function getResendErrorDetails(error: unknown) {
+  if (!error || typeof error !== 'object') {
+    return { status: undefined, code: undefined, type: undefined, message: String(error) };
+  }
+
+  const details = error as Record<string, unknown>;
+  return {
+    status: typeof details.statusCode === 'number' ? details.statusCode : undefined,
+    code: typeof details.name === 'string' ? details.name : undefined,
+    type: typeof details.type === 'string' ? details.type : undefined,
+    message: typeof details.message === 'string' ? details.message : 'Unknown Resend error',
+  };
+}
+
 function escapeHtml(value: string) {
   return value
     .replaceAll('&', '&amp;')
@@ -86,7 +100,10 @@ export async function POST(request: NextRequest) {
     const contactToEmail = process.env.CONTACT_TO_EMAIL;
 
     if (!resendApiKey || !contactToEmail) {
-      console.error('Missing required environment variables: RESEND_API_KEY or CONTACT_TO_EMAIL');
+      console.error('Contact email configuration is incomplete', {
+        missingResendApiKey: !resendApiKey,
+        missingContactToEmail: !contactToEmail,
+      });
       return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
     }
 
@@ -147,13 +164,13 @@ export async function POST(request: NextRequest) {
     });
 
     if (!response.data?.id) {
-      console.error('Failed to send email via Resend:', response.error);
+      console.error('Resend contact email failed', getResendErrorDetails(response.error));
       return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error('Contact form error', getResendErrorDetails(error));
     return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
   }
 }
