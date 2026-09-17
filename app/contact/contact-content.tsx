@@ -32,7 +32,7 @@ async function sendContactForm(data: any) {
 
 export function ContactContent() {
   const router = useRouter();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", website: "" });
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
 
@@ -75,6 +75,17 @@ export function ContactContent() {
           <div>
             <SectionHeading tag="Get In Touch" title="Send us a message." />
             <form onSubmit={handleSubmit} className="space-y-5 -mt-8">
+              <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+                <Label htmlFor="website">Website</Label>
+                <Input
+                  id="website"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={form.website}
+                  onChange={(e) => setForm({ ...form, website: e.target.value })}
+                />
+              </div>
               <div>
                 <Label htmlFor="name">Name *</Label>
                 <Input id="name" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="mt-1.5" />
@@ -91,6 +102,12 @@ export function ContactContent() {
                 <Label htmlFor="message">Message *</Label>
                 <Textarea id="message" required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="mt-1.5" />
               </div>
+              <p className="text-xs leading-relaxed text-steel">
+                This form is for genuine questions about Move Muscle &amp; Joint services. Promotional and unsolicited marketing messages are not accepted.
+              </p>
+              <p className="text-xs leading-relaxed text-steel">
+                Please do not include sensitive medical, insurance, or payment information.
+              </p>
               {error && <p className="text-sm text-red-600">{error}</p>}
               <Button type="submit" disabled={sending} className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-full font-semibold">
                 {sending ? "Sending..." : "Send Message"}
