@@ -1,13 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+function escapeHtml(value: string) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+const marketingPattern = /\b(backlinks?|guest\s+posts?|seo\s+services?|marketing\s+agenc(y|ies)|buy\s+traffic|paid\s+promotion|press\s+release)\b/i;
+
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, phone, message } = await request.json();
+    const body = await request.json();
+    const name = typeof body.name === 'string' ? body.name.trim() : '';
+    const email = typeof body.email === 'string' ? body.email.trim() : '';
+    const phone = typeof body.phone === 'string' ? body.phone.trim() : '';
+    const message = typeof body.message === 'string' ? body.message.trim() : '';
+    const website = typeof body.website === 'string' ? body.website.trim() : '';
 
-    // Validate input
-    if (!name || !email || !message) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    // Silently accept honeypot submissions so bots cannot learn that they were detected.
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
+
+    if (
+      name.length < 2 || name.length > 100 ||
+      email.length > 254 || message.length < 10 || message.length > 4000 ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    ) {
+      return NextResponse.json({ error: 'Invalid form submission' }, { status: 400 });
+    }
+
+    const urlCount = (message.match(/https?:\/\//gi) || []).length;
+    if (marketingPattern.test(message) || urlCount >= 3) {
+      return NextResponse.json({ success: true });
     }
 
     // Get environment variables
@@ -20,13 +49,17 @@ export async function POST(request: NextRequest) {
     }
 
     const resend = new Resend(resendApiKey);
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone || 'Not provided');
+    const safeMessage = escapeHtml(message).replaceAll('\n', '<br />');
 
     // Send email via Resend
     const response = await resend.emails.send({
       from: 'Move Muscle & Joint <hello@movemj.com>',
       to: [contactToEmail],
       replyTo: email,
-      subject: `New contact form submission from ${name}`,
+      subject: `New contact form submission from ${safeName}`,
       html: `
 <!DOCTYPE html>
 <html>
@@ -50,19 +83,19 @@ export async function POST(request: NextRequest) {
     <div class="content">
       <div class="field">
         <div class="label">Name</div>
-        <div class="value">${name}</div>
+        <div class="value">${safeName}</div>
       </div>
       <div class="field">
         <div class="label">Email</div>
-        <div class="value">${email}</div>
+        <div class="value">${safeEmail}</div>
       </div>
       <div class="field">
         <div class="label">Phone</div>
-        <div class="value">${phone || 'Not provided'}</div>
+        <div class="value">${safePhone}</div>
       </div>
       <div class="field">
         <div class="label">Message</div>
-        <div class="value">${message}</div>
+        <div class="value">${safeMessage}</div>
       </div>
     </div>
   </div>
