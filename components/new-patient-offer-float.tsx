@@ -44,7 +44,7 @@ export function NewPatientOfferMobileFloat() {
       target={onOfferPage ? "_blank" : undefined}
       rel={onOfferPage ? "noopener noreferrer" : undefined}
       aria-label="Book Your $49 First Session"
-      className="fixed inset-x-4 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-40 flex min-h-14 items-center justify-between gap-4 rounded-xl border border-white/35 bg-[#849bbd]/65 px-5 py-3 text-white shadow-[0_10px_30px_rgba(25,29,36,0.22)] backdrop-blur-md transition duration-200 hover:bg-[#849bbd]/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 md:hidden"
+      className="fixed inset-x-4 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-40 flex min-h-14 items-center justify-center gap-4 rounded-xl border border-white/35 bg-[#849bbd]/65 px-5 py-3 text-white shadow-[0_10px_30px_rgba(25,29,36,0.22)] backdrop-blur-md transition duration-200 hover:bg-[#849bbd]/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 md:hidden"
     >
       <span className="text-sm font-semibold">Book Your $49 First Session</span>
     </Link>
