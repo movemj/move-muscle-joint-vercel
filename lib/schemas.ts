@@ -18,7 +18,7 @@ export const schemas = {
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
-      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab inside Fit House gym in Overland Park, KS. Led by Dr. Joseph Hugunin, former team chiropractor for Sporting Kansas City and University of Kansas Athletics.',
+      'Movement-based chiropractic, myofascial release therapy, shockwave therapy, and targeted rehab from Move Muscle & Joint, located inside Fit House KC in Overland Park, KS. Fit House provides the training facility; Move Muscle & Joint provides the chiropractic and rehabilitation care. Led by Dr. Joseph Hugunin, former team chiropractor for Sporting Kansas City and University of Kansas Athletics.',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,

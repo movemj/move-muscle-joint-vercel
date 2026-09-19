@@ -26,7 +26,10 @@ export function Footer() {
             <div className="space-y-3 text-sm text-white/70 overflow-hidden">
               <div className="flex items-start gap-2 overflow-hidden">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
-                <span className="break-words overflow-wrap-break-word">{SITE.address}</span>
+                <div>
+                  <span className="break-words overflow-wrap-break-word">{SITE.address}</span>
+                  <p>Located inside <a href="https://fithousekc.com" target="_blank" rel="noopener noreferrer" className="text-white/70 underline-offset-4 hover:text-white hover:underline">Fit House KC</a>.</p>
+                </div>
               </div>
               <div className="flex items-start gap-2 overflow-hidden">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />

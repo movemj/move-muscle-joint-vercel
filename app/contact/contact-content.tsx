@@ -112,6 +112,7 @@ export function ContactContent() {
                   <div>
                     <p className="font-semibold text-charcoal">Address</p>
                     <p className="text-sm text-steel">{SITE.address}</p>
+                    <p className="text-sm text-steel mt-1">Located inside <a href="https://fithousekc.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:underline">Fit House KC</a>.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
