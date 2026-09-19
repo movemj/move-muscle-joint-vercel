@@ -39,7 +39,7 @@ const firstVisit = [
   ["04", "YOU LEAVE WITH A PLAN", "Know what to work on, what comes next, and what progress should look like."],
 ];
 
-const recognition = ["Back Pain", "Neck Pain", "Knee Pain", "Shoulder Pain", "Sports Injuries", "Stiffness", "Recurring Pain", "I’ve Tried Everything"];
+const recognition = ["Back Pain", "Neck Pain", "Knee Pain", "Shoulder Pain", "Hip Pain", "Foot & Ankle Pain", "Sciatica", "Headaches & Tension", "Sports Injuries", "Running Injuries", "Mobility Restrictions", "Stiffness", "Recurring Pain", "Posture Concerns", "Strength Imbalances", "I’ve Tried Everything"];
 const faqs: Array<[string, string | [string, string]]> = [
   ["What happens at my first visit?", "Your first visit begins with a comprehensive whole-body movement assessment. We discuss your history and goals, explain our findings, and often begin integrated treatment in the same session."],
   ["Will I be treated during the first visit?", "When clinically appropriate, your first visit may include hands-on chiropractic care, myofascial work, or movement-based treatment."],
