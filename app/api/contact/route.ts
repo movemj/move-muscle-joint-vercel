@@ -2,13 +2,14 @@ import { Redis } from '@upstash/redis';
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const CONTACT_LIMIT = 5;
-const CONTACT_WINDOW_SECONDS = 60 * 60;
+const CONTACT_LIMIT = 10;
+const CONTACT_WINDOW_SECONDS = 15 * 60;
 
 function getClientIp(request: NextRequest) {
-  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    request.headers.get('x-real-ip') ||
-    'unknown';
+  return request.headers.get('x-vercel-forwarded-for')?.trim() ||
+    request.headers.get('x-real-ip')?.trim() ||
+    request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim() ||
+    null;
 }
 
 async function checkRateLimit(request: NextRequest) {
@@ -20,9 +21,14 @@ async function checkRateLimit(request: NextRequest) {
     return true;
   }
 
+  const clientIp = getClientIp(request);
+  if (!clientIp) {
+    return true;
+  }
+
   try {
     const redis = new Redis({ url, token });
-    const key = `contact-form:${getClientIp(request)}`;
+    const key = `contact-form:${clientIp}`;
     const count = await redis.incr(key);
 
     if (count === 1) {
