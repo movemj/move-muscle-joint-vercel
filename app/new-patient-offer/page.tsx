@@ -67,13 +67,13 @@ export default function NewPatientOfferPage() {
           <div className="absolute inset-x-0 bottom-0 h-[43vh] min-h-[260px] lg:relative lg:inset-auto lg:h-auto lg:min-h-[650px]">
             <div className="absolute inset-0 bg-white/10 mix-blend-multiply" aria-hidden="true" />
             <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
-            <div className="offer-price-badge absolute bottom-6 left-6 w-[min(19rem,calc(100%-3rem))] overflow-hidden rounded-2xl border border-white/30 bg-[#003c85]/90 px-6 py-5 text-white shadow-[0_18px_42px_rgba(0,60,133,0.28)] backdrop-blur-md sm:bottom-10 sm:left-10 sm:px-7 sm:py-6">
-              <span className="absolute -right-7 -top-7 size-20 rounded-full border border-white/20 bg-[#849bbd]/35" aria-hidden="true" />
-              <span className="absolute -right-3 -top-3 size-5 rounded-full bg-[#849bbd] shadow-[0_0_0_5px_rgba(132,155,189,0.18)]" aria-hidden="true" />
-              <p className="relative text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/75">New patient offer</p>
-              <p className="relative mt-2 text-[4.75rem] font-bold leading-[0.85] tracking-[-0.07em] text-white sm:text-8xl">$49</p>
-              <p className="relative mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#c9d8eb]">First Move Session</p>
-              <p className="relative mt-3 max-w-[235px] text-xs leading-relaxed text-white/75">Assessment · Findings · Next step</p>
+            <div className="offer-price-badge absolute bottom-6 left-6 w-[min(19rem,calc(100%-3rem))] overflow-hidden rounded-2xl border border-white/25 bg-[#003c85]/72 px-6 py-5 text-white shadow-[0_18px_42px_rgba(0,60,133,0.28)] backdrop-blur-md sm:bottom-10 sm:left-10 sm:px-7 sm:py-6">
+              <Image src="/images/move-logo-white.webp" alt="" fill sizes="304px" className="pointer-events-none object-contain object-right opacity-[0.12]" aria-hidden="true" />
+              <span className="absolute inset-y-0 right-0 w-2/3 bg-gradient-to-l from-[#849bbd]/20 to-transparent" aria-hidden="true" />
+              <p className="relative z-10 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/75">New patient offer</p>
+              <p className="relative z-10 mt-2 text-[4.75rem] font-bold leading-[0.85] tracking-[-0.07em] text-white sm:text-8xl">$49</p>
+              <p className="relative z-10 mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#c9d8eb]">First Move Session</p>
+              <p className="relative z-10 mt-3 max-w-[235px] text-xs leading-relaxed text-white/75">Assessment · Findings · Next step</p>
             </div>
           </div>
         </div>
