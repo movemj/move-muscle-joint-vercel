@@ -67,13 +67,11 @@ export default function NewPatientOfferPage() {
           <div className="absolute inset-x-0 bottom-0 h-[43vh] min-h-[260px] lg:relative lg:inset-auto lg:h-auto lg:min-h-[650px]">
             <div className="absolute inset-0 bg-white/10 mix-blend-multiply" aria-hidden="true" />
             <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
-            <div className="offer-price-badge absolute bottom-6 left-6 w-[min(19rem,calc(100%-3rem))] overflow-hidden rounded-2xl border border-white/25 bg-[#003c85]/72 px-6 py-5 text-white shadow-[0_18px_42px_rgba(0,60,133,0.28)] backdrop-blur-md sm:bottom-10 sm:left-10 sm:px-7 sm:py-6">
-              <Image src="/images/move-logo-white.webp" alt="" fill sizes="304px" className="pointer-events-none object-contain object-right opacity-[0.12]" aria-hidden="true" />
-              <span className="absolute inset-y-0 right-0 w-2/3 bg-gradient-to-l from-[#849bbd]/20 to-transparent" aria-hidden="true" />
-              <p className="relative z-10 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/75">New patient offer</p>
-              <p className="relative z-10 mt-2 text-[4.75rem] font-bold leading-[0.85] tracking-[-0.07em] text-white sm:text-8xl">$49</p>
-              <p className="relative z-10 mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#c9d8eb]">First Move Session</p>
-              <p className="relative z-10 mt-3 max-w-[235px] text-xs leading-relaxed text-white/75">Assessment · Findings · Next step</p>
+            <div className="offer-price-badge absolute bottom-6 left-6 text-white sm:bottom-10 sm:left-10">
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/80">New patient offer</p>
+              <p className="mt-2 text-[5.5rem] font-bold leading-[0.82] tracking-[-0.08em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] sm:text-9xl">$49</p>
+              <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#d5e2f2]">First Move Session</p>
+              <p className="mt-3 max-w-[235px] text-xs leading-relaxed text-white/80">Assessment · Findings · Next step</p>
             </div>
           </div>
         </div>
