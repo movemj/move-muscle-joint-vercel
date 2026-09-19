@@ -21,17 +21,18 @@ import { schemas } from '@/lib/schemas';
 const serviceAreas = ["Overland Park", "Leawood", "Prairie Village", "Olathe", "Shawnee", "Lenexa", "Kansas City metro"];
 const janeUrl = buildJaneUrl({ campaign: "contact" });
 
-async function sendContactForm(data: Record<string, string>) {
-  return fetch('/api/contact', {
+async function sendContactForm(data: any) {
+  const response = await fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
+  return response.ok;
 }
 
 export function ContactContent() {
   const router = useRouter();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", website: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
 
@@ -40,18 +41,14 @@ export function ContactContent() {
     setSending(true);
     setError("");
     try {
-      const response = await sendContactForm(form);
-      if (response.ok) {
+      const success = await sendContactForm(form);
+      if (success) {
         router.push("/thank-you");
-      } else if (response.status === 400) {
-        setError("Please check your name, email, and message and try again.");
-      } else if (response.status === 429) {
-        setError("Too many attempts. Please wait a while and try again.");
       } else {
-        setError("We couldn’t send your message. Please try again or call/text us at (913) 303-0989.");
+        setError("Failed to send message. Please try again.");
       }
-    } catch {
-      setError("We couldn’t send your message. Please try again or call/text us at (913) 303-0989.");
+    } catch (err) {
+      setError("An error occurred. Please try again.");
     }
     setSending(false);
   };
@@ -78,17 +75,6 @@ export function ContactContent() {
           <div>
             <SectionHeading tag="Get In Touch" title="Send us a message." />
             <form onSubmit={handleSubmit} className="space-y-5 -mt-8">
-              <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
-                <Label htmlFor="website">Website</Label>
-                <Input
-                  id="website"
-                  name="website"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  value={form.website}
-                  onChange={(e) => setForm({ ...form, website: e.target.value })}
-                />
-              </div>
               <div>
                 <Label htmlFor="name">Name *</Label>
                 <Input id="name" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="mt-1.5" />
@@ -107,9 +93,6 @@ export function ContactContent() {
               </div>
               <p className="text-xs leading-relaxed text-steel">
                 This form is for genuine questions about Move Muscle &amp; Joint services. Promotional and unsolicited marketing messages are not accepted.
-              </p>
-              <p className="text-xs leading-relaxed text-steel">
-                Please do not include sensitive medical, insurance, or payment information.
               </p>
               {error && <p className="text-sm text-red-600">{error}</p>}
               <Button type="submit" disabled={sending} className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-full font-semibold">
