@@ -68,7 +68,7 @@ export const NAV_ITEMS = [
 ];
 
 export const IMAGES = {
-  hero: "/images/overland-park-movement-hero.webp",
+  hero: "/images/overland-park-movement-assessment-hero.webp",
   chiropractic: "/images/chiropractic.webp",
   myofascial: "/images/myofascial.webp",
   shockwave: "/images/shockwave.webp",
