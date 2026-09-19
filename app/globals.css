@@ -71,6 +71,21 @@
   to { transform: translateX(-50%); }
 }
 
+@keyframes offer-price-glow {
+  0%, 100% { box-shadow: 0 18px 42px rgba(0, 60, 133, 0.2), 0 0 0 1px rgba(132, 155, 189, 0.14); }
+  50% { box-shadow: 0 22px 52px rgba(0, 60, 133, 0.3), 0 0 0 1px rgba(132, 155, 189, 0.28); }
+}
+
+.offer-price-badge {
+  animation: offer-price-glow 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-price-badge {
+    animation: none;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
