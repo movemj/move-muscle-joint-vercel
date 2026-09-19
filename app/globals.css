@@ -71,6 +71,10 @@
   to { transform: translateX(-50%); }
 }
 
+.offer-price-badge {
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.28);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

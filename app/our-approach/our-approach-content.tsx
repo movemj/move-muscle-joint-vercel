@@ -42,6 +42,7 @@ export function OurApproachContent() {
             <p>Most traditional care models are built around isolated treatments — an adjustment here, a stretch there, and a follow-up scheduled for next week. That fragmented approach leaves gaps in recovery and often leads to recurring flare-ups.</p>
             <p>At Move Muscle & Joint, we built a different model. Our care is designed around how the body actually works — as an interconnected system where pain in one area often reflects dysfunction somewhere else. When you address the root cause through coordinated hands-on treatment and movement retraining, results are more durable and meaningful.</p>
             <p>This isn&apos;t about more visits. It&apos;s about better visits. Every session is designed to move you forward, with clarity about where you are and where you&apos;re going.</p>
+            <p>Our clinic is located inside <a href="https://fithousekc.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:underline">Fit House KC</a>, giving your care a convenient connection to a professional strength and conditioning environment. Fit House is our facility location—not your medical provider—while Move Muscle &amp; Joint provides your chiropractic and rehabilitation care.</p>
           </div>
         </div>
       </SectionWrapper>

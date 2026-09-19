@@ -39,7 +39,7 @@ const firstVisit = [
   ["04", "YOU LEAVE WITH A PLAN", "Know what to work on, what comes next, and what progress should look like."],
 ];
 
-const recognition = ["Back Pain", "Neck Pain", "Knee Pain", "Shoulder Pain", "Sports Injuries", "Stiffness", "Recurring Pain", "I’ve Tried Everything"];
+const recognition = ["Back Pain", "Neck Pain", "Knee Pain", "Shoulder Pain", "Hip Pain", "Foot & Ankle Pain", "Sciatica", "Headaches & Tension", "Sports Injuries", "Running Injuries", "Mobility Restrictions", "Stiffness", "Recurring Pain", "Posture Concerns", "Strength Imbalances", "I’ve Tried Everything"];
 const faqs: Array<[string, string | [string, string]]> = [
   ["What happens at my first visit?", "Your first visit begins with a comprehensive whole-body movement assessment. We discuss your history and goals, explain our findings, and often begin integrated treatment in the same session."],
   ["Will I be treated during the first visit?", "When clinically appropriate, your first visit may include hands-on chiropractic care, myofascial work, or movement-based treatment."],
@@ -59,14 +59,19 @@ export default function NewPatientOfferPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">Your first Move session is designed to uncover what may be contributing to the problem—not simply chase where it hurts. Get a comprehensive movement assessment, a clear explanation of what we find, and treatment when clinically appropriate.</p>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
+              {['Movement assessment', 'Clinical evaluation', 'Clear next step'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
+            </div>
+            <div className="mt-9"><CTAButton campaign="new-patient-offer" treatment={6} label="Book Your $49 First Session" variant="white" size="lg" showArrow /></div>
           </div>
           <div className="absolute inset-x-0 bottom-0 h-[43vh] min-h-[260px] lg:relative lg:inset-auto lg:h-auto lg:min-h-[650px]">
             <div className="absolute inset-0 bg-white/10 mix-blend-multiply" aria-hidden="true" />
             <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
-            <div className="absolute bottom-6 left-6 bg-navy px-6 py-5 text-white sm:bottom-10 sm:left-10">
-              <p className="text-5xl font-bold tracking-tight">$49</p>
-              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">First Move Session</p>
-              <p className="mt-3 max-w-[220px] text-xs leading-relaxed text-white/70">Whole-body assessment · Personalized findings · Treatment when appropriate</p>
+            <div className="offer-price-badge absolute bottom-6 left-6 text-white sm:bottom-10 sm:left-10">
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/80">New patient offer</p>
+              <p className="mt-2 text-[5.5rem] font-bold leading-[0.82] tracking-[-0.08em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] sm:text-9xl">$49</p>
+              <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#d5e2f2]">First Move Session</p>
+              <p className="mt-3 max-w-[235px] text-xs leading-relaxed text-white/80">Assessment · Findings · Next step</p>
             </div>
           </div>
         </div>
@@ -79,7 +84,8 @@ export default function NewPatientOfferPage() {
             <SectionHeading tag="What brought you here?" title="You Don’t Have to Know What’s Wrong Yet." />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-steel">Pain, stiffness, recurring injuries, or movement that just doesn’t feel right—we start by looking at how your body is working as a whole.</p>
           </div>
-          <div className="relative mt-10 overflow-hidden rounded-md border border-border bg-light-gray py-5" aria-label="Common reasons patients seek care">
+          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.18em] text-navy/60">Common reasons patients start here</p>
+          <div className="relative left-1/2 mt-4 w-screen -translate-x-1/2 overflow-hidden border-y border-border bg-light-gray py-5" aria-label="Common reasons patients seek care">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-light-gray to-transparent" aria-hidden="true" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-light-gray to-transparent" aria-hidden="true" />
             <div className="flex w-max animate-[offer-marquee_28s_linear_infinite] gap-3 px-3 hover:[animation-play-state:paused] motion-reduce:animate-none">
@@ -108,7 +114,7 @@ export default function NewPatientOfferPage() {
 
       <section className="bg-navy py-20 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-24 lg:px-16">
-          <div><p className="text-8xl font-bold tracking-tight text-white sm:text-9xl">$49</p><p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-accent">First Move Session</p><p className="mt-6 max-w-sm text-lg leading-relaxed text-white/70">No guessing. No generic protocol. Start with clarity.</p></div>
+          <div className="lg:border-l lg:border-white/15 lg:pl-10"><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">New patient offer</p><p className="mt-3 text-8xl font-bold leading-none tracking-[-0.07em] text-white sm:text-9xl">$49</p><p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#c9d8eb]">First Move Session</p><p className="mt-6 max-w-sm text-lg leading-relaxed text-white/70">No guessing. No generic protocol. Start with clarity.</p></div>
           <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Your first visit includes</p><h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">More Than an Adjustment.</h2><div className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">{["Whole-body movement assessment", "Clinical evaluation", "Explanation of findings", "Personalized recommendations", "Hands-on treatment when clinically appropriate", "A clear next step"].map((item) => <div key={item} className="flex gap-3 border-t border-white/15 pt-4 text-sm text-white/80"><Check className="size-4 shrink-0 text-accent" aria-hidden="true" />{item}</div>)}</div><div className="mt-9"><CTAButton campaign="new-patient-offer" treatment={6} label="Book My $49 First Visit" variant="white" size="lg" showArrow /></div></div>
         </div>
       </section>
