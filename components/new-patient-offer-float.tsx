@@ -25,8 +25,8 @@ export function NewPatientOfferFloat() {
       <span className="relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full bg-navy shadow-[0_8px_24px_rgba(25,29,36,0.18)] transition-transform duration-300 ease-out group-hover:rotate-2 motion-reduce:transition-none motion-reduce:group-hover:rotate-0">
         <Image src="/mmj-logo-original.png" alt="Move" width={1254} height={1254} className="size-11 rounded-full object-cover" />
       </span>
-      <span className="-ml-2 flex h-16 w-44 items-center justify-between bg-softblue pl-7 pr-5 text-charcoal shadow-[0_8px_24px_rgba(25,29,36,0.12)]">
-        <span className="text-xs font-bold uppercase tracking-[0.14em]">{onOfferPage ? "Book $49 Visit" : "$49 First Visit"}</span>
+      <span className="-ml-2 flex h-12 w-52 items-center justify-between bg-softblue pl-9 pr-6 text-charcoal shadow-[0_8px_24px_rgba(25,29,36,0.12)] [clip-path:polygon(0_0,calc(100%-1.25rem)_0,100%_50%,calc(100%-1.25rem)_100%,0_100%)]">
+        <span className="whitespace-nowrap text-xs font-bold uppercase tracking-[0.14em]">{onOfferPage ? "Book $49 Session" : "$49 First Session"}</span>
         <span aria-hidden="true" className="inline-block text-lg transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none">→</span>
       </span>
     </Link>
