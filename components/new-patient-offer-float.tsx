@@ -20,12 +20,12 @@ export function NewPatientOfferFloat() {
       target={onOfferPage ? "_blank" : undefined}
       rel={onOfferPage ? "noopener noreferrer" : undefined}
       aria-label={onOfferPage ? "Book $49 visit" : "View $49 first visit offer"}
-      className="group fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 items-center transition-transform duration-300 ease-out hover:-translate-x-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 motion-reduce:transition-none motion-reduce:hover:translate-x-0 md:flex"
+      className="group fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 items-center drop-shadow-[0_8px_24px_rgba(0,60,133,0.24)] transition-transform duration-300 ease-out hover:-translate-x-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 motion-reduce:transition-none motion-reduce:hover:translate-x-0 md:flex"
     >
-      <span className="relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full bg-navy shadow-[0_8px_24px_rgba(25,29,36,0.18)] transition-transform duration-300 ease-out group-hover:rotate-2 motion-reduce:transition-none motion-reduce:group-hover:rotate-0">
+      <span className="relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full bg-[#003c85] ring-4 ring-[#003c85] transition-transform duration-300 ease-out group-hover:rotate-2 motion-reduce:transition-none motion-reduce:group-hover:rotate-0">
         <Image src="/mmj-logo-original.png" alt="Move" width={1254} height={1254} className="size-11 rounded-full object-cover" />
       </span>
-      <span className="-ml-2 flex h-12 w-64 items-center justify-center rounded-full bg-[#003c85] px-6 text-center text-white shadow-[0_8px_24px_rgba(0,60,133,0.24)] transition duration-200 group-hover:-translate-y-0.5 group-hover:shadow-[0_12px_28px_rgba(0,60,133,0.3)]">
+      <span className="-ml-3 flex h-12 w-64 items-center justify-center rounded-r-full rounded-l-md bg-[#003c85] pl-8 pr-6 text-center text-white transition duration-200 group-hover:-translate-y-0.5">
         <span className="whitespace-nowrap text-[0.68rem] font-bold uppercase tracking-[0.08em]">Book Your $49 First Session</span>
       </span>
     </Link>
