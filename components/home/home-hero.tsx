@@ -8,9 +8,9 @@ export function HomeHero() {
   return (
     <HeroMedia
       imageSrc={IMAGES.hero}
-      alt="Movement assessment with a clinician at Move Muscle & Joint inside Fit House KC in Overland Park"
+      alt="Movement assessment and rehabilitation at Move Muscle & Joint in Overland Park"
       overlayOpacity="bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-charcoal/15"
-      mobileImagePosition="object-[72%_center]"
+      mobileImagePosition="object-[68%_center]"
     >
       <div className="mx-auto flex w-full max-w-7xl items-end px-6 pb-5 pt-28 sm:px-8 sm:py-28 lg:min-h-[calc(100vh-5rem)] lg:items-center lg:px-8 lg:py-16">
         <div className="max-w-xl">
