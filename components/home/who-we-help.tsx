@@ -68,7 +68,7 @@ export function WhoWeHelp() {
           <div className="aspect-[4/5] rounded-2xl overflow-hidden relative">
             <Image
               src={IMAGES.lifestyle}
-              alt="Woman running on a treadmill in a bright modern gym"
+              alt="Physical therapist helping a woman with a leg stretch on a treatment table"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
