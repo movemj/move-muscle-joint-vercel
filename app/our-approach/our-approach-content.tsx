@@ -23,7 +23,7 @@ const differentiators = [
 export function OurApproachContent() {
   return (
     <>
-      <HeroMedia imageSrc={IMAGES.assessment} alt="Movement assessment" overlayOpacity="bg-charcoal/60">
+      <HeroMedia imageSrc={IMAGES.assessment} alt="Clinician guiding a patient through movement treatment at Move Muscle & Joint in Overland Park" overlayOpacity="bg-charcoal/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32">
           <Breadcrumbs items={[{ label: "Our Approach", path: "/our-approach" }]} />
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-3xl">

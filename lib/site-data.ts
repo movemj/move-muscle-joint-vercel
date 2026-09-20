@@ -74,7 +74,7 @@ export const IMAGES = {
   shockwave: "/images/shockwave.webp",
   rehab: "/images/rehab.webp",
   provider: "/images/joseph-hugunin-dc.webp",
-  assessment: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blog%20Hero%20for%20wellness%20advice%20Move%20Muscle%20%26%20Joint-seHkPjzPLHVq5lr6gOvoPzkdrFxxmd.webp",
+  assessment: "/images/our-approach-movement-treatment.webp",
   lifestyle: "/images/lifestyle.webp",
   clinic: "/images/clinic.webp",
   aboutFacility: "/images/about-movement-facility-hero.webp",
