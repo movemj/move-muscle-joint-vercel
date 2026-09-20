@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/site-data";
 import { buildJaneUrl } from "@/lib/booking";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const janeUrl = buildJaneUrl({ campaign: "header-footer" });
@@ -87,17 +87,6 @@ export function Header() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <a
-              href={janeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:inline-flex px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all bg-white text-navy hover:bg-white/90"
-            >
-              Book Now
-            </a>
-            <a href="tel:+19133030989" aria-label="Call Move Muscle & Joint" className="lg:hidden inline-flex items-center justify-center rounded-full border border-white/40 p-2 text-white hover:bg-white/10">
-              <Phone className="h-4 w-4" />
-            </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden p-2 text-white transition-colors"
