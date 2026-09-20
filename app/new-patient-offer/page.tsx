@@ -39,7 +39,6 @@ const firstVisit = [
   ["04", "YOU LEAVE WITH A PLAN", "Know what to work on, what comes next, and what progress should look like."],
 ];
 
-const recognition = ["Back Pain", "Neck Pain", "Knee Pain", "Shoulder Pain", "Hip Pain", "Foot & Ankle Pain", "Sciatica", "Headaches & Tension", "Sports Injuries", "Running Injuries", "Mobility Restrictions", "Stiffness", "Recurring Pain", "Posture Concerns", "Strength Imbalances", "I’ve Tried Everything"];
 const faqs: Array<[string, string | [string, string]]> = [
   ["What happens at my first visit?", "Your first visit begins with a comprehensive whole-body movement assessment. We discuss your history and goals, explain our findings, and often begin integrated treatment in the same session."],
   ["Will I be treated during the first visit?", "When clinically appropriate, your first visit may include hands-on chiropractic care, myofascial work, or movement-based treatment."],
@@ -53,25 +52,20 @@ export default function NewPatientOfferPage() {
   return (
     <main className="bg-white pb-28 md:pb-0">
       <JsonLdSchema data={schemas.newPatientOffer()} />
-      <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-charcoal text-white lg:min-h-0">
-        <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-stretch lg:grid-cols-[1.04fr_0.96fr]">
-          <div className="relative z-10 flex flex-col justify-center px-6 pb-[48vh] pt-28 sm:px-8 lg:px-16 lg:py-36 lg:pb-36">
+      <section className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-charcoal text-white">
+        <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="z-0 object-cover object-center" sizes="100vw" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/25" aria-hidden="true" />
+        <div className="relative z-20 mx-auto flex min-h-[calc(100svh-5rem)] max-w-7xl items-center px-6 py-28 sm:px-8 lg:px-16 lg:py-36">
+          <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">Your first Move session is designed to uncover what may be contributing to the problem—not simply chase where it hurts. Get a comprehensive movement assessment, a clear explanation of what we find, and treatment when clinically appropriate.</p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
-              {['Movement assessment', 'Clinical evaluation', 'Clear next step'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
+              {['Movement assessment', 'Treatment'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
             </div>
-            <div className="mt-9"><CTAButton campaign="new-patient-offer" treatment={6} label="Book Your $49 First Session" variant="white" size="lg" showArrow /></div>
-          </div>
-          <div className="absolute inset-x-0 bottom-0 h-[43vh] min-h-[260px] lg:relative lg:inset-auto lg:h-auto lg:min-h-[650px]">
-            <div className="absolute inset-0 bg-white/10 mix-blend-multiply" aria-hidden="true" />
-            <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 48vw" />
-            <div className="offer-price-badge absolute bottom-6 left-6 text-white sm:bottom-10 sm:left-10">
-              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/80">New patient offer</p>
-              <p className="mt-2 text-[5.5rem] font-bold leading-[0.82] tracking-[-0.08em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] sm:text-9xl">$49</p>
-              <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#d5e2f2]">First Move Session</p>
-              <p className="mt-3 max-w-[235px] text-xs leading-relaxed text-white/80">Assessment · Findings · Next step</p>
+            <div className="mt-9 flex items-baseline gap-4 text-white">
+              <span className="text-8xl font-bold leading-none tracking-[-0.08em] drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] sm:text-9xl">$49</span>
+              <span className="text-lg font-bold uppercase tracking-[0.16em] text-[#d5e2f2]">1:1</span>
             </div>
           </div>
         </div>
@@ -83,14 +77,6 @@ export default function NewPatientOfferPage() {
           <div className="max-w-2xl">
             <SectionHeading tag="What brought you here?" title="You Don’t Have to Know What’s Wrong Yet." />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-steel">Pain, stiffness, recurring injuries, or movement that just doesn’t feel right—we start by looking at how your body is working as a whole.</p>
-          </div>
-          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.18em] text-navy/60">Common reasons patients start here</p>
-          <div className="relative left-1/2 mt-4 w-screen -translate-x-1/2 overflow-hidden border-y border-border bg-light-gray py-5" aria-label="Common reasons patients seek care">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-light-gray to-transparent" aria-hidden="true" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-light-gray to-transparent" aria-hidden="true" />
-            <div className="flex w-max animate-[offer-marquee_28s_linear_infinite] gap-3 px-3 hover:[animation-play-state:paused] motion-reduce:animate-none">
-              {[...recognition, ...recognition].map((item, index) => <span key={`${item}-${index}`} className="shrink-0 rounded-full border border-navy/20 bg-white px-4 py-2 text-sm font-semibold text-navy shadow-sm sm:text-base">{item}</span>)}
-            </div>
           </div>
         </div>
       </SectionWrapper>
