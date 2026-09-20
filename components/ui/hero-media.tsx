@@ -11,6 +11,7 @@ interface HeroMediaProps {
   className?: string;
   minHeight?: string;
   mobileImagePosition?: string;
+  imageClassName?: string;
 }
 
 export function HeroMedia({
@@ -23,6 +24,7 @@ export function HeroMedia({
   className = "",
   minHeight = "min-h-[100dvh] sm:min-h-screen",
   mobileImagePosition = "object-center",
+  imageClassName = "",
 }: HeroMediaProps) {
   return (
     <section
@@ -50,7 +52,7 @@ export function HeroMedia({
             src={imageSrc}
             alt={alt}
             fill
-            className={cn("object-cover", mobileImagePosition, "sm:object-center")}
+            className={cn("object-cover", mobileImagePosition, "sm:object-center", imageClassName)}
             priority
             sizes="100vw"
           />
