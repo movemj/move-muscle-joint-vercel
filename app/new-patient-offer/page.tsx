@@ -72,7 +72,7 @@ export default function NewPatientOfferPage() {
       </section>
 
 
-      <SectionWrapper>
+      <SectionWrapper padding="py-14 lg:py-20">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-2xl">
             <SectionHeading tag="What brought you here?" title="You Don’t Have to Know What’s Wrong Yet." />

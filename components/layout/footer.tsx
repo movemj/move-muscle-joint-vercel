@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-charcoal text-white w-full max-w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 w-full max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-12 w-full max-w-full">
           {/* Brand */}
           <div className="lg:col-span-1 overflow-hidden">
             <Link href="/" className="inline-block mb-4" aria-label="Move Muscle & Joint home">
@@ -35,8 +35,12 @@ export function Footer() {
                 <Phone className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+19133030989" className="break-words hover:text-white">{SITE.phone}</a>
-                  <span>Monday – Friday: 9:00 AM – 6:00 PM</span>
-                  <span>Saturday – Sunday: Closed</span>
+                  <span className="leading-relaxed">Monday – Friday
+                    <span className="block pl-0 text-white/55">9:00 AM – 6:00 PM</span>
+                  </span>
+                  <span className="leading-relaxed">Saturday – Sunday
+                    <span className="block text-white/55">Closed</span>
+                  </span>
                 </div>
               </div>
             </div>
