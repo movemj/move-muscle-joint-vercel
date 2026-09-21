@@ -19,7 +19,7 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-16">
           <div className="flex items-center gap-5">
             <Link href="/" aria-label="Move Muscle & Joint home">
-              <Image src="/images/move-logo-white.webp" alt="Move Muscle & Joint" width={180} height={72} className="h-12 w-auto" />
+              <Image src="/images/move-logo-white.webp" alt="Move Muscle & Joint" width={180} height={72} className="h-auto w-[150px] sm:w-[180px]" />
             </Link>
             <div className="border-l border-white/15 pl-5 text-sm text-white/65">
               <p>{SITE.address}</p>
