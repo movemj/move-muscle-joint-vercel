@@ -107,8 +107,7 @@ export default function NewPatientOfferPage() {
             {[['Rush in. Adjust. Leave.', 'Assess. Treat. Retrain.'], ['Treat only where it hurts.', 'Look at how the entire system is moving.'], ['Endless visits without direction.', 'A plan built around progress.']].map(([not, move]) => (
               <article key={not} className="relative overflow-hidden rounded-2xl border border-border bg-light-gray p-6 shadow-[0_16px_40px_-30px_rgba(15,35,60,0.6)] sm:p-7">
                 <div className="border-t border-border pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-charcoal/50">The usual approach</p>
-                  <p className="mt-2 text-base font-medium text-charcoal/65 line-through decoration-accent/70">{not}</p>
+                  <p className="text-base font-medium text-charcoal/65 line-through decoration-accent/70">{not}</p>
                   <div className="my-5 h-px bg-accent/40" aria-hidden="true" />
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent">The Move approach</p>
                   <p className="mt-2 text-lg font-bold leading-snug tracking-tight text-navy">{move}</p>
