@@ -55,7 +55,7 @@ export default function NewPatientOfferPage() {
       <JsonLdSchema data={schemas.newPatientOffer()} />
       <section className="relative isolate h-[100svh] min-h-[620px] overflow-hidden bg-charcoal text-white">
         <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="z-0 object-cover object-center" sizes="100vw" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/25" aria-hidden="true" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-charcoal/15" aria-hidden="true" />
         <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center justify-center px-6 py-16 text-center sm:px-8 md:justify-start md:text-left lg:px-16">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
