@@ -23,7 +23,7 @@ export function Footer() {
             </Link>
             <div className="border-l border-white/15 pl-5 text-sm text-white/65">
               <p>{SITE.address}</p>
-              <a href="tel:+19133030989" className="mt-1 block hover:text-white">{SITE.phone}</a>
+              <a href="tel:+19133030989" className="mt-1 block hover:text-white">913-303-0989</a>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/65">
