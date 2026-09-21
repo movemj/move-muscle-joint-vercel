@@ -21,7 +21,7 @@ export function TestimonialQuote({
       className={cn(
         "flex flex-col gap-4",
         variant === "featured" ? "max-w-2xl" : "max-w-xl",
-        centered && "items-center text-center",
+        centered && "mx-auto items-center text-center",
         className
       )}
     >
