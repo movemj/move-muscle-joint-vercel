@@ -61,7 +61,7 @@ export default function NewPatientOfferPage() {
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">Your first Move session is designed to uncover what may be contributing to the problem—not simply chase where it hurts. Get a comprehensive movement assessment, a clear explanation of what we find, and treatment when clinically appropriate.</p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
-              {['Movement assessment', 'Treatment', 'No obligation'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
+              {['Movement assessment', 'Treatment', 'No sales pressure'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
             </div>
             <div className="mt-9 text-white">
               <span className="text-8xl font-bold leading-none tracking-[-0.08em] drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] sm:text-9xl">$49</span>
