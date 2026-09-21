@@ -28,7 +28,6 @@ export function Footer() {
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/65">
             <span>Monday – Friday · 9:00 AM – 6:00 PM</span>
-            <a href={janeUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-white hover:text-accent">Book your first visit</a>
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
           </div>
         </div>
