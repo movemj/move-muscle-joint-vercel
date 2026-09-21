@@ -26,8 +26,7 @@ export function Footer() {
               <a href="tel:+19133030989" className="mt-1 block hover:text-white">913-303-0989</a>
             </div>
           </div>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/65">
-            <span>Monday – Friday · 9:00 AM – 6:00 PM</span>
+          <div className="flex justify-end text-sm text-white/65">
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
           </div>
         </div>
