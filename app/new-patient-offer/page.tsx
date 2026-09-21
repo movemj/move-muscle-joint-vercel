@@ -10,6 +10,7 @@ import { schemas } from "@/lib/schemas";
 import { IMAGES, SITE, SERVICES } from "@/lib/site-data";
 import { getTestimonialsByTag } from "@/lib/testimonials";
 import { TestimonialsStatic } from "@/components/testimonials/testimonials-static";
+import { FirstVisitSteps } from "@/components/new-patient-offer/first-visit-steps";
 
 const offerTestimonial = getTestimonialsByTag("offer")[0];
 
@@ -88,12 +89,7 @@ export default function NewPatientOfferPage() {
               <Image src={IMAGES.handsOn} alt="Hands-on movement care at Move Muscle & Joint" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
             </div>
           </div>
-          <div className="relative flex flex-col gap-8 pl-8 before:absolute before:bottom-4 before:left-3 before:top-4 before:w-px before:bg-accent/70">
-            {firstVisit.map(([number, title, description]) => <article key={number} className="relative grid gap-5 pl-16 sm:grid-cols-[100px_1fr] sm:pl-0">
-              <span className="text-5xl font-bold tracking-tight text-navy/15 sm:text-6xl">{number}</span>
-              <div><h2 className="text-sm font-bold uppercase tracking-[0.14em] text-navy">{title}</h2><p className="mt-3 max-w-lg leading-relaxed text-steel">{description}</p></div>
-            </article>)}
-          </div>
+          <FirstVisitSteps steps={firstVisit} />
         </div>
       </SectionWrapper>
 
