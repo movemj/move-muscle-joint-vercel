@@ -72,7 +72,7 @@ export default function NewPatientOfferPage() {
       </section>
 
 
-      <SectionWrapper bg="bg-light-gray" padding="py-14 lg:py-20">
+      <SectionWrapper padding="py-14 lg:py-20">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-2xl">
             <SectionHeading tag="What brought you here?" title="You Don’t Have to Know What’s Wrong Yet." />
@@ -81,7 +81,7 @@ export default function NewPatientOfferPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper bg="bg-white">
+      <SectionWrapper bg="bg-light-gray">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <SectionHeading tag="Your First Move Session" title="What Happens When You Walk Through the Door." />
@@ -100,14 +100,15 @@ export default function NewPatientOfferPage() {
         </div>
       </section>
 
-      <SectionWrapper bg="bg-light-gray">
+      <SectionWrapper bg="bg-white">
         <div className="mx-auto max-w-5xl">
           <SectionHeading tag="Why Move feels different" title="If You’ve Tried Care Before, This May Feel Different." align="center" />
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[['Rush in. Adjust. Leave.', 'Assess. Treat. Retrain.'], ['Treat only where it hurts.', 'Look at how the entire system is moving.'], ['Endless visits without direction.', 'A plan built around progress.']].map(([not, move]) => (
               <article key={not} className="relative overflow-hidden rounded-2xl border border-border bg-light-gray p-6 shadow-[0_16px_40px_-30px_rgba(15,35,60,0.6)] sm:p-7">
                 <div className="border-t border-border pt-5">
-                  <p className="text-base font-medium text-charcoal/65 line-through decoration-accent/70">{not}</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-charcoal/50">The usual approach</p>
+                  <p className="mt-2 text-base font-medium text-charcoal/65 line-through decoration-accent/70">{not}</p>
                   <div className="my-5 h-px bg-accent/40" aria-hidden="true" />
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent">The Move approach</p>
                   <p className="mt-2 text-lg font-bold leading-snug tracking-tight text-navy">{move}</p>
@@ -118,11 +119,11 @@ export default function NewPatientOfferPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper bg="bg-white">
+      <SectionWrapper bg="bg-light-gray">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"><div className="relative aspect-[4/3] overflow-hidden rounded-md"><Image src={IMAGES.provider} alt="Joseph Hugunin, DC — Founder, Move Muscle & Joint" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 45vw" /></div><div><SectionHeading tag="Your Provider" title="You’ll Know Who You’re Seeing." /><p className="mt-2 font-medium text-navy">One-on-one care with Dr. Joseph Hugunin.</p><div className="mt-6 flex flex-col gap-4 leading-relaxed text-steel"><p>Dr. Joseph Hugunin helps patients uncover the root cause of pain through a blend of chiropractic care, movement assessment, myofascial release therapy, and rehab-based treatment.</p><p>His approach focuses on restoring function, reducing flare-ups, and helping patients build long-term confidence in the way they move.</p></div></div></div>
       </SectionWrapper>
 
-      <SectionWrapper bg="bg-light-gray"><div className="mx-auto max-w-3xl"><SectionHeading tag="Questions" title="A few things to know." align="center" /><Accordion type="single" collapsible className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer], index) => <AccordionItem key={question} value={`faq-${index}`}><AccordionTrigger className="py-6 text-left font-semibold text-charcoal hover:text-navy">{question}</AccordionTrigger><AccordionContent className="pb-6 leading-relaxed text-steel">{Array.isArray(answer) ? <a className="text-navy underline underline-offset-4" href={answer[1]} target="_blank" rel="noreferrer">{answer[0]}</a> : answer}</AccordionContent></AccordionItem>)}</Accordion></div></SectionWrapper>
+      <SectionWrapper><div className="mx-auto max-w-3xl"><SectionHeading tag="Questions" title="A few things to know." align="center" /><Accordion type="single" collapsible className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer], index) => <AccordionItem key={question} value={`faq-${index}`}><AccordionTrigger className="py-6 text-left font-semibold text-charcoal hover:text-navy">{question}</AccordionTrigger><AccordionContent className="pb-6 leading-relaxed text-steel">{Array.isArray(answer) ? <a className="text-navy underline underline-offset-4" href={answer[1]} target="_blank" rel="noreferrer">{answer[0]}</a> : answer}</AccordionContent></AccordionItem>)}</Accordion></div></SectionWrapper>
 
       {offerTestimonial && (
         <TestimonialsStatic testimonials={[offerTestimonial]} bg="bg-white" centered />
