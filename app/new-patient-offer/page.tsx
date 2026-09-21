@@ -52,10 +52,10 @@ export default function NewPatientOfferPage() {
   return (
     <main className="bg-white pb-28 md:pb-0">
       <JsonLdSchema data={schemas.newPatientOffer()} />
-      <section className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-charcoal text-white">
+      <section className="relative isolate h-[100svh] min-h-[620px] overflow-hidden bg-charcoal text-white">
         <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="z-0 object-cover object-center" sizes="100vw" />
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/25" aria-hidden="true" />
-        <div className="relative z-20 mx-auto flex min-h-[calc(100svh-5rem)] max-w-7xl items-center px-6 py-28 sm:px-8 lg:px-16 lg:py-36">
+        <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-6 py-16 sm:px-8 lg:px-16">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
@@ -63,9 +63,8 @@ export default function NewPatientOfferPage() {
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
               {['Movement assessment', 'Treatment'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
             </div>
-            <div className="mt-9 flex items-baseline gap-4 text-white">
+            <div className="mt-9 text-white">
               <span className="text-8xl font-bold leading-none tracking-[-0.08em] drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] sm:text-9xl">$49</span>
-              <span className="text-lg font-bold uppercase tracking-[0.16em] text-[#d5e2f2]">1:1</span>
             </div>
           </div>
         </div>
