@@ -56,12 +56,12 @@ export default function NewPatientOfferPage() {
       <section className="relative isolate h-[100svh] min-h-[620px] overflow-hidden bg-charcoal text-white">
         <Image src={IMAGES.assessment} alt="Clinician guiding a patient through a standing movement assessment" fill priority className="z-0 object-cover object-center" sizes="100vw" />
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/25" aria-hidden="true" />
-        <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-6 py-16 sm:px-8 lg:px-16">
+        <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center justify-center px-6 py-16 text-center sm:px-8 md:justify-start md:text-left lg:px-16">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">New to Move? Start here.</p>
             <h1 className="mt-5 max-w-2xl text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Move Better Starts With Knowing Why.</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">Your first Move session is designed to uncover what may be contributing to the problem—not simply chase where it hurts. Get a comprehensive movement assessment, a clear explanation of what we find, and treatment when clinically appropriate.</p>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
+            <div className="mt-8 hidden flex-wrap gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/70 md:flex">
               {['Movement assessment', 'Treatment', 'No sales pressure'].map((item) => <span key={item} className="flex items-center gap-2"><Check className="size-4 text-accent" aria-hidden="true" />{item}</span>)}
             </div>
             <div className="mt-9 text-white">
