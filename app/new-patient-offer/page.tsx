@@ -100,10 +100,23 @@ export default function NewPatientOfferPage() {
         </div>
       </section>
 
-      <SectionWrapper>
-        <SectionHeading tag="Why Move feels different" title="If You’ve Tried Care Before, This May Feel Different." align="center" />
-        <div className="mx-auto mt-12 max-w-4xl divide-y divide-border border-y border-border">
-          {[["Rush in. Adjust. Leave.", "Assess. Treat. Retrain."], ["Treat only where it hurts.", "Look at how the entire system is moving."], ["Endless visits without direction.", "A plan built around progress."]].map(([not, move]) => <div key={not} className="grid gap-5 py-8 sm:grid-cols-2 sm:gap-10"><div><p className="text-[11px] font-bold uppercase tracking-[0.18em] text-charcoal">Not</p><p className="mt-2 text-lg font-medium text-charcoal/80 line-through decoration-accent/70">{not}</p></div><div><p className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent">Move</p><p className="mt-2 text-xl font-bold tracking-tight text-navy">{move}</p></div></div>)}
+      <SectionWrapper bg="bg-white">
+        <div className="mx-auto max-w-5xl">
+          <SectionHeading tag="Why Move feels different" title="If You’ve Tried Care Before, This May Feel Different." align="center" />
+          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+            {[['Rush in. Adjust. Leave.', 'Assess. Treat. Retrain.'], ['Treat only where it hurts.', 'Look at how the entire system is moving.'], ['Endless visits without direction.', 'A plan built around progress.']].map(([not, move], index) => (
+              <article key={not} className="relative overflow-hidden rounded-2xl border border-border bg-light-gray p-6 shadow-[0_16px_40px_-30px_rgba(15,35,60,0.6)] sm:p-7">
+                <span className="text-5xl font-bold tracking-[-0.08em] text-navy/10">0{index + 1}</span>
+                <div className="mt-7 border-t border-border pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-charcoal/50">The usual approach</p>
+                  <p className="mt-2 text-base font-medium text-charcoal/65 line-through decoration-accent/70">{not}</p>
+                  <div className="my-5 h-px bg-accent/40" aria-hidden="true" />
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent">The Move approach</p>
+                  <p className="mt-2 text-lg font-bold leading-snug tracking-tight text-navy">{move}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 
@@ -114,7 +127,7 @@ export default function NewPatientOfferPage() {
       <SectionWrapper><div className="mx-auto max-w-3xl"><SectionHeading tag="Questions" title="A few things to know." align="center" /><Accordion type="single" collapsible className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer], index) => <AccordionItem key={question} value={`faq-${index}`}><AccordionTrigger className="py-6 text-left font-semibold text-charcoal hover:text-navy">{question}</AccordionTrigger><AccordionContent className="pb-6 leading-relaxed text-steel">{Array.isArray(answer) ? <a className="text-navy underline underline-offset-4" href={answer[1]} target="_blank" rel="noreferrer">{answer[0]}</a> : answer}</AccordionContent></AccordionItem>)}</Accordion></div></SectionWrapper>
 
       {offerTestimonial && (
-        <TestimonialsStatic testimonials={[offerTestimonial]} bg="bg-light-gray" centered />
+        <TestimonialsStatic testimonials={[offerTestimonial]} bg="bg-white" centered />
       )}
 
 
