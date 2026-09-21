@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { SITE, SERVICES, CONDITIONS } from "@/lib/site-data";
 import { buildJaneUrl } from "@/lib/booking";
@@ -7,10 +10,34 @@ import { MapPin, Phone } from "lucide-react";
 const janeUrl = buildJaneUrl({ campaign: "header-footer" });
 
 export function Footer() {
+  const pathname = usePathname();
+  const isOfferPage = pathname === "/new-patient-offer";
+
+  if (isOfferPage) {
+    return (
+      <footer className="bg-charcoal text-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-16">
+          <div className="flex items-center gap-5">
+            <Link href="/" aria-label="Move Muscle & Joint home">
+              <Image src="/images/move-logo-white.webp" alt="Move Muscle & Joint" width={180} height={72} className="h-auto w-[150px] sm:w-[180px]" />
+            </Link>
+            <div className="border-l border-white/15 pl-5 text-sm text-white/65">
+              <p>{SITE.address}</p>
+              <a href="tel:+19133030989" className="mt-1 block hover:text-white">913-303-0989</a>
+            </div>
+          </div>
+          <div className="flex justify-end text-sm text-white/65">
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer className="bg-charcoal text-white w-full max-w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 w-full max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-12 w-full max-w-full">
           {/* Brand */}
           <div className="lg:col-span-1 overflow-hidden">
             <Link href="/" className="inline-block mb-4" aria-label="Move Muscle & Joint home">
@@ -35,8 +62,12 @@ export function Footer() {
                 <Phone className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+19133030989" className="break-words hover:text-white">{SITE.phone}</a>
-                  <span>Monday – Friday: 9:00 AM – 6:00 PM</span>
-                  <span>Saturday – Sunday: Closed</span>
+                  <span className="leading-relaxed">Monday – Friday
+                    <span className="block pl-0 text-white/55">9:00 AM – 6:00 PM</span>
+                  </span>
+                  <span className="leading-relaxed">Saturday – Sunday
+                    <span className="block text-white/55">Closed</span>
+                  </span>
                 </div>
               </div>
             </div>

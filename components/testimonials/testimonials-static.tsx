@@ -32,22 +32,24 @@ export function TestimonialsStatic({
 
   return (
     <SectionWrapper bg={bg} className={className}>
-      <SectionHeading tag={tag} title={title} align={centered ? "center" : "left"} />
-      <div
-        className={cn(
-          "-mt-4",
-          isSingle
-            ? cn("max-w-2xl", centered && "mx-auto")
-            : "grid gap-12 sm:grid-cols-2 sm:gap-16"
-        )}
-      >
-        {testimonials.map((t) => (
-          <TestimonialQuote key={t.id} testimonial={t} centered={centered && isSingle} />
-        ))}
-      </div>
-      <div className={cn("mt-10 flex flex-col gap-2", centered && "items-center text-center")}>
-        <GoogleReviewsLink />
-        <TestimonialDisclaimer />
+      <div className={cn(centered && "mx-auto max-w-3xl text-center")}>
+        <SectionHeading tag={tag} title={title} align={centered ? "center" : "left"} />
+        <div
+          className={cn(
+            "-mt-4",
+            isSingle
+              ? cn("mx-auto max-w-2xl", centered && "text-center")
+              : "grid gap-12 sm:grid-cols-2 sm:gap-16"
+          )}
+        >
+          {testimonials.map((t) => (
+            <TestimonialQuote key={t.id} testimonial={t} centered={centered && isSingle} />
+          ))}
+        </div>
+        <div className={cn("mt-10 flex flex-col gap-2", centered && "items-center text-center")}>
+          <GoogleReviewsLink />
+          <TestimonialDisclaimer />
+        </div>
       </div>
     </SectionWrapper>
   );
