@@ -104,10 +104,9 @@ export default function NewPatientOfferPage() {
         <div className="mx-auto max-w-5xl">
           <SectionHeading tag="Why Move feels different" title="If You’ve Tried Care Before, This May Feel Different." align="center" />
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
-            {[['Rush in. Adjust. Leave.', 'Assess. Treat. Retrain.'], ['Treat only where it hurts.', 'Look at how the entire system is moving.'], ['Endless visits without direction.', 'A plan built around progress.']].map(([not, move], index) => (
+            {[['Rush in. Adjust. Leave.', 'Assess. Treat. Retrain.'], ['Treat only where it hurts.', 'Look at how the entire system is moving.'], ['Endless visits without direction.', 'A plan built around progress.']].map(([not, move]) => (
               <article key={not} className="relative overflow-hidden rounded-2xl border border-border bg-light-gray p-6 shadow-[0_16px_40px_-30px_rgba(15,35,60,0.6)] sm:p-7">
-                <span className="text-5xl font-bold tracking-[-0.08em] text-navy/10">0{index + 1}</span>
-                <div className="mt-7 border-t border-border pt-5">
+                <div className="border-t border-border pt-5">
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-charcoal/50">The usual approach</p>
                   <p className="mt-2 text-base font-medium text-charcoal/65 line-through decoration-accent/70">{not}</p>
                   <div className="my-5 h-px bg-accent/40" aria-hidden="true" />
