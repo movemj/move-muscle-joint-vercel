@@ -131,7 +131,11 @@ export default function TargetedRehabPage() {
         },
         {
           q: "How long does rehab take?",
-          a: "The duration depends on your condition, goals, and how your body responds. Some patients graduate in a few weeks, while others with complex presentations may continue longer.",
+          a: "A typical care plan is 3 to 6 visits, depending on the person, your goals, and how your body responds. Some people may need more or fewer visits.",
+        },
+        {
+          q: "Do I need a referral?",
+          a: "No referral is needed to book. You can schedule directly through our online scheduling system.",
         },
         {
           q: "What happens at my first visit?",

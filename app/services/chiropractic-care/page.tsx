@@ -122,7 +122,7 @@ export default function ChiropracticCarePage() {
         },
         {
           q: "Do I need a referral?",
-          a: "No referral is needed. You can book directly through our online scheduling system.",
+          a: "No referral is needed to book. You can schedule directly through our online scheduling system."
         },
         {
           q: "How often will I need treatment?",

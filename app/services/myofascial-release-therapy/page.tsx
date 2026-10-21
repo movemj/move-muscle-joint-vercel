@@ -131,7 +131,11 @@ export default function MyofascialReleasePage() {
         },
         {
           q: "How many sessions will I need?",
-          a: "It depends on the severity and chronicity of your myofascial release therapy restrictions. Most patients see improvement within a few sessions when combined with corrective exercise.",
+          a: "A typical care plan is 3 to 6 visits, depending on the person, the severity of the restrictions, and your goals.",
+        },
+        {
+          q: "Do I need a referral?",
+          a: "No referral is needed to book. You can schedule directly through our online scheduling system.",
         },
         {
           q: "What happens at my first visit?",
