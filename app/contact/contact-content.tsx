@@ -147,6 +147,7 @@ export function ContactContent() {
             </div>
 
             <div className="mt-6">
+              <p className="mb-5 text-sm leading-relaxed text-steel">We are in network with many major insurance plans. Coverage varies by plan, so contact us and we&apos;ll verify your benefits before your first visit.</p>
               <CTAButton href="/book" label="Book Your Appointment" showArrow size="lg" campaign="contact" />
               <p className="mt-3 text-sm text-steel">
                 Need hours, parking, or what to expect first?{" "}
