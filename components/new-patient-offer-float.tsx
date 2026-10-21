@@ -51,5 +51,5 @@ export function NewPatientOfferMobileFloat() {
 }
 
 export function NewPatientOfferFloatGroup() {
-  return <><NewPatientOfferFloat /><NewPatientOfferMobileFloat /></>;
+  return <NewPatientOfferFloat />;
 }
