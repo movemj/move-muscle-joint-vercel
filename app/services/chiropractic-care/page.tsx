@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
+const chiropracticTitle = "Chiropractic Care in Overland Park, KS | Move Muscle & Joint";
+const chiropracticDescription =
+  "Chiropractic care in Overland Park for neck pain, low back pain, and sciatica, with adjustments, movement assessment, and targeted rehab support.";
+
 export const metadata: Metadata = {
-  title: "Chiropractic Care in Overland Park, KS",
-  description:
-    "Personalized chiropractic care in Overland Park supports mobility and movement goals with assessment-driven treatment. Book your first visit online today.",
+  title: { absolute: chiropracticTitle },
+  description: chiropracticDescription,
   twitter: {
     card: "summary_large_image",
     title: "Chiropractic Care Overland Park KS",
@@ -108,6 +111,7 @@ export default function ChiropracticCarePage() {
             at Move delivers results that compound over time rather than requiring indefinite
             maintenance.
           </p>
+          <p>Learn more about <a className="text-navy underline" href="/services/myofascial-release-therapy">myofascial release therapy</a> and <a className="text-navy underline" href="/services/targeted-rehab">targeted rehab</a> as part of an integrated plan.</p>
         </>
       }
       relatedConditions={CONDITIONS}
@@ -127,6 +131,10 @@ export default function ChiropracticCarePage() {
         {
           q: "Is chiropractic combined with other treatments?",
           a: "Yes. At Move, chiropractic is part of an integrated model that may include myofascial release therapy, shockwave therapy, and targeted rehab in the same visit.",
+        },
+        {
+          q: "What happens at my first visit?",
+          a: "We review your history and goals, assess how you move, explain the findings, and discuss an appropriate care plan before treatment.",
         },
       ]}
     />

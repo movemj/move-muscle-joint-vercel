@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
-const targetedRehabTitle = "Rehab & Movement Retraining | Overland Park, KS";
+const targetedRehabTitle = "Targeted Rehab in Overland Park, KS | Move Muscle & Joint";
 const targetedRehabDescription =
-  "Rehab and movement retraining in Overland Park to rebuild strength, improve movement patterns, and support lasting recovery after pain or injury.";
+  "Targeted rehab in Overland Park uses active rehab and corrective exercise for back, hip, knee, and shoulder pain with a progressive care plan.";
 
 export const metadata: Metadata = {
   title: { absolute: targetedRehabTitle },
@@ -108,10 +108,11 @@ export default function TargetedRehabPage() {
             building strength, and moving with confidence.
           </p>
           <p>
-            While chiropractic care and myofascial release therapy therapy create the conditions for movement,
+            While chiropractic care and myofascial release therapy create the conditions for movement,
             rehab teaches the body how to use that new capacity. It&apos;s what makes the difference
             between short-term relief and long-term resilience.
           </p>
+          <p>Explore <a className="text-navy underline" href="/services/chiropractic-care">chiropractic adjustments</a> and <a className="text-navy underline" href="/services/myofascial-release-therapy">myofascial release therapy</a> when hands-on care may support your exercise plan.</p>
         </>
       }
       relatedConditions={CONDITIONS}
@@ -131,6 +132,10 @@ export default function TargetedRehabPage() {
         {
           q: "How long does rehab take?",
           a: "The duration depends on your condition, goals, and how your body responds. Some patients graduate in a few weeks, while others with complex presentations may continue longer.",
+        },
+        {
+          q: "What happens at my first visit?",
+          a: "We discuss your history and goals, observe relevant movement, and build a clear starting plan for exercises and activity.",
         },
       ]}
     />

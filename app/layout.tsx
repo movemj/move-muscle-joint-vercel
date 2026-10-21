@@ -9,6 +9,7 @@ import { schemas } from "@/lib/schemas";
 import { NewPatientOfferFloatGroup } from "@/components/new-patient-offer-float";
 import { AnalyticsEventTracking } from "@/components/analytics";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -92,13 +93,14 @@ export default function RootLayout({
       <head>
         <JsonLdSchema data={schemas.website()} />
       </head>
-      <body className={`${montserrat.variable} overflow-x-hidden font-sans`}>
+      <body className={`${montserrat.variable} overflow-x-hidden pb-20 font-sans md:pb-0`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
         <AnalyticsEventTracking />
         <Header />
         <main>{children}</main>
         <Footer />
         <NewPatientOfferFloatGroup />
+        <MobileStickyCTA />
       </body>
     </html>
   );

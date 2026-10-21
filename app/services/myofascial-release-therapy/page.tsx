@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
-const myofascialTitle = "Myofascial Release Therapy | Overland Park, KS";
+const myofascialTitle = "Myofascial Release Therapy in Overland Park, KS | Move Muscle & Joint";
 const myofascialDescription =
-  "Myofascial release therapy in Overland Park to reduce tension, improve mobility, and support recovery with personalized hands-on care.";
+  "Myofascial release therapy in Overland Park supports mobility and recovery with hands-on care for active adults, athletes, and persistent tension.";
 
 export const metadata: Metadata = {
   title: { absolute: myofascialTitle },
@@ -116,6 +116,7 @@ export default function MyofascialReleasePage() {
             for movement retraining and strength building — creating a more complete and durable
             recovery.
           </p>
+          <p>It can be paired with <a className="text-navy underline" href="/services/chiropractic-care">chiropractic adjustments</a> and <a className="text-navy underline" href="/services/targeted-rehab">active rehab</a> when those options fit your plan.</p>
         </>
       }
       relatedConditions={relatedConditions}
@@ -131,6 +132,14 @@ export default function MyofascialReleasePage() {
         {
           q: "How many sessions will I need?",
           a: "It depends on the severity and chronicity of your myofascial release therapy restrictions. Most patients see improvement within a few sessions when combined with corrective exercise.",
+        },
+        {
+          q: "What happens at my first visit?",
+          a: "We review your history, assess movement, explain where myofascial restrictions may be affecting you, and discuss treatment options.",
+        },
+        {
+          q: "Can myofascial release therapy be combined with rehab?",
+          a: "Yes. Hands-on care can be paired with targeted rehab and movement changes when that combination fits your goals.",
         },
       ]}
     />
