@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Tension Headache Treatment",
+title: "Tension Headache Relief in Overland Park",
     description: "Tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and rehab.",
   },
   alternates: {
