@@ -97,7 +97,8 @@ export default function ShockwaveTherapyPage() {
       testimonialId="kyle-f"
       faqs={[
         { q: "Is shockwave therapy painful?", a: "Most patients feel pressure or tapping and some discomfort during treatment. Intensity is adjusted based on your feedback throughout the session." },
-        { q: "How many shockwave sessions will I need?", a: "The number and spacing of sessions depend on your condition, history, goals, and response. We will discuss a plan after assessment rather than promise a fixed number." },
+        { q: "How many shockwave sessions will I need?", a: "A typical care plan is 3 to 6 visits, depending on the person, your condition, goals, and response. We will discuss the appropriate plan after assessment." },
+          { q: "Do I need a referral?", a: "No referral is needed to book. You can schedule directly through our online scheduling system." },
         { q: "Is shockwave therapy extra?", a: "Shockwave is part of our $80-and-up visits when it's recommended for you. It isn't included in the $49 first visit or the $50 visits, and there is no separate per-session add-on." },
         { q: "What conditions respond best to shockwave?", a: "Shockwave therapy may be considered for some persistent tendon and fascia concerns, including plantar fascia, Achilles, elbow, and shoulder presentations. Evidence and response vary by condition." },
         { q: "What is shockwave therapy?", a: "Shockwave therapy uses mechanical acoustic pulses applied to a selected area. It is also called acoustic wave therapy, ESWT, or extracorporeal shockwave therapy (ESWT), and it is considered as part of an individualized plan." },

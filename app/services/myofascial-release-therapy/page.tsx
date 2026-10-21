@@ -117,6 +117,7 @@ export default function MyofascialReleasePage() {
             recovery.
           </p>
           <p>It can be paired with <a className="text-navy underline" href="/services/chiropractic-care">chiropractic adjustments</a> and <a className="text-navy underline" href="/services/targeted-rehab">active rehab</a> when those options fit your plan.</p>
+          <p>A typical care plan is 3 to 6 visits, depending on the person.</p>
         </>
       }
       relatedConditions={relatedConditions}
@@ -131,7 +132,11 @@ export default function MyofascialReleasePage() {
         },
         {
           q: "How many sessions will I need?",
-          a: "It depends on the severity and chronicity of your myofascial release therapy restrictions. Most patients see improvement within a few sessions when combined with corrective exercise.",
+          a: "A typical care plan is 3 to 6 visits, depending on the person, the severity of the restrictions, and your goals.",
+        },
+        {
+          q: "Do I need a referral?",
+          a: "No referral is needed. Dr. Hugunin is a doctor, so you can book directly.",
         },
         {
           q: "What happens at my first visit?",

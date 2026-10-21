@@ -86,7 +86,7 @@ export function ServicePageTemplate({
       <SectionWrapper>
         <div className="max-w-3xl">
           <div className="space-y-5 text-steel leading-relaxed text-lg">{introText}</div>
-          <p className="mt-6 text-sm text-steel">The first visit is $49, follow-up visits are $50 to $80 depending on the care, and visits that include shockwave are $80 and up.</p>
+          <p className="mt-6 text-sm text-steel">The first visit is $49, follow-up visits are $50 to $80 depending on the care, and visits that include shockwave are $80 and up. A typical care plan is 3 to 6 visits, depending on the person and their goals.</p>
         </div>
       </SectionWrapper>
 

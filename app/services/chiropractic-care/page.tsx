@@ -112,6 +112,7 @@ export default function ChiropracticCarePage() {
             maintenance.
           </p>
           <p>Learn more about <a className="text-navy underline" href="/services/myofascial-release-therapy">myofascial release therapy</a> and <a className="text-navy underline" href="/services/targeted-rehab">targeted rehab</a> as part of an integrated plan.</p>
+          <p>A typical care plan is 3 to 6 visits, depending on the person.</p>
         </>
       }
       relatedConditions={CONDITIONS}
@@ -122,11 +123,11 @@ export default function ChiropracticCarePage() {
         },
         {
           q: "Do I need a referral?",
-          a: "No referral is needed. You can book directly through our online scheduling system.",
+          a: "No referral is needed. Dr. Hugunin is a doctor, so you can book directly."
         },
         {
           q: "How often will I need treatment?",
-          a: "Frequency depends on your condition, goals, and how your body responds. We'll outline a clear plan after your initial assessment.",
+          a: "A typical care plan is 3 to 6 visits, depending on the person, your condition, goals, and how your body responds. We'll outline a clear plan after your initial assessment.",
         },
         {
           q: "Is chiropractic combined with other treatments?",

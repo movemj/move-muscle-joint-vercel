@@ -113,6 +113,7 @@ export default function TargetedRehabPage() {
             between short-term relief and long-term resilience.
           </p>
           <p>Explore <a className="text-navy underline" href="/services/chiropractic-care">chiropractic adjustments</a> and <a className="text-navy underline" href="/services/myofascial-release-therapy">myofascial release therapy</a> when hands-on care may support your exercise plan.</p>
+          <p>A typical care plan is 3 to 6 visits, depending on the person.</p>
         </>
       }
       relatedConditions={CONDITIONS}
@@ -131,7 +132,11 @@ export default function TargetedRehabPage() {
         },
         {
           q: "How long does rehab take?",
-          a: "The duration depends on your condition, goals, and how your body responds. Some patients graduate in a few weeks, while others with complex presentations may continue longer.",
+          a: "A typical care plan is 3 to 6 visits, depending on the person, your goals, and how your body responds. Some people may need more or fewer visits.",
+        },
+        {
+          q: "Do I need a referral?",
+          a: "No referral is needed. Dr. Hugunin is a doctor, so you can book directly.",
         },
         {
           q: "What happens at my first visit?",
