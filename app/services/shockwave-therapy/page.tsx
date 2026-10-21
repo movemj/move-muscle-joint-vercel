@@ -7,7 +7,7 @@ const shockwaveDescription =
   "Shockwave therapy in Overland Park for stubborn soft tissue pain, helping support healing, mobility, and a return to the activities you enjoy.";
 
 export const metadata: Metadata = {
-  title: shockwaveTitle,
+  title: { absolute: shockwaveTitle },
   description: shockwaveDescription,
   twitter: {
     card: "summary_large_image",
