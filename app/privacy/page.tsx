@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Read the privacy policy for Move Muscle & Joint, a chiropractic and rehab clinic serving Overland Park, KS.",
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy | Move Muscle & Joint",
+  title: "Privacy Policy",
     description: "Read the privacy policy for Move Muscle & Joint, a chiropractic and rehab clinic serving Overland Park, KS.",
   },
   alternates: {
