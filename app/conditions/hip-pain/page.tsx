@@ -55,7 +55,7 @@ export default function HipPainPage() {
       relatedConditions={CONDITIONS.filter(c => ["Low Back Pain", "Sciatica", "Knee Pain", "Sports Injuries"].includes(c.title))}
       faqs={[
         { q: "Is hip pain always from the hip?", a: "No. Hip pain can be referred from the lumbar spine or SI joint. Our assessment differentiates the source so treatment is directed appropriately." },
-        { q: "Can hip pain be treated without surgery?", a: "Many hip conditions respond well to conservative care including chiropractic treatment, myofascial release therapy therapy, and progressive rehab." },
+        { q: "Can hip pain be treated without surgery?", a: "Many hip conditions respond well to conservative care including chiropractic treatment, myofascial release therapy, and progressive rehab." },
       ]}
     />
   );

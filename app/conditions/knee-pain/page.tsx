@@ -29,7 +29,7 @@ export default function KneePainPage() {
         <p>Knee pain treatment at Move Muscle & Joint in Overland Park goes beyond the knee. We evaluate hip mechanics, ankle mobility, and lower extremity strength to find the movement dysfunctions that are stressing your knee — then build an integrated treatment plan to resolve them.</p>
       </>}
       whatItIs={<>
-        <p>Knee pain can involve the patellofemoral joint, meniscus, ligaments, tendons, or surrounding myofascial release therapy. It may present as pain with squatting, stairs, running, or simply walking. Because the knee sits between the hip and ankle, it&apos;s often the victim — not the cause — of dysfunction above or below.</p>
+        <p>Knee pain can involve the patellofemoral joint, meniscus, ligaments, tendons, or surrounding soft tissue. It may present as pain with squatting, stairs, running, or simply walking. Because the knee sits between the hip and ankle, it&apos;s often the victim — not the cause — of dysfunction above or below.</p>
       </>}
       symptoms={[
         "Pain with squatting, lunging, or stairs",

@@ -59,7 +59,7 @@ export default function PlantarFasciitisPage() {
       relatedConditions={CONDITIONS.filter(c => ["Knee Pain", "Hip Pain", "Sports Injuries"].includes(c.title))}
       faqs={[
         { q: "Is shockwave therapy effective for plantar fasciitis?", a: "Yes. Shockwave therapy is one of the most well-researched treatments for plantar fasciitis and is often effective when other approaches haven't provided relief." },
-        { q: "How long does plantar fasciitis take to heal?", a: "With integrated treatment including shockwave therapy, most patients see significant improvement within four to eight weeks." },
+        { q: "How long does plantar fasciitis take to heal?", a: "With integrated treatment including shockwave therapy, many patients notice changes within a few weeks; your plan depends on your assessment." },
         { q: "Do I need orthotics?", a: "Orthotics can be helpful in some cases, but our focus is on building foot strength and addressing the underlying mechanics. We'll recommend orthotics only if indicated." },
       ]}
     />

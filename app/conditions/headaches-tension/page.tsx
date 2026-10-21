@@ -3,11 +3,11 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Tension Headache Treatment",
+  title: { absolute: "Headache & Tension Relief in Overland Park | Move Muscle & Joint" },
   description: "Tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and rehab.",
   twitter: {
     card: "summary_large_image",
-title: "Tension Headache Relief in Overland Park",
+title: "Headache & Tension Relief in Overland Park | Move Muscle & Joint",
     description: "Tension headache treatment in Overland Park, KS with chiropractic care, posture work, myofascial release therapy, and rehab.",
   },
   alternates: {
@@ -26,7 +26,7 @@ export default function HeadachesTensionPage() {
       breadcrumbLabel="Headaches & Tension"
       breadcrumbPath="/conditions/headaches-tension"
       introText={<>
-        <p>Headache and tension treatment at Move Muscle & Joint in Overland Park addresses the musculoskeletal contributors to chronic headaches — including cervical joint dysfunction, myofascial tension, postural strain, and upper body movement deficits. Our integrated approach combines chiropractic care, myofascial release therapy therapy, and corrective exercise for lasting relief.</p>
+        <p>Headache and tension treatment at Move Muscle & Joint in Overland Park addresses the musculoskeletal contributors to chronic headaches — including cervical joint dysfunction, myofascial tension, postural strain, and upper body movement deficits. Our integrated approach combines chiropractic care, myofascial release therapy, and corrective exercise for lasting relief.</p>
       </>}
       whatItIs={<>
         <p>Tension headaches and cervicogenic headaches are among the most common types seen in clinical practice. They originate from dysfunction in the cervical spine, suboccipital muscles, and upper trapezius — often driven by poor posture, stress, and repetitive strain.</p>
@@ -56,7 +56,7 @@ export default function HeadachesTensionPage() {
       relatedServices={SERVICES}
       relatedConditions={CONDITIONS.filter(c => ["Neck Pain", "Shoulder Pain"].includes(c.title))}
       faqs={[
-        { q: "Can chiropractic care help with headaches?", a: "Yes. Cervicogenic and tension headaches are well-supported conditions for chiropractic care, especially when combined with myofascial release therapy therapy and corrective exercise." },
+        { q: "Can chiropractic care help with headaches?", a: "Yes. Cervicogenic and tension headaches are well-supported conditions for chiropractic care, especially when combined with myofascial release therapy and corrective exercise." },
         { q: "How do I know if my headache is cervicogenic?", a: "Cervicogenic headaches typically originate from the neck, are associated with neck stiffness, and may be triggered or worsened by neck movement or sustained positions." },
         { q: "How quickly will I notice improvement?", a: "Many patients notice a reduction in headache frequency and intensity within the first few sessions of integrated treatment." },
       ]}

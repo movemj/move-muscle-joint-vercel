@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ConditionPageTemplate } from "@/components/templates/condition-page-template";
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 const title = "Sports Injury Relief in Overland Park";
-const description = "Sports injury relief in Overland Park with movement-focused chiropractic care, myofascial release therapy therapy, and progressive rehab for active adults.";
+const description = "Sports injury relief in Overland Park with movement-focused chiropractic care, myofascial release therapy, and progressive rehab for active adults.";
 
 export const metadata: Metadata = {
   title,
@@ -23,7 +24,7 @@ export default function SportsInjuriesPage() {
       introText={
         <>
           <p>Sports injury treatment at Move Muscle & Joint in Overland Park is built for active adults, recreational athletes, and competitive performers who want to recover well and return with confidence. We assess the whole movement system instead of focusing only on the painful spot.</p>
-          <p>Whether you are dealing with a new strain, recurring tendon pain, or an injury that has changed how you move, our integrated approach combines chiropractic care, myofascial release therapy, and targeted rehab around your goals.</p>
+          <p>Whether you are dealing with a new strain, recurring tendon pain, or an injury that has changed how you move, our integrated approach combines chiropractic care, myofascial release therapy, and targeted rehab around your goals. Learn more about our <Link href="/sports-chiropractor-overland-park" className="font-medium text-navy underline underline-offset-2">sports chiropractor in Overland Park</Link> approach.</p>
         </>
       }
       whatItIs={

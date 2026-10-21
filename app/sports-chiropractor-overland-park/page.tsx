@@ -94,7 +94,7 @@ export default function SportsChiropractorOverlandParkPage() {
       <SectionWrapper>
         <SectionHeading tag="Integrated care" title="Choose the tools that fit your movement problem." />
         <div className="grid gap-4 md:grid-cols-3">
-          <Link href="/services/shockwave-therapy" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Shockwave therapy</h2><p className="mt-2 text-sm leading-relaxed text-steel">Learn how this treatment may fit into care for persistent myofascial release therapy concerns.</p></Link>
+          <Link href="/services/shockwave-therapy" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Shockwave therapy</h2><p className="mt-2 text-sm leading-relaxed text-steel">Learn how this treatment may fit into care for persistent soft tissue concerns.</p></Link>
           <Link href="/services/myofascial-release-therapy" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Myofascial release therapy</h2><p className="mt-2 text-sm leading-relaxed text-steel">Explore hands-on work for tissue mobility and areas that feel restricted.</p></Link>
           <Link href="/services/targeted-rehab" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Targeted rehab</h2><p className="mt-2 text-sm leading-relaxed text-steel">Build strength, control, and tolerance for the movements your sport requires.</p></Link>
         </div>
@@ -104,7 +104,7 @@ export default function SportsChiropractorOverlandParkPage() {
         <div className="mx-auto max-w-3xl"><SectionHeading tag="Questions" title="Sports chiropractic FAQ" /> <div className="space-y-3">{faqs.map((faq) => <details key={faq.question} className="rounded-xl bg-white px-6 py-5"><summary className="cursor-pointer font-semibold text-charcoal">{faq.question}</summary><p className="pt-4 leading-relaxed text-steel">{faq.answer}</p></details>)}</div></div>
       </SectionWrapper>
 
-      <section className="bg-navy py-20"><div className="mx-auto max-w-3xl px-6 text-center lg:px-8"><h2 className="text-3xl font-bold text-white md:text-4xl">Ready to understand what is holding you back?</h2><p className="mt-4 text-lg text-white/70">Start with an assessment built around how you move and what you want to return to.</p><div className="mt-8"><CTAButton href="/new-patient-offer" label="See the New Patient Offer" variant="white" size="lg" showArrow campaign="services" content="offer" /></div></div></section>
+      <section className="bg-navy py-20"><div className="mx-auto max-w-3xl px-6 text-center lg:px-8"><h2 className="text-3xl font-bold text-white md:text-4xl">Ready to understand what is holding you back?</h2><p className="mt-4 text-lg text-white/70">Start with an assessment built around how you move and what you want to return to.</p><div className="mt-8"><CTAButton href="/book" label="See the New Patient Offer" variant="white" size="lg" treatment={6} showArrow campaign="services" content="offer" /></div></div></section>
     </>
   );
 }

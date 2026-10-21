@@ -95,8 +95,7 @@ export default function ChiropracticCarePage() {
         "Improved joint mobility and range of motion",
         "Reduced pain and inflammation",
         "Better spinal alignment and posture",
-        "Enhanced nervous system function",
-        "Support for injury recovery",
+                "Support for injury recovery",
         "Integrated with rehab for lasting results",
       ]}
       moveMethodFit={

@@ -83,7 +83,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Natasha B.",
     tags: ["headaches-tension", "neck-pain"],
     quote:
-      "I came in with a long-standing head and neck injury and had been struggling with chronic nausea for years. After just the first session, my nausea was completely gone\u2014and I still have several sessions to go! \u2026 It's not just a standard adjustment\u2014he also uses myofascial release therapy release techniques that help relax and realign the body.",
+      "I came in with a long-standing head and neck injury and had been struggling with chronic nausea for years. After just the first session, my nausea was completely gone\u2014and I still have several sessions to go! \u2026 It's not just a standard adjustment\u2014he also uses soft tissue release techniques that help relax and realign the body.",
   },
   {
     id: "mckenna-z",
