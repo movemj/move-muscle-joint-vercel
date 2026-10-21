@@ -7,6 +7,8 @@ import { JsonLdSchema } from "@/components/schema-json-ld";
 import { SITE } from "@/lib/site-data";
 import { schemas } from "@/lib/schemas";
 import { NewPatientOfferFloatGroup } from "@/components/new-patient-offer-float";
+import { AnalyticsEventTracking } from "@/components/analytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -91,6 +93,8 @@ export default function RootLayout({
         <JsonLdSchema data={schemas.website()} />
       </head>
       <body className={`${montserrat.variable} overflow-x-hidden font-sans`}>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+        <AnalyticsEventTracking />
         <Header />
         <main>{children}</main>
         <Footer />
