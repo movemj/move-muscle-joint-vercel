@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
-const targetedRehabTitle = "Targeted Rehab Overland Park KS";
+const targetedRehabTitle = "Rehab & Movement Retraining | Overland Park, KS";
 const targetedRehabDescription =
-  "Targeted rehab in Overland Park, KS to rebuild strength, improve movement patterns, and support long-term resilience after pain or injury.";
+  "Rehab and movement retraining in Overland Park to rebuild strength, improve movement patterns, and support lasting recovery after pain or injury.";
 
 export const metadata: Metadata = {
   title: targetedRehabTitle,

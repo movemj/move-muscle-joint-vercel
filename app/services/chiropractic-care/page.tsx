@@ -3,7 +3,7 @@ import { ServicePageTemplate } from "@/components/templates/service-page-templat
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Chiropractic Care in Overland Park, KS | Move Muscle & Joint",
+  title: "Chiropractic Care in Overland Park, KS",
   description:
     "Personalized chiropractic care in Overland Park supports mobility and movement goals with assessment-driven treatment. Book your first visit online today.",
   twitter: {

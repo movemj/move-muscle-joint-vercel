@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
-const myofascialTitle = "Myofascial Release Therapy Overland Park KS";
+const myofascialTitle = "Myofascial Release Therapy | Overland Park, KS";
 const myofascialDescription =
-  "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work at Move Muscle & Joint in Overland Park, KS.";
+  "Myofascial release therapy in Overland Park to reduce tension, improve mobility, and support recovery with personalized hands-on care.";
 
 export const metadata: Metadata = {
   title: myofascialTitle,
