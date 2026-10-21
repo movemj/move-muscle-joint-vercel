@@ -3,19 +3,19 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Sciatica Chiropractor Overland Park KS",
+  title: "Sciatica Relief in Overland Park",
   description:
     "Sciatica chiropractor in Overland Park, KS treating nerve pain at its source with chiropractic care, myofascial release, and rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Sciatica Chiropractor Overland Park KS | Move Muscle & Joint",
+    title: "Sciatica Relief in Overland Park",
     description: "Sciatica chiropractor in Overland Park, KS treating nerve pain at its source with chiropractic care, myofascial release, and rehab.",
   },
   alternates: {
     canonical: "/conditions/sciatica",
   },
   openGraph: {
-    title: "Sciatica Chiropractor Overland Park KS | Move Muscle & Joint",
+    title: "Sciatica Relief in Overland Park",
     description:
       "Sciatica chiropractor in Overland Park, KS treating nerve pain at its source with chiropractic care, myofascial release, and rehab.",
     url: `${SITE.url}/conditions/sciatica`,

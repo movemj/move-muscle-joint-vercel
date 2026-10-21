@@ -3,11 +3,11 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Knee Pain Treatment in Overland Park",
+  title: "Knee Pain Relief in Overland Park",
   description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
   twitter: {
     card: "summary_large_image",
-title: "Knee Pain Relief in Overland Park | Move Muscle & Joint",
+title: "Knee Pain Relief in Overland Park",
     description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
   },
   alternates: {

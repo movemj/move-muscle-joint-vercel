@@ -3,11 +3,11 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Hip Pain Treatment in Overland Park",
+  title: "Hip Pain Relief in Overland Park",
   description: "Hip pain treatment in Overland Park, KS using chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
   twitter: {
     card: "summary_large_image",
-title: "Hip Pain Relief in Overland Park | Move Muscle & Joint",
+title: "Hip Pain Relief in Overland Park",
     description: "Hip pain treatment in Overland Park, KS using chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
   },
   alternates: {

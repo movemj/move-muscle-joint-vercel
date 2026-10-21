@@ -3,18 +3,18 @@ import { ConditionPageTemplate } from '@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: "Plantar Fasciitis Treatment Overland Park KS",
+  title: "Plantar Fasciitis Relief in Overland Park",
   description: "Plantar fasciitis treatment in Overland Park, KS using shockwave therapy to relieve heel pain, plus chiropractic care and rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Plantar Fasciitis Treatment Overland Park KS | Move Muscle & Joint",
+    title: "Plantar Fasciitis Relief in Overland Park",
     description: "Plantar fasciitis treatment in Overland Park, KS using shockwave therapy to relieve heel pain, plus chiropractic care and rehab.",
   },
   alternates: {
     canonical: "/conditions/plantar-fasciitis",
   },
   openGraph: {
-    title: "Plantar Fasciitis Treatment Overland Park KS | Move Muscle & Joint",
+    title: "Plantar Fasciitis Relief in Overland Park",
     description: "Plantar fasciitis treatment in Overland Park, KS using shockwave therapy to relieve heel pain, plus chiropractic care and rehab.",
     url: `${SITE.url}/conditions/plantar-fasciitis`,
   },

@@ -3,19 +3,19 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Neck Pain Relief in Overland Park | Move Muscle & Joint",
+  title: "Neck Pain Relief in Overland Park",
   description:
     "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Neck Pain Chiropractor Overland Park KS | Move Muscle & Joint",
+    title: "Neck Pain Relief in Overland Park",
     description: "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
   },
   alternates: {
     canonical: "/conditions/neck-pain",
   },
   openGraph: {
-    title: "Neck Pain Chiropractor Overland Park KS | Move Muscle & Joint",
+    title: "Neck Pain Relief in Overland Park",
     description:
       "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
     url: `${SITE.url}/conditions/neck-pain`,

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HomeHero } from "@/components/home/home-hero";
 import { BrandPhilosophy } from "@/components/home/brand-philosophy";
 import { FirstVisit } from "@/components/home/first-visit";
@@ -44,6 +45,11 @@ export default function Home() {
       <MoveMethod />
       <IntegratedCare />
       <ServicesPreview />
+      <div className="bg-secondary px-6 py-8 text-center">
+        <Link href="/sports-chiropractor-overland-park" className="font-semibold text-navy underline underline-offset-4">
+          Sports chiropractic care for active adults in Overland Park
+        </Link>
+      </div>
       <WhoWeHelp />
       <ProviderPreview />
       <LocalArea />
