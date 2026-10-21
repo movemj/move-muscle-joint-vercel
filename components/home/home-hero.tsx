@@ -18,7 +18,7 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-softblue"
+            className="mb-5 whitespace-nowrap text-[clamp(10px,3vw,12px)] font-semibold uppercase tracking-[0.08em] text-softblue md:text-xs md:tracking-[0.25em]"
           >
             Chiropractor in Overland Park, KS
           </motion.p>
