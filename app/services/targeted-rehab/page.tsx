@@ -113,6 +113,7 @@ export default function TargetedRehabPage() {
             between short-term relief and long-term resilience.
           </p>
           <p>Explore <a className="text-navy underline" href="/services/chiropractic-care">chiropractic adjustments</a> and <a className="text-navy underline" href="/services/myofascial-release-therapy">myofascial release therapy</a> when hands-on care may support your exercise plan.</p>
+          <p>A typical care plan is 3 to 6 visits, depending on the person.</p>
         </>
       }
       relatedConditions={CONDITIONS}
@@ -135,7 +136,7 @@ export default function TargetedRehabPage() {
         },
         {
           q: "Do I need a referral?",
-          a: "No referral is needed to book. You can schedule directly through our online scheduling system.",
+          a: "No referral is needed. Dr. Hugunin is a doctor, so you can book directly.",
         },
         {
           q: "What happens at my first visit?",
