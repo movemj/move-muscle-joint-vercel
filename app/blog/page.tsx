@@ -51,9 +51,6 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* LocalBusiness JSON-LD for GMB consistency */}
-      <JsonLdSchema data={schemas.localBusinessChiropractor()} />
-      
       {/* Hero - matches homepage hero style */}
       <HeroMedia
         imageSrc={IMAGES.assessment}

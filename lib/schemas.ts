@@ -6,6 +6,13 @@ import { buildJaneUrl } from './booking';
  * Generates structured data for SEO and rich snippets
  */
 
+const serviceDescriptions: Record<string, string> = {
+  '/services/chiropractic-care': 'Chiropractic at Move Muscle & Joint in Overland Park goes beyond routine adjustments. It is a personalized, assessment-driven approach to restoring joint function, improving mobility, and addressing movement dysfunctions that contribute to pain.',
+  '/services/myofascial-release-therapy': 'Myofascial release therapy at Move Muscle & Joint uses targeted hands-on care to improve tissue mobility, reduce tension, and support better movement in Overland Park.',
+  '/services/shockwave-therapy': 'Shockwave therapy at Move Muscle & Joint in Overland Park, also called acoustic wave therapy or ESWT, uses acoustic pulses as part of care for persistent tendon and fascia concerns.',
+  '/services/targeted-rehab': 'Targeted rehab at Move Muscle & Joint in Overland Park uses progressive exercise and movement retraining to rebuild strength, improve control, and support lasting resilience.',
+};
+
 export const schemas = {
   /**
    * 1. LocalBusiness + Chiropractor Schema (Combined)
@@ -13,8 +20,8 @@ export const schemas = {
    */
   localBusinessChiropractor: () => ({
     '@context': 'https://schema.org',
-    '@type': 'Chiropractic',
-    '@id': `${SITE.url}/#clinic`,
+    '@type': ['MedicalBusiness', 'LocalBusiness'],
+    '@id': `${SITE.url}/#business`,
     name: SITE.name,
     alternateName: 'Move Muscle and Joint',
     description:
@@ -59,6 +66,8 @@ export const schemas = {
       { '@type': 'City', name: 'Overland Park' },
       { '@type': 'City', name: 'Leawood' },
       { '@type': 'City', name: 'Prairie Village' },
+      { '@type': 'City', name: 'Lenexa' },
+      { '@type': 'City', name: 'Olathe' },
     ],
     medicalSpecialty: 'Chiropractic',
     founder: {
@@ -66,6 +75,19 @@ export const schemas = {
     },
     employee: {
       '@id': `${SITE.url}/about/#provider`,
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Move Muscle & Joint Services',
+      itemListElement: [
+        'Chiropractic Care',
+        'Myofascial Release Therapy',
+        'Shockwave Therapy',
+        'Targeted Rehab',
+      ].map((name) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name },
+      })),
     },
     availableService: [
       {
@@ -101,16 +123,16 @@ export const schemas = {
    * 2. Service Schema
    * Used on: Service detail pages
    */
-  service: (serviceTitle: string, serviceSlug: string) => ({
+  service: (serviceTitle: string, serviceSlug: string, description?: string) => ({
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${SITE.url}${serviceSlug}#service`,
     name: serviceTitle,
-    description: `${serviceTitle} in ${SITE.addressCity}, ${SITE.addressState} to improve joint mobility, reduce pain, and support better movement.`,
+    description: description ?? serviceDescriptions[serviceSlug] ?? `${serviceTitle} in ${SITE.addressCity}, ${SITE.addressState} to improve joint mobility, reduce pain, and support better movement.`,
     provider: {
-      '@type': 'Chiropractor',
-      '@id': `${SITE.url}/#clinic`,
+      '@id': `${SITE.url}/#business`,
     },
+    url: `${SITE.url}${serviceSlug}`,
     areaServed: {
       '@type': 'City',
       name: SITE.addressCity,
@@ -166,17 +188,16 @@ export const schemas = {
     image: `${SITE.url}/images/joseph-hugunin-dc.webp`,
     url: `${SITE.url}/about`,
     worksFor: {
-      '@id': `${SITE.url}/#clinic`,
+      '@id': `${SITE.url}/#business`,
     },
     alumniOf: [
       { '@type': 'CollegeOrUniversity', name: 'Cleveland Chiropractic College', address: 'Los Angeles' },
     ],
     knowsAbout: [
-      'Chiropractic',
-      'Sports Chiropractic',
-      'Myofascial Release Therapy',
-      'Shockwave Therapy',
-      'Movement Rehabilitation',
+      'Musculoskeletal care',
+      'Sports chiropractic',
+      'Myofascial release therapy',
+      'Shockwave therapy',
     ],
     sameAs: ['https://www.linkedin.com/in/dr-joseph-hugunin/'],
     areaServed: 'Overland Park, KS',
@@ -237,12 +258,12 @@ author: {
       url: `${SITE.url}/about`,
       jobTitle: 'Doctor of Chiropractic',
       worksFor: {
-        '@id': `${SITE.url}/#clinic`,
+        '@id': `${SITE.url}/#business`,
       },
     },
     publisher: {
       '@type': 'Organization',
-      '@id': `${SITE.url}/#clinic`,
+      '@id': `${SITE.url}/#business`,
       name: SITE.name,
       logo: {
         '@type': 'ImageObject',
@@ -270,7 +291,7 @@ author: {
     availability: 'https://schema.org/InStock',
     url: `${SITE.url}/new-patient-offer`,
     seller: {
-      '@id': `${SITE.url}/#clinic`,
+      '@id': `${SITE.url}/#business`,
     },
   }),
 
@@ -285,7 +306,7 @@ author: {
     url: `${SITE.url}/book`,
     name: 'Book a Chiropractor in Overland Park, KS | Move Muscle & Joint',
     about: {
-      '@id': `${SITE.url}/#clinic`,
+      '@id': `${SITE.url}/#business`,
     },
     potentialAction: {
       '@type': 'ReserveAction',
@@ -318,7 +339,7 @@ author: {
       'Chiropractic, myofascial release therapy, shockwave therapy, and rehab in Overland Park, KS.',
     publisher: {
       '@type': 'Chiropractor',
-      '@id': `${SITE.url}/#clinic`,
+      '@id': `${SITE.url}/#business`,
     },
   }),
 };
