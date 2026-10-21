@@ -3,8 +3,24 @@ import { getAllPosts } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.movemuscleandjoint.com';
-  const siteLastModified = new Date('2026-09-06');
-  
+  const lastModifiedByPath: Record<string, string> = {
+    '/': '2026-10-20',
+    '/our-approach': '2026-10-18',
+    '/about': '2026-10-18',
+    '/services': '2026-10-18',
+    '/services/chiropractic-care': '2026-10-18',
+    '/services/myofascial-release-therapy': '2026-10-18',
+    '/services/shockwave-therapy': '2026-10-18',
+    '/services/targeted-rehab': '2026-10-18',
+    '/conditions': '2026-10-18',
+    '/blog': '2026-10-20',
+    '/faq': '2026-10-18',
+    '/contact': '2026-10-18',
+    '/book': '2026-10-20',
+    '/new-patient-offer': '2026-10-20',
+    '/privacy': '2026-10-18',
+  };
+
   // Static routes
   const staticRoutes = [
     { url: baseUrl, changeFrequency: 'weekly', priority: 1 },
@@ -46,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allRoutes = [
     ...staticRoutes.map(route => ({
       url: route.url,
-      lastModified: siteLastModified,
+      lastModified: new Date(lastModifiedByPath[new URL(route.url).pathname] ?? '2026-10-18'),
       changeFrequency: route.changeFrequency as 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
       priority: route.priority,
     })),

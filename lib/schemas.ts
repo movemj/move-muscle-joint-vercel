@@ -320,11 +320,6 @@ author: {
       '@type': 'Chiropractor',
       '@id': `${SITE.url}/#clinic`,
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${SITE.url}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
   }),
 };
 
