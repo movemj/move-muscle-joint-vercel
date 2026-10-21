@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/footer";
 import { JsonLdSchema } from "@/components/schema-json-ld";
 import { SITE } from "@/lib/site-data";
 import { schemas } from "@/lib/schemas";
-import { NewPatientOfferFloatGroup } from "@/components/new-patient-offer-float";
 import { AnalyticsEventTracking } from "@/components/analytics";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
@@ -99,7 +98,6 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <NewPatientOfferFloatGroup />
         <MobileStickyCTA />
       </body>
     </html>

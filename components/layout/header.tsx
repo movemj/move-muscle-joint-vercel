@@ -85,8 +85,17 @@ export function Header() {
             })}
           </nav>
 
-          {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          {/* Booking CTA + Mobile Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href={janeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-navy px-4 py-2 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-navy/90 sm:px-5 sm:py-2.5 sm:text-sm"
+            >
+              <span className="hidden sm:inline">Book Now</span>
+              <span className="sm:hidden">Book</span>
+            </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden p-2 text-white transition-colors"
@@ -117,16 +126,6 @@ export function Header() {
                   </Link>
                 </div>
               ))}
-              <div className="pt-4">
-                <a
-                  href={janeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full py-3 px-6 bg-navy text-white text-center rounded-full font-semibold text-sm tracking-wide break-words"
-                >
-                  Book Now
-                </a>
-              </div>
             </nav>
           </motion.div>
         )}

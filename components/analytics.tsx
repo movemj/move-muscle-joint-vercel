@@ -18,7 +18,7 @@ export function AnalyticsEventTracking() {
       const href = link.getAttribute("href") ?? "";
       const eventName = href.startsWith("tel:")
         ? "call_click"
-        : href.startsWith("https://mmj.janeapp.com")
+        : href.startsWith("https://mmj.janeapp.com") || href === "/new-patient-offer"
           ? "book_click"
           : null;
 
