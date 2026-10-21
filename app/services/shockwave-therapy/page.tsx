@@ -53,7 +53,7 @@ export default function ShockwaveTherapyPage() {
       whatItIs={
         <>
           <p>
-            Shockwave therapy, also called acoustic wave therapy or ESWT, uses [CONFIRM: device brand and type] to deliver focused acoustic pulses to a targeted area.
+            Shockwave therapy, also called acoustic wave therapy or ESWT, uses a STORZ MEDICAL shockwave therapy device to deliver acoustic pulses to a targeted area. {/* [CONFIRM: model name] */}
           </p>
           <p>
             Shockwave therapy — also known as extracorporeal shockwave therapy (ESWT) — delivers
