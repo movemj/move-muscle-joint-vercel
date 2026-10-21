@@ -12,12 +12,6 @@ import { getTestimonialsForCondition } from "@/lib/testimonials";
 import { TestimonialsStatic } from "@/components/testimonials/testimonials-static";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 interface ConditionPageTemplateProps {
   title: string;
@@ -190,18 +184,14 @@ export function ConditionPageTemplate({
         <SectionWrapper>
           <div className="max-w-3xl mx-auto">
             <SectionHeading tag="FAQ" title={`Common questions about ${title.toLowerCase()}.`} align="center" />
-            <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="bg-secondary rounded-xl border-none px-6">
-                  <AccordionTrigger className="text-left font-semibold text-charcoal text-sm py-5">
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent forceMount className="text-sm text-steel leading-relaxed pb-5">
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
+            <div className="space-y-3">
+              {faqs.map((faq) => (
+                <details key={faq.q} className="bg-secondary rounded-xl px-6 py-5">
+                  <summary className="cursor-pointer text-left font-semibold text-charcoal text-sm">{faq.q}</summary>
+                  <p className="text-sm text-steel leading-relaxed pt-4">{faq.a}</p>
+                </details>
               ))}
-            </Accordion>
+            </div>
           </div>
         </SectionWrapper>
       )}

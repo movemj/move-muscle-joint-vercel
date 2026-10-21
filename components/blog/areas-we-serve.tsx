@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { SITE } from "@/lib/site-data";
 
@@ -24,18 +23,14 @@ export function AreasWeServe() {
       </p>
       <div className="flex flex-wrap gap-2">
         {AREAS_SERVED.map((area) => (
-          <Link
+          <span
             key={area.name}
-            href="/contact"
-            className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-              area.isPrimary
-                ? "bg-navy text-white hover:bg-navy/90"
-                : "bg-lightgray text-steel hover:bg-softblue/20 hover:text-charcoal"
+            className={`px-3 py-1.5 text-sm rounded-full ${
+              area.isPrimary ? "bg-navy text-white" : "bg-lightgray text-steel"
             }`}
           >
-            {area.name}
-            {area.isPrimary && ", KS"}
-          </Link>
+            {area.name}{area.isPrimary && ", KS"}
+          </span>
         ))}
       </div>
       <p className="mt-4 text-xs text-steel">

@@ -3,9 +3,9 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Low Back Pain Chiropractor Overland Park KS",
+  title: "Low Back Pain | Overland Park, KS | Move Muscle & Joint",
   description:
-    "Low back pain chiropractor in Overland Park, KS using chiropractic care, myofascial release, and rehab to resolve pain at its source.",
+    "Find movement-focused care for low back pain in Overland Park with chiropractic care, myofascial release therapy, and rehab. Book an assessment today.",
   twitter: {
     card: "summary_large_image",
     title: "Low Back Pain Chiropractor Overland Park KS | Move Muscle & Joint",
