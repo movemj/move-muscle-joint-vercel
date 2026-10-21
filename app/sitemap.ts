@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/conditions/sciatica`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/conditions/neck-pain`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/conditions/low-back-pain`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/conditions/sports-injuries`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/conditions/headaches-tension`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/conditions/hip-pain`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/conditions/knee-pain`, changeFrequency: 'monthly', priority: 0.8 },

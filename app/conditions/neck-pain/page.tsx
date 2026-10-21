@@ -3,7 +3,7 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Neck Pain Chiropractor Overland Park KS",
+  title: "Neck Pain Relief in Overland Park | Move Muscle & Joint",
   description:
     "Neck pain chiropractor in Overland Park, KS combining chiropractic care, posture work, myofascial release, and targeted rehab.",
   twitter: {

@@ -53,6 +53,9 @@ export default function ShockwaveTherapyPage() {
       whatItIs={
         <>
           <p>
+            Shockwave therapy, also called acoustic wave therapy or ESWT, uses [CONFIRM: device brand and type] to deliver focused acoustic pulses to a targeted area.
+          </p>
+          <p>
             Shockwave therapy — also known as extracorporeal shockwave therapy (ESWT) — delivers
             high-energy acoustic pulses to targeted areas of damaged or dysfunctional tissue. These
             pulses stimulate the body&apos;s natural healing response, increasing blood flow, breaking

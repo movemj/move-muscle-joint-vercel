@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Shoulder Pain Treatment in Overland Park",
+title: "Shoulder Pain Relief in Overland Park | Move Muscle & Joint",
     description: "Shoulder pain relief in Overland Park, KS with chiropractic care, mobility work, myofascial release therapy, and targeted rehab.",
   },
   alternates: {

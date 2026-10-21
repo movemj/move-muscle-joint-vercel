@@ -97,6 +97,7 @@ export function ConditionPageTemplate({
 
       <SectionWrapper>
         <div className="max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-charcoal mb-5">{title} relief in Overland Park</h2>
           <div className="space-y-5 text-steel leading-relaxed text-lg">{introText}</div>
         </div>
       </SectionWrapper>

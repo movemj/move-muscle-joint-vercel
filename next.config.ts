@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
         destination: "https://www.movemuscleandjoint.com/:path*",
         permanent: true,
       },
+      { source: "/index", destination: "/", permanent: true },
       { source: "/schedule", destination: "/book", permanent: true },
       // Contact/Booking redirects
       { source: "/contact-booking", destination: "/book", permanent: true },
