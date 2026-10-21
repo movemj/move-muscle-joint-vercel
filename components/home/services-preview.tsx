@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { CTAButton } from "@/components/ui/cta-button";
 import { SERVICES, IMAGES } from "@/lib/site-data";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -44,14 +43,13 @@ export function ServicesPreview() {
                 {s.title}
               </h3>
               <p className="text-sm text-steel mt-2 leading-relaxed">{s.shortDesc}</p>
-              <div className="mt-5 flex items-center justify-between">
+              <div className="mt-5">
                 <Link
                   href={s.slug}
-                  className="text-sm font-semibold text-navy flex items-center gap-1 hover:gap-2 transition-all"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-navy transition-all hover:gap-2"
                 >
-                  Learn More <ArrowRight className="w-4 h-4" />
+                  Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
-                <CTAButton href="/book" label="Book" size="sm" campaign="homepage" content={s.slug.replace("/services/", "")} />
               </div>
             </div>
           </motion.div>
