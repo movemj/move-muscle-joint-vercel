@@ -44,10 +44,10 @@ export function HomeHero() {
             transition={{ delay: 0.5 }}
             className="mt-7 flex flex-wrap gap-3"
           >
-            <CTAButton href="/book" label="Book Now" variant="white" size="lg" showArrow campaign="homepage" />
+            <CTAButton href="/book" label="Book your $49 first visit" variant="white" size="lg" showArrow campaign="homepage" />
             <CTAButton
-              href="https://us.fullscript.com/welcome/move"
-              label="Supplements"
+              href="tel:+19133030989"
+              label="Call or text (913) 303-0989"
               variant="outlineWhite"
               size="lg"
               external

@@ -25,12 +25,12 @@ export const SERVICES = [
   {
     title: "Myofascial Release Therapy",
     slug: "/services/myofascial-release-therapy",
-    shortDesc: "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on soft tissue work.",
+    shortDesc: "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on myofascial release therapy.",
   },
   {
     title: "Shockwave Therapy",
     slug: "/services/shockwave-therapy",
-    shortDesc: "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology as part of your recovery plan.",
+    shortDesc: "Support recovery from stubborn tendon and muscle conditions using acoustic wave technology as part of your recovery plan.",
   },
   {
     title: "Targeted Rehab / Movement Retraining",

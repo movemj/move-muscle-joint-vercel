@@ -108,7 +108,7 @@ export default function MyofascialReleasePage() {
         <>
           <p>
             Myofascial release therapy supports the Move Method by addressing the soft tissue layer
-            of dysfunction. While chiropractic care restores joint position, soft tissue work
+            of dysfunction. While chiropractic care restores joint position, myofascial release therapy
             ensures the muscles and fascia can support that improved alignment.
           </p>
           <p>

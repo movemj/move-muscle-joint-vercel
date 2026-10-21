@@ -112,7 +112,7 @@ export default function SciaticaPage() {
             keep it from coming back.
           </p>
           <p>
-            Our integrated model means you receive chiropractic care, soft tissue work, and rehab in
+            Our integrated model means you receive chiropractic care, myofascial release therapy, and rehab in
             the same visit — without needing to coordinate between multiple providers.
           </p>
         </>

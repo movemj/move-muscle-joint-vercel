@@ -10,7 +10,7 @@ export function LocalArea() {
       <div className="max-w-3xl space-y-5 text-steel leading-relaxed -mt-8">
         <p>
           Move Muscle & Joint is located in Overland Park at 10701 El Monte
-          St, Studio 2, inside Fit House near 119th & Roe. Care here combines{" "}
+          St, Studio 2, inside Fit House KC near 108th & Roe. Care here combines{" "}
           <Link href="/services/chiropractic-care" className="text-navy font-semibold hover:underline">
             chiropractic care
           </Link>

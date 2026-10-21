@@ -12,11 +12,11 @@ const pillars = [
   },
   {
     title: "Myofascial Release Therapy",
-    desc: "Targeted soft tissue work to release chronic tension, improve tissue quality, and support the body's ability to heal.",
+    desc: "Targeted myofascial release therapy to release chronic tension, improve tissue mobility, and support the body&apos;s ability to move.",
   },
   {
     title: "Shockwave Therapy",
-    desc: "Acoustic wave technology to accelerate healing in stubborn tendon and soft tissue conditions.",
+    desc: "Acoustic wave technology to support recovery from stubborn tendon and muscle conditions.",
   },
   {
     title: "Targeted Rehab",

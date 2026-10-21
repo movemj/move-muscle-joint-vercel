@@ -71,7 +71,7 @@ export function BookContent() {
             <div>
               <p className="font-semibold text-charcoal">Address</p>
               <p className="text-sm text-steel">{SITE.address}</p>
-              <p className="text-sm text-steel mt-1">The clinic is located inside Fit House, near 119th & Roe.</p>
+              <p className="text-sm text-steel mt-1">The clinic is located inside Fit House KC, near 108th & Roe.</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
