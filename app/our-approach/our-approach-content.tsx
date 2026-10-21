@@ -13,7 +13,7 @@ import { MoveMethod } from '@/components/home/move-method';
 
 const differentiators = [
   { icon: Brain, title: "Assessment-Driven", desc: "Every treatment plan starts with understanding how your body moves, compensates, and loads — not with assumptions." },
-  { icon: Layers, title: "Integrated, Not Isolated", desc: "Chiropractic care, myofascial release therapy therapy, shockwave, and rehab work together inside one coordinated model." },
+  { icon: Layers, title: "Integrated, Not Isolated", desc: "Chiropractic care, myofascial release therapy, shockwave, and rehab work together inside one coordinated model." },
   { icon: Repeat, title: "Movement Retraining", desc: "We don't just treat symptoms. We retrain the patterns that caused them, so results last." },
   { icon: HeartPulse, title: "Whole-Body Perspective", desc: "Pain in one area often stems from dysfunction elsewhere. We evaluate the entire kinetic chain." },
   { icon: Shield, title: "Durability Over Dependency", desc: "Our goal is to build resilience and self-sufficiency — not ongoing dependency on passive care." },
@@ -60,7 +60,7 @@ export function OurApproachContent() {
       <SectionWrapper>
         <SectionHeading tag="How Services Work Together" title="One system, not a menu." subtitle="Each treatment modality at Move supports the others — creating a care experience that builds on itself over time." align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-steel leading-relaxed">
-          <p>Chiropractic restores joint position and mobility. Myofascial release therapy addresses the myofascial release therapy restrictions that limit movement quality. Shockwave therapy accelerates healing for stubborn conditions. And targeted rehab rebuilds the strength and motor control that prevent recurrence.</p>
+          <p>Chiropractic restores joint position and mobility. Myofascial release therapy addresses the soft tissue restrictions that limit movement quality. Shockwave therapy accelerates healing for stubborn conditions. And targeted rehab rebuilds the strength and motor control that prevent recurrence.</p>
           <p>Rather than choosing one modality, your treatment plan draws from all of them based on what your body needs at each stage of recovery. This is what makes the Move Method work — it&apos;s progressive, it&apos;s personalized, and it&apos;s designed to end well.</p>
         </div>
       </SectionWrapper>
@@ -86,7 +86,7 @@ export function OurApproachContent() {
             <p>From there, we&apos;ll explain what we&apos;ve found, outline a clear treatment plan, and often begin integrated care in the same session. You leave with a real understanding of what&apos;s happening and a defined path forward — not just temporary relief.</p>
           </div>
           <div className="mt-10">
-            <CTAButton href="/book" label="Schedule Your First Visit" size="lg" showArrow campaign="our-approach" />
+            <CTAButton href="/book" label="Schedule Your First Visit" size="lg" showArrow campaign="our-approach" treatment={6} />
           </div>
         </div>
       </SectionWrapper>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, MapPin, Phone } from "lucide-react";
 import { HomeHero } from "@/components/home/home-hero";
+import { CTAButton } from "@/components/ui/cta-button";
 import { BrandPhilosophy } from "@/components/home/brand-philosophy";
 import { FirstVisit } from "@/components/home/first-visit";
 import { MoveMethod } from "@/components/home/move-method";
@@ -70,7 +71,7 @@ export default function Home() {
             <p className="mt-4 max-w-2xl leading-relaxed text-steel">Move Muscle &amp; Joint is inside Fit House KC in Overland Park. Your visit is built around a clear movement assessment, hands-on care and practical next steps you can use between appointments.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/contact" className="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy/90">Get directions</Link>
-              <Link href="/book" className="rounded-full border border-navy px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white">Book your $49 first visit</Link>
+              <CTAButton href="/book" label="Book your $49 first visit" variant="outline" campaign="homepage" treatment={6} />
             </div>
           </div>
           <div className="rounded-2xl bg-secondary p-6 text-sm text-steel">

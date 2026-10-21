@@ -50,7 +50,7 @@ export function ConditionsOverviewContent() {
             className="mt-5 text-lg text-white/70 max-w-2xl leading-relaxed"
           >
             Every condition is evaluated through an integrated lens — understanding the full movement
-            picture, addressing the root cause, and building a plan for lasting relief.
+            picture, addressing the root cause, and building a plan for lasting relief. Active patients can also learn more about our <Link href="/sports-chiropractor-overland-park" className="font-medium text-navy underline underline-offset-2">sports chiropractor in Overland Park</Link> approach.
           </motion.p>
         </div>
       </section>
@@ -79,8 +79,7 @@ export function ConditionsOverviewContent() {
                   {c.title}
                 </h3>
                 <p className="text-sm text-steel mt-2 leading-relaxed">
-                  Integrated treatment in Overland Park combining chiropractic care, myofascial release therapy
-                  therapy, and targeted rehab.
+                  Integrated treatment in Overland Park combining chiropractic care, myofascial release therapy, and targeted rehab.
                 </p>
                 <span className="mt-4 text-sm font-semibold text-navy flex items-center gap-1 group-hover:gap-2 transition-all">
                   Learn More <ArrowRight className="w-4 h-4" />

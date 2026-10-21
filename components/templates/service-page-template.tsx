@@ -78,7 +78,7 @@ export function ServicePageTemplate({
             {h1}
           </motion.h1>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mt-6">
-            <CTAButton href="/book" label="Book $49 visit" variant="white" showArrow campaign="services" content={serviceSlug} />
+            <CTAButton href="/book" label="Book $49 visit" treatment={6} variant="white" showArrow campaign="services" content={serviceSlug} />
           </motion.div>
         </div>
       </HeroMedia>
@@ -107,7 +107,7 @@ export function ServicePageTemplate({
         <SectionHeading tag="What to Expect" title="Your experience with this service." align="center" />
         <div className="max-w-3xl mx-auto space-y-4 text-steel leading-relaxed -mt-8">{whatToExpect}</div>
         <div className="mt-10 text-center">
-          <CTAButton href="/book" label="Book $49 visit" showArrow campaign="services" content={serviceSlug} />
+          <CTAButton href="/book" label="Book $49 visit" treatment={6} showArrow campaign="services" content={serviceSlug} />
         </div>
       </SectionWrapper>
 
@@ -189,7 +189,7 @@ export function ServicePageTemplate({
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Ready to get started?</h2>
           <p className="mt-5 text-lg text-white/70">Book your visit at Move Muscle & Joint in Overland Park.</p>
           <div className="mt-8">
-            <CTAButton href="/book" label="Book $49 visit" variant="white" size="lg" showArrow campaign="services" content={serviceSlug} />
+            <CTAButton href="/book" label="Book $49 visit" treatment={6} variant="white" size="lg" showArrow campaign="services" content={serviceSlug} />
           </div>
         </div>
       </section>
