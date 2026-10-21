@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates/service-page-template";
 import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
-const shockwaveTitle = "Shockwave Therapy Overland Park KS";
+const shockwaveTitle = "Shockwave Therapy in Overland Park, KS | Move Muscle & Joint";
 const shockwaveDescription =
-  "Accelerate healing for stubborn soft tissue conditions using focused acoustic wave technology at Move Muscle & Joint in Overland Park, KS.";
+  "Shockwave therapy in Overland Park for stubborn soft tissue pain, helping support healing, mobility, and a return to the activities you enjoy.";
 
 export const metadata: Metadata = {
   title: shockwaveTitle,

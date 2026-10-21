@@ -2,15 +2,20 @@ import type { Metadata } from "next";
 import { AboutContent } from "./about-content";
 
 export const metadata: Metadata = {
-  title: "About Move Muscle & Joint",
-  description: "Meet Move Muscle & Joint, a modern movement-focused chiropractic and rehab clinic in Overland Park, located inside Fit House KC for convenient access to a professional strength and conditioning environment and long-term results.",
+  title: { absolute: "Dr. Joseph Hugunin, DC | Overland Park Chiropractor" },
+  description: "Meet Dr. Joseph Hugunin, DC, a movement-focused chiropractor serving Overland Park and Leawood with personalized care and rehab programs.",
   twitter: {
     card: "summary_large_image",
-    title: "About Move Muscle & Joint",
-    description: "Meet Move Muscle & Joint, a modern movement-focused chiropractic and rehab clinic in Overland Park, located inside Fit House KC for convenient access to a professional strength and conditioning environment and long-term results.",
+    title: "Dr. Joseph Hugunin, DC | Overland Park Chiropractor",
+    description: "Meet Dr. Joseph Hugunin, DC, a movement-focused chiropractor serving Overland Park and Leawood with personalized care and rehab programs.",
   },
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "Dr. Joseph Hugunin, DC | Overland Park Chiropractor",
+    description: "Meet Dr. Joseph Hugunin, DC, a movement-focused chiropractor serving Overland Park and Leawood with personalized care and rehab programs.",
+    url: "https://www.movemuscleandjoint.com/about",
   },
 };
 

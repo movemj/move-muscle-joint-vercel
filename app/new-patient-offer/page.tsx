@@ -14,8 +14,8 @@ import { FirstVisitSteps } from "@/components/new-patient-offer/first-visit-step
 
 const offerTestimonial = getTestimonialsByTag("offer")[0];
 
-const offerTitle = "$49 New Patient Special | Chiropractor in Overland Park, KS";
-const offerDescription = "New patient special at Move Muscle & Joint in Overland Park: $49 for a full movement assessment, clinical evaluation, and hands-on treatment when appropriate.";
+const offerTitle = "$49 First Visit Chiropractic Assessment | Overland Park";
+const offerDescription = "$49 first visit chiropractic assessment in Overland Park with movement screening, clinical evaluation, and hands-on care when appropriate today.";
 
 export const metadata: Metadata = {
   title: { absolute: offerTitle },
