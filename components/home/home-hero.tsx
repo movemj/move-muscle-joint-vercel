@@ -20,7 +20,7 @@ export function HomeHero() {
             transition={{ delay: 0.1 }}
             className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-softblue"
           >
-            Overland Park, KS
+            Chiropractor in Overland Park, KS
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -36,9 +36,7 @@ export function HomeHero() {
             transition={{ delay: 0.35 }}
             className="mt-5 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg"
           >
-            Movement-based care in Overland Park combining chiropractic care,
-            myofascial release therapy, shockwave therapy, and targeted rehab
-            to improve how your body moves — not just where it hurts.
+            Movement-based chiropractic care, myofascial release therapy, shockwave therapy and targeted rehab.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
