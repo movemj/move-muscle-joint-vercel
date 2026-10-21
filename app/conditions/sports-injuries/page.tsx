@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ConditionPageTemplate } from "@/components/templates/condition-page-template";
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
-const title = "Sports Injury Relief in Overland Park | Move Muscle & Joint";
+const title = "Sports Injury Relief in Overland Park";
 const description = "Sports injury relief in Overland Park with movement-focused chiropractic care, soft tissue therapy, and progressive rehab for active adults.";
 
 export const metadata: Metadata = {
