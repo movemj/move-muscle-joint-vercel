@@ -9,11 +9,10 @@ export function HomeHero() {
     <HeroMedia
       imageSrc={IMAGES.hero}
       alt="Movement assessment and rehabilitation at Move Muscle & Joint in Overland Park"
-      overlayOpacity="bg-gradient-to-b from-charcoal/85 via-charcoal/15 to-transparent md:bg-gradient-to-r md:from-charcoal/85 md:via-charcoal/60 md:to-charcoal/15"
+      overlayOpacity="bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-charcoal/15"
       mobileImagePosition="object-[68%_center]"
-      minHeight="md:min-h-[calc(100vh-5rem)]"
     >
-      <div className="mx-auto flex w-full max-w-7xl items-start px-6 pb-10 pt-24 sm:px-8 sm:py-14 md:items-center md:px-8 md:py-16 lg:min-h-[calc(100vh-5rem)] lg:py-16">
+      <div className="mx-auto flex w-full max-w-7xl items-end px-6 pb-5 pt-28 sm:px-8 sm:py-28 lg:min-h-[calc(100vh-5rem)] lg:items-center lg:px-8 lg:py-16">
         <div className="max-w-xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
