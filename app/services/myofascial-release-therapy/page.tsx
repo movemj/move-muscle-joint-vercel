@@ -42,7 +42,7 @@ export default function MyofascialReleasePage() {
         <>
           <p>
             Myofascial release therapy at Move Muscle & Joint in Overland Park targets the soft
-            tissue restrictions that limit how your body moves. Through skilled hands-on techniques,
+            myofascial restrictions that limit how your body moves. Through skilled hands-on techniques,
             we address chronic tension, adhesions, and fascial tightness to restore tissue mobility
             and support long-term recovery.
           </p>
@@ -57,7 +57,7 @@ export default function MyofascialReleasePage() {
         <>
           <p>
             Myofascial release therapy is a form of manual therapy that applies sustained pressure
-            to connective tissue restrictions. It targets the fascia — the web of tissue that
+            to connective myofascial restrictions. It targets the fascia — the web of tissue that
             surrounds and connects muscles, joints, and organs — to reduce tension, improve
             circulation, and restore tissue extensibility.
           </p>
