@@ -40,6 +40,10 @@ const faqs = [
     a: "Move is built around an integrated care model — not isolated adjustments. Every visit is assessment-driven, combines hands-on treatment with movement retraining, and takes place in a modern gym-based clinical setting. Our goal is durable movement and long-term function, not dependency on passive care."
   },
   {
+    q: "How does insurance coverage work?",
+    a: "We are in network with many major insurance plans. Coverage varies by plan, so contact us and we'll verify your benefits before your first visit."
+  },
+  {
     q: "How do I book an appointment?",
     a: "The easiest way to book is through our online scheduling system. Simply visit our Book Now page and you'll be guided through the process. We operate as a receptionless office, so online booking is the fastest and most reliable way to schedule your visit."
   },

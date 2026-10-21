@@ -46,6 +46,7 @@ const faqs: Array<[string, string | [string, string]]> = [
   ["Do I have to sign up for a long treatment plan?", "No. We explain what we find and recommend a clear next step based on your goals and assessment."],
   ["Who is the $49 first visit for?", "This dedicated offer is for new patients beginning care at Move Muscle & Joint."],
   ["What should I wear?", "Wear comfortable clothing that allows you to move naturally."],
+  ["How does insurance coverage work?", "We are in network with many major insurance plans. Coverage varies by plan, so contact us and we'll verify your benefits before your first visit."],
   ["Where is Move Muscle & Joint located?", [`We’re at ${SITE.address}.`, "https://www.google.com/maps/place/?q=place_id:ChIJN-zGIIPpwIcRCDPsBaLbDtg"]],
 ];
 

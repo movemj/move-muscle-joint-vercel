@@ -42,6 +42,12 @@ export default function Home() {
       <HomeHero />
       <BrandPhilosophy />
       <FirstVisit />
+      <section className="bg-white px-6 py-12 text-center sm:px-8 lg:px-16">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-navy">What it costs</h2>
+          <p className="mt-4 leading-relaxed text-steel">We are in network with many major insurance plans. Coverage varies by plan, so contact us and we&apos;ll verify your benefits before your first visit.</p>
+        </div>
+      </section>
       <MoveMethod />
       <IntegratedCare />
       <ServicesPreview />
