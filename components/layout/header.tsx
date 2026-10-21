@@ -91,7 +91,7 @@ export function Header() {
               href={janeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-navy px-4 py-2 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-navy/90 sm:px-5 sm:py-2.5 sm:text-sm"
+              className="hidden rounded-full bg-navy px-4 py-2 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-navy/90 md:inline-flex md:px-5 md:py-2.5 md:text-sm"
             >
               <span className="hidden sm:inline">Book Now</span>
               <span className="sm:hidden">Book</span>
@@ -120,12 +120,22 @@ export function Header() {
                 <div key={item.path}>
                   <Link
                     href={item.path}
+                    onClick={() => setMobileOpen(false)}
                     className="block py-3 text-base font-medium text-white hover:text-softblue transition-colors"
                   >
                     {item.label}
                   </Link>
                 </div>
               ))}
+              <a
+                href={janeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="mt-4 block w-full rounded-full bg-navy px-5 py-3 text-center text-sm font-semibold tracking-wide text-white transition-colors hover:bg-navy/90"
+              >
+                Book Now
+              </a>
             </nav>
           </motion.div>
         )}

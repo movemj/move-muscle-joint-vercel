@@ -92,7 +92,7 @@ export default function RootLayout({
       <head>
         <JsonLdSchema data={schemas.website()} />
       </head>
-      <body className={`${montserrat.variable} overflow-x-hidden pb-20 font-sans md:pb-0`}>
+      <body className={`${montserrat.variable} overflow-x-hidden pb-24 font-sans md:pb-0`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
         <AnalyticsEventTracking />
         <Header />
