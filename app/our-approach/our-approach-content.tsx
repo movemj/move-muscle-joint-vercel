@@ -51,7 +51,7 @@ export function OurApproachContent() {
         <SectionHeading tag="How We Evaluate" title="Understanding how your body moves." subtitle="Before any treatment begins, we assess your movement as a system — identifying restrictions, compensations, and loading imbalances that contribute to pain." align="center" />
         <div className="max-w-3xl mx-auto space-y-5 text-steel leading-relaxed">
           <p>Our assessment looks beyond the site of pain. We evaluate posture, gait, joint mobility, stability patterns, and functional movement to understand what&apos;s driving dysfunction — not just where it hurts.</p>
-          <p>This comprehensive evaluation forms the basis of every treatment plan. It allows us to integrate the right combination of chiropractic, soft tissue work, shockwave therapy, and rehab for your specific needs.</p>
+          <p>This comprehensive evaluation forms the basis of every treatment plan. It allows us to integrate the right combination of chiropractic, myofascial release therapy, shockwave therapy, and rehab for your specific needs.</p>
         </div>
       </SectionWrapper>
 

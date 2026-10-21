@@ -22,7 +22,7 @@ const steps = [
   {
     icon: Dumbbell,
     title: "Integrated Treatment",
-    desc: "Your session may include hands-on chiropractic care, soft tissue work, and movement-based rehab — all in one visit.",
+    desc: "Your session may include hands-on chiropractic care, myofascial release therapy, and movement-based rehab — all in one visit.",
   },
   {
     icon: Target,
