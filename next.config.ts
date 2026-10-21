@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
         destination: "https://www.movemuscleandjoint.com/:path*",
         permanent: true,
       },
+      { source: "/index", destination: "/", permanent: true },
       { source: "/schedule", destination: "/book", permanent: true },
       // Contact/Booking redirects
       { source: "/contact-booking", destination: "/book", permanent: true },
@@ -67,7 +68,13 @@ const nextConfig: NextConfig = {
       { source: "/blog/why-choose-movement-focused-chiropractic", destination: "/our-approach", permanent: true },
 
       // Location redirects
+      { source: "/locations/lenexa/chiropractic-care", destination: "/services/chiropractic-care", permanent: true },
+      { source: "/locations/overland-park/chiropractic-care", destination: "/services/chiropractic-care", permanent: true },
+      { source: "/locations", destination: "/contact", permanent: true },
       { source: "/locations/overland-park", destination: "/", permanent: true },
+
+      // Blog redirects
+      { source: "/blog/why-a-movement-assessment-is-the-first-step-to-lasting-relief", destination: "/blog/movement-assessment-importance", permanent: true },
       // Preserve the generic location redirect after the specific Overland Park rule.
       {
         source: "/locations/:city",

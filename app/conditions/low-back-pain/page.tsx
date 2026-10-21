@@ -3,7 +3,7 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Low Back Pain | Overland Park, KS | Move Muscle & Joint",
+  title: "Low Back Pain Relief in Overland Park | Move Muscle & Joint",
   description:
     "Find movement-focused care for low back pain in Overland Park with chiropractic care, myofascial release therapy, and rehab. Book an assessment today.",
   twitter: {

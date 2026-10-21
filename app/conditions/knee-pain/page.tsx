@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
   twitter: {
     card: "summary_large_image",
-    title: "Knee Pain Treatment in Overland Park",
+title: "Knee Pain Relief in Overland Park | Move Muscle & Joint",
     description: "Knee pain treatment in Overland Park, KS with chiropractic care, movement retraining, myofascial release therapy, and rehab.",
   },
   alternates: {

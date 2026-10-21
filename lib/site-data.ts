@@ -78,5 +78,5 @@ export const IMAGES = {
   lifestyle: "/images/lifestyle.webp",
   clinic: "/images/clinic.webp",
   aboutFacility: "/images/about-movement-facility-hero.webp",
-  handsOn: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Active%20release%20techniques%20ART%20overland%20park%20ks-6YOLZFNTeUnDzE2gUycsJBbZSX7P9m.webp",
+  handsOn: "/images/myofascial.webp",
 };
