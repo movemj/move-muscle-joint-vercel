@@ -3,7 +3,7 @@ import { ConditionPageTemplate } from "@/components/templates/condition-page-tem
 import { SERVICES, CONDITIONS, SITE } from "@/lib/site-data";
 
 const title = "Sports Injury Relief in Overland Park";
-const description = "Sports injury relief in Overland Park with movement-focused chiropractic care, soft tissue therapy, and progressive rehab for active adults.";
+const description = "Sports injury relief in Overland Park with movement-focused chiropractic care, myofascial release therapy therapy, and progressive rehab for active adults.";
 
 export const metadata: Metadata = {
   title,
@@ -40,7 +40,7 @@ export default function SportsInjuriesPage() {
       howWeEvaluate={<p>Our assessment includes injury history, joint and tissue testing, range of motion, strength, balance, gait or sport-specific movement, and a review of your current training demands. We identify what is safe now and what needs to improve before progression.</p>}
       treatmentApproach={<>
         <p>Treatment may include chiropractic care to restore joint motion, myofascial release for restricted muscle and connective tissue, and progressive exercises for strength, control, and confidence. Your plan changes as your capacity improves.</p>
-        <p>For persistent tendon or soft tissue symptoms, shockwave therapy may be considered when clinically appropriate. We coordinate each intervention around a clear return-to-activity plan.</p>
+        <p>For persistent tendon or myofascial release therapy symptoms, shockwave therapy may be considered when clinically appropriate. We coordinate each intervention around a clear return-to-activity plan.</p>
       </>}
       whyChooseMove={<p>Active patients in Overland Park choose Move because recovery is more than reducing pain. Dr. Joseph Hugunin combines hands-on care with movement retraining so you can understand your injury, rebuild capacity, and return to the activities that matter to you.</p>}
       relatedServices={SERVICES}

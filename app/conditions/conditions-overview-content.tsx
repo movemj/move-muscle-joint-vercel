@@ -79,7 +79,7 @@ export function ConditionsOverviewContent() {
                   {c.title}
                 </h3>
                 <p className="text-sm text-steel mt-2 leading-relaxed">
-                  Integrated treatment in Overland Park combining chiropractic care, soft tissue
+                  Integrated treatment in Overland Park combining chiropractic care, myofascial release therapy
                   therapy, and targeted rehab.
                 </p>
                 <span className="mt-4 text-sm font-semibold text-navy flex items-center gap-1 group-hover:gap-2 transition-all">

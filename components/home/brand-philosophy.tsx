@@ -53,7 +53,7 @@ export function BrandPhilosophy() {
           </div>
           <div className="absolute -bottom-6 -left-6 bg-navy text-white px-6 py-4 rounded-xl shadow-lg hidden lg:block z-10">
             <p className="text-sm font-semibold break-words">Integrated Care Model</p>
-            <p className="text-xs text-white/70 mt-1 break-words">Chiropractic · Soft Tissue · Rehab</p>
+            <p className="text-xs text-white/70 mt-1 break-words">Chiropractic · Myofascial Release Therapy · Rehab</p>
           </div>
         </motion.div>
       </div>

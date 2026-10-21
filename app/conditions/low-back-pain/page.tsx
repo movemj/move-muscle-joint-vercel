@@ -97,7 +97,7 @@ export default function LowBackPainPage() {
           </p>
           <p>
             For persistent or complex cases, shockwave therapy may be incorporated to address
-            chronic soft tissue dysfunction. The goal is always to progress from pain reduction to
+            chronic myofascial release therapy dysfunction. The goal is always to progress from pain reduction to
             functional independence.
           </p>
         </>

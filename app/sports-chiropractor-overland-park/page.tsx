@@ -88,7 +88,7 @@ export default function SportsChiropractorOverlandParkPage() {
       <SectionWrapper>
         <SectionHeading tag="Integrated care" title="Choose the tools that fit your movement problem." />
         <div className="grid gap-4 md:grid-cols-3">
-          <Link href="/services/shockwave-therapy" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Shockwave therapy</h2><p className="mt-2 text-sm leading-relaxed text-steel">Learn how this treatment may fit into care for persistent soft-tissue concerns.</p></Link>
+          <Link href="/services/shockwave-therapy" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Shockwave therapy</h2><p className="mt-2 text-sm leading-relaxed text-steel">Learn how this treatment may fit into care for persistent myofascial release therapy concerns.</p></Link>
           <Link href="/services/myofascial-release-therapy" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Myofascial release therapy</h2><p className="mt-2 text-sm leading-relaxed text-steel">Explore hands-on work for tissue mobility and areas that feel restricted.</p></Link>
           <Link href="/services/targeted-rehab" className="rounded-xl border border-border p-6 transition-shadow hover:shadow-md"><h2 className="font-bold text-charcoal">Targeted rehab</h2><p className="mt-2 text-sm leading-relaxed text-steel">Build strength, control, and tolerance for the movements your sport requires.</p></Link>
         </div>
