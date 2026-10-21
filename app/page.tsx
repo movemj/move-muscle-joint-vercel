@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Chiropractor in Overland Park, KS | Move Muscle & Joint",
     description: "Movement-based chiropractor in Overland Park and Leawood. Chiropractic, myofascial release therapy, shockwave and rehab. $49 first visit. Book online.",
-    url: "https://www.movemuscleandjoint.com/",
+    url: "https://www.movemuscleandjoint.com",
   },
 };
 

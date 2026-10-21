@@ -7,7 +7,7 @@ const myofascialDescription =
   "Myofascial release therapy in Overland Park to reduce tension, improve mobility, and support recovery with personalized hands-on care.";
 
 export const metadata: Metadata = {
-  title: myofascialTitle,
+  title: { absolute: myofascialTitle },
   description: myofascialDescription,
   twitter: {
     card: "summary_large_image",

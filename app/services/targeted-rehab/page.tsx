@@ -7,7 +7,7 @@ const targetedRehabDescription =
   "Rehab and movement retraining in Overland Park to rebuild strength, improve movement patterns, and support lasting recovery after pain or injury.";
 
 export const metadata: Metadata = {
-  title: targetedRehabTitle,
+  title: { absolute: targetedRehabTitle },
   description: targetedRehabDescription,
   twitter: {
     card: "summary_large_image",
