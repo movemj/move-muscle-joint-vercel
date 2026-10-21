@@ -207,12 +207,12 @@ export default async function BlogPostPage({ params }: Props) {
       url: `${SITE.url}/about`,
       jobTitle: "Doctor of Chiropractic",
       worksFor: {
-        "@id": `${SITE.url}/#clinic`,
+        "@id": `${SITE.url}/#business`,
       },
     },
     publisher: {
       "@type": "Organization",
-      "@id": `${SITE.url}/#clinic`,
+      "@id": `${SITE.url}/#business`,
       name: SITE.name,
       logo: {
         "@type": "ImageObject",
@@ -259,8 +259,6 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <JsonLdSchema data={articleSchema} />
       <JsonLdSchema data={breadcrumbSchema} />
-      <JsonLdSchema data={schemas.localBusinessChiropractor()} />
-
       {/* Header with Breadcrumbs */}
       <section className="bg-charcoal pt-28 pb-16">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

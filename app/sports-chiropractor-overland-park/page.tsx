@@ -42,6 +42,12 @@ export default function SportsChiropractorOverlandParkPage() {
 
   return (
     <>
+      <JsonLdSchema data={schemas.service(
+        "Sports Chiropractic",
+        "/sports-chiropractor-overland-park",
+        "Movement-focused care for runners, golfers, lifters, and pickleball players who want to understand what is limiting performance and get back to doing what they enjoy."
+      )} />
+      <JsonLdSchema data={schemas.faqPage(faqs)} />
       <JsonLdSchema
         data={schemas.breadcrumb([
           { name: "Home", url: SITE.url },
