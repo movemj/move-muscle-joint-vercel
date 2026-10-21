@@ -42,9 +42,9 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-7 flex flex-wrap gap-3"
+            className="mt-7 hidden flex-wrap gap-3 md:flex"
           >
-            <CTAButton href="/book" label="Book your $49 first visit" variant="white" size="lg" showArrow campaign="homepage" />
+            <CTAButton href="/new-patient-offer" label="Book your $49 first visit" variant="white" size="lg" showArrow />
             <CTAButton
               href="tel:+19133030989"
               label="Call or text (913) 303-0989"
