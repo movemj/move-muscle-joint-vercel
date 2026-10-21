@@ -4,7 +4,7 @@ import { IMAGES, CONDITIONS, SITE } from "@/lib/site-data";
 
 const shockwaveTitle = "Shockwave Therapy in Overland Park, KS | Move Muscle & Joint";
 const shockwaveDescription =
-  "Shockwave therapy in Overland Park for stubborn soft tissue pain, helping support healing, mobility, and a return to the activities you enjoy.";
+  "Shockwave therapy in Overland Park for persistent tendon and fascia concerns, also called acoustic wave therapy or ESWT, with movement-focused care.";
 
 export const metadata: Metadata = {
   title: { absolute: shockwaveTitle },
@@ -39,10 +39,7 @@ export default function ShockwaveTherapyPage() {
       introText={
         <>
           <p>
-            Shockwave therapy at Move Muscle & Joint in Overland Park uses focused acoustic wave
-            technology to accelerate healing in stubborn soft tissue conditions. When tendon pain,
-            plantar fasciitis, or chronic tissue dysfunction hasn&apos;t responded to conventional
-            treatment, shockwave therapy offers a non-invasive path forward.
+            Shockwave therapy at Move Muscle & Joint in Overland Park, also called acoustic wave therapy or ESWT, uses acoustic pulses as part of care for persistent tendon and fascia concerns. When tendon pain, plantar fasciitis, or chronic tissue dysfunction hasn&apos;t responded to conventional treatment, shockwave therapy may be considered alongside a broader movement plan.
           </p>
           <p>
             At Move, shockwave is never used in isolation. It&apos;s integrated with chiropractic care,
@@ -57,14 +54,12 @@ export default function ShockwaveTherapyPage() {
           </p>
           <p>
             Shockwave therapy — also known as extracorporeal shockwave therapy (ESWT) — delivers
-            high-energy acoustic pulses to targeted areas of damaged or dysfunctional tissue. These
-            pulses stimulate the body&apos;s natural healing response, increasing blood flow, breaking
-            down calcification, and promoting tissue repair.
+            acoustic pulses to a targeted area. Your clinician explains what the session involves and
+            adjusts the approach based on the area being treated and your feedback.
           </p>
           <p>
-            It&apos;s an evidence-supported treatment for conditions involving tendons, fascia, and
-            chronic soft tissue dysfunction — particularly when other approaches haven&apos;t delivered
-            sufficient results.
+            It may be considered for conditions involving tendons and fascia as part of a plan that
+            can also include chiropractic care, myofascial release therapy, and targeted rehab.
           </p>
         </>
       }
@@ -72,7 +67,7 @@ export default function ShockwaveTherapyPage() {
         <>
           <p>
             Shockwave therapy at Move is ideal for patients with persistent tendon-related pain,
-            chronic soft tissue conditions, or conditions that have plateaued with other treatments.
+            chronic myofascial release therapy conditions, or conditions that have plateaued with other treatments.
             Common candidates include people dealing with plantar fasciitis, Achilles tendinopathy,
             tennis elbow, and similar conditions.
           </p>
@@ -87,13 +82,10 @@ export default function ShockwaveTherapyPage() {
         <>
           <p>
             During a shockwave therapy session, your clinician applies the device directly to the
-            treatment area. You may feel pressure and some discomfort during the session, but most
-            patients tolerate it well. Sessions are typically short and are often followed by soft
-            tissue work and corrective exercise.
+            treatment area.             You may feel pressure and some discomfort during the session, but most patients tolerate it well. Sessions are typically short and may be followed by myofascial release therapy and corrective exercise.
           </p>
           <p>
-            Most patients require a series of sessions spaced over several weeks for optimal
-            results. Progress is tracked through your ongoing movement assessments.
+            The number and spacing of visits depend on your presentation and care plan. Progress is tracked through ongoing movement assessments.
           </p>
         </>
       }
@@ -131,8 +123,8 @@ export default function ShockwaveTherapyPage() {
           a: "Most protocols involve three to six sessions spaced about one week apart, though this varies based on the condition and your response to treatment.",
         },
         {
-          q: "Is shockwave therapy covered by insurance?",
-          a: "Coverage varies by plan. Contact your insurance provider with the specific CPT code for shockwave therapy to determine your benefits.",
+          q: "Is shockwave therapy extra?",
+          a: "Shockwave is part of our $80-and-up visits when it's recommended for you. It isn't included in the $49 first visit or the $50 visits, and there is no separate per-session add-on.",
         },
         {
           q: "What conditions respond best to shockwave?",

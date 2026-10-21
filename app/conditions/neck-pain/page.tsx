@@ -96,7 +96,7 @@ export default function NeckPainPage() {
           </p>
           <p>
             For chronic or stubborn presentations, shockwave therapy may be used to address
-            associated soft tissue dysfunction. Our goal is to restore pain-free mobility and build
+            associated myofascial release therapy dysfunction. Our goal is to restore pain-free mobility and build
             the strength and awareness to maintain it long-term.
           </p>
         </>

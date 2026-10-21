@@ -43,7 +43,7 @@ export default function TargetedRehabPage() {
           <p>
             This isn&apos;t generic physical therapy. It&apos;s progressive, personalized exercise-based
             rehabilitation delivered inside a gym-based clinical setting — integrated with your
-            chiropractic care and soft tissue treatment from day one.
+            chiropractic care and myofascial release therapy treatment from day one.
           </p>
         </>
       }
@@ -108,7 +108,7 @@ export default function TargetedRehabPage() {
             building strength, and moving with confidence.
           </p>
           <p>
-            While chiropractic care and soft tissue therapy create the conditions for movement,
+            While chiropractic care and myofascial release therapy therapy create the conditions for movement,
             rehab teaches the body how to use that new capacity. It&apos;s what makes the difference
             between short-term relief and long-term resilience.
           </p>

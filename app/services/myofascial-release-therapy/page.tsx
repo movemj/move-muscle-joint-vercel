@@ -47,7 +47,7 @@ export default function MyofascialReleasePage() {
             and support long-term recovery.
           </p>
           <p>
-            This isn&apos;t a spa massage. It&apos;s a clinical, targeted approach to soft tissue dysfunction
+            This isn&apos;t a spa massage. It&apos;s a clinical, targeted approach to myofascial release therapy dysfunction
             — integrated into your broader care plan alongside chiropractic treatment and
             movement-based rehab.
           </p>
@@ -72,7 +72,7 @@ export default function MyofascialReleasePage() {
         <>
           <p>
             Myofascial release therapy is ideal for patients dealing with chronic tightness,
-            recurring muscle tension, restricted range of motion, or soft tissue pain that hasn&apos;t
+            recurring muscle tension, restricted range of motion, or myofascial release therapy pain that hasn&apos;t
             responded to stretching alone.
           </p>
           <p>
@@ -107,7 +107,7 @@ export default function MyofascialReleasePage() {
       moveMethodFit={
         <>
           <p>
-            Myofascial release therapy supports the Move Method by addressing the soft tissue layer
+            Myofascial release therapy supports the Move Method by addressing the myofascial release therapy layer
             of dysfunction. While chiropractic care restores joint position, myofascial release therapy
             ensures the muscles and fascia can support that improved alignment.
           </p>
@@ -130,7 +130,7 @@ export default function MyofascialReleasePage() {
         },
         {
           q: "How many sessions will I need?",
-          a: "It depends on the severity and chronicity of your soft tissue restrictions. Most patients see improvement within a few sessions when combined with corrective exercise.",
+          a: "It depends on the severity and chronicity of your myofascial release therapy restrictions. Most patients see improvement within a few sessions when combined with corrective exercise.",
         },
       ]}
     />

@@ -55,7 +55,7 @@ export default function Home() {
       <section className="bg-white px-6 py-12 text-center sm:px-8 lg:px-16">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold tracking-tight text-navy">What it costs</h2>
-          <p className="mt-4 leading-relaxed text-steel">$49 first visit. Follow-up visits are $50 to $80 depending on the visit. We are in network with many major insurance plans. Coverage varies by plan, so contact us and we&apos;ll verify your benefits before your first visit.</p>
+          <p className="mt-4 leading-relaxed text-steel">$49 first visit. Follow-up visits are $50 to $80 depending on the care. Visits that include shockwave therapy, when it&apos;s recommended, are $80 and up, with no separate add-on fee. We are in network with many major insurance plans. Coverage varies by plan, so contact us and we&apos;ll verify your benefits before your first visit.</p>
         </div>
       </section>
       <MoveMethod />

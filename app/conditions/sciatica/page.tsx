@@ -98,7 +98,7 @@ export default function SciaticaPage() {
           </p>
           <p>
             For patients with persistent symptoms, shockwave therapy may be used to address
-            associated soft tissue dysfunction. Treatment is progressive — focused on pain reduction
+            associated myofascial release therapy dysfunction. Treatment is progressive — focused on pain reduction
             first, then movement retraining and strength building to prevent recurrence.
           </p>
         </>

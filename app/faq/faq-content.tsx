@@ -25,7 +25,11 @@ const faqs = [
   },
   {
     q: "Is shockwave therapy painful?",
-    a: "Most patients experience some discomfort during shockwave therapy, but it is generally well-tolerated. Intensity is adjusted throughout the session based on your feedback. Many patients report that the temporary discomfort is very manageable compared to the relief it provides."
+    a: "Most patients experience some discomfort during shockwave therapy, but it is generally well-tolerated. Intensity is adjusted throughout the session based on your feedback."
+  },
+  {
+    q: "Is shockwave therapy extra?",
+    a: "Shockwave is part of our $80-and-up visits when it's recommended for you. It isn't included in the $49 first visit or the $50 visits, and there is no separate per-session add-on."
   },
   {
     q: "Do you serve patients outside Overland Park?",
