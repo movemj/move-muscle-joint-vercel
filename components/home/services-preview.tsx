@@ -26,7 +26,7 @@ export function ServicesPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300"
+            className="flex h-full flex-col overflow-hidden rounded-xl bg-white transition-all duration-300 group hover:shadow-xl"
           >
             <div className="aspect-[4/3] overflow-hidden relative">
               <Image
@@ -38,12 +38,12 @@ export function ServicesPreview() {
                 loading="lazy"
               />
             </div>
-            <div className="p-6">
+            <div className="flex h-full flex-col p-6">
               <h3 className="font-bold text-charcoal group-hover:text-navy transition-colors">
                 {s.title}
               </h3>
-              <p className="text-sm text-steel mt-2 leading-relaxed">{s.shortDesc}</p>
-              <div className="mt-5">
+              <p className="flex-1 text-sm leading-relaxed text-steel">{s.shortDesc}</p>
+              <div className="mt-auto pt-5">
                 <Link
                   href={s.slug}
                   className="inline-flex items-center gap-1 text-sm font-semibold text-navy transition-all hover:gap-2"
