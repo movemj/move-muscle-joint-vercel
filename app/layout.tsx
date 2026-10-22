@@ -9,6 +9,7 @@ import { schemas } from "@/lib/schemas";
 import { AnalyticsEventTracking } from "@/components/analytics";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
+import ChatWidget from "@/components/chat-widget";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -99,6 +100,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <MobileStickyCTA />
+        <ChatWidget />
       </body>
     </html>
   );
