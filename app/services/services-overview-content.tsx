@@ -90,14 +90,13 @@ export function ServicesOverviewContent() {
                   {s.title}
                 </h3>
                 <p className="text-steel mt-3 leading-relaxed">{s.shortDesc}</p>
-                <div className="mt-6 flex items-center gap-6">
+                <div className="mt-6">
                   <Link
                     href={s.slug}
-                    className="text-sm font-semibold text-navy flex items-center gap-1 hover:gap-2 transition-all"
+                    className="flex items-center gap-1 text-sm font-semibold text-navy transition-all hover:gap-2"
                   >
-                    Learn More <ArrowRight className="w-4 h-4" />
+                    Learn More <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <CTAButton href="/book" label="Book Now" size="sm" campaign="services" content={s.slug.replace("/services/", "")} />
                 </div>
               </div>
             </motion.div>
