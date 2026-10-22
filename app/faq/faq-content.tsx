@@ -48,6 +48,10 @@ const faqs = [
     a: "We are in network with many major insurance plans. Coverage varies by plan, so contact us and we'll verify your benefits before your first visit."
   },
   {
+    q: "Can I call the office?",
+    a: "We're a one-provider office with no front desk, so online booking is fastest. For questions, text (913) 303-0989.",
+  },
+  {
     q: "How do I book an appointment?",
     a: "The easiest way to book is through our online scheduling system. Simply visit our Book Now page and you'll be guided through the process. We operate as a receptionless office, so online booking is the fastest and most reliable way to schedule your visit."
   },

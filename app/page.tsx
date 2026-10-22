@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
 import { HomeHero } from "@/components/home/home-hero";
 import { CTAButton } from "@/components/ui/cta-button";
 import { BrandPhilosophy } from "@/components/home/brand-philosophy";
@@ -77,8 +77,7 @@ export default function Home() {
           <div className="rounded-2xl bg-secondary p-6 text-sm text-steel">
             <iframe title="Map to Move Muscle & Joint" src="https://www.google.com/maps?q=10701+El+Monte+St+Studio+2+Overland+Park+KS+66211&output=embed" className="mb-6 h-56 w-full rounded-xl border-0" loading="lazy" />
             <div className="flex gap-3"><MapPin className="mt-0.5 h-5 w-5 shrink-0 text-navy" /><p>{SITE.address}<br />Located inside Fit House KC</p></div>
-            <div className="mt-5 flex gap-3"><Phone className="mt-0.5 h-5 w-5 shrink-0 text-navy" /><a href="tel:+19133030989" className="hover:text-navy">{SITE.phone}</a></div>
-            <div className="mt-5 flex gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-navy" /><p>Monday–Friday<br />9:00 AM–6:00 PM</p></div>
+                <div className="mt-5 flex gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-navy" /><p>Monday–Friday<br />9:00 AM–6:00 PM</p></div>
           </div>
         </div>
       </section>
