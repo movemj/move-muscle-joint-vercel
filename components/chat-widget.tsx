@@ -9,9 +9,9 @@ interface Message {
 }
 
 const BRAND = {
-  blue: "#003C85",
+  accent: "#849BBD",
   dark: "#191D24",
-  accentBlue: "#849BBD",
+  blue: "#003C85",
   white: "#FFFFFF",
   lightGray: "#F3F3F3",
   borderGray: "#E5E5E5",
@@ -80,7 +80,6 @@ export default function ChatWidget() {
   }
 
   return (
-    // bottom-20 on mobile to clear the sticky CTA bar; bottom-5 on sm+ screens
     <div className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-50 flex flex-col items-end gap-3">
       {/* Chat panel */}
       {open && (
@@ -96,19 +95,19 @@ export default function ChatWidget() {
             <div className="flex items-center gap-3">
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
-                style={{ background: BRAND.blue }}
+                style={{ background: BRAND.accent }}
               >
                 M
               </div>
               <div>
                 <p className="text-white text-sm font-semibold leading-none tracking-wide">Maya</p>
-                <p className="text-xs mt-1" style={{ color: BRAND.accentBlue }}>Move Muscle &amp; Joint</p>
+                <p className="text-xs mt-1" style={{ color: BRAND.accent }}>Move Muscle &amp; Joint</p>
               </div>
             </div>
             <button
               onClick={() => setOpen(false)}
               className="transition-opacity hover:opacity-70"
-              style={{ color: BRAND.accentBlue }}
+              style={{ color: BRAND.accent }}
               aria-label="Close chat"
             >
               <X size={18} />
@@ -130,7 +129,7 @@ export default function ChatWidget() {
                   style={
                     msg.role === "user"
                       ? {
-                          background: BRAND.blue,
+                          background: BRAND.accent,
                           color: BRAND.white,
                           borderRadius: "18px 18px 4px 18px",
                         }
@@ -157,7 +156,7 @@ export default function ChatWidget() {
                     borderRadius: "18px 18px 18px 4px",
                   }}
                 >
-                  <Loader2 size={14} className="animate-spin" style={{ color: BRAND.accentBlue }} />
+                  <Loader2 size={14} className="animate-spin" style={{ color: BRAND.accent }} />
                 </div>
               </div>
             )}
@@ -184,7 +183,7 @@ export default function ChatWidget() {
               onClick={send}
               disabled={loading || !input.trim()}
               className="flex items-center justify-center w-8 h-8 rounded-full transition-opacity disabled:opacity-30"
-              style={{ background: BRAND.blue }}
+              style={{ background: BRAND.accent }}
               aria-label="Send"
             >
               <Send size={13} className="text-white" />
@@ -197,7 +196,7 @@ export default function ChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95"
-        style={{ background: BRAND.blue }}
+        style={{ background: BRAND.accent }}
         aria-label={open ? "Close chat" : "Chat with us"}
       >
         {open ? (
