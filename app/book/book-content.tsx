@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  Phone,
   MapPin,
   Car,
   Clock,
@@ -42,10 +41,6 @@ export function BookContent() {
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
             <CTAButton href="/book" label="Book Online" variant="white" size="lg" showArrow campaign="book-page" />
-            <a href="tel:+19133030989" className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
-              <Phone className="w-4 h-4" />
-              Call or text (913) 303-0989
-            </a>
           </motion.div>
         </div>
       </section>
@@ -87,14 +82,6 @@ export function BookContent() {
               <p className="font-semibold text-charcoal">Hours</p>
               <p className="text-sm text-steel">Monday – Friday: 9:00 AM – 6:00 PM</p>
               <p className="text-sm text-steel">Saturday – Sunday: Closed</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <Phone className="w-5 h-5 text-navy shrink-0 mt-0.5" />
-            <div>
-              <p className="font-semibold text-charcoal">Phone</p>
-              <a href="tel:+19133030989" className="text-sm text-steel hover:text-navy">{SITE.phone}</a>
-              <p className="text-xs text-steel mt-0.5">Call or text us at (913) 303-0989.</p>
             </div>
           </div>
         </div>
@@ -154,7 +141,7 @@ export function BookContent() {
       <SectionWrapper>
         <SectionHeading tag="Returning Patients" title="Booking a follow-up visit." />
         <div className="max-w-3xl -mt-8 text-steel leading-relaxed">
-          <p>Already a patient at Move? Use the same online booking link to schedule your next visit, or call or text our office and we&apos;ll get you on the schedule.</p>
+          <p>Already a patient at Move? Use the same online booking link to schedule your next visit.</p>
         </div>
       </SectionWrapper>
 
@@ -162,7 +149,7 @@ export function BookContent() {
       <SectionWrapper bg="bg-secondary">
         <div className="max-w-3xl mx-auto flex items-start gap-3 text-center sm:text-left">
           <RotateCcw className="w-5 h-5 text-navy shrink-0 mt-0.5 hidden sm:block" />
-          <p className="text-sm text-steel leading-relaxed">We ask for advance notice if you need to cancel or reschedule so we can offer your spot to another patient. Please call or text our office to make any changes to your appointment.</p>
+          <p className="text-sm text-steel leading-relaxed">We ask for advance notice if you need to cancel or reschedule so we can offer your spot to another patient. Please use the online booking system to make changes to your appointment.</p>
         </div>
       </SectionWrapper>
 
@@ -179,10 +166,6 @@ export function BookContent() {
           <p className="mt-5 text-lg text-white/70">Book your visit at Move Muscle & Joint in Overland Park.</p>
           <div className="mt-8 flex flex-col items-center gap-4">
             <CTAButton href="/book" label="Book Online" variant="white" size="lg" showArrow campaign="book-page" />
-            <a href="tel:+19133030989" className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white">
-              <Phone className="w-4 h-4" />
-              Call or text (913) 303-0989
-            </a>
           </div>
         </div>
       </section>

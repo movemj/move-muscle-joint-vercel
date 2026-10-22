@@ -45,13 +45,6 @@ export function HomeHero() {
             className="mt-7 hidden flex-wrap gap-3 md:flex"
           >
             <CTAButton href="/new-patient-offer" label="Book your $49 first visit" variant="white" size="lg" showArrow campaign="homepage" treatment={6} />
-            <CTAButton
-              href="tel:+19133030989"
-              label="Call or text (913) 303-0989"
-              variant="outlineWhite"
-              size="lg"
-              external
-            />
           </motion.div>
         </div>
       </div>

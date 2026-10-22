@@ -23,7 +23,7 @@ export function Footer() {
             </Link>
             <div className="border-l border-white/15 pl-5 text-sm text-white/65">
               <p>{SITE.address}</p>
-              <a href="tel:+19133030989" className="mt-1 block hover:text-white">913-303-0989</a>
+              <p className="mt-1">Text for questions: (913) 303-0989</p>
             </div>
           </div>
           <div className="flex justify-end text-sm text-white/65">
@@ -61,7 +61,7 @@ export function Footer() {
               <div className="flex items-start gap-2 overflow-hidden">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0 text-softblue" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+19133030989" className="break-words hover:text-white">{SITE.phone}</a>
+                  <p className="break-words">Text for questions: (913) 303-0989</p>
                   <span className="leading-relaxed">Monday – Friday
                     <span className="block pl-0 text-white/55">9:00 AM – 6:00 PM</span>
                   </span>

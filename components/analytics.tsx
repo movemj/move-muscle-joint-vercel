@@ -16,11 +16,9 @@ export function AnalyticsEventTracking() {
       if (!link) return;
 
       const href = link.getAttribute("href") ?? "";
-      const eventName = href.startsWith("tel:")
-        ? "call_click"
-        : href.startsWith("https://mmj.janeapp.com") || href === "/new-patient-offer"
-          ? "book_click"
-          : null;
+      const eventName = href.startsWith("https://mmj.janeapp.com") || href === "/new-patient-offer"
+        ? "book_click"
+        : null;
 
       if (!eventName) return;
 

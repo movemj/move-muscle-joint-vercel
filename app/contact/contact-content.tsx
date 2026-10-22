@@ -64,7 +64,7 @@ export function ContactContent() {
             Contact Move Muscle & Joint
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-5 text-lg text-white/70 max-w-2xl">
-            Have a question? Use the form below or visit our office in Overland Park. Call or text us at (913) 303-0989.
+            Have a question? Use the form below or visit our office in Overland Park.
           </motion.p>
         </div>
       </section>
@@ -119,8 +119,8 @@ export function ContactContent() {
                   <Phone className="w-5 h-5 text-navy shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-charcoal">Phone</p>
-                    <a href="tel:+19133030989" className="text-sm text-steel hover:text-navy">{SITE.phone}</a>
-                    <p className="text-xs text-steel mt-0.5">Call or text us at (913) 303-0989.</p>
+                    <p className="text-sm text-steel">Text for questions: (913) 303-0989</p>
+                    <p className="text-xs text-steel mt-0.5">Text for questions: (913) 303-0989.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
