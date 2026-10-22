@@ -71,7 +71,7 @@ export default function Home() {
             <p className="mt-4 max-w-2xl leading-relaxed text-steel">Move Muscle &amp; Joint is inside Fit House KC in Overland Park. Your visit is built around a clear movement assessment, hands-on care and practical next steps you can use between appointments.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/contact" className="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy/90">Get directions</Link>
-              <CTAButton href="/book" label="Book your $49 first visit" variant="outline" campaign="homepage" treatment={6} />
+              <CTAButton href="/new-patient-offer" label="Book your $49 first visit" variant="outline" campaign="homepage" treatment={6} />
             </div>
           </div>
           <div className="rounded-2xl bg-secondary p-6 text-sm text-steel">
