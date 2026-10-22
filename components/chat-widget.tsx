@@ -15,7 +15,6 @@ const BRAND = {
   white: "#FFFFFF",
   lightGray: "#F3F3F3",
   borderGray: "#E5E5E5",
-  mutedGray: "#757B84",
 }
 
 const GREETING =
@@ -81,11 +80,12 @@ export default function ChatWidget() {
   }
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+    // bottom-20 on mobile to clear the sticky CTA bar; bottom-5 on sm+ screens
+    <div className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-50 flex flex-col items-end gap-3">
       {/* Chat panel */}
       {open && (
         <div
-          className="flex flex-col w-[340px] h-[500px] rounded-2xl shadow-2xl overflow-hidden"
+          className="flex flex-col w-[calc(100vw-2rem)] sm:w-[340px] h-[460px] sm:h-[500px] rounded-2xl shadow-2xl overflow-hidden"
           style={{ background: BRAND.white, border: `1px solid ${BRAND.borderGray}` }}
         >
           {/* Header */}
@@ -95,7 +95,7 @@ export default function ChatWidget() {
           >
             <div className="flex items-center gap-3">
               <div
-                className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
                 style={{ background: BRAND.blue }}
               >
                 M
