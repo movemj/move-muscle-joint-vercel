@@ -25,7 +25,7 @@ export const SERVICES = [
   {
     title: "Myofascial Release Therapy",
     slug: "/services/myofascial-release-therapy",
-    shortDesc: "Release chronic tension, improve tissue mobility, and support recovery through targeted hands-on myofascial release therapy.",
+    shortDesc: "Hands-on treatment that releases chronic tension, restores tissue mobility and supports recovery.",
   },
   {
     title: "Shockwave Therapy",
