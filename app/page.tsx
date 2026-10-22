@@ -19,6 +19,13 @@ import { JsonLdSchema } from "@/components/schema-json-ld";
 import { schemas } from "@/lib/schemas";
 import { SITE } from "@/lib/site-data";
 
+const OG_IMAGE = {
+  url: "/move-muscle-joint-overland-park-ks-og.webp",
+  width: 1200,
+  height: 630,
+  alt: "Move Muscle & Joint - Movement-Based Chiropractic Care in Overland Park, Kansas",
+};
+
 export const metadata: Metadata = {
   title: { absolute: "Chiropractor in Overland Park, KS | Move Muscle & Joint" },
   description: "Movement-based chiropractor in Overland Park and Leawood. Chiropractic, myofascial release therapy, shockwave and rehab. $49 first visit. Book online.",
@@ -26,6 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chiropractor in Overland Park, KS | Move Muscle & Joint",
     description: "Movement-based chiropractor in Overland Park and Leawood. Chiropractic, myofascial release therapy, shockwave and rehab. $49 first visit. Book online.",
+    images: [OG_IMAGE.url],
   },
   alternates: {
     canonical: "/",
@@ -34,6 +42,7 @@ export const metadata: Metadata = {
     title: "Chiropractor in Overland Park, KS | Move Muscle & Joint",
     description: "Movement-based chiropractor in Overland Park and Leawood. Chiropractic, myofascial release therapy, shockwave and rehab. $49 first visit. Book online.",
     url: "https://www.movemuscleandjoint.com",
+    images: [OG_IMAGE],
   },
 };
 
