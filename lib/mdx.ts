@@ -56,6 +56,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 
+  const topic = inferTopic(String(data.title || ''), Array.isArray(data.tags) ? data.tags.map(String) : [], slug);
+
   return {
     slug,
     title: data.title || 'Untitled',
@@ -63,8 +65,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
     date: data.date || new Date().toISOString(),
     dateModified: data.dateModified,
     author: data.author || 'Dr. Joseph Hugunin',
-    ogImage: data.ogImage,
-    category: data.category,
+    ogImage: data.ogImage || topic.image,
+    category: data.category || topic.category,
     tags: data.tags || [],
     relatedPosts: data.relatedPosts || [],
     content,
@@ -133,4 +135,40 @@ export function formatDate(dateString: string): string {
     month: 'long',
     day: 'numeric',
   });
+}
+
+/**
+ * Pick a default cover image and category for posts that do not set them
+ * (for example posts written automatically by AI SEO Crew).
+ */
+function inferTopic(title: string, tags: string[], slug: string): { image: string; category?: string } {
+  const haystack = `${title} ${tags.join(' ')} ${slug}`.toLowerCase();
+  if (/shockwave|eswt|acoustic wave/.test(haystack)) return { image: '/images/shockwave.webp', category: 'Shockwave Therapy' };
+  if (/myofascial|trigger point/.test(haystack)) return { image: '/images/myofascial.webp', category: 'Myofascial Release' };
+  if (/sciatica/.test(haystack)) return { image: '/images/sciatica-relief.jpg', category: 'Sciatica' };
+  if (/rehab|exercise|mobility|strength/.test(haystack)) return { image: '/images/rehab.webp', category: 'Rehab' };
+  return { image: '/images/clinic.webp' };
+}
+
+/**
+ * Pick related posts automatically (shared tags and title words) when a post
+ * does not list relatedPosts in its frontmatter.
+ */
+export function getAutoRelatedPosts(slug: string, limit = 3): BlogPostMeta[] {
+  const all = getAllPosts();
+  const current = all.find((p) => p.slug === slug);
+  if (!current) return all.slice(0, limit);
+  const words = (s: string) => s.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 4);
+  const currentTags = new Set((current.tags || []).map((t) => t.toLowerCase()));
+  const currentWords = new Set(words(current.title));
+  return all
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      const tagScore = (p.tags || []).filter((t) => currentTags.has(t.toLowerCase())).length * 2;
+      const wordScore = words(p.title).filter((w) => currentWords.has(w)).length;
+      return { post: p, score: tagScore + wordScore };
+    })
+    .sort((a, b) => b.score - a.score || new Date(b.post.date).getTime() - new Date(a.post.date).getTime())
+    .slice(0, limit)
+    .map((x) => x.post);
 }
