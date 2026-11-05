@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { HeroMedia } from "@/components/ui/hero-media";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -94,21 +93,6 @@ export default function BlogPage() {
                 className="group bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <Link href={`/blog/${post.slug}`} className="block">
-                  {post.ogImage ? (
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Image
-                        src={post.ogImage}
-                        alt={post.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                    </div>
-                  ) : (
-                    <div className="aspect-[16/10] bg-lightgray flex items-center justify-center">
-                      <span className="text-steel text-sm">No image</span>
-                    </div>
-                  )}
                   <div className="p-6">
                     {post.category && (
                       <span className="text-xs font-semibold tracking-[0.15em] uppercase text-softblue mb-3 block">

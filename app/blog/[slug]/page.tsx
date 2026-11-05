@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -296,22 +295,6 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      {/* Featured Image */}
-      {post.ogImage && (
-        <div className="relative -mt-8 mb-12 max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="relative rounded-lg overflow-hidden shadow-xl">
-            <Image
-              src={post.ogImage}
-              alt={post.title}
-              width={1200}
-              height={800}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-        </div>
-      )}
 
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-6 lg:px-8 pb-16">
