@@ -11,7 +11,7 @@ import { AuthorBio } from "@/components/blog/author-bio";
 import { RelatedPosts } from "@/components/blog/related-posts";
 import { AreasWeServe } from "@/components/blog/areas-we-serve";
 import { ServiceLink } from "@/components/blog/service-link";
-import { getPostBySlug, getAllPostSlugs, getRelatedPosts, formatDate } from "@/lib/mdx";
+import { getPostBySlug, getAllPostSlugs, getRelatedPosts, getAutoRelatedPosts, formatDate } from "@/lib/mdx";
 import { schemas } from "@/lib/schemas";
 import { SITE, IMAGES } from "@/lib/site-data";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
@@ -185,7 +185,10 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const relatedPosts = post.relatedPosts ? getRelatedPosts(post.relatedPosts) : [];
+  const relatedPosts =
+    post.relatedPosts && post.relatedPosts.length > 0
+      ? getRelatedPosts(post.relatedPosts)
+      : getAutoRelatedPosts(slug);
 
   // Article JSON-LD schema
   const articleSchema = {
