@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { HeroMedia } from "@/components/ui/hero-media";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -49,8 +51,12 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* Blog hero */}
-      <section className="relative w-full max-w-full flex items-center overflow-hidden min-h-[100dvh] sm:min-h-screen bg-charcoal">
+      {/* Hero - matches homepage hero style */}
+      <HeroMedia
+        imageSrc={IMAGES.assessment}
+        alt="Movement assessment and rehabilitation insights"
+        overlayOpacity="bg-gradient-to-r from-charcoal/80 via-charcoal/60 to-charcoal/30"
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
           <div className="max-w-2xl">
             <Breadcrumbs items={[{ label: "Blog", path: "/blog" }]} />
@@ -66,7 +72,7 @@ export default function BlogPage() {
             </p>
           </div>
         </div>
-      </section>
+      </HeroMedia>
 
       {/* Blog Posts Grid */}
       <SectionWrapper>
@@ -88,6 +94,21 @@ export default function BlogPage() {
                 className="group bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <Link href={`/blog/${post.slug}`} className="block">
+                  {post.ogImage ? (
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={post.ogImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-[16/10] bg-lightgray flex items-center justify-center">
+                      <span className="text-steel text-sm">No image</span>
+                    </div>
+                  )}
                   <div className="p-6">
                     {post.category && (
                       <span className="text-xs font-semibold tracking-[0.15em] uppercase text-softblue mb-3 block">
@@ -106,7 +127,7 @@ export default function BlogPage() {
                         {formatDate(post.date)}
                       </span>
                       <span className="flex items-center gap-1 text-sm font-semibold text-navy group-hover:gap-2 transition-all">
-                        Read
+                        Read More
                         <ArrowRight className="w-4 h-4" />
                       </span>
                     </div>

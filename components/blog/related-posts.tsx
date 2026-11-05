@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BlogPostMeta, formatDate } from "@/lib/mdx";
 import { ArrowRight, Calendar } from "lucide-react";
 
@@ -19,6 +20,21 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
             className="group bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
             <Link href={`/blog/${post.slug}`} className="block">
+              {post.ogImage ? (
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={post.ogImage}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              ) : (
+                <div className="aspect-[16/10] bg-lightgray flex items-center justify-center">
+                  <span className="text-steel text-sm">No image</span>
+                </div>
+              )}
               <div className="p-5">
                 {post.category && (
                   <span className="text-xs font-semibold tracking-[0.15em] uppercase text-softblue mb-2 block">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -100,24 +101,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-interface MdxNode {
-  type: string;
-  name?: string | null;
-  children?: MdxNode[];
-}
-
-function omitBlogImages() {
-  return function transform(node: MdxNode) {
-    if (!node.children) return;
-    node.children = node.children.filter((child) =>
-      child.type !== "image" && child.type !== "imageReference" &&
-      !(["mdxJsxFlowElement", "mdxJsxTextElement"].includes(child.type) &&
-        ["img", "Image", "picture"].includes(child.name ?? ""))
-    );
-    node.children.forEach(transform);
-  };
-}
-
 // MDX components using your existing typography
 const mdxComponents = {
   h1: (props: any) => (
@@ -175,9 +158,11 @@ const mdxComponents = {
       {...props}
     />
   ),
-  img: () => null,
-  Image: () => null,
-  picture: () => null,
+  img: (props: any) => (
+    <span className="block my-8">
+      <img className="rounded-lg w-full" alt={props.alt ?? ""} {...props} />
+    </span>
+  ),
   hr: () => <hr className="my-10 border-border" />,
   strong: (props: any) => <strong className="font-semibold text-charcoal" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
@@ -312,14 +297,26 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Featured Image */}
+      {post.ogImage && (
+        <div className="relative -mt-8 mb-12 max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="relative rounded-lg overflow-hidden shadow-xl">
+            <Image
+              src={post.ogImage}
+              alt={post.title}
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      )}
+
       {/* Article Content */}
-      <article className="max-w-4xl mx-auto px-6 lg:px-8 pt-12 pb-16">
+      <article className="max-w-4xl mx-auto px-6 lg:px-8 pb-16">
         <div className="prose-custom">
-          <MDXRemote
-            source={post.content}
-            components={mdxComponents}
-            options={{ mdxOptions: { remarkPlugins: [omitBlogImages] } }}
-          />
+          <MDXRemote source={post.content} components={mdxComponents} />
         </div>
 
         {/* Tags */}
