@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SITE, IMAGES } from "@/lib/site-data";
+import { SITE } from "@/lib/site-data";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 interface AuthorBioProps {
@@ -14,10 +14,10 @@ export function AuthorBio({ author }: AuthorBioProps) {
         <div className="shrink-0">
           <div className="relative w-24 h-24 rounded-full overflow-hidden">
             <Image
-              src={IMAGES.provider}
+              src="/images/blog-author-profile.png"
               alt={author}
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="96px"
             />
           </div>
